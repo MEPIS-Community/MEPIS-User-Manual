@@ -115,7 +115,7 @@ to work with one's own hardware, and putting it to daily use. Updates will be av
 Attribution 2.5.  Citation should read:</p>
 <pre>
 MEPIS Community Documentation Project: 
-    2010. <em>MEPIS 11 User's Manual</em> [Version 1.0]
+    2011. <em>MEPIS 11 User's Manual</em> [Version 1.0]
 </pre>
 
 <p>For help outside the scope of this Manual, see Section 11.</p>
@@ -133,7 +133,7 @@ MEPIS Community Documentation Project:
 <h2>Introduction</h2>
 
 <p>The MEPIS Linux <a href="index.html#s12-1_livecd" class="spterm"  title="An optical disk with a booting, usable operating
-system" >LiveDVD (or LiveDVD) </a> or Live USB boots your computer without accessing the hard disk.  It copies a virtual filesystem into RAM that acts as the center of a temporary operating system for the computer. When you end your LiveDVD session, everything about your
+system" >LiveDVD</a> or <a href="index.html#s12-1_liveusb" class="spterm"  title="A USB flash drive on which there is a bootable, usable operating system" >LiveUSB</a> boots your computer without accessing the hard disk.  It copies a virtual filesystem into RAM that acts as the center of a temporary operating system for the computer. When you end your LiveDVD session, everything about your
 computer is back to the way it was, unchanged.</p> 
 <p>This provides a number of benefits: </p>
 <ul>
@@ -417,13 +417,13 @@ the DVD's integrity.</p>
 <br /><br />
 
 <h2 id="s02-3_liveusb">Creating a Live USB</h2>
-<p>Netbooks typically lack a CD/DVD drive, so a Live USB is required for temporary use and installation.  Other users may also want a Live USB.  Once you have obtained the ISO, whether by purchase or download, you can easily create a bootable USB that works on most systems.</p>
+<p>Netbooks typically lack a CD/DVD drive, so a Live USB is required for temporary use and installation.  Other users may also want a Live USB for improved portability or speed.  Once you have obtained the ISO, whether by purchase or download, you can easily create a bootable USB that works on most systems.</p>
 <p>If you have an existing installtion of MEPIS, or can boot the LiveDVD on a different computer, then a MEPIS application is available to you that makes the process easy.</p>
 <ul>
 <li>  Plug in your USB device.  It needs to remain unmounted, so ignore the Device Notifier screen that pops up.</li>
 <li>Click <strong>Start Menu > Settings > MEPIS System Assistant</strong>, then click on the MEPIS USB Key tab.</li>
 <li>Make the appropriate selections for the USB key, key type and ISO source.</li>
-<li>Click Apply.</li>
+<li>Click Apply, wait until the process is finished, then reboot or exit for later use.</li>
 </ul>
 
 <p>If you need or want to create the Live USB from the netbook itself, you should use an alternative method:</p>
@@ -435,20 +435,19 @@ the DVD's integrity.</p>
 <li>Create the files necessary (it will take some time) on the USB device</li>
 </ul>
 
-<p>Whichever method you used to create the Live USB, you will probably need to take a few steps to get your netbook to boot correctly using the USB.</p>
+<p>Whichever method you used to create the Live USB, you will probably need to take a few steps to get your computer to boot correctly using the USB.</p>
 <ul>
-<li>To boot the netbook with the USB Drive, many computers have special keys you can press during booting which allow you to choose to boot the USB drive. Typical Boot Device Menu keys are Esc, F8, F9, F10 or F12.</li> 
+<li>To boot with the USB Drive, many computers have special keys you can press during booting which allow you to choose that device. Typical Boot Device Menu keys are Esc, F8, F9, F10 or F12.</li> 
 <li>Alternatively, You may have to go into the BIOS to change the boot device order:
 <ul>
-<li>Boot the netbook, and hit the required key (e.g., F2, F10 or Esc) at the beginning to get into the BIOS</li>
+<li>Boot the computer, and hit the required key (e.g., F2, F10 or Esc) at the beginning to get into the BIOS</li>
 <li>Click on (or arrow over to) the Boot tab</li>
 <li>Identify and highlight your USB device (usually, "USB HDD"), then move it to the top of the list.  Save and exit</li>
 <li>If unsure or uncomfortable about changing the BIOS, ask for assistance in the Forums.</li>
 </ul></li>
 <li>When you see the GRUB screen, select the Default entry</li>
-<li>For screen resolution, first try Auto Resolution</li> 
-<li>If that is not right, click F3 and try setting the resolution yourself to what is approppriate for your netbook; the Acer Aspire One, for instance, requires 1024×600.</li>
-<li>Finally, you can try changing the last entry on the line at the bottom of the screen to read <strong>vga=8</strong></li></ul>
+<li>For screen resolution, first accept the default Auto Resolution</li> 
+<li>For other video alternatives, see <a href="index.html#section03-3">Section 3.3</a></li></ul>
 
 
 <br /><br />
@@ -7234,7 +7233,9 @@ applications are released. It specifies that you may view, modify, and redistrib
 
 <p id="s12-1_kicker"><strong>Kicker:&nbsp;&nbsp;</strong>  The panel in KDE that appears by default at the bottom of the screen and contains navigation icons, open (minimized) programs and system notifications. It is highly configurable, and can include a utility to switch between any of several desktops you can run simultaneously, if your primary desktop surface tends to get cluttered with open programs. For a graphic and a short explanation of its default appearance, see <a href="index.html#s03-4_kicker"> Section 3.3: Kicker.</a></p>
 
-<p id="s12-1_livecd"><strong>LiveDVD:&nbsp;&nbsp;</strong> A bootable compact disc from which one can run an operating system, usually with a complete desktop environment, applications, and essential hardware functionality. In 2003, MEPIS was the first distribution of Linux to include a GUI-based Installer application on the desktop of a fully functional LiveCD, so a separate Installation CD was no longer needed. Simultaneously, MEPIS was also the first Linux to include GUI-based tools, now called <em>Assistants,</em> on the LiveCD to help a user repair a broken system.</p>
+<p id="s12-1_livecd"><strong>LiveCD/DVD:&nbsp;&nbsp;</strong> A bootable compact disc from which one can run an operating system, usually with a complete desktop environment, applications, and essential hardware functionality. In 2003, MEPIS was the first distribution of Linux to include a GUI-based Installer application on the desktop of a fully functional LiveCD, so a separate Installation CD was no longer needed. Simultaneously, MEPIS was also the first Linux to include GUI-based tools, now called <em>Assistants,</em> on the LiveCD to help a user repair a broken system.</p>
+
+<p id="s12-1_liveusb"> <strong>LiveUSB:&nbsp;&nbsp;</strong> A USB flash drive on which an operating system has been loaded in such a way that it can be booted and run.  See LiveDVD.</p>
 
 <p id="s12-1_mbr"><strong>MBR:&nbsp;&nbsp; </strong> Master Boot Record: the first 512-byte sector of a bootable hard disk drive. Special data written to the MBR enables the computer's BIOS to pass the boot process off to a partition with an installed operating system.</p>
 
