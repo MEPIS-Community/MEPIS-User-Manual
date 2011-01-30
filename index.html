@@ -1704,9 +1704,12 @@ http://www.mepis.org/docs/en/index.php?title=Change_Wallpaper</a>
 <!-- ###################  start ordered list ################# -->
 <ol>
 <li>Switch on your camera in 'play' mode and connect it to your computer.</li>
-<li>Many cameras will be recognized by the Device Notifier to the right of the Start Menu icon, which will send up a notification that a new storage device has been connected, and it will carry the name of your camera.  Click on that device, and then select "Open with Dolphin" from the items on the list.</li>
+<li>Click System Settings > Digital Camera, and you will usually see your camera icon already there.</li>
+<li>If it is not there, you can add it manually by clicking the menu camera icon and finding your camera in the list.</li></ol>
+<p>Retrieving images from your camera is easy:</p>
+<ol><li>Most cameras will be recognized by the Device Notifier in the System Tray on the right side of the panel, which will send up a notification that a new storage device has been connected, and it will carry the name of your camera.  Click on that device, and then select "Open with Dolphin" from the items on the list.</li>
 <li>Alternatively, click <strong>Start Menu > Graphics > Gwenview (Image Viewer)</strong>, and you will see your camera listed under Places.</li>
-<li>IF you still have problems, install Digikam from the repos.  It will likely recognize your camera and allow you to import images.</li>
+<li>A third possibility is to install Digikam from the repos.  It will likely recognize your camera and allow you to import images.</li>
 <li>Some brands (Kodak, for example) or models sometimes present particular problems, and may require a manual edit of the rules governing how plug-in devices are handled.  See the Wiki link below for Kodak cameras on how to do that.</li>
 </ol>
 <!-- ###################  end ordered list ################# -->
@@ -1717,10 +1720,10 @@ hard or floppy disk.</p>
 <br /><br />
 
 <h2 class="05-2-1_troubleshooting">Troubleshooting</h2>
-
+System >
 <!-- ###################  start unordered list ################# -->
 <ul>
-<li>Make sure your user-id appears in the camera group (create it if necessary) using KUser.</li>
+<li>Make sure your user-id appears in the camera group (create it if necessary) using Start Menu > KUser.</li>
 <li>If your camera does not appear, check to see if it is on the USB device list linked below.
 </li>
 <li>Google for the keywords "gphoto2 YourCameraMake YourCameraModel". Look for a changelog that includes your model. Check the version of the changelog and compare it to the output of typing this into a terminal:
@@ -1818,8 +1821,10 @@ partition you have specified.
 <h1 id="section05-2-3">5.2.3:&nbsp;&nbsp;&nbsp;&nbsp; How to set up a printer </h1>
 <h2>Basic operation</h2>
 <p>USB printers plugged directly into the computer will probably be automatically recognized and installed by a KDE utility that does the configuration, though they can also be manually installed.  Printing itself is enabled by CUPS (Common UNIX Printing System).</p>
-<p>All printer management is handled by Printer Configuration, found by clicking <strong>Start Menu > Settings > System Settings</strong>. On the “General” tab under Computer Administration, click on Printer Configuration.  Any printer automatically installed will be listed there.  On the left-hand side you will see an entry for New Printer, with buttons on the right to start up the appropriate wizard for a new network printer or printer class (group, e.g., "color printers").  Also there is an entry for Server Settings, which you would use when sharing a printer (see Section 9.1).</p>
-
+<p>All printer management is handled by Printer Configuration, found by clicking <strong>Start Menu > Settings > System Settings</strong>. Scroll down if necessary to find Printer Configuration icon, and click on it.  Any printer automatically installed will be listed there on the left-hand side, where there are also entries for New Printer and Server Settings, which you would use when sharing a printer (see Section 9.1).  Click on New Printer, and follow the screens to set up a new network printer or printer class (group, e.g., "color printers").  </p>
+<p>If this method does not work  satisfactorily for you, you can open a browser and type in the address bar:</p>
+<pre>http://localhost:631/</pre>
+<p>This will present you with the CUPS (Common Unix Printing System) interface, where you can click on "Adding Printers and Classes" at the top of the middle column, then "Add Printer" on the following page.</p>
 <br /><br />
 
 <h2 id="s05-2-3_troubleshooting">Troubleshooting</h2>
@@ -1828,6 +1833,7 @@ partition you have specified.
 <li>MEPIS Wiki: Canon ixxx printer drivers<a href="http://www.mepis.org/docs/en/index.php?title=Install_Canon_ixxx_Printer_Drivers"> http://www.mepis.org/docs/en/index.php?title=
 Install_Canon_ixxx_Printer_Drivers</a></li>
 <li>MEPIS Wiki: Install Brother printer drivers: <a href="http://www.mepis.org/docs/en/index.php?title=Install_Brother_Printer_Drivers"> http://www.mepis.org/docs/en/index.php?title= Install_Brother_Printer_Drivers</a></li>
+<li>CUPS Mini-Tutorial: <a href="http://dev.linuxfoundation.org/~till/printing-tutorial/tut.html"> http://dev.linuxfoundation.org/~till/printing-tutorial/tut.html</a></li>
 </ul>
 
 <br /><br />
