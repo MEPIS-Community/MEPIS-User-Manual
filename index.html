@@ -5,7 +5,7 @@
 <title>MEPIS 11 USER'S MANUAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;
 to &nbsp;&nbsp;&nbsp;MEPIS&nbsp;&nbsp;&nbsp;Linux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
 
-<link rel="stylesheet" href="style/m85-03.css" type="text/css" />
+<link rel="stylesheet" href="style/m11-01.css" type="text/css" />
 <link rel="shortcut icon" href="grafx/m8-shortcut-2.ico" type="image/x-icon" />
 
  <meta name="generator" content="Bluefish 1.0.7"/>
@@ -1790,7 +1790,7 @@ partition you have specified.
 <br /><br />
 
 <h2 id="s05-2-2_troubleshooting">Troubleshooting</h2>
-<p>Most of the time your monitor will be picked up automatically by MEPIS Linux, and the right graphic driver will be loaded without problem.  If not, try these steps one at a time:</p>
+<p>If the right graphic driver is not loaded, try these steps one at a time:</p>
 
 <ol>
 <li>Reboot to your MEPIS LiveDVD, being careful to choose resolution carefully by clicking F3 to select the appropriate screen resolution.  If the LiveDVD works with your monitor, then follow the steps above to copy your xorg.conf file over to the hard drive.
@@ -1806,7 +1806,7 @@ partition you have specified.
 <h2 id="s05-2-2_links">Links and Guides for Section 5.2.2</h2>
 
 <ul class="link">
-<li>MEPIS Wiki: <a href="http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi"> http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi</a></li>
+<li>MEPIS Wiki: sgfxi <a href="http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi"> http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi</a></li>
 </ul>
 
 
@@ -1874,13 +1874,13 @@ Webcams have traditionally been tricky to configure with Linux. However, MEPIS L
  To test whether it is working, try these options: 
 
 <ul> <!-- ##########  start sublist  ##########  -->
-<li>Click <strong>Start Menu > Internet > Kopete (Instant Messenger)</strong>, then click on the menu bar <strong>Settings > Configure... >Devices</strong>. After a few seconds, you should see the webcam's view.
+<li>Click <strong>Start Menu > Internet > Kopete (Instant Messenger)</strong>, then click on the menu bar <strong>Settings > Configure... > Video</strong>. After a few seconds, you should see the webcam's view.
 </li>
 <li>Install <strong>Skype</strong>, then click on Options >Video Devices, and click on the Test button.
 </li>
 <li>Install <strong>cheese</strong>, then click Video and Start recording.
 </li>
-<li>Install <strong>camstream</strong>, then click File >Open Viewer and select your webcam.
+<li>Install <strong>camstream</strong>, then click File > Open Viewer and select your webcam.
 </li>
 </ul></li><!-- ########## end sublist  ##########  -->
 
@@ -1933,13 +1933,13 @@ frame-grabbers, etc.).</p>
 <br />
 
 <h2>Basic steps</h2>
-<p>You can manage your scanner in MEPIS Linux with the KDE frontend Kooka (not installed by default) by following these steps:</p>
+<p>You can manage your scanner in MEPIS Linux with the KDE frontend Skanlite by following these steps:</p>
 <ul>
 <li>Click <strong>Start Menu > System > Synaptic Package Manager</strong>.</li> 
-<li>Locate and install the <strong>kooka</strong> package (see 7: Software Management)</li>
-<li>Click <strong>Start Menu > Graphics > Kooka (Scan and OCR Program)</strong></li>
+<li>Locate and install the <strong>skanlite</strong> package (see 7: Software Management)</li>
+<li>Click <strong>Start Menu > Graphics > Skanlite </strong></li>
 <li>Kooka will check the system for scanners and present you with a list of what it  has found.</li>
-<li>For details on how to use Kooka, see the Kooka handbook linked below.</li>
+<li>For details on how to use Skanlite, click the help icon to see the handbook.</li>
 <li>A good alternative for flatbed scanners involves installing <strong>kipi-plugins</strong> from the repos, which will give you a basic scanner under <strong>Start Menu > Graphics > Acquire Images</strong>.</li>
 </ul>
 
@@ -1975,7 +1975,7 @@ geniusvp2
 <ul class="link">
 <li>SANE home page: <a href="http://www.sane-project.org/ "> http://www.sane-project.org/ </a></li>
 <li>Scanners supported by SANE: <a href="http://www.sane-project.org/sane-mfgs.html "> http://www.sane-project.org/sane-mfgs.html </a></li>
-<li>Kooka manual<a href="http://kooka.kde.org/doc/manual.php "> http://kooka.kde.org/doc/manual.php </a></li>
+
 <li>Scanners across a network: <a href= "http://www.linux.com/feature/57798"> http://www.linux.com/feature/57798</a></li>
 <li>Other common choices: <a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Scanner "> http://www.mepis.org/docs/en/index.php?title=Linux_software#Scanner</a></li>
 </ul>
@@ -1989,19 +1989,18 @@ geniusvp2
 <!-- ########################### SECTION 5.2.6 ########################### -->
 
 
-<h1  id="section05-2-6">5.2.6:&nbsp;&nbsp;&nbsp; How to set up a PDA </h1>
-<p>Success with using a PDA on MEPIS Linux depends on the handheld OS and hardware being used.</p>
+<h1  id="section05-2-6">5.2.6:&nbsp;&nbsp;&nbsp; How to set up a handheld device </h1>
+<p>Success with using a handheld device on MEPIS Linux depends on the handheld OS and hardware being used.  Many users get around the complications of synching through the use of cloud applications such as Google Calendar or Contacts.</p>
 
 <h2>Palm devices</h2>
-<p>
-        PalmOS devices have traditionally worked pretty well with Linux. All interactions depend on pilot-link, an application that is not installed by default with MEPIS Linux. On MEPIS Linux, users have had success using Jpilot to sync data to the desktop, though without integration into KDE applications such as Calendar or Contacts.
+<p>PalmOS devices can be used on MEPIS Linux to sync handheld data to the Jpilot desktop application, though without integration into KDE applications such as Calendar or Contacts.
       </p>
 <h3 id="s05-2-6_prelim">Preliminaries</h3>
 
 <ul>
 <li>Make sure your handheld data are backed up before you start.</li>
-<li>Make sure all your device entries are correct, including spelling and capitalization</li>
-<li>If you are using a Palm device that has been used on another PC, restore the factory defaults (hard reset)</li>
+<li>Make sure your device info is correct, including spelling and capitalization</li>
+<li>If you are using a Palm device that has been used on another PC, you may have to restore the factory defaults (hard reset)</li>
 <li>Make sure that the modules you need are loaded: <strong>visor</strong>, <strong>usbserial</strong> and <strong>uhci_hcd</strong> or <strong>ehci_hcd</strong>.  See the Wiki on handling modules, linked below.</li>
 </ul>
 
@@ -2013,7 +2012,7 @@ geniusvp2
 pilot-link
 jpilot
 libpisock9
-</pre>There is a more recent version of Jpilot available from Debian Testing (Squeeze) that installs without problem on MEPIS Linux
+</pre>
 </li>
 <li> Connect your Palm handheld to the computer</li>
 <li>Open Jpilot (<strong>Start Menu > Office</strong>) and click on File > Preferences > Settings, and select the appropriate Serial Port from the pull-down menu.  When using a cradle On MEPIS, the choice of <strong>usb:</strong> will usually work.
@@ -2025,8 +2024,13 @@ libpisock9
 
 <br /><br />
 
-<h2 id="s05-2-6_other_pdas">Other PDAs</h2>
-<p>At the present, synching a PDA that's running Windows Mobile 2003 or 2005 OS is somewhat difficult, as is any RIM Blackberry PDA. However, there are active projects working on this and you can use Bluetooth to move files.  Check the sites linked below for new developments.</p>
+<h2 id="s05-2-6_blackberry">RIM Blackberry devices</h2>
+
+
+<h2 id="s05-2-6_other_pdas">Windows Mobile devices</h2>
+<p>At the present, synching a PDA that runs Windows Mobile is somewhat difficult. However, there are active projects working on this and you can use Bluetooth to move files.  Check the sites linked below for new developments.</p>
+
+<h2 id="s05-2-6s
 
 <h2 id="s05-2-6_troubleshooting">Troubleshooting</h2>
 <ul><li>Go through the preliminary steps again.  Be sure that the modules are loaded.</li>
