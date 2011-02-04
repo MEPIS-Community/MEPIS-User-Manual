@@ -1081,19 +1081,19 @@ http://www.mepis.org/docs/en/index.php?title=Boot_options</a></li>
 </ul>
 <!-- ###################  end unordered list ################# -->
 
-<h3 id="s03-5_hdd-names">Hard drive names in MEPIS Linux</h3>
+<h2 id="s03-5_hdd-names">Hard drive names in MEPIS Linux</h2>
 <p>Before you begin editing partitions, it is critical that you understand how MEPIS Linux (and other Linux operating systems) refers
 to hard drives and hard drive partitions.</p>
 
 <p>Unlike Windows, which assigns a &ldquo;drive letter&rdquo; to each of your hard drive partitions, MEPIS Linux assigns a short
-<strong>device name</strong> to each hard drive or storage device on a system.  The device names always start with <strong>sd</strong> plus
+<strong>device name</strong> to each hard drive or other storage device on a system.  The device names always start with <strong>sd</strong> plus
 a single letter.  For instance, the first drive on your system will be <strong>sda</strong>, the second <strong>sdb</strong>, etc. Within each drive every partition is referred to as a number appended to the device name. </p>
 <p> Thus, for instance, &ldquo;sda1&rdquo; would be the first partition on the first hard drive, while &ldquo;sdb3&rdquo; would be the third
 partition on the second drive.  It is important to understand the difference between referring to an entire device
 (such as <strong>sda</strong>) and a partition on the device (such as <strong>sda1</strong>). </p>
 <br />
 
-
+<p>There are more advanced means of naming drives, the most common of which is the <strong>UUID</strong> (Universally Unique IDentifier), used to assign a permanent name that will not be changed by the addition or removal of equipment.  See the Wiki entry under Links and Guides, below.</p>
 <!--Prepping Windows for NTFS resizing-->
 <h2 id="s03-5_ntfs">Resizing an NTFS partition</h2>
 <p>Resizing an <a href="index.html#s12-1_ntfs" class="spterm"  title="click to go to the Glossary">  NTFS</a> (Windows NT File System) partition with KDE Partition Manager is generally a painless and simple procedure. However there are some small risks, particularly if your hard drive is old or very full. You can mitigate these risks by taking the following steps on your Windows installation (consult your online Windows help (F1) if you are unsure how to perform any of these tasks):</p>
@@ -1154,7 +1154,9 @@ install. If you see multiple partitions showing up in KDE Partition Manager that
 
 <h2 id="s03-5_links">Links and Guides for Section 3.5</h2>
 <ul class="link">
- <li>Wikipedia: cfdisk: <a href="http://en.wikipedia.org/wiki/Cfdisk"> http://en.wikipedia.org/wiki/Cfdisk</a></li>
+<li>MEPIS Wiki: UUID: <a href="http://www.mepis.org/docs/en/index.php?title=Uuid"> http://www.mepis.org/docs/en/index.php?title=Uuid</a>
+</li> 
+<li>Wikipedia: cfdisk: <a href="http://en.wikipedia.org/wiki/Cfdisk"> http://en.wikipedia.org/wiki/Cfdisk</a></li>
 <li>Linux Partitions: A Primer: <a href="http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549"> http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549</a></li>
 <li>Repartition your hard drive: <a href="http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive">  http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive</a></li>
 <li>Community visual guide to resizing: <a href="http://www.mepisguides.com/Mepis-6/Install/resize/Mepis-Install-Resize.html"> http://www.mepisguides.com/Mepis-6/Install/
@@ -2366,7 +2368,7 @@ href="index.html#s12-1_chainloading"  class="spterm" title="A method of loading 
 
 <h2 id="s05-4_overview">Overview</h2>
 
-<p>The typical default GRUB screen in MEPIS Linux  shows 3 kernel entries for MEPIS, any other detected OS, and a MEMTEST entry.  It looks something like this (here for a dual_boot with Windows XP on a system with a single hard drive): </p>
+<p>The typical default GRUB screen in MEPIS Linux  shows 3 kernel entries for MEPIS ("stanzas" that start with <strong>title</strong>), any other detected OS, and a MEMTEST entry.  For a dual_boot on a single hard drive with Windows XP installed in the first partition (named <strong>sda1</strong> in MEPIS Linux, see <a href="index.html#s03-5_hdd-names">Section 3.5</a>), it looks something like this: </p>
 <pre>
 timeout 10
 color cyan/blue white/blue
@@ -2398,7 +2400,7 @@ title MEMTEST
 kernel /boot/memtest86+.bin
 </pre>
 
-<p>Three kernel entries are listed for technical reasons: details in the Wiki discussion of GRUB under <em> Links and Guides</em> below.
+<p>Three kernel entries are listed for technical reasons; details in the Wiki discussion of GRUB under <em> Links and Guides</em> below.
 </p>
 <p>The final entry, Memtest is a thorough, stand-alone memory test for all Intel or AMD-based systems. It writes a series of test patterns
 to every memory address, then reads back the data written and compares it for errors.  See <a href="index.html#section08-07">Section 8.7</a>.</p>
@@ -2406,7 +2408,7 @@ to every memory address, then reads back the data written and compares it for er
 <br />
 <br />
 
-<h2 id="s05-4_grub">Configuring GRUB</h2>
+<h2 id="s05-4_grub">Customizing GRUB</h2>
 <p>After successfully installing a dual-boot system, many people want to adapt it to their environment.  Warning: making mistakes in editing GRUB configuration may render your system unbootable. To recover from this situation see Section 5.3.2 for 'Repair System Boot'.</p>
 <h3>Configuring the boot menu timeout</h3>
 <p>It is possible to change the length of time for which the boot menu is shown. This is useful if you would like the computer to start up
