@@ -1081,7 +1081,7 @@ http://www.mepis.org/docs/en/index.php?title=Boot_options</a></li>
 </ul>
 <!-- ###################  end unordered list ################# -->
 
-<h2 id="s03-5_hdd-names">Hard drive names in MEPIS Linux</h2>
+<h2 id="s03-5_hdd-names">Hard drive names and types</h2>
 <p>Before you begin editing partitions, it is critical that you understand how MEPIS Linux (and other Linux operating systems) refers
 to hard drives and hard drive partitions.</p>
 
@@ -1091,9 +1091,11 @@ a single letter.  For instance, the first drive on your system will be <strong>s
 <p> Thus, for instance, &ldquo;sda1&rdquo; would be the first partition on the first hard drive, while &ldquo;sdb3&rdquo; would be the third
 partition on the second drive.  It is important to understand the difference between referring to an entire device
 (such as <strong>sda</strong>) and a partition on the device (such as <strong>sda1</strong>). </p>
-<br />
 
 <p>There are more advanced means of naming drives, the most common of which is the <strong>UUID</strong> (Universally Unique IDentifier), used to assign a permanent name that will not be changed by the addition or removal of equipment.  See the Wiki entry under Links and Guides, below.</p>
+
+<p>PC hard disks were originally permitted only four partitions.  These are called "primary" partitions in Linx and are numbered 1 to 4.  You can increase the number by making one of the primary partitions into an "extended" partition, then dividing that into logical partitions (limit 15) that are numbered from 5 onward.  Linux can be installed into a primary or logical partition.</p>
+
 <!--Prepping Windows for NTFS resizing-->
 <h2 id="s03-5_ntfs">Resizing an NTFS partition</h2>
 <p>Resizing an <a href="index.html#s12-1_ntfs" class="spterm"  title="click to go to the Glossary">  NTFS</a> (Windows NT File System) partition with KDE Partition Manager is generally a painless and simple procedure. However there are some small risks, particularly if your hard drive is old or very full. You can mitigate these risks by taking the following steps on your Windows installation (consult your online Windows help (F1) if you are unsure how to perform any of these tasks):</p>
@@ -1112,19 +1114,25 @@ partition on the second drive.  It is important to understand the difference bet
 <h5 id="s03-5_steps">Resizing steps:</h5>
 <!--Using -->
 <!-- ###################  start ordered list ################# -->
-
+<p>Take your time!  You can do the steps one at a time or all together at the end.  Here we separate them out so we can illustrate the result of each step.  Note that you can only resize <u>unmounted</u> partitions, so to change the partition where MEPIS Linux itself is installed you would have to use the LiveDVD.</p>
 <ol>
-<li> From the LiveDVD click <strong>Start Menu > System > KDE Partition Manager (Partition Editor)</strong>.</li>
-<li>In KDE Partition Manager select the drive then select the partition. Note that you can only resize the partition where MEPIS Linux itself is installed by using the LiveDVD.</li>
-<li>Right-click on the partition and select &ldquo;Resize&rdquo;. Choose the new size of the partition. The free space that will remain will be used for MEPIS Linux installation; make sure the &ldquo;free space after&rdquo; resizing is larger than the minimum required size for your version of MEPIS Linux (see <a href="index.html#section03-1">minimum/recommended specifications</a>). Click &ldquo;OK&rdquo;</li>
-<li>Right-click on the &ldquo;free&rdquo; partition and select &ldquo;Create&rdquo;.</li>
-<li>Select Partition Type: linux-swap. Enter the size you have chosen. Click &ldquo;OK&rdquo;.</li>
-<li>Right-click on the &ldquo;free&rdquo; partition and select &ldquo;Create&rdquo;.</li>
-<li>Unless you know what you are doing, select Ext3 and allot the amount of space you have chosen for root. Click &ldquo;OK&rdquo;.</li>
-<li>Repeat the last steps to create a partition for home.</li>
-<li>Click on the disk icon or go to <strong>File > Commit</strong>, respond &ldquo;Yes&rdquo; to the dialog. KDE Partition Manager will now
-repartition your drive; at the end you should get a message that the operation was completed successfully. </li>
-<li><strong>Very Important!</strong> Note down the partition numbers/names as displayed in the new partition layout (e.g., sda3). You will need this information when choosing what partition number/name to install Mepis on, and to ensure that you do not overwrite your Windows partition!</li>
+<li> From the LiveDVD click <strong>Start Menu > System > KDE Partition Manager</strong>, and supply root's password.</li>
+<li>In KDE Partition Manager select the correct drive in the left panel, then select the partition in the right panel.  Be careful here!</li>
+<li>Right-click on that partition and select &ldquo;Resize&#047;Move&rdquo;. Choose the new size of the partition. The free space that will remain will be used for MEPIS Linux installation; make sure the &ldquo;free space after&rdquo; resizing will be larger than the minimum required size for your version of MEPIS Linux (see <a href="index.html#section03-1">minimum/recommended specifications</a>). Click &ldquo;OK&rdquo;</li>
+<li>Click on the Apply menu icon and respond &ldquo;Apply...&rdquo; to the dialog. KDE Partition Manager will now
+repartition your drive; at the end you should get a message that the operation was completed successfully.  The result will look something like this:</li>
+<img src="grafx/Partition1.png" alt="New empty partition" width="329" height="86" />
+<li>Now let's create a swap partition</li>
+<ul><li>Right-click on the &ldquo;unallocated&rdquo; partition and select &ldquo;New&rdquo;. You will see this dialog box:</li>
+<img src="grafx/Partition3.png" alt="New partition dialog" width="420" height="327" />
+<li>Usually you will select Primary for partition type unless you have more than 4 partitions (see <a href="index.html#s03-5_hdd-names">hard drive names</a>).</li>
+<li>Select <strong>linux-swap</strong> as the File system, and make the size at least equal to the amount of RAM you have installed. Click &ldquo;OK&rdquo;.</li>
+<li>It is often very conventient to add a Label (here something like: "Swap") when you create a new partition.</li>
+<li>Click &ldquo;OK&rdquo; </li></ul>
+<li>Repeat the steps to create the remaining two partitions, <strong>root</strong> and <strong>home</strong>.  Right-click on the &ldquo;free&rdquo; partition and select &ldquo;New&rdquo;.</li>
+<li>Unless you know what you are doing, select Primary, Ext3 and the amount of space you have chosen. Click &ldquo;OK&rdquo;.</li>
+<li>Repeat the last steps to create a separate partition for home (recommended).  If you want to skip this step, your data files will be in the Home folder inside the the root partition.</li>
+<li><strong>Very Important!</strong> Note down the partition numbers/names as displayed in the new layout (e.g., sda3) for both the root and the home partition. You will need this information when choosing what partition number/name to install Mepis on, and to ensure that you do not overwrite your Windows partition!</li>
 </ol>
 <!-- ###################  end ordered list ################# -->
 
@@ -1134,9 +1142,6 @@ repartition your drive; at the end you should get a message that the operation w
 
 <!-- ###################  start unordered list ################# -->
 <ul>
-<li>
-A single hard drive can have only 4 primary partitions. If you need to have more than 4 partitions on the disk, you need to create an <strong>extended partition</strong>, which you can then divide into 15 or fewer <strong>logical partitions.</strong>
-</li>
 <li>
 Many home computers are sold with a &ldquo;diagnostic partition&rdquo; and &ldquo;restore partition&rdquo;, in addition to the factory OS
 install. If you see multiple partitions showing up in KDE Partition Manager that you were not aware of, they are probably these.
@@ -1157,6 +1162,7 @@ install. If you see multiple partitions showing up in KDE Partition Manager that
 <li>MEPIS Wiki: UUID: <a href="http://www.mepis.org/docs/en/index.php?title=Uuid"> http://www.mepis.org/docs/en/index.php?title=Uuid</a>
 </li> 
 <li>Wikipedia: cfdisk: <a href="http://en.wikipedia.org/wiki/Cfdisk"> http://en.wikipedia.org/wiki/Cfdisk</a></li>
+<li>Wikipedia: Partitioning: <a href="http://en.wikipedia.org/wiki/Disk_partitioning">http://en.wikipedia.org/wiki/Disk_partitioning</a></li>
 <li>Linux Partitions: A Primer: <a href="http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549"> http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549</a></li>
 <li>Repartition your hard drive: <a href="http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive">  http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive</a></li>
 <li>Community visual guide to resizing: <a href="http://www.mepisguides.com/Mepis-6/Install/resize/Mepis-Install-Resize.html"> http://www.mepisguides.com/Mepis-6/Install/
