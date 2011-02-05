@@ -1115,24 +1115,29 @@ partition on the second drive.  It is important to understand the difference bet
 <!--Using -->
 <!-- ###################  start ordered list ################# -->
 <p>Take your time!  You can do the steps one at a time or all together at the end.  Here we separate them out so we can illustrate the result of each step.  Note that you can only resize <u>unmounted</u> partitions, so to change the partition where MEPIS Linux itself is installed you would have to use the LiveDVD.</p>
-<ol>
+<ul>
 <li> From the LiveDVD click <strong>Start Menu > System > KDE Partition Manager</strong>, and supply root's password.</li>
 <li>In KDE Partition Manager select the correct drive in the left panel, then select the partition in the right panel.  Be careful here!</li>
 <li>Right-click on that partition and select &ldquo;Resize&#047;Move&rdquo;. Choose the new size of the partition. The free space that will remain will be used for MEPIS Linux installation; make sure the &ldquo;free space after&rdquo; resizing will be larger than the minimum required size for your version of MEPIS Linux (see <a href="index.html#section03-1">minimum/recommended specifications</a>). Click &ldquo;OK&rdquo;</li>
 <li>Click on the Apply menu icon and respond &ldquo;Apply...&rdquo; to the dialog. KDE Partition Manager will now
 repartition your drive; at the end you should get a message that the operation was completed successfully.  The result will look something like this:</li>
 <img src="grafx/Partition1.png" alt="New empty partition" width="329" height="86" />
-<li>Now let's create a swap partition</li>
-<ul><li>Right-click on the &ldquo;unallocated&rdquo; partition and select &ldquo;New&rdquo;. You will see this dialog box:</li>
+<li>Let's start by creating the root partition. Make sure you have already figured out how to divide up the partition you just created.</li>
+<ol><li>Right-click on the &ldquo;unallocated&rdquo; partition and select &ldquo;New&rdquo;. You will see this dialog box:</li>
 <img src="grafx/Partition3.png" alt="New partition dialog" width="420" height="327" />
-<li>Usually you will select Primary for partition type unless you have more than 4 partitions (see <a href="index.html#s03-5_hdd-names">hard drive names</a>).</li>
-<li>Select <strong>linux-swap</strong> as the File system, and make the size at least equal to the amount of RAM you have installed. Click &ldquo;OK&rdquo;.</li>
-<li>It is often very conventient to add a Label (here something like: "Swap") when you create a new partition.</li>
-<li>Click &ldquo;OK&rdquo; </li></ul>
-<li>Repeat the steps to create the remaining two partitions, <strong>root</strong> and <strong>home</strong>.  Unless you know what you are doing, select Primary and Ext3.</li>
-<li>If you want to create a separate partition for Home (recommended), your data files will be in the Home folder inside the the root partition.</li>
-<li><strong>Very Important!</strong> Note down the partition numbers/names as displayed in the new layout (e.g., sda3) for both the root and the home partition. You will need this information when choosing what partition number/name to install Mepis on, and to ensure that you do not overwrite your Windows partition!</li>
-</ol>
+<li>Usually you will select <strong>Primary</strong> for partition type unless you have more than 4 partitions (see <a href="index.html#s03-5_hdd-names">hard drive names</a>).</li>
+<li>Select <strong>Ext3</strong> as the File system, and set the size so that enough is left for Home and Swap.  Click &ldquo;OK&rdquo;.</li>
+<li>It is often very conventient to add a Label (here something like: "MEPIS 11") when you create a new partition.</li>
+<li>Click &ldquo;OK&rdquo; </li></ol>
+<li>Now for the Home partition:</li>
+<ol><li>Repeat the steps above, again selecting <strong>Primary</strong> and <strong>Ext3</strong>.</li>
+<li>Set the size, making sure to leave enough room for the Swap partition.</li>
+<li>If you do not want to create a separate partition for Home, your personal files will be in the Home folder of the root partition you created before.</li></ol>
+<li>Finally, the Swap partition:</li>
+<ol><li>Repeat the steps to above, again selecting Primary as the Partition type. </li>
+<li>Select <strong>linux-swap</strong> as the File system</li>
+<li>Make the size at least equal to the amount of RAM you have installed. </li></ol></ul>
+<p><strong>Very Important!</strong> Note down the partition numbers/names as displayed in the new layout (e.g., sda3) for both the root and the home partition. You will need this information when choosing what partition number/name to install Mepis on, and to ensure that you do not overwrite your Windows partition!</p>
 <!-- ###################  end ordered list ################# -->
 
 <br /><br />
