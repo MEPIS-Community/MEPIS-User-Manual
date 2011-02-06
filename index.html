@@ -6744,7 +6744,7 @@ users, other than root  &mdash;in other words, system administration utilities.
 
 <p>MEPIS is an account-based operating system. This means that no program can run without a user account to run under, and any running program is thereby limited by the permissions granted to the user who started it. </p>
 
-<p>In MEPIS Linux there is one and only one user account which has permission to do everything; this account is called <strong>root</strong> (not to be confused with the &ldquo;root&rdquo; of the filesystem, mentioned in Section 10.1 see: <a class="spterm" href="#s12-1_rootfs" title="see Glossary for more info.">root filesystem</a>). The <a class="spterm" href="#s12-1_rootuser" title="see Glossary for more info.">root user</a> has a unique password that is set during system installation. When you run programs (such as Synaptic or MEPIS System Assistants) that need to access or change protected operating system files and directories, you will be prompted for the root password.  Once you enter it, MEPIS will be able to make the specific changes it needs.</p>
+<p>In MEPIS Linux there is one and only one user account that has permission to do everything; this account is called <strong>root</strong> (not to be confused with the &ldquo;root&rdquo; of the filesystem, mentioned in Section 10.1 see: <a class="spterm" href="#s12-1_rootfs" title="see Glossary for more info.">root filesystem</a>). The <a class="spterm" href="#s12-1_rootuser" title="see Glossary for more info.">root user</a> has a unique password that is set during system installation. When you run programs (such as Synaptic or MEPIS System Assistants) that need to access or change protected operating system files and directories, you will be prompted for the root password.  Once you enter it, MEPIS will be able to make the specific changes it needs.</p>
 <p></p>
 
 <p>NOTE: Much of the security and stability that Linux is known for hinges on the proper use of limited user accounts, and the protection provided by default file and directory permissions. For this reason, you should operate as <em>root</em> only for a procedure that requires it. Never log into MEPIS as root to run the computer for normal activities! </p>
@@ -6773,14 +6773,37 @@ users, other than root  &mdash;in other words, system administration utilities.
 <p>To view or change a file's permissions in KDE, right-click the file and select <strong>Properties</strong>.  Click the <strong>Permissions</strong> tab.  Here you can set the permissions granted to the owner, group, and others using the pull-down menus.  For some files (like <a href="index.html#section09-7">scripts</a>, for instance), you need to check the box to make them executable, and for folders you can check a box to limit the deletion of files inside it to the owners. If necessary, you can click <strong>Advanced Permissions</strong> and see the permissions grid for the file.</p>
 <p>NOTE: you must be operating as root to change the permission of a file or directory whose owner is root.</p>
 <br />
+<h3 id="s10-2_muser">MUser</h3>
+<p>The <a href="index.html#section05-3-3">MEPIS User Assistant</a> is an easy way to add or delete a user.  In addition, it can restore default values for groups and memberships.</p>
+
 <h3 id="s10-2_kuser">KUser</h3>
-<p>KUser is part of KDE and can be reached by clicking <strong>Start Menu > System > KUser (User Manager)</strong> and supplying the root password.  The main screen has two tabs, one for users and the other for groups; above them sits a toolbar and on top a menu bar.  Here are the icons on the toolbar:</p>
+<p>KUser is part of KDE and can be reached by clicking <strong>Start Menu > System > KUser</strong> and supplying the root password.  It allows detailed control of a user's account.  The main screen has two tabs, one for users and the other for groups; above them sits a toolbar and on top a menu bar.  Here are the icons on the toolbar:</p>
 
 <img src="grafx/KUser_icons.jpg" alt="KUser icons" width="226" height="31" />
-<p>The first three buttons in the toolbar have to do with user management (default tab): add user, edit user, and delete any user highlighted. The second three are used with similar functions for group management (Groups tab), and allow you to decide who belongs to each group. The screens that pop up are pretty self-explanatory, but you can consult the KUser Handbook found under Help.</p>
+<p>The first three buttons in the toolbar have to do with user management (default tab): add user, edit user, and delete any user highlighted.  When you add a user, you will see this dialog box:</p>
+<img src="grafx/KUser.png" alt="KUser new user dialog" width="484" height="400" />
 
-<h3 id="s10-2_muser">MUser</h3>
-<p>The <a href="index.html#section05-3-3">MEPIS User Assistant</a> can also be used to add or delete a user.  In addition, it can restore default values for groups and memberships.</p>
+
+<p>The second three are used with similar functions for group management (Groups tab), and allow you to decide who belongs to each group. This can be important for access to hardware, as the following example shows: </p>
+<p>Sometimes a program needs to have a user registered before it will operate correctly. Let's take an example with the photo organizer DigiKam, which can be fussy about this. According to the directions on the DigiKam home page, the username should be added to the user group &ldquo;camera&rdquo; but that group is not listed. Here's how you would do that: </p>
+<ol>
+<li>Click <strong>Start Menu > System > KUser (User Manager)</strong>, and supply root's password.
+</li>
+<li>Click on the Groups tab, and confirm that there is no group name &ldquo;camera.&rdquo;
+</li>
+<li>Click on the <strong>add group</strong> icon, or on the menu bar Group >Add... 
+</li>
+<li>In the dialogue box that pops up, type <strong>camera</strong> as Group name.
+</li>
+<li>Highlight your username in the column on the right, then click the middle <strong>Add...</strong> button to move your username into the column Users in Group. 
+</li>
+<li>Click <strong>OK.</strong>
+</li>
+<li>The Group tab now includes the group &ldquo;camera&rdquo; with your username. 
+</li>
+</ol>
+
+
 
 <br />
 <h3 id="s10-2_cli">CLI commands</h3>
@@ -6801,24 +6824,7 @@ users, other than root  &mdash;in other words, system administration utilities.
 
 <br /><br />
 
-<h2>Example</h2>
-<p>Sometimes a program needs to have a user registered before it will operate correctly. Let's take an example with the photo organizer DigiKam, which can be fussy about this. According to the directions on the DigiKam home page, the username should be added to the user group &ldquo;camera&rdquo; but that group is not listed. Here's how you would do that: </p>
-<ol>
-<li>Click <strong>Start Menu > System > KUser (User Manager)</strong>, and supply root's password.
-</li>
-<li>Click on the Groups tab, and confirm that there is no group name &ldquo;camera.&rdquo;
-</li>
-<li>Click on the <strong>add group</strong> icon, or on the menu bar Group >Add... 
-</li>
-<li>In the dialogue box that pops up, type <strong>camera</strong> as Group name.
-</li>
-<li>Highlight your username in the column on the right, then click the middle <strong>Add...</strong> button to move your username into the column Users in Group. 
-</li>
-<li>Click <strong>OK.</strong>
-</li>
-<li>The Group tab now includes the group &ldquo;camera&rdquo; with your username. 
-</li>
-</ol>
+
 
 <br /><br />
 
@@ -6826,7 +6832,8 @@ users, other than root  &mdash;in other words, system administration utilities.
 
 <ul>
 <li>MEPIS Wiki: Permissions: <a href="http://www.mepis.org/docs/en/index.php?title=Permissions">http://www.mepis.org/docs/en/index.php?title=Permissions</a></li>
-<li>File permissions:<a href="http://www.linuxforums.org/security/file_permissions.html">at http://www.linuxforums.org</a></li>
+<li>KUser: <a href="http://userbase.kde.org/KUser">http://userbase.kde.org/KUser</a></li>
+<li>File permissions: <a href="http://www.linuxforums.org/security/file_permissions.html">http://www.linuxforums.org/security/file_permissions.html</a></li>
 </ul>
 
 
