@@ -1122,7 +1122,7 @@ partition on the second drive.  It is important to understand the difference bet
 <li>Click on the Apply menu icon and respond &ldquo;Apply...&rdquo; to the dialog. KDE Partition Manager will now
 repartition your drive; at the end you should get a message that the operation was completed successfully.  The result will look something like this:</li>
 <img src="grafx/Partition1.png" alt="New empty partition" width="329" height="86" />
-<li>Let's start by creating the root partition. Make sure you have already figured out how to divide up the partition you just created.</li>
+<li>Let's start by creating the Root partition that will hold the operating system. Make sure you have already figured out how to divide up the partition you just created.</li>
 <ol><li>Right-click on the &ldquo;unallocated&rdquo; partition and select &ldquo;New&rdquo;. You will see this dialog box:</li>
 <img src="grafx/Partition3.png" alt="New partition dialog" width="420" height="327" />
 <li>Usually you will select <strong>Primary</strong> for partition type unless you have more than 4 partitions (see <a href="index.html#s03-5_hdd-names">hard drive names</a>).</li>
@@ -1136,7 +1136,9 @@ repartition your drive; at the end you should get a message that the operation w
 <li>Finally, the Swap partition:</li>
 <ol><li>Repeat the steps to above, again selecting Primary as the Partition type. </li>
 <li>Select <strong>linux-swap</strong> as the File system</li>
-<li>Make the size at least equal to the amount of RAM you have installed. </li></ol></ul>
+<li>Make the size at least equal to the amount of RAM you have installed. </li>
+<li>When you have finished, you will see something like this:
+<img src="grafx/Partition5.png" alt="Partition final result" width="329" height="86" /></li></ol></ul>
 <p><strong>Very Important!</strong> Note down the partition numbers/names as displayed in the new layout (e.g., sda3) for both the root and the home partition. You will need this information when choosing what partition number/name to install Mepis on, and to ensure that you do not overwrite your Windows partition!</p>
 <!-- ###################  end ordered list ################# -->
 
@@ -2495,11 +2497,10 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
 <ol>
-<li>Click <strong>Start Menu > Settings > System Settings &amp; Appearance > Fonts</strong></li>
-<li>Adjust font size as needed.</li>
-<li>For help, press F1 to access the KDE Help Center, then click in left panel <strong>Control Center Modules > Fonts</strong>.</li>
-<li>If your monitor's size or resolution causes text to be too large or too small, you can uniformly increase or decrease the size
-of all text, using the X-Windows Assistant's General tab: <strong>Start Menu > Settings > MEPIS X-Windows Assistant</strong> to change system display dpi.</li>
+<li>Click <strong>Start Menu > Settings > System Settings > Application Appearance > Fonts</strong></li>
+<li>Adjust font size as needed.  You can adjust them individually, or all at once (e.g., when a specific monitor makes them too large or too small) using the button Adjust All Fonts.</li>
+<li>For help, press F1 to access the KDE Help Center.</li>
+
 </ol>
 
 <br />
