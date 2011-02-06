@@ -2440,19 +2440,21 @@ time you restart your computer.</li>
 <br />
 
 <h3 id="s05-4_change-default">Changing the default operating system to boot</h3>
-<p>You can decide which operating system will be started automatically if you have not chosen one from the boot menu within a certain time.</p>
-<p>Open the <strong>boot/grub/menu.lst</strong> file as root using the method indicated above, and add the following option just above the first
-&ldquo;title&rdquo; entry:</p>
+<p>There are various ways you can set which operating system will be started automatically if you have not chosen one from the boot menu within a certain time.  Open the <strong>boot/grub/menu.lst</strong> file as root using the method indicated above, and do one of the following:</p>
+<ul><li>Add a default order number</li>
+<ul><li> add the following option just above the first
+&ldquo;title&rdquo; entry:
 
 <pre>
 default <em>n</em>
-</pre>
+</pre></li>
 
-<p>Change the variable <em>n</em> to &ldquo;0&rdquo; to boot from the first entry in the menu, &ldquo;1&rdquo; for the second, and so forth.
-Save the file and exit. The changes will take effect the next time the computer boots.
-</p>
-<p>An alternative method is to cut the whole entry for the OS you want to boot by default and paste it in the first title position.</p>
-
+<li>Change the variable <em>n</em> to &ldquo;0&rdquo; to boot from the first entry in the menu, &ldquo;1&rdquo; for the second, and so forth.</li></ul>
+<li>Rearrange the stanzas</li> 
+<ul><li>Highlight the stanza for the OS you want to boot by default</li> 
+<li>Cut and paste it into the first title position.</li> </ul>
+<li>Configure GRUB to default to whichever OS you booted previously. For details, check the Wiki entry on Customizing GRUB in Links and Guides below.</li>
+<li>Whichever method you choose, save the file and exit when you are done. The changes will take effect the next time the computer boots.</li></ul>
 <br />
 <br />
 
