@@ -6070,18 +6070,22 @@ provide access to software written for Windows on their desktop.  It is also use
 <p>Here is an overview of the basic steps to set up and run VirtualBox:</p>
 
 <ul>
-<li><strong>Prepare the machine</strong> -- You will need some packages before you can install and run VirtualBox.  Open a terminal, become root, and type or paste in these commands one at a time:
+<li><strong>Prepare the machine</strong> -- You will need some packages before you can install and run VirtualBox.  Open a terminal, become root, and type or paste in this command, which will pull in the necessary software:
 <pre>m-a prepare</pre>
 </li>
 
 <li><strong>Install VirtualBox</strong> -- This is most easily done with the MEPIS package from the repos, but it is also possible to download from the VirtualBox website.  Be sure to reboot after installation.
 </li>
 
-<li><strong>Create a Virtual Machine</strong> -- To create a virtual machine start VirtualBox, then click the <strong>New</strong> icon on the toolbar. You will need a Windows CD or a Linux ISO.  Follow the wizard, accepting all suggested settings unless you know better--you can always change them later.  Once the machine is set up, then click on <strong>Settings >CD/DVD Rom</strong>, and check the Mount box to point to the CD or the ISO.
+<li><strong>Create a Virtual Machine</strong> -- To create a virtual machine start VirtualBox, then click the <strong>New</strong> icon on the toolbar. You will need a Windows CD or a Linux ISO.  Follow the wizard, accepting all suggested settings unless you know better--you can always change them later.  Once the machine is set up, then you can select the mount point to be either the Host Drive or a Virtual CD/DVD Disk File (ISO).  See the instructions below for making those assignments.
 </li>
 
 <li><strong>Install Guest Additions</strong> -- Be sure to install VirtualBox GuestAdditions to your Guest OS by booting into the Guest OS, then clicking <strong>Devices >Install Guest Additions</strong> and pointing toward the <strong>VBoxGuestAdditions.iso</strong> that it will automatically locate.   This will allow you to enable sharing files between Guest and Host and to adjust your display in various ways so that it suits your environment and habits.
 </li>
+<li><strong>Install Extension Pack</strong> -- For VirtualBox V4.0 and greater, you should download and install the Oracle VM VirtualBox Extension Pack from the Oracle web site (see Links and Guides).  After the file is downloaded, navigate to it with Dolphin and click on the file's icon. The Extension Pack will install automatically.</li>
+<li><strong>Selecting Host Drive or Virtual CD/DVD Disk File</strong> – Under Settings > Storage, you will see a Storage Tree with an IDE Controller below it (you can also add a SATA Controller if you wish).  The IDE Controller will have a Primary Master, Primary Slave, Secondary Master and Secondary Slave.  A Hard Disk, which was created during the initial setup, will usually be assigned to Primary Master and a CD/DVD Drive will usually be assigned to the Secondary Master.  It looks something like this: 
+By clicking on the CD/DVD Drive icon in the Storage Tree, the CD/DVD Drive icon will appear in the Attributes section in the right side of the window.  Clicking on the CD/DVD Drive icon in the Attributes section will open a drop-down menu where you can assign the Host Drive or a Virtual CD/DVD disk file (ISO) to be mounted on the CD/DVD Drive.  (You can select a different ISO file by clicking on Choose a Virtual CD/DVD disk file and navigating to the file.)  The selected device will be mounted when you start the virtual machine; thus, if a bootable ISO file is mounted on the Secondary Master (with the Secondary Master as the first boot device), the virtual machine will boot from the ISO file when it is started.
+	While the virtual machine is running, you can change the mount point on the fly by clicking on 	Devices > CD/DVD Devices and selecting the device to be mounted from the drop-down menu.</li>
 </ul>
 
 <p>Excellent documentation is available through <em>Help</em> on the menu bar or as a PDF from the website.</p>
@@ -6096,6 +6100,8 @@ provide access to software written for Windows on their desktop.  It is also use
 http://en.wikipedia.org/wiki/Comparison_of_virtual_machines </a>
 </li>
 <li>VirtualBox home page: <a href=" http://www.virtualbox.org/ "> http://www.virtualbox.org/ </a>
+</li>
+<li>VirtualBox Extension Pack: <a href="http://www.virtualbox.org/wiki/Downloads"> http://www.virtualbox.org/wiki/Downloads </a>
 </li>
 <li>MEPIS Wiki: kernel headers:<a href="http://www.mepis.org/docs/en/index.php?title=Kernel_headers">http://www.mepis.org/docs/en/index.php?title=Kernel_header</a>
 </li>
