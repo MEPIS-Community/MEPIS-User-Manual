@@ -1668,6 +1668,9 @@ After a fresh installation many people find these first steps useful to get goin
 
 <!-- ###################  start unordered list ################# -->
 <ul class="link">
+<li>Easy installation of common software packages: <a href="http://www.mepis.org/docs/en/index.php?title=Smxi">
+http://www.mepis.org/docs/en/index.php?title=Smxi</a>
+</li>
 <li>Access the Windows side of a dual-boot: <a href="http://www.mepis.org/docs/en/index.php?title=Kwikdisk">
 http://www.mepis.org/docs/en/index.php?title=Kwikdisk</a>
 </li>
@@ -2336,7 +2339,7 @@ alone.  2) See <a href="index.html#section05-5">Section 5.5</a> for detailed dis
 <li><u>The latest Nvidia driver</u>: This is a proprietary driver that works with newer Nvidia cards - see the Nvidia Unix Portal page linked below for supported products list. </li>
 <li><u>The legacy Nvidia driver</u>: This is also a proprietary driver, but it works with older Nvidia cards (for Riva/TNT/GeForce 2 - use the 7xxx from the Nvidia website linked below. </li>
 <li><u>The NV driver</u>: This is an open-source driver from Xorg, but it lacks 3D support.</li> 
-<li><u>VESA</u>: This is a generic driver that provides basic functionality (2D, 1024x768 resolution) to most video cards. Use it for troubleshooting, or as a temporary driver before you use the script <strong>sgfxi</strong>.</li>
+<li><u>VESA</u>: This is a generic driver that provides basic functionality (2D, 1024x768 resolution) to most video cards. Use it for troubleshooting, or as a temporary driver before you upgrade.</li>
 </ul>
 
 <p>If you are using the proprietary drivers, you can set other options here such as dual monitor settings or shadow curser mode.</p> 
@@ -2505,8 +2508,10 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <p> Much of the adjustment of the typical display is carried out through the MEPIS X-Windows Assistant, see <a href="index.html#section05-3-4">Section 5.3.4</a>.  It is also possible to use RandRTray by clicking <strong>Start Menu > System > KRandRTray (Screen Resize &amp; Rotate)</strong>.  This section covers other configuration steps.</p>
 
 <h2>Graphic driver</h2>
-<p></p>
-
+<p>If you are not satisfied with your display performance, you may want to upgrade your graphic driver.  As we have seen the MEPIS X-Config Assistant can be used to do this.  Another method is to make use of a script called <strong>sgfxi</strong> that was developed by the user h-2 for standard system upkeep for Debian.  To get the script, open Konsole, become root, and enter:</p>
+<pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
+<p>Once you have this installed, you can use it to easily upgrade a Nvidia or ATI driver to the latest appropriate version.  Follow the directions in the Wiki, listed below.</p>  
+<p>Note that this is not an official MEPIS product.</p>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -2613,6 +2618,7 @@ http://us.download.nvidia.com/XFree86/Linux-x86/177.80/ README/chapter-06.html <
 </li>
 <li>MEPIS Wiki: GTK+: <a href="http://www.mepis.org/docs/en/index.php?title=Gtk"> http://www.mepis.org/docs/en/index.php?title=Gtk</a>
 </li>
+<li>MEPIS Wiki: Sgfxi: <a href="http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi">http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi</a></li>
 <li>MEPIS Wiki: Monitor and Display Setup: <a href="http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup"> http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup</a>
 </li>
 <li>KPowersave home page: <a href="http://sourceforge.net/projects/powersave/"> http://sourceforge.net/projects/powersave/ </a></li>
