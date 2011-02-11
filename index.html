@@ -2799,15 +2799,7 @@ http://www.mepis.org/docs</a></li>
 </ul>
 <p>Sometimes there is both a native Linux driver and a Windows driver available.  You may want to compare them for speed and connectivity, and you may have to remove the one you are not using to prevent a conflict.  For more information, see Links and Guides below.</p>
 
-<p>Wireless cards can be either internal or external.</p>
-<ul>
-<li>Some computers contain inexpensive internal modems that are designed only for use with MS-Windows.  These are called variously
-winmodems, linmodems or  softmodems. MEPIS Linux includes drivers for many common winmodems, but others may prove more difficult to
-configure.</li>
-<li>External serial wireless modems generally tend to work without problem. </li> 
-
-<li>USB modems (wireless dongles) usually show up on the rausb0 interface.</li>
-</ul>
+<p>Wireless cards can be either internal or external.  USB modems (wireless dongles) usually show up on the wlan interface, but if not then check others on the list.</p>
 
 
 <p>NOTE: The successful method varies for users because of the complicated interactions among the Linux kernel, wireless tools, and the local wireless card chipset and router.</p>
@@ -2844,7 +2836,7 @@ configure.</li>
 <ul>
 <li><strong>eth1</strong>, when a kernel module is being used and a wired interface exists</li>
 
-<li><strong>wlan0</strong>, when ndiswrapper is operating</li>
+<li><strong>wlan0</strong>, when ndiswrapper is operating and often when using native drivers</li>
 
 <li><strong>ra0</strong> for cards with Ralink 2500 chipsets using the native driver.  If an external device such as a dongle is being used, this will show up as <strong>rausb0</strong></li>
 
@@ -2859,7 +2851,7 @@ For a full list, consult the Debian Wiki on Wifi linked below.</li>
 
 <li>Search out any conflicts between drivers: 1) if you have a Broadcom chipset, use MEPIS Network Assistant to turn off all drivers except the one you want to use; 2) Atheros-based chipsets can cause more than one module to be loaded, preventing a proper connection.</li>
 
-<li>Try another connection manager such as Wicd or Ceni.  Wicd is a popular choice for many Linux distributions, and can be gotten from the MEPIS repositories.  Ceni must be downloaded from the link below and installed; it is particularly useful for hidden access points and other difficult situations.  Please note that MEPIS can not guarantee the performance of these applications.</li>
+<li>Try another connection manager such as <strong>Wicd</strong> or <strong>Ceni</strong>.  Wicd (wicd-gtk is a nice graphical app) is a popular choice for many Linux distributions, and can be gotten from the MEPIS repositories.  Ceni is in the Community Repository; it is particularly useful for hidden access points and other difficult situations.  Please note that MEPIS can not guarantee the performance of these applications.</li>
 
 </ul></li>
 
@@ -2872,7 +2864,7 @@ For a full list, consult the Debian Wiki on Wifi linked below.</li>
 
 <li>Although we would like to use native drivers, in some cases you will want or need to use ndiswrapper and a Windows driver.  This may be because you can't otherwise connect, or because the connection is better.  See below for details.</li>
 
-<li>For some cards it is necessary to install firmware, the small programs and data structures that internally control the electronic components.  MEPIS comes with quite a bit of firmware already available, but you may have to track down your particular need (for Intel-based chipsets, for example).  Use the LinuxWireless website linked below.</li>
+<li>For some cards it is necessary to install firmware, the small programs and data structures that internally control the electronic components.  MEPIS comes with quite a bit of firmware already available, but you may have to track down your particular need.  Use the LinuxWireless website linked below.</li>
 
 <li>Open a terminal and type <pre>dmesg | grep net</pre> and look for any error message.</li>
 
@@ -3003,7 +2995,7 @@ http://www.mepis.org/docs/en/index.php?title=Guarddog </a></li>
 <p>It also offers some other services for interfacing with Windows networks, such as domain authentication, messaging services, and netbios name resolution.  Finally, it provides an easy method of connecting Linux machines to each other and even to Mac machines.</p>
 <p>Password protection is enabled by clicking <strong>Start Menu > Settings > System Settings > Sharing</strong>, and entering a default user name and password.  To configure shares for Windows, right-click the desktop >Run Command, and enter:</p>
  <pre>kdesu systemsettings</pre>
-<p>Enter root's password, then click on the Advanced tab > Samba.</p>
+<p>Enter root's password, then click on Sharing > Samba.</p>
 <p>Setup in MEPIS Linux is very easy.  Use Dolphin to navigate to the folder/directory you want to share.  Right-click and select Properties.  Click on the Share tab, then on the button Configure File Sharing.  Provide root's password, and then define the users and folders available to Samba.</p>
 
 <ul> <!--list 1 -->
