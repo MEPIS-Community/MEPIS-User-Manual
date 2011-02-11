@@ -1659,7 +1659,7 @@ After a fresh installation many people find these first steps useful to get goin
 <li> <a href="index.html#section05-6-1-1">Wired internet connection (Section 5.6.1.1)</a></li>
 <li> <a href="index.html#section05-6-1-2">Wireless internet connection (Section 5.6.1.2) </a></li>
 <li> <a href="index.html#section05-5">Adjusting fonts and display resolution  (Section 5.5)</a></li>
-<li> <a href="index.html#section05-7">Sound and multimedia configuration (Section 5.7)</a></li>
+<li> <a href="index.html#section05-7">Sound configuration (Section 5.7)</a></li>
 <li> <a href="index.html#section05-9">Set language, keyboard, time format and other locale items(Section 5.9)</a></li>
 </ul>
 <!-- ###################  end unordered list ################# -->
@@ -1726,13 +1726,14 @@ http://www.mepis.org/docs/en/index.php?title=Change_Wallpaper</a>
 <!-- ###################  start ordered list ################# -->
 <ol>
 <li>Switch on your camera in 'play' mode and connect it to your computer.</li>
-<li>Click System Settings > Digital Camera, and you will usually see your camera icon already there.</li>
+<li>Click <strong>Start Menu > System > System Settings > Digital Camera</strong>, and you will usually see your camera icon already there.</li>
 <li>If it is not there, you can add it manually by clicking the menu camera icon and finding your camera in the list.</li></ol>
 <p>Retrieving images from your camera is easy:</p>
 <ol><li>Most cameras will be recognized by the Device Notifier in the System Tray on the right side of the panel, which will send up a notification that a new storage device has been connected, and it will carry the name of your camera.  Click on that device, and then select "Open with Dolphin" from the items on the list.</li>
 <li>Alternatively, click <strong>Start Menu > Graphics > Gwenview (Image Viewer)</strong>, and you will see your camera listed under Places.</li>
 <li>A third possibility is to install Digikam from the repos.  It will likely recognize your camera and allow you to import images.</li>
 <li>Some brands (Kodak, for example) or models sometimes present particular problems, and may require a manual edit of the rules governing how plug-in devices are handled.  See the Wiki link below for Kodak cameras on how to do that.</li>
+<li>Occasionally, it may be necessary to explore your camera's menu in order to change the connection type from PTP to USB.</li>
 </ol>
 <!-- ###################  end ordered list ################# -->
 
@@ -1742,10 +1743,10 @@ hard or floppy disk.</p>
 <br /><br />
 
 <h2 class="05-2-1_troubleshooting">Troubleshooting</h2>
-System >
+
 <!-- ###################  start unordered list ################# -->
 <ul>
-<li>Make sure your user-id appears in the camera group (create it if necessary) using Start Menu > KUser.</li>
+<li>Make sure your user-id appears in the camera group (create it if necessary) using <strong>Start Menu > System > KUser</strong>.</li>
 <li>If your camera does not appear, check to see if it is on the USB device list linked below.
 </li>
 <li>Google for the keywords "gphoto2 YourCameraMake YourCameraModel". Look for a changelog that includes your model. Check the version of the changelog and compare it to the output of typing this into a terminal:
@@ -2050,10 +2051,10 @@ libpisock9
 <br /><br />
 
 <h2 id="s05-2-6_blackberry">RIM Blackberry devices</h2>
-<p>There is no official method of synching a BlackBerry device with Linux, but there is group working on the problem called the Barry Project.  At the moment, the Project's critical software <strong>barryutil</strong>strong> is not directly available for MEPIS 11, but check the Wiki and the Forum for updates.</p>
+<p>There is no official method of synching a BlackBerry device with Linux, but there is group working on the problem called the Barry Project.  The Project's critical software <strong>barry-util</strong> is available from the Community Repositories for MEPIS 11, and usage details can be found in the Wiki.</p>
 
 <h2 id="s05-2-6_other_pdas">Other devices</h2>
-<p>At the present, synching a PDA that runs Windows Mobile is somewhat difficult. However, there are active projects working on this and you can use Bluetooth to move files.  Check the sites linked below for new developments.  Likewise, there currently is no easy way to sync Nokia phones with the desktop.  In both cases, the use of a cloud application may be the easiest way.</p>
+<p>At the present, synching a PDA that runs Windows Mobile is difficult. However, there are active projects working on this.  Check the sites linked below for new developments.  Likewise, there currently is no easy way to sync Nokia phones with the desktop.  In both cases, you can use Bluetooth to move files and a cloud application for such things as contacts, calendars, etc.</p>
 
 <h2 id="s05-2-6_links">Links and Guides for Section 5.2.6</h2>
 
@@ -2503,6 +2504,10 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <h1  id="section05-5">5.5:&nbsp;&nbsp;&nbsp;&nbsp; Display </h1>
 <p> Much of the adjustment of the typical display is carried out through the MEPIS X-Windows Assistant, see <a href="index.html#section05-3-4">Section 5.3.4</a>.  It is also possible to use RandRTray by clicking <strong>Start Menu > System > KRandRTray (Screen Resize &amp; Rotate)</strong>.  This section covers other configuration steps.</p>
 
+<h2>Graphic driver</h2>
+<p></p>
+
+
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
 <ol>
@@ -2519,6 +2524,12 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <ol>
 <li>Open Firefox and click on the menu bar <strong>Edit > Preferences >Content</strong></li>
 <li>Make any desired changes. </li>
+</ol>
+
+<h4><u>Opera</u></h4>
+<ol>
+<li>Open Opera and type in the navigation panel: <strong>about:config</strong></li>
+<li>Enter "font" in the search box, and make any desired changes. </li>
 </ol>
 
 <h4><u>GTK fonts</u></h4>
@@ -2560,7 +2571,7 @@ NOTE: You may need to resize the window to see the <strong>Install</strong> butt
 <br />
 
 <h2 id="s05-5_laptop"> Laptops </h2>
-<p>The action initiated by closing the lid of a laptop is set by default to Suspend to Ram after 15 minutes.  You can alter that behavior by clicking <strong>Start Menu > Settings > System Settings > Advanced > Power Management > Edit Profiles</strong>.</p>
+<p>The action initiated by closing the lid of a laptop is set by default to Suspend to Ram after 15 minutes.  You can alter that behavior by clicking <strong>Start Menu > Settings > System Settings > Power Management > Edit Profiles</strong>.</p>
 
 <p>There is a small tool for changing the display on the fly that is handy when using a laptop. Located by clicking  <strong>Start Menu > System > KRandRTray (Screen Resize &amp; Rotate)</strong>.  It sits in the system tray, and allows you to
 conveniently alter screen size, orientation or refresh rate.</p>
@@ -4085,10 +4096,14 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#File_Sharing </a></p
 <br />
 
 <h2 id="s08-01_ftp">FTP</h2>
-<p>You have a number of choices for FTP transfer in MEPIS Linux. You can use one of the browsers installed by default; for Firefox, there is also a useful FTP extension called FireFTP that provides increased functionality. Alternatively, you can install a dedicated FTP client from the repos. See also Bluetooth, below.</p>
+<p>You have a number of choices for FTP transfer in MEPIS Linux (see also Bluetooth, below).</p>
+<ul><li>Click <strong>Start Menu > Internet > Konqueror</strong>, details in the Handbook.</li>
+<li>Click <strong>Start Menu > Internet > KFTPgrabber</strong>, details in the Handbook</li>
+<li> Install the Firefox extension called FireFTP.</li>
+<li>Install any other FTP client you like from the repos.</li></ul> 
 <ul class="link">
 <li>FireFTP home page:&nbsp; <a href="http://fireftp.mozdev.org/"> http://fireftp.mozdev.org/ </a></li>
-<li>gFTP home page:&nbsp; <a href="http://gftp.seul.org/"> http://gftp.seul.org/ </a></li>
+<li>KFTPgrabber home page:&nbsp; <a href="http://www.kftp.org/"> http://www.kftp.org/ </a></li>
 <li>Wikipedia: FTP: <a href= "http://en.wikipedia.org/wiki/Ftp"> http://en.wikipedia.org/wiki/Ftp </a></li>
 </ul>
 
