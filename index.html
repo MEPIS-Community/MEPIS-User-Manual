@@ -2941,12 +2941,11 @@ http://www.mepis.org/docs</a></li>
 <br />
 
 <h2>Software</h2>
-<p>Most firewall programs available for MEPIS Linux are merely frontends for Netfilter/iptables, the network filtering module in newer Linux kernels. So, the real differences among different firewalls are the way the interface works and what options are available. Here are several alternatives: (See Links and Guides for more details)</p>
+<p>Most firewall programs available for MEPIS Linux are merely frontends for Netfilter/iptables, the network filtering module in newer Linux kernels. So, the real differences among different firewalls are the way the interface works and what options are available. Here are several alternatives to consider (details in Wiki): </p>
 
 <ul>
 <li>Firestarter</li>
 <li>Guarddog</li>
-<li>Webmin</li>
 <li>Kmyfirewall</li>
 </ul>
 
@@ -2971,7 +2970,6 @@ http://www.simonzone.com</a></li>
 http://www.mepis.org/docs/en/index.php?title=Firestarter </a></li>
 <li>MEPIS Wiki: Guarddog: <a href=" http://www.mepis.org/docs/en/index.php?title=Guarddog ">
 http://www.mepis.org/docs/en/index.php?title=Guarddog </a></li>
-<li>MEPIS Wiki: Webmin: <a href=" http://www.mepis.org/docs/en/index.php?title=Webmin "> http://www.mepis.org/docs/en/index.php?title=Webmin</a></li>
 <li>Kmyfirewall home page: <a href=" http://kmyfirewall.sourceforge.net/ "> http://kmyfirewall.sourceforge.net/</a></li>
 </ul>
 
@@ -3129,10 +3127,10 @@ repositories.</p>
 <br />
 
 <h2 id="s05-6-4_vpn">VPN</h2>
-<p>Installing the <strong>Kvpnc</strong> (see Section 7.2) allows you to easily manage VPN connections in a graphic environment. Follow these steps to connect with Kvpnc:</p>
+<p>Install <strong>Kvpnc</strong> from the repositories to easily manage VPN connections in a graphic environment. Follow these steps to connect with Kvpnc:</p>
 
 <ol>
-<li>Click <strong>Start Menu > Settings > System Settings > Network Settings > Vpn tab</strong>.</li>
+<li>Click <strong>Start Menu > Settings > System Settings > Network Settings > Network Connections, VPN tab</strong>.</li>
 <li>Click <strong>Add</strong> and choose the VPN type from the pull-down menu.</li>
 <li>Fill in the boxes on the Network Connection screen as appropriate.</li>
 <li>Click <strong>OK</strong> to save the profile, then click the <strong>Apply</strong> button to connect.</li>
@@ -3149,7 +3147,7 @@ vpnc
 <br /><br />
 
 <h2 id="s05-6-4_remote">Remote Desktop</h2>
-<p>Remote desktop connections can be managed with the package <strong>Start Menu > Internet > KRDC (Remote Desktop Client)</strong>, installed by default. Follow these steps to connect:</p>
+<p>Remote desktop connections can be managed by clicking <strong>Start Menu > Internet > KRDC (Remote Desktop Client)</strong>. Follow these steps to connect:</p>
 
 <ol>
 <li>Click <strong>Start Menu > Internet > KRDC</strong>.</li>
@@ -3182,7 +3180,25 @@ vpnc
 
 <p>Linux has many different ways of interacting with audio hardware. The main two are the Advanced Linux Sound Architecture (ALSA) and the Open Sound System (OSS). KDE builds on these low-level systems with its own Phonon API which all KDE multimedia programs use for playing sound.  Fortunately, MEPIS chooses the most appropriate audio settings automatically and you do not need to worry about the details.</p>
 
-<h2  id="s05-7_restricted">Restricted formats</h2>
+<h2 id="s05-7_basic">Basic configuration</h2>
+<p>KMix is the recommended way to adjust the details of your sound.</p>
+ 
+<ol>
+<li>Open KMix by clicking <strong>Start Menu > Multimedia > KMix</strong>, or by clicking the speaker icon in the system tray (right side of the panel) and then on <strong>Mixer</strong>.</li> 
+<li>On the tab that may carry the name of your soundcard, make sure the Master volume (on the far left) is turned up.</li> 
+<li>Also, make sure PCM is turned up (the control with the blue squiggly line above it).  You can hover your cursor over the icons to find out what they mean.</li> 
+<li>Make sure that the Mute checkbox next to the slider controls is not ticked.</li>
+<li>On the menu bar click <strong>Settings >Configure Kmix</strong> and make certain that <strong>Restore volumes on login</strong> is
+checked.</li>
+</ol>
+<p>You can also check that your audio hardware is working correctly in <strong>Start Menu > Settings > System Settings > Multimedia</strong>. Click on the "Music" category in the left-hand panel and select a device in the right-hand panel (there may be more than one). Click "Test" to verify that each device is working correctly. You can determine the primary soundcard by adjusting its priority with the "Defer" button.</p>
+
+<p>NOTE: you cannot play an audio CD by clicking on the CD-ROM icon on the desktop.  You must use an installed player (see <a href="index.html#section08-02">Section 8.2: Multimedia</a>).</p>
+
+<br />
+<br />
+
+<h2  id="s05-7_restricted">Multimedia restricted formats</h2>
 <p>People wishing to play back video and audio files in proprietary formats will need to install this packages:</p>
 
 <pre>
@@ -3198,30 +3214,14 @@ deb http://www.debian-multimedia.org squeeze main
 
 <br /><br />
 
-<h2 id="s05-7_basic">Basic configuration</h2>
-<p>KMix is the recommended way to adjust the details of your sound.</p>
- 
-<ol>
-<li>Open KMix by clicking <strong>Start Menu > Multimedia > KMix</strong>, or by clicking the speaker icon in the system tray (right side of the panel) and clicking on <strong>Mixer</strong>.</li> 
-<li>On the Output tab that may carry the name of your soundcard, make sure the Master volume (on the far left) is turned up.</li> 
-<li>Also, make sure PCM is turned up (the control with the blue squiggly line above it).  You can hover your cursor over the icons to find out what they mean.</li> 
-<li>Make sure that the Mute checkbox next to the slider controls is not ticked.</li>
-<li>On the menu bar click <strong>Settings >Configure Kmix</strong> and make certain that <strong>Restore volumes on login</strong> is
-checked.</li>
-</ol>
-<p>You can also check that your audio hardware is working correctly in <strong>Start Menu > Settings > System Settings > Multimedia</strong>. Click on the "Music" category in the left-hand panel and select a device in the right-hand panel (there may be more than one). Click "Test" to verify that each device is working correctly. You can determine the primary soundcard by adjusting its priority with the "Defer" button.</p>
 
-<p>NOTE: you cannot play an audio CD by clicking on the CD-ROM icon on the desktop.  You must use an installed player (see <a href="index.html#section08-02">Section 8.2: Multimedia</a>).</p>
-
-<br />
-<br />
 
 <h2 id="s05-7_system">System sounds</h2>
 <p>You can control KDE system-wide sound settings by following these steps:</p>
 
 <ol>
-<li>Click <strong>Start Menu > Settings > System Settings > Notifications</strong></li>
-<li>Click on any event in System Notifications section to make any changes.</li>
+<li>Click <strong>Start Menu > Settings > System Settings > Application and System Notifications > Event Source</strong></li>
+<li>Click on any Event source to make any changes.  If you don't want to hear the initial music notes when the desktop comes up, for instance, you would select KDE Workspace as the event source, then highlight Login and uncheck Play a sound below.</li>
 </ol>
 
 
@@ -3243,8 +3243,7 @@ you your card manufacturer and model. Here is an example of output:</p>
 0000:00:1f.5 Multimedia audio controller: Intel Corp 82801EB/ER (ICH5)
 </pre>
 
-<p>With this information, you can use the MEPIS Wiki sound driver
-database listed below to track down more information and help, or turn to other resources linked below.  In rare cases, you may have to load a module for your card following the directions linked below.</p>
+<p>With this information, you can use the MEPIS Wiki to track down more information and help, or ask on the Forum.  In rare cases, you may have to load a module for your card following the directions linked below.</p>
 
 <p>NOTE: Many of the drivers do not include the <strong>snd-</strong> prefix; you will need to add that to get the actual module name.</p>
 
@@ -3252,7 +3251,6 @@ database listed below to track down more information and help, or turn to other 
 <li>MEPIS Wiki: Sound not working at all: <a href=" http://www.mepis.org/docs/en/index.php?title=Sound_not_working "> http://www.mepis.org/docs/en/index.php?title=Sound_not_working </a></li>
 <li>MEPIS Wiki: Unsupported file types: <a href=" http://www.mepis.org/docs/en/index.php?title=Converting_unsupported_file_types ">at http://www.mepis.org/docs</a></li>
 <li>MEPIS Wiki: Loading a sound module: <a href=" http://www.mepis.org/docs/en/index.php?title=Loading_a_module "> http://www.mepis.org/docs/en/index.php?title=Loading_a_module </a></li>
-<li>MEPIS Wiki: Soundblaster Extigy: <a href=" http://www.mepis.org/docs/en/index.php?title=Soundblaster_Extigy "> http://www.mepis.org/docs/en/index.php?title=Soundblaster_Extigy</a></li>
 </ul>
 
 <br /><br />
