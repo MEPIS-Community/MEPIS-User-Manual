@@ -1568,13 +1568,9 @@ to go to Glossary entry."> MBR </a> (master boot record at the very beginning of
 
 <!-- ###################  start unordered list ################# -->
 <ul class="link">
-<li>Active@ Partition Recovery for DOS: <a href="http://www.partition-recovery.com/"> http://www.partition-recovery.com/</a>
-</li>
-<li>MEPIS Wiki: GRUB: <a href="http://www.mepis.org/docs/en/index.php?title=GRUB"> http://www.mepis.org/docs/en/index.php?title=GRUB</a>
-</li>
 <li>Windows Recovery Console: <a href="http://support.microsoft.com/kb/314058">http://support.microsoft.com/kb/314058</a></li>
-<li>Bootrec.exe tool for Windows Vista: <a href="http://support.microsoft.com/kb/927392">
-http://support.microsoft.com/kb/927392</a>
+<li>Active@ Partition Recovery for DOS: <a href="http://www.partition-recovery.com/"> http://www.partition-recovery.com/</a></li>
+<li>Bootrec.exe tool for Windows Vista: <a href="http://support.microsoft.com/kb/927392">http://support.microsoft.com/kb/927392</a>
 </li>
 </ul>
 <!-- ###################  end unordered list ################# -->
@@ -3344,12 +3340,20 @@ http://www.bluez.org/about/ </a>
 <li>Troubleshoot hardware devices.</li>
 </ul>
 
-<p>The default program to run a terminal in a  MEPIS Linux KDE desktop window is <strong>Konsole</strong>, which can be found at <strong>Start Menu > System > Konsole (Terminal)</strong>.</p>
-
+<p>The default program to run a terminal in a  MEPIS Linux KDE desktop window is <strong>Konsole</strong>, which can be found at <strong>Start Menu > System > Konsole (Terminal)</strong>.  Some commands are only recognized for super user (root), while others may vary the output depending on user.  To obtain temporary root permissions:</p>
+<ul>
+<li>open Konsole.</li>
+<li>type <strong>su</strong>.</li>
+<li>enter root's password</li>
+</ul>
+<p>You will recognize when Konsole is running with root privileges by looking at the prompt line right before the space where you type.  Instead of a <strong>&#036;</strong>, you will see a <strong>&#035;</strong>; in addtion, the font color changes to red.</p> 
+<p>NOTE: if you try to run as a regular user a command that requires root privileges such as <strong>hwinfo</strong>, you will receive an error message that the command was not found.  </p>
 <br />
 <br />
 
 <h2 id="s06-1_first">First steps</h2>
+<p>For more information on running Konsole for solving system problems, please refer to the topic <strong>Troubleshooting</strong> at the end of this section.  Also, it is advisable to make backups of the files you are working on as a root user with the commands <strong>cp</strong> and <strong>mv</strong> (see below).</p>
+
 <p>Though console commands can be fairly complex, understanding the command line is just a matter of putting together simple things.  To see
 how easy it can be, open Konsole and try a few basic commands. This will all make more sense if you do it as a tutorial exercise rather
  than just reading it.  Let's start with a simple command: <strong>ls</strong>, which lists the contents of a directory. The basic command
@@ -3394,7 +3398,7 @@ in a text file for use at a later time?</p>
 <pre>
 ls -l /usr/bin/ &#124; grep fire > FilesOfFire.txt
 </pre>
-<p>This command now instructs your computer to make a detailed list of all the files that contain the word "fire" and to create a text file containing that list.  As you can see, the console can be used to perform complex tasks very easily by joining simple commands together in different ways.</p>
+<p>This command now instructs your computer to make a detailed list of all the files that contain the word "fire" in a particular directory, and to create a text file containing that list, in this case named "FilesOfFire.txt".  As you can see, the command line can be used to perform complex tasks very easily by combining simple commands in different ways.</p>
 
 
 <br /><br />
@@ -3477,7 +3481,7 @@ with a pipe, e.g. <strong>cat somefile.txt &#124; grep <em>somestring</em></stro
 <br /><br />
 
 <h2 id="s06-1_troubleshooting">Troubleshooting</h2>
-<p>For most new Linux users, the command line is mainly used as a troubleshooting tool.  Terminal commands give quick, detailed information that can be easily pasted into a forum post, search box, or email when seeking help on the web.  Here are some common troubleshooting commands. Some of them may not output information, or not as much information unless you are <a href="index.html#s12-1_rootuser " class="spterm"  title="see glossary for &ldquo;root user&rdquo;">logged in as root</a>.</p>
+<p>For most new Linux users, the command line is mainly used as a troubleshooting tool.  Terminal commands give quick, detailed information that can be easily pasted into a forum post, search box, or email when seeking help on the web. It is strongly recommended that you keep this information at hand when asking for help.  Being able to refer to your specific hardware configuration will not only speed up your process of obtaining help, but also it will let others offer you more accurate solutions. Here are some common troubleshooting commands. Some of them may not output information, or not as much information unless you are <a href="index.html#s12-1_rootuser " class="spterm"  title="see glossary for &ldquo;root user&rdquo;">logged in as root</a>.</p>
 
 <table>
 <tr>
@@ -3543,6 +3547,7 @@ in the terminal's <strong>most</strong> pager, meaning that only one screenful o
 </ul>
 
 <br /><br />
+
 
 
 <h2 id="s06-1_links">Links and Guides for Section 6</h2>
