@@ -1552,22 +1552,7 @@ to go to Glossary entry."> MBR </a> (master boot record at the very beginning of
 <!-- ###################  start unordered list ################# -->
 <ul>
 
-<li>With Windows XP and later, you need to boot into the Windows Recovery console on the hard drive in the following manner:
-<ol><li>Insert the Windows XP CD into your CD drive and restart your computer. If you are prompted, select any options required to start (boot) from the CD.</li>
-<li>When the text-based part of Setup begins, follow the prompts. Select the repair or recover option by pressing R.</li>
-<li>If you have a dual-boot or multiboot system, select the installation that you want to access from the Recovery Console.</li>
-<li>When you are prompted, type the Administrator password.  Usually your admin password is blank, so just hit Return.</li>
-<li>At the command prompt, type Recovery Console commands, and then you can refer to the commands that are listed in the "Available commands within Windows Recovery Console" section.</li>
-<li>Try <strong>fixboot</strong> first, which re-writes the boot record</li>
-<li>If that does not work, then try <strong>fixmbr</strong>.  This may damage a partition table that it doesn't understand, so it is usually recommended to use this only when there is a single partition.</li>
-<li>Finally, run <strong>CHKDSK /P C</strong>.</li></ol>
-</li>
-
-<li>If the Windows Recovery console isn't available by default, you can create it in Windows by finding WINNT32.EXE on the install CD and running this from the Windows command line, rebooting afterwards:
-<pre>C:\I386\WINNT32.EXE /cmdcons</pre>
-NOTE: once installed from the I386 folder on the CD, the program WINNT32.EXE resides on the hard drive in \WINDOWS\system32\.
-<br />&nbsp;
-</li> 
+<li>With Windows XP and later, you need to boot into the <strong>Windows Recovery Console</strong>.  Follow the link below for up-to-date details.</li>
 
 <li>If you do not have the Windows CD, you can repair the MBR with third-party software such as Active@ Partition Recovery for DOS (link below). You need the commercial version for this feature, and it may require that you had backed up the MBR.
 </li>
