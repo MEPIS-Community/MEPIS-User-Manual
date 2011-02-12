@@ -1552,34 +1552,24 @@ to go to Glossary entry."> MBR </a> (master boot record at the very beginning of
 <!-- ###################  start unordered list ################# -->
 <ul>
 
-<li>
-For XP, you do that by booting the Windows install CD and picking the repair option. Once you get to a DOS screen you can issue the command:
-<pre>fixmbr</pre>
+<li>With Windows XP and later, you need to boot into the Windows Recovery console on the hard drive in the following manner:
+<ol><li>Insert the Windows XP CD into your CD drive and restart your computer. If you are prompted, select any options required to start (boot) from the CD.</li>
+<li>When the text-based part of Setup begins, follow the prompts. Select the repair or recover option by pressing R.</li>
+<li>If you have a dual-boot or multiboot system, select the installation that you want to access from the Recovery Console.</li>
+<li>When you are prompted, type the Administrator password.  Usually your admin password is blank, so just hit Return.</li>
+<li>At the command prompt, type Recovery Console commands, and then you can refer to the commands that are listed in the "Available commands within Windows Recovery Console" section.</li>
+<li>Try <strong>fixboot</strong> first, which re-writes the boot record</li>
+<li>If that does not work, then try <strong>fixmbr</strong>.  This may damage a partition table that it doesn't understand, so it is usually recommended to use this only when there is a single partition.</li>
+<li>Finally, run <strong>CHKDSK /P C</strong>.</li></ol>
 </li>
 
-<li>If you do not have the Windows CD, you can repair the MBR with third-party software such as Active@ Partition Recovery for DOS (link below).  You may need to have backed up the MBR.
-</li>
-
-<li>Alternatively, you can boot into the Windows Recovery console on the hard drive, and run fixmbr from there.  For booting, use the MEPIS Live DVD and run grub from the command line.  Then enter the following commands from the grub prompt:
-<pre>
-root (hd0,0)
-chainloader +1
-boot
-</pre>
-NOTE: (hd0,0) may have to be changed, depending on which disk/partition Windows is installed.
-<br />&nbsp;
-</li>
-
-<li>If the Windows Recovery console isn't available by default, you can create it in Windows by finding WINNT32.EXE and running this from the Windows command line and rebooting afterwards:
+<li>If the Windows Recovery console isn't available by default, you can create it in Windows by finding WINNT32.EXE on the install CD and running this from the Windows command line, rebooting afterwards:
 <pre>C:\I386\WINNT32.EXE /cmdcons</pre>
-NOTE: The I386 folder may appear in different places on different systems.
+NOTE: once installed from the I386 folder on the CD, the program WINNT32.EXE resides on the hard drive in \WINDOWS\system32\.
 <br />&nbsp;
 </li> 
- 
-<li>Alternatively, the MEPIS Live DVD has a built-in application, ms-sys, to restore the Windows 2000/XP/2003 MBR on the hard disk.  Run this command from the Konsole (terminal) as root:
-<pre> ms-sys -m /dev/sda</pre>
-NOTE: if the boot disk is different than sda, then change the name accordingly.
-<br />&nbsp;
+
+<li>If you do not have the Windows CD, you can repair the MBR with third-party software such as Active@ Partition Recovery for DOS (link below). You need the commercial version for this feature, and it may require that you had backed up the MBR.
 </li>
 
 <li>For Windows Vista, follow the link below on how to use the Bootrec.exe tool.
@@ -1597,8 +1587,7 @@ NOTE: if the boot disk is different than sda, then change the name accordingly.
 </li>
 <li>MEPIS Wiki: GRUB: <a href="http://www.mepis.org/docs/en/index.php?title=GRUB"> http://www.mepis.org/docs/en/index.php?title=GRUB</a>
 </li>
-<li>Windows Recovery Console: <a href="http://support.microsoft.com/kb/307654">
-http://support.microsoft.com/kb/307654</a></li>
+<li>Windows Recovery Console: <a href="http://support.microsoft.com/kb/314058">http://support.microsoft.com/kb/314058</a></li>
 <li>Bootrec.exe tool for Windows Vista: <a href="http://support.microsoft.com/kb/927392">
 http://support.microsoft.com/kb/927392</a>
 </li>
