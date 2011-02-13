@@ -1238,7 +1238,7 @@ installation.</li>
 <h3 id="s04-1_license">License and Terms  </h3>
 <p>Read through the license and terms of use.  Note that Warren Woodford released the source code for the proprietary Installer and System Assistants under the Apache License in the Fall of 2008.  Check <em>I agree to the Terms</em> and click <strong>Next.</strong></p>
 
-<h3 id="s04-1_pg1">Page 1</h3>
+<h3 id="s04-1_pg1">Page 1 (Disk, Partitions, and Type of Installation)</h3>
 <p>Select the disk on which you wish to install MEPIS Linux. Refer to <a href="index.html#section03-5">Section 3.</a> if you are not sure what the Linux hard drive names mean. What you do next is determined by how you wish to set up your computer:</p>
 
 <!-- ###################  start unordered list ################# -->
@@ -1254,27 +1254,27 @@ If you are installing MEPIS Linux to a dual-boot with another operating system, 
 </ul>
 <!-- ###################  end unordered list ################# -->
 
-<h3 id="s04-1_pg2">Page 2</h3>
+<h3 id="s04-1_pg2">Page 2 (Partitions and Preferences)</h3>
 <p>If you chose <strong>Auto-install using entire disk</strong> on the last page, you will not see this page.  Skip to the next step.  </p>
 
 <!-- ###################  start unordered list ################# -->
 <ul>
 <li>
-<strong>Page 2(a):&nbsp;&nbsp;  </strong>If you chose <strong>custom install on existing partitions,</strong> you will now be prompted to select the partitions to install MEPIS Linux. Specify the <strong>root</strong> and <strong>swap</strong> partitions you have set up previously; if you have set up a separate partition for your <a href="index.html#s12-1_home-dir" class="spterm" title="Click to go to glossary entry." > home directory,</a>  specify it here, otherwise set <strong>home</strong> to &ldquo;root&rdquo;.
+<strong>Page 2a (Choose Partitions):&nbsp;&nbsp;  </strong>If you chose <strong>custom install on existing partitions,</strong> you will now be prompted to select the partitions to install MEPIS Linux. Specify the <strong>root</strong> and <strong>swap</strong> partitions you have set up previously; if you have set up a separate partition for your <a href="index.html#s12-1_home-dir" class="spterm" title="Click to go to glossary entry." > home directory,</a>  specify it here, otherwise set <strong>home</strong> to &ldquo;root&rdquo;.
 </li>
 <li>
-<strong>Page 2(b):&nbsp;&nbsp;  </strong> Check &ldquo;Preserve data in /home&rdquo; if you are doing an upgrade
-and already have data in an existing home partition; note that this option is not recommended. Select <strong>Check for badblocks</strong> if you want to do a scan for physical defects on the harddrive during formatting. This <em>is</em> recommended. Finally, you can optionally select the type of filesystem you want to use on the hard drive. If you don't know what to choose here, the default <strong>ext3</strong> is recommended. ext4 is also available (see Section 10.1).
+<strong>Page 2b (Preferences):&nbsp;&nbsp;  </strong> Check &ldquo;Preserve data in /home&rdquo; if you are doing an upgrade
+and already have data in an existing home partition; note that this option is not recommended. Select <strong>Check for badblocks</strong> if you want to do a scan for physical defects on the harddrive during formatting. This <em>is</em> recommended. Finally, you can optionally select the type of filesystem you want to use on the hard drive. If you don't know what to choose here, the default <strong>ext3</strong> is recommended.  In MEPIS Linux for the first time, ext4 is available (see Section 10.1).
 </li>
 </ul>
 <!-- ###################  end unordered list ################# -->
 
-<h3 id="s04-1_pg3">Page 3</h3>
+<h3 id="s04-1_pg3">Page 3 (Installation in Progress)</h3>
 <p>MEPIS Linux will now begin the install. You will be prompted to
 confirm the formatting of each partition (or the entire disk). Answer &ldquo;YES&rdquo; to each, then
 sit back, relax and read the informational messages while MEPIS Linux is copied to your hard drive. </p>
 
-<h3 id="s04-1_pg4">Page 4</h3>
+<h3 id="s04-1_pg4">Page 4 (Select Boot Method)</h3>
 <p>You now need to install GRUB, the bootloader (see <a href="index.html#section05-4"> Section 5.4</a>). In most cases, you should go with the
 default setting (MBR).  Select <strong>root</strong> if you are an expert, as you will need to manually edit the existing boot loader to boot to MEPIS Linux, either directly or by <a
 href="index.html#s12-1_chainloading" class="spterm" title="Click to go to Glossary entry."> chainloading</a>. </p>
@@ -1285,7 +1285,7 @@ disk.&rdquo; Usually this will be the first drive on the system (sda). </p>
 <p>NOTE: The <strong>initrd</strong> option refers to an <em>initial RAM drive,</em> a virtual hard drive created in the system's memory that
 allows the kernel to load special driver modules required to read the boot device (hard drive). It is the default setting.</p>
 
-<h3 id="s04-1_pg5">Page 5</h3>
+<h3 id="s04-1_pg5">Page 5 (Common Services to Enable)</h3>
 <p>On this page you can enable or disable a few common services:</p>
 
 <!-- ###################  start unordered list ################# -->
@@ -1303,19 +1303,21 @@ it as a print server.
 </ul>
 <!-- ###################  end unordered list ################# -->
 
-<h3 id="s04-1_pg6">Page 6</h3>
+<h3 id="s04-1_pg6">Page 6 (Computer Network Names)</h3>
 <p>Here is where you specify your computer's name and domain. On most home networks the domain does not matter; however, if you are
 on a large corporate network, or your network has its own internal DNS server, you can set your domain name here.</p>
 
 <p>You can also enable or disable the Samba server and configure the  Samba workgroup (see <a href="index.html#section05-6-3">Section 5.6.3</a>). If you have other computers running Windows on your network and wish to share files or printers to them, enable this setting.</p>
 
-<h3 id="s04-1_pg7">Page 7</h3>
-<p>If you are in the United States, the default locale settings should be fine for you. If you are outside the USA, select the keyboard and locale settings appropriate to your language and country.</p>
+<h3 id="s04-1_pg7">Page 7 (Setting the Localization, Clock, and Timezone)</h3>
+<p><strong>Page 7a (Localization Defaults):</strong>  If you are in the United States, the default locale settings should be fine for you. If you are outside the USA, select the keyboard and locale settings appropriate to your language and country.</p>
 
-<p>You can also indicate here whether your hardware clock is set to GMT (a.k.a. UTC). If you are dual-booting with Microsoft Windows, you will want to leave this unselected. If you are installing on Apple hardware or if this computer will only run Linux, check this box.</p>
+<p><strong>Page 7b (Configure Clock):</strong>  You can also indicate here whether your hardware clock is set to GMT (a.k.a. UTC). If you are dual-booting with Microsoft Windows, you will want to leave this unselected. If you are installing on Apple hardware or if this computer will only run Linux, check this box.</p>
 
-<h3 id="s04-1_pg8">Page 8</h3>
-<p>On this page you will set up a username and password for the default user, and a password for the root (administrative) user. </p>
+<p><strong>Page 7c (Timezone):</strong>  Here, you can choose from the dropdown menu the time zone in which you are located. The entries are organized alphabetically and grouped by continent for your convenience.</p>
+
+<h3 id="s04-1_pg8">Page 8 (Accounts and Passwords):</h3>
+<p>On this page you will set up a username and password for the default user, and a password for the root (administrative) user  For your convenience, you may tick the box "show passwords" to check if your passwords match.</p>
 <p>Usernames:</p>
 
 <!-- ###################  start unordered list ################# -->
@@ -1332,7 +1334,7 @@ on a large corporate network, or your network has its own internal DNS server, y
 <ul>
 <li>Are case-sensitive.</li>
 <li>Should be secure, especially the root password. They should be at least six characters, contain a mix of upper- and lower-case letters, numbers, and symbols, and should not be based on a dictionary word.</li>
-<li>Should not be forgotten. You'll need to have root password to do any administrative task on the computer, such as installing software or configuring hardware.</li>
+<li>Should not be forgotten. You'll need to have root password to do any administrative task on the computer, such as installing software or configuring hardware, so it is advisable not to use for the root account passwords that others may guess easily, like "root."</li>
 </ul>
 <!-- ###################  end unordered list ################# -->
 
