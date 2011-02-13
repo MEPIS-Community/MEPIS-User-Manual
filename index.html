@@ -2976,14 +2976,30 @@ http://www.mepis.org/docs/en/index.php?title=Guarddog </a></li>
 
 <br />
 <h2 id="s05-6-3_samba">Samba</h2>
-<p>This is the protocol used by Windows machines (which they call SMB: &ldquo;Server Message Block&rdquo;). Samba is the most complete solution to share files with Windows machines on your network without making changes to the Windows machines. Samba sets up network "shares" (directories available for other users) for chosen Linux directories and all contained subdirectories. These appear to Microsoft Windows users as normal Windows folders accessible via the network.</p>
+<p>This is the protocol used by Windows machines (which they call SMB: &ldquo;Server Message Block&rdquo;). Samba is the most complete solution to share files with Windows machines on your network without making changes to the Windows machines. Samba sets up network &ldquo;shares&rdquo; (directories available to other users) for chosen Linux directories and all contained subdirectories. These appear to Microsoft Windows users as normal Windows folders accessible via the network.</p>
 <p>It also offers some other services for interfacing with Windows networks, such as domain authentication, messaging services, and netbios name resolution.  Finally, it provides an easy method of connecting Linux machines to each other and even to Mac machines.</p>
-<p>Password protection is enabled by clicking <strong>Start Menu > Settings > System Settings > Sharing</strong>, and entering a default user name and password.  To configure shares for Windows, right-click the desktop >Run Command, and enter:</p>
- <pre>kdesu systemsettings</pre>
-<p>Enter root's password, then click on Sharing > Samba.</p>
-<p>Setup in MEPIS Linux is very easy.  Use Dolphin to navigate to the folder/directory you want to share.  Right-click and select Properties.  Click on the Share tab, then on the button Configure File Sharing.  Provide root's password, and then define the users and folders available to Samba.</p>
+<!--new from this point on -SB -->
+<p>There are two basic aspects to sharing files on your network through Samba: first, setting up a samba server on the machine whose files you want to share, and then telling the server which directories it may share with other computers on your network.</p>
+<h3>Setting up a samba server</h3>
+<p>If you are logged into a KDE session as <a href="index.html#s12-1_rootuser" class="spterm"
+id="rootuser" title=" 'root' has all permissions necessary to do anything to any file. Dangerous!"> root,</a> go to: 
+<strong>Start Menu > Settings > System Settings > Network and Connectivity > Sharing</strong></p>
+<p>To avoid the risks of logging into a session as root: from your user account, open a Konsole window, or right-click on the desktop and choose <em>run command</em> from the pop-up menu. Enter this command:
+<pre>kdesu kcmshell4 kcmsambaconf</pre></p>
+<p>Enter root's password when prompted. You should then have the window <strong>Samba KDE Control Module</strong>.  You have tabbed windows for these configuration categories: <strong>Base Settings, Shares, Printers, Users, Advanced</strong>.</p>
+<p>For detailed information on how to configure your Samba Server, see the Mepis Wiki:
+</p>
+<ul class="link">
+<li><a href=" http://www.mepis.org/docs/en/index.php?title=Configuring_SAMBA "> http://www.mepis.org/docs/en/index.php?title=Configuring_SAMBA </a></li>
+</ul>
 
-<ul> <!--list 1 -->
+<h3>Adding Samba shares</h3>
+
+<p>In addition to going into Samba KDE Control Module to add more directories to share, there is another shortcut you can take to add shares.  Use Dolphin to navigate to the folder/directory you want to share.  Right-click and select Properties.  Click on the Share tab, then on the button Configure File Sharing.  Provide root's password, and then define the users and folders available to Samba.</p>
+
+<h3>When considering Samba</h3>
+<!-- end new material by SB, except for added Mepis Wiki Samba link in  <h2 id="s05-6-3_links"> -->
+<ul> <!-- list 1 -->
 <li>Pros:
   
 <ul> <!--sublist 1a -->
@@ -3086,6 +3102,7 @@ BitTorrent is a peer-to-peer file sharing (P2P) communications protocol for dist
 
 <h2 id="s05-6-3_links">Links and Guides for Section 5.6.3</h2>
 <ul class="link">
+<li>Mepis Wiki: Samba: <a href=" http://www.mepis.org/docs/en/index.php?title=SAMBA "> http://www.mepis.org/docs/en/index.php?title=SAMBA </a></li>
 <li>Wikipedia: Samba: <a href=" http://en.wikipedia.org/wiki/Samba_(software) "> http://en.wikipedia.org/wiki/Samba_(software) </a></li>
 <li>Samba project page: <a href=" http://www.samba.org/ "> http://www.samba.org/ </a></li>
 <li>Wikipedia: NFS: <a href=" http://en.wikipedia.org/wiki/Network_File_System_(protocol) ">  http://en.wikipedia.org/wiki/Network_File_System_(protocol) </a></li>
