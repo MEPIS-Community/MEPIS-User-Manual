@@ -3669,7 +3669,7 @@ increasingly likely as you add unsupported repositories.  <strong>BE VERY ATTENT
 that others be removed!  If a large number of packages are going to be removed, you may want to investigate another method of installing
 this application.
 </li>
-<li><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package, and be asked
+<p><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package, and be asked
 whether you want to install the new version or keep your current version.
 <ul><li>If the package in question is from a MEPIS repository, it is recommended that you &ldquo;install the maintainer's version&rdquo; <strong>(Y)</strong> </li>
 <li>Otherwise, answer &ldquo;keep the current version&rdquo; (<strong>N</strong>), which is also the default choice. </li></ul>
@@ -3717,14 +3717,19 @@ password is required and, naturally, you will need to be connected to the Intern
 </li>
 <li>Hit the <strong>Reload</strong> button.  This button causes Synaptic to contact the online repository servers and download a new
 <em>index</em> file with information on what packages are available, what versions they are, and what other packages are required for them
-to be installed.
+to be installed.  If you get a message that some of the repositories failed to be contacted, wait a minute and then try again.
 </li>
 <li>If you already know the name of the package you are looking for, just click in the pane on the right and start typing, and Synaptic will incrementally search for what you type. 
 </li> 
-<li>If you don't know the package's name, use the <strong>Search</strong> button to locate software based on name or keywords.  This is one of Synaptic's greatest advantages over other methods.
+<li>If you don't know the package's name, use the <strong>Search</strong> box in the upper right corner to locate software based on name or keywords.  This is one of Synaptic's greatest advantages over other methods.
 </li>
-<li>Alternatively, click the <strong>Sections</strong> button on the bottom left and browse through the one that interests you (Editors, Games and Amusement, Utilities, etc.).  You will see a description of each package in the bottom pane, and can use the tabs to discover more information about it.
-</li>
+<li>Alternatively, use one of the filter buttons in the bottom left corner:</li>
+<ul><li><u>Sections</u>  provides subareas such as Editors, Games and Amusement, Utilities, etc.).  You will see a description of each package in the bottom pane, and can use the tabs to discover more information about it.</li>
+<li><u>Status</u> groups packages by their installation situation. </li>
+<li><u>Origin</u> will show packages from a specific repository.</li> 
+<li><u>Custom Filters</u> provides various filter options</li> 
+<li><u>Search Results</u> will show a list of previous searches for the Synaptic session you are in.</li>
+</ul>
 <li>Click the empty box next to it and select <strong>Mark for Installation</strong>.  If the package has dependencies, you will be notified and they will automatically be marked for installation as well.  You can also just double-click the package if it is the only one you are installing.
 </li>
 <li>Click <strong>Apply</strong> to begin the installation.  You will see a warning message &#8220;You are about to install software that can't be authenticated!&#8221; that you can safely ignore.
@@ -3733,7 +3738,7 @@ to be installed.
 </li>
 <li>Occasionally, packages will fail to install because their install scripts fail one or more <em>safety
 checks;</em> for instance, a package might try to overwrite a file that is part of another package, or require downgrading another package
-due to dependencies.  If you have an install or upgrade that is stuck on one of these errors, it is called a <em>broken package</em>.  To fix this, click on the <strong>Custom</strong> button on the bottom of the left panel, then the entry <em>Broken.</em>  Highlight the package and try first to fix the problem by clicking <strong>Edit >Fix Broken Packages</strong>.  If that is not successful, then right-click the package to uninstall it.
+due to dependencies.  If you have an install or upgrade that is stuck on one of these errors, it is called a <em>broken package</em>.  To fix this, click on the <strong>Broken packages</strong> entry in the left panel.  Highlight the package and try first to fix the problem by clicking <strong>Edit >Fix Broken Packages</strong>.  If that is not successful, then right-click the package to uninstall it.
 </li>
 </ol>
 
@@ -3747,7 +3752,7 @@ due to dependencies.  If you have an install or upgrade that is stuck on one of 
 </li> 
 <li>Synaptic will inform you if any packages are upgradeable by marking them with a star.  You can also click the <strong>Status</strong> button on the bottom left and select the <em>Installed (upgradeable)</em> section in the left pane to see all the upgradeable packages installed on your system.
 </li>  
-<li>Click the <strong>Mark All Upgrades</strong> button to select all of these packages for upgrade, or click on the packages one-by-one to individually select upgrades. 
+<li>Click the <strong>Mark All Upgrades</strong> icon below the menu bar to select all of these packages for upgrade, or click on the packages one-by-one to individually select upgrades. 
 </li> 
 <li>Click <strong>Apply</strong> to begin the upgrade, ignoring the warning message.  As the installation process begins, you have the option of watching the details in a terminal within Synaptic.
 </li>
@@ -3755,13 +3760,13 @@ due to dependencies.  If you have an install or upgrade that is stuck on one of 
 overwrite a configuration file you have altered.  Pay attention here, and follow the prompts until the upgrade completes.
 </li>
 </ol>
-
+<br /><br />
 <h2 id="s07-2_downgrading">Downgrading software with Synaptic</h2>
 <p>Sometimes you may want to downgrade an application to an older version, for instance because of problems that arose with the new one.  This is easy to do in Synaptic:</p>
 <ol>
 <li>Open Synaptic, supply the root password, and click Reload.</li>
 <li>Click on Installed in the panel on the left, then find and highlight the package you want to downgrade in the panel on the right</li>
-<li>On the menu bar, click <strong>Package >Force version...</strong></li>
+<li>On the menu bar, click <strong>Package > Force version...</strong></li>
 <li>Select from the available versions on the pull-down list</li>
 <li>Click Force Version, then install in the usual manner.</li>
 </ol>
@@ -3776,11 +3781,11 @@ overwrite a configuration file you have altered.  Pay attention here, and follow
 </li>
 <li>Click on Installed in the panel on the left, then find and highlight the package you want to pin in the panel on the right.
 </li>
-<li>On the menu bar, click <strong>Package >Lock version...</strong>
+<li>On the menu bar, click <strong>Package > Lock version...</strong>
 </li>
 <li>Synaptic will highlight the package in red and add a lock icon to the first column.
 </li>
-<li>To unlock, highlight the package again and click Package >Lock version (which will have a check mark).
+<li>To unlock, highlight the package again and click Package > Lock version (which will have a check mark).
 </li>
 </ol>
 
@@ -3810,6 +3815,7 @@ a <strong>meta-package</strong>, which is an empty package that simply depends o
 remove a complicated package like this is to inspect the dependency list for the meta-package, and remove the packages listed there.  Take
 care, however, that you don't uninstall a dependency of another application you want to keep!
 </li>
+<li>You may find that the staus category Autoremoveable begins to accumulate packages.  These were installed by other packages and are no longer needed, so you can click on that status category, highlight all the packages in the right pane, and then right-click them to remove.</li>
 </ul>
 
 <br /><br />
@@ -3840,45 +3846,43 @@ https://help.ubuntu.com/community/SynapticHowto</a></li>
 <h1 id="section07-3">7.3:&nbsp;&nbsp;&nbsp;&nbsp; Installing Software by Other Methods</h1>
 <h2 id="s07-3_deb">Deb packages</h2>
 <p>The software packages installed through Synaptic (and APT behind it) are in a format called <em>deb</em> (short for &ldquo;Debian&rdquo;,
-the Linux distribution that devised APT). You can manually install <u>downloaded</u> deb packages using the graphical tools <strong>Gdebi-kde</strong> or
-the command-line tool <strong>gdebi</strong> (not installed by default).  These are simple tools to install local &#042;.deb packages.</p>
+the Linux distribution that devised APT). You can manually install <u>downloaded</u> deb packages using the graphical tool <strong>Gdebi</strong> or the command-line tool <strong>dpkg</strong>.  These are simple tools to install local &#042;.deb packages.</p>
 
 
 <br /><br />
 
-<h2 id="s07-3_gdebi">Installing &#042;.deb files with gdebi-kde</h2>
+<h2 id="s07-3_gdebi">Installing &#042;.deb files with Gdebi</h2>
 <ol>
-<li>Click on the deb package you want to install.  Gdebi-kde (installed with MEPIS 11) will open the install dialog.</li>
+<li>Navigate to the deb package you want to install and click on it.  Gdebi will open the install dialog.</li>
 
 <li>Click <strong>Install.</strong></li>
 
-<li>You will be prompted for your root password.  Enter it to proceed.</li>
+<li>Enter your root password when prompted.</li>
 
 <li>Gdebi will attempt to install the package, and report the results.</li>
+<li>Gdebi can also be used from the command line</li>
 
 </ol>
 
 <br /><br />
 
-<h2 id="s07-3_dpkg">Installing &#042;.deb files with gdebi</h2>
+<h2 id="s07-3_dpkg">Installing &#042;.deb files with dpkg</h2>
 <ol>
-<li>Open Konsole from <strong>Start Menu > System > Konsole (Terminal)</strong>.   Become root using the <strong>su</strong> command and entering the root password when prompted.</li>
-<li>Use the <strong>cd</strong> command to change to the directory containing your downloaded .deb file(s).  (Sometimes it is easier to first navigate to the directory containing the deb file(s), hit F4 to open a terminal, and change to root.)
-<br /></li>
-
-<li>Install the package with the command (substituting the real package name, of course): 
+<li>Navigate to the folder containing the deb package you want to install using Dolphin.  </li>
+<li>Hit F4 to open a terminal, and become root</li>
+<li>Install the package with the command (substituting the real package name, of course): </li>
 <pre>
-gdebi -i packagename.deb
+dpkg -i packagename.deb
 </pre>
-If you are installing multiple packages at the same time, you can do it all at once using:
+<li>If you are installing multiple packages at the same time, you can do it all at once using:</li>
 <pre>
 dpkg -i *.deb
 </pre> 
-NOTE: In a shell command, the asterisk is a <em>wild card</em> in the argument. In this case it will cause the program to apply the command to
-any file whose name ends with &ldquo;.deb&rdquo;.</li>
+<p>NOTE: In a shell command, the asterisk is a <em>wild card</em> in the argument. In this case it will cause the program to apply the command to
+any file whose name ends with &ldquo;.deb&rdquo;.</p>
 
 <li>If required dependencies are not installed on your system already, you will get <em>unmet dependencies errors</em> as
-<strong>gdebi</strong> does not automatically take care of them.  To correct these errors and finish the installation, run
+<strong>dpkg</strong> does not automatically take care of them.  To correct these errors and finish the installation, run
 <pre>
 apt-get -f install
 </pre>
@@ -3896,7 +3900,7 @@ installation methods.  These methods include: </p>
 <ul>
 <li>
 <strong>RPM packages:</strong> Some distributions of Linux use the RPM packaging system (short for RedHat Package Manager, developed by
-RedHat Linux. RPM packages are similar to <em>deb</em> packages in many ways, and there is a command-line program available from MEPIS Linux to
+RedHat Linux). RPM packages are similar to <em>deb</em> packages in many ways, and there is a command-line program available from MEPIS Linux to
 convert RPM packages to <em>debs</em> called <strong>alien</strong>.   Alien does not come installed with MEPIS Linux, but is available
 from the default repositories.
 <br />
