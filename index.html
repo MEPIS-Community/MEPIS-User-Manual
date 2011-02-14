@@ -1768,44 +1768,14 @@ of the program does not recognize the camera.  See whether one is available from
 <li>Shutdown the entire system and disconnect the power.</li>
 <li>Unplug the monitor.</li>
 <li>Plug in new monitor and reconnect the power to the computer.</li>
-<li>Reboot to the LiveDVD.  Be sure to press F3 to check your resolution options.</li>
-<li>Open the MEPIS X-Windows Assistant.</li>
-<li>On the Repair tab:
-
-<ul> <!--sublist-->
-<li>In the first field, select the hard drive where MEPIS is installed.</li> 
-<li>In the second field, select the partition where the root filesystem &ldquo;<strong>/</strong>&rdquo; is mounted. </li>
-</ul></li><!-- end sublist-->
-
-<li>Click <em>OK</em> or <em>Apply.</em> X-Windows Assistant will copy the X configuration from the LiveDVD to the <strong>/etc/X11/</strong> folder on the
-partition you have specified.
-</li>
-<li>Reboot without the DVD.
-</li>
+<li>When you reboot, the system will usually recognize and configure your new monitor correctly.</li>
 </ol>
 
 
 <br /><br />
 
 <h2 id="s05-2-2_troubleshooting">Troubleshooting</h2>
-<p>If the right graphic driver is not loaded, try these steps one at a time:</p>
-
-<ol>
-<li>Reboot to your MEPIS LiveDVD, being careful to choose resolution carefully by clicking F3 to select the appropriate screen resolution.  If the LiveDVD works with your monitor, then follow the steps above to copy your xorg.conf file over to the hard drive.
-</li>
-<li>Use <a href="index.html#section05-3-4">the MEPIS X Windows Assistant</a> to install the correct graphics driver
-</li>
-<li>If problems persist, use the script called <strong>sgfxi</strong> (see Links and Guides) to install or update your driver.
-</li>
-</ol>
-
-<br /><br />
-
-<h2 id="s05-2-2_links">Links and Guides for Section 5.2.2</h2>
-
-<ul class="link">
-<li>MEPIS Wiki: sgfxi <a href="http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi"> http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi</a></li>
-</ul>
+<p>Consult Section 5.5 on how to change drivers or resolution.</p> 
 
 
 
@@ -2105,10 +2075,8 @@ the iPod mini, iPod Photo, iPod Shuffle, iPod nano, and iPod Video.  It is avail
 <li><a href="index.html#section05-3-1">5.3.1:&nbsp;&nbsp;&nbsp;&nbsp; Network Assistant </a></li>
 <li><a href="index.html#section05-3-2">5.3.2:&nbsp;&nbsp;&nbsp;&nbsp; System Assistant  </a></li>
 <li><a href="index.html#section05-3-3">5.3.3:&nbsp;&nbsp;&nbsp;&nbsp; User Assistant  </a></li>
-<li><a href="index.html#section05-3-4">5.3.4:&nbsp;&nbsp;&nbsp;&nbsp; X-Windows Assistant  </a></li>
-<li><a href="index.html#section05-3-5">5.3.5:&nbsp;&nbsp;&nbsp;&nbsp; NDisWrapper Manager </a></li>
-<li><a href="index.html#section05-3-6">5.3.6:&nbsp;&nbsp;&nbsp;&nbsp; Welcome Center  </a></li>
-<li><a href="index.html#s05-3_links">5.3 Links:&nbsp;&nbsp;&nbsp;&nbsp; additional online information </a></li>
+<li><a href="index.html#section05-3-4">5.3.4:&nbsp;&nbsp;&nbsp;&nbsp; Welcome Center  </a></li>
+<li><a href="index.html#s05-3_links">5.3:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Links </a></li>
 </ul>
 <!-- ************  unordered hyperlink list ended  ************  -->
 
@@ -2235,7 +2203,7 @@ checked, and for that reason is usually run from the LiveDVD.
 <br /><br /><br /><br /><br /><br />
 
 
-<!-- ########################### SECTION 5.3.3  ########################### -->
+
 <h1 id="section05-3-3">5.3.3:&nbsp;&nbsp;  User Assistant </h1>
 <p>This utility aids in adding, editing, removing users to your system.  You can start the utility from <strong>Start Menu > Settings > MEPIS User Assistant</strong>.  It has four tabs:</p>
 <ul>
@@ -2254,85 +2222,15 @@ directory.</li>
 <br /><br /><br /><br /><br /><br />
 
 
-<!-- ########################### SECTION 5.3.4  ########################### -->
 
-
-<h1 id="section05-3-4">5.3.4:&nbsp;&nbsp; X-Windows Assistant </h1>
-<p>This utility brings together a number of configuration steps for <strong>&ldquo;X&rdquo;</strong>, the window system used by MEPIS Linux.
-You can start it from <strong>Start Menu > Settings > MEPIS X-Windows Assistant</strong> (command line: <strong>mxconfig</strong>). 
-It has six
-tabs.</p>
-
-<h2 id="s05-3-4_repair-x">Repair </h2>
-
-<p>This tab is intended to be used from the LiveDVD. It allows you to copy the automatically-generated X configuration from the LiveDVD
-onto a hard drive installation of MEPIS Linux. This is useful if you've made a configuration error and the X graphical interface will no longer
-start (all you get is a command-line log-in prompt)</p>
-
-<ul>
-<li>In the first line, specify the destination disk from the pull-down menu.</li>
-<li>In the second, select the partition where &ldquo;/&rdquo; is mounted. </li>
-<li>When you click OK or Apply, X-Windows Assistant will copy the X configuration file
-<strong>/etc/X11/xorg.conf</strong> from the LiveDVD to the folder on the partition you have specified.</li>
-</ul>
-
-<p>NOTE: This utility is only useful from a hard drive install when you have MEPIS Linux or a similar Debian-based Linux distribution on another
-partition, and you'd like to copy the <strong>xorg.conf</strong> file from that one to another.</p>
-<br /><br />
-
-<h2 id="s05-3-4_general-x">General </h2>
-<p>This tab allows you to change the dpi (dots-per-inch) setting of on-screen text. Change this if your monitor's size or resolution causes text to be too large or too small and you want to uniformly increase or decrease the size of all text rendered in X windows.</p> 
-<p>NOTE: The font sizes of KDE applications can be adjusted under <strong>Start Menu > Settings > System Settings</strong>, click Appearance then Fonts. </p>
-
-<br /><br />
-
-<h2 id="s05-3-4_mouse-x">Mouse </h2>
-<p>This tab simply allows you to activate or deactivate different mouse types on your system. Most users shouldn't have a reason to deactivate any of these devices; MEPIS Linux will work fine even if nonexistent mouse devices are enabled.</p>
-<p>NOTE: More fine-tuned control of the mouse's behavior is available under <strong>Start Menu > Settings > System Settings</strong>, click Keyboard and then Mouse.</p>
-
-
-<br /><br />
-
-<h2 id="s05-3-4_monitor-x">Monitor </h2>
-<p>This tool allows you to specify the brand and model of your Monitor, and if necessary, alter its frequencies. Changing the frequencies
-may be necessary if you are having trouble getting the full range of available video resolutions from your monitor.</p>
-
-<p>If you don't find your monitor listed in the brand/model menus, you can type in the monitor's vertical and horizontal frequency ranges
-manually. Make sure you consult your monitor's documentation! </p>
-<p>NOTES: 1) Be very careful with this tool! Setting your monitor to the wrong model or setting the wrong frequency ranges can cause you
-to lose video, or even potentially damage your monitor. If you are happy with the resolution you are getting, it's best to leave this tool
-alone.  2) See <a href="index.html#section05-5">Section 5.5</a> for detailed display configuration and troubleshooting.</p>
-
-<br /><br />
-
-<h2 id="s05-3-4_nvidia">NVIDIA </h2>
-<p>If you have an Nvidia graphics card, this tool assists you in installing the drivers. You have a choice of four drivers:</p>
-<ul>
-<li><u>The latest Nvidia driver</u>: This is a proprietary driver that works with newer Nvidia cards - see the Nvidia Unix Portal page linked below for supported products list. </li>
-<li><u>The legacy Nvidia driver</u>: This is also a proprietary driver, but it works with older Nvidia cards (for Riva/TNT/GeForce 2 - use the 7xxx from the Nvidia website linked below. </li>
-<li><u>The NV driver</u>: This is an open-source driver from Xorg, but it lacks 3D support.</li> 
-<li><u>VESA</u>: This is a generic driver that provides basic functionality (2D, 1024x768 resolution) to most video cards. Use it for troubleshooting, or as a temporary driver before you upgrade.</li>
-</ul>
-
-<p>If you are using the proprietary drivers, you can set other options here such as dual monitor settings or shadow curser mode.</p> 
-<p>NOTE: If you are uncertain of which driver to use, consult the list of NVIDIA supported cards linked below.</p>
-
-<br /><br />
-
-<h2 id="s05-3-4_troubleshooting"> Troubleshooting </h2>
-<ul>
-<li>See <a href="index.html#section05-5">Section 5.5</a> for detailed display configuration and troubleshooting.</li>
-<li>See <a href="index.html#section05-6-0">Section 5.6</a> for details on networking configuration and troubleshooting.</li>
-</ul>
-
-<br /><br />
-<h1 id="section05-3-5">5.3.5:&nbsp;&nbsp; NDisWrapper Assistant </h1>
-<p>This new utility allows you to view, install and remove Windows drivers, as well as to blacklist the kernel module ndiswrapper itself using self-explanatory buttons.  You can start it from <strong>Start Menu > System > MEPIS NDisWrapper Manager</strong> (command line: <strong>mndiswrapper</strong>).  For details, see Section 5.6.1.2 on NDisWrapper.</p>
-<br /><br />
-
-<h1 id="section05-3-6">5.3.6:&nbsp;&nbsp; MEPIS Welcome Center</h1>
+<!-- ########################### SECTION 5.3.3  ########################### -->
+<h1 id="section05-3-4">5.3.4:&nbsp;&nbsp; Welcome Center</h1>
 <p>This is another new utility that aims to make the Users first encounter with MEPIS Linux as friendly as possible. You can start it from <strong>Start Menu > System > MEPIS Welcome Center</strong> (command line: <strong>mwelcome</strong>).  From this Center you can research a topic using MEPIS documentation, join the Community forum, contribute to MEPIS development, install a language pack, activate the Community repos, or add popular applications with a single click.</p>
-<br /><br />
+<br /><br /><br /><br /><br /><br />
+
+
+<!-- ########################### SECTION 5.3.5  ########################### -->
+
 
 <h2 id="s05-3_links"> Links and Guides for Section 5.3</h2>
 <ul class="link">
@@ -2341,8 +2239,7 @@ alone.  2) See <a href="index.html#section05-5">Section 5.5</a> for detailed dis
 <li>MEPIS Wiki:  WEP: <a href=" http://www.mepis.org/docs/en/index.php?title=Wep "> http://www.mepis.org/docs/en/index.php?title=Wep</a></li>
 <li>MEPIS Wiki: WPA: <a href=" http://www.mepis.org/docs/en/index.php?title=WPA "> http://www.mepis.org/docs/en/index.php?title=WPA </a></li>
 <li>MEPIS Wiki:  OnTheGo: <a href=" http://www.mepis.org/docs/en/index.php?title=Onthego "> http://www.mepis.org/docs/en/index.php?title=Onthego </a></li>
-<li>MEPIS Wiki: NVIDIA supported cards: <a href=" http://www.mepis.org/docs/en/index.php?title=NVIDIA_supported_cards ">  http://www.mepis.org/docs/en/index.php?title=NVIDIA_supported_cards </a></li>
-<li>NVIDIA Unix Portal: <a href=" http://www.nvidia.com/object/unix.html "> http://www.nvidia.com/object/unix.html</a></li>
+
 </ul>
 
 
@@ -2477,13 +2374,19 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <!-- ########################### SECTION 5.5  ########################### -->
 
 <h1  id="section05-5">5.5:&nbsp;&nbsp;&nbsp;&nbsp; Display </h1>
-<p> Much of the adjustment of the typical display is carried out through the MEPIS X-Windows Assistant, see <a href="index.html#section05-3-4">Section 5.3.4</a>.  It is also possible to use RandRTray by clicking <strong>Start Menu > System > KRandRTray (Screen Resize &amp; Rotate)</strong>.  This section covers other configuration steps.</p>
-
+<h2>Resolution</h2>
+<p>Resolution refers to the physical number of columns and rows of pixels creating the display (e.g., 1920×1200).  In most cases, the resolution is correctly set during installation (see Section 4.2) or when a new monitor is connected.  If not, you can change it in the following ways:</p>
+<ul><li>Click <strong>Start Menu > System > System Settings > Display and Monitor</strong>. Use the pull-down menu to set the correct values.</li>
+<li>For laptops, you can make changes easily by clicking <strong>Start Menu > System > More Applications > KRandRTray</strong>.  This will place an icon in your System Tray that you can right-click to change resolution or left-click for other changes.</li>
+<li>For Nvidia cards, you can install the package <strong>nvidia-settings</strong> that will give you a graphic tool that you can use as root to alter settings.</li>
+<li>In difficult situations, it is possible to manually alter the configuration file <strong>/etc/X11/xorg.conf</strong>.  Always back up the file before you change it, and check the Wiki and the Forum for help.</li></ul>
 <h2>Graphic driver</h2>
-<p>If you are not satisfied with your display performance, you may want to upgrade your graphic driver.  As we have seen the MEPIS X-Config Assistant can be used to do this.  Another method is to make use of a script called <strong>sgfxi</strong> that was developed by the user h-2 for standard system upkeep for Debian.  To get the script, open Konsole, become root, and enter:</p>
+<p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>).  There are two methods for doing this:</p>
+<ul><li><u>Download directly from the manufacturer</u>.  This method will require you to select and compile the driver for your system, see the Wiki entry listed below.  To find the appropriate driver, do a web search for <strong>"(brandname) graphic driver linux"</strong> and find what you need.</li>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h-2 for standard system upkeep for Debian, and can install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
-<p>Once you have this installed, you can use it to easily upgrade a Nvidia or ATI driver to the latest appropriate version.  Follow the directions in the Wiki, listed below.</p>  
-<p>Note that this is not an official MEPIS product.</p>
+<p>Once you have this installed, you can use it to easily change to the latest appropriate version by following the on-screen directions.  Details about its use are in the Wiki, listed below.</p>  
+<p>Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -2557,18 +2460,15 @@ conveniently alter screen size, orientation or refresh rate.</p>
 <br />
 
 <h2 id="s05-5_troubleshooting"> Troubleshooting </h2>
+<p>If all normal attempts to configure your video have failed, or if things have gotten totally messed up, you can use a CLI tool called <strong>Xorg -configure</strong> that will examine your system and provide a new basic configuration file. Note that there is no user input or choice of screen resolution.  Details in the Wiki entry, below.</p>
+<p><u>Troubleshooting links</u></p>
 <ul class="link">
-<li>MEPIS Wiki: No graphical login:
-          <br /> 
-<a href="http://www.mepis.org/docs/en/index.php?title=MEPIS_doesn%27t_boot_to_graphical_login">at
-http://www.mepis.org/docs</a>
+<li>MEPIS Wiki: No graphical login: <a href="http://www.mepis.org/docs/en/index.php?title=No graphical login">http://www.mepis.org/docs/en/index.php?title=No graphical login</a>
 <br />
 </li>
-<li>MEPIS Wiki:  Using the script dpkg-reconfigure: <a href="http://www.mepis.org/docs/en/index.php?title=Dpkg-reconfigure_xserver-xorg">http://www.mepis.org/docs/en/index.php?title=Dpkg-reconfigure_<br />xserver-xorg</a></li>
+<li>MEPIS Wiki:  Reconfiguring Xorg.conf: <a href="http://www.mepis.org/docs/en/index.php?title=Xorg_-configure">http://www.mepis.org/docs/en/index.php?title=Xorg_-configure</a></li>
 <li>MEPIS Wiki: Manually editing X config file: <a href="http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup"> http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup</a></li>
-<li>MEPIS Wiki:  Increase monitor resolution:  <a href="http://www.mepis.org/docs/en/index.php?title=Increase_Resolution"> http://www.mepis.org/docs/en/index.php?title=Increase_Resolution</a>  </li>
-<li>MEPIS Wiki: Adjust monitor gamma: <a href="http://www.mepis.org/docs/en/index.php?title=Adjusting_Monitor_Gamma"> http://www.mepis.org/docs/en/index.php?title=Adjusting_Monitor_Gamma</a></li>
-<li>MEPIS Wiki: Reinstall the X config file: <a href="http://www.mepis.org/docs/en/index.php?title=Reinstalling_X_config_file"> http://www.mepis.org/docs/en/index.php?title=Reinstalling_X_config_file</a></li>
+<li>Xorg.conf editing basics: <a href="http://www.linux.com/archive/feed/118108"> http://www.linux.com/archive/feed/118108 </a></li>
 </ul>
 
 <br />
@@ -2593,6 +2493,7 @@ http://us.download.nvidia.com/XFree86/Linux-x86/177.80/ README/chapter-06.html <
 <li>MEPIS Wiki: Sgfxi: <a href="http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi">http://www.mepis.org/docs/en/index.php?title=Smxi#sgfxi</a></li>
 <li>MEPIS Wiki: Monitor and Display Setup: <a href="http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup"> http://www.mepis.org/docs/en/index.php?title=Monitor_and_Display_Setup</a>
 </li>
+<li>MEPIS Wiki:  Increase monitor resolution:  <a href="http://www.mepis.org/docs/en/index.php?title=Increase_Resolution"> http://www.mepis.org/docs/en/index.php?title=Increase_Resolution</a>  </li>
 <li>KPowersave home page: <a href="http://sourceforge.net/projects/powersave/"> http://sourceforge.net/projects/powersave/ </a></li>
 <li>KPowersave discussion forums: <a href="http://sourceforge.net/forum/forum.php?forum_id=424162"> 
 http://sourceforge.net/forum/forum.php?forum_id=424162</a></li>
