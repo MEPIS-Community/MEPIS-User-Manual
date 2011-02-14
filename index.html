@@ -3587,22 +3587,22 @@ in the terminal's <strong>most</strong> pager, meaning that only one screenful o
 <h2>7.1: Introduction</h2>
 
 <h3>Methods</h3>
-<p>Synaptic is the recommended method for beginners to manipulate software packages, although other methods are also available and may be
+<p>Synaptic is the recommended method for beginners to manage software packages, although other methods are also available and may be
 required for certain situations.</p>
 <ul>
 <li><a href ="index.html#section07-2">7.2:&nbsp;&nbsp;&nbsp;Synaptic Package Manager</a></li>
 <li><a href= "index.html#section07-3">7.3:&nbsp;&nbsp;&nbsp;Other methods</a></li>
 </ul>
 <h3 id="s07-1_packages" >Packages</h3>
-<p>Installing, removing, and upgrading software on MEPIS is accomplished through the Advanced Package Tool (<strong>APT</strong>) system.   Software
-is provided in the form of a <strong>package</strong>, a discrete, non-executable bundle of data that includes instructions for your package manager
+<p>Software operations in MEPIS are accomplished through the Advanced Package Tool (<strong>APT</strong>) system.   Software
+is provided in the form of a <strong>package</strong>: a discrete, non-executable bundle of data that includes instructions for your package manager
 about installation.  They are stored on servers called <strong>repositories</strong>, and can be browsed, downloaded, and installed through special
-client software called a <strong>package manager</strong>.  The recommended package manager for MEPIS is Synaptic (see <a href="index.html#section07-2"> Section 7.2</a>), though the graphical utility Gdebi and the command-line utility apt-get are also included for those who prefer them (see <a href= "index.html#section07-3"> Section 7.3</a>).</p>
+client software called a <strong>package manager</strong>.  The recommended package manager for MEPIS is Synaptic, though the graphical utility Gdebi and the command-line utility apt-get are also included for those who prefer them.</p>
 
 <p>The majority of packages have one or more <strong>dependencies</strong>, meaning that they have one or more packages that must also be
 installed in order for them to work.  The APT system is designed to automatically handle dependencies for you; in other words, when you
-try to install a package whose dependencies aren't already installed, your APT package manager will automatically mark those dependencies
-for installation as well.</p>
+try to install a package whose dependencies are not already installed, your APT package manager will automatically mark those dependencies
+for installation as well.  It can happen that these dependencies can not be met, preventing the installation of a package.</p>
 
 
 <br />
@@ -3621,11 +3621,13 @@ MEPIS (and especially if you are new to Linux), it is recommended that in genera
 <li>debian-multimedia-keyring </li>
 </ul>
 
-<p>The MEPIS Community has its own repository of packages that it builds and maintains.  These packages are distinct from official MEPIS packages, and typically have been <a href="index.html#s12-1_backport" class="spterm" id="backport" title="click to go to the Glossary">backported</a> from Debian versions that are still in testing or even experimental.  To find out more about what is available, who the packagers are, and even how to get involved, follow the MEPIS Community Package Project link below.</p>
+<p>The MEPIS Community has its own repository of packages that it builds and maintains.  These packages are distinct from official MEPIS packages, and typically have been <a href="index.html#s12-1_backport" class="spterm" id="backport" title="click to go to the Glossary">"backported"</a> from "forward" Debian versions (testing or even experimental).  To find out more about what is available, who the packagers are, and even how to get involved, follow the MEPIS Community Package Project link below.</p>
 
-<p>Repositories are most easily added, removed, or edited through Synaptic, though they can also be altered by hand by editing the file <strong>/etc/atp/sources.list</strong> in a root terminal. In Synaptic, click <strong>Settings >Repositories</strong>, then click the button New and add the information.  Here, for instance, is how the settings look for the MEPIS Community repo:</p>
+<p>Repositories are most easily added, removed, or edited through Synaptic, though they can also be altered by hand by editing the file <strong>/etc/atp/sources.list</strong> in a root terminal. In Synaptic, click <strong>Settings > Repositories</strong>, then click the button New and add the information.  Here, for instance, is how the settings look for the MEPIS Community repo:</p>
 <img src="grafx/CommRepoSyn_small.png" alt="Synaptic community repo" width="400" height="93" />
+<p>At times it may be easier to directly alter the repository list in the <strong>/etc/apt/sources.list</strong> file. This can be edited as root with any text editor by backing up the existing file, editing the original file, and saving it.  The same repository viewed above looks like this in the file:
 
+<pre>deb http://main.mepis-deb.org/mepiscr/repo/ mepis11cr main non-free</pre>
 <p>Some repositories carry special labels:  </p>
 <ul>
 <li><u>contrib</u>, which depend on or are accessory to non-free packages.</li>
@@ -3646,19 +3648,14 @@ modification on MEPIS Linux.  Adding repositories or installing packages designe
 derivatives (including SimplyMEPIS 6.x) may cause system instability.
 </li>
 
-<li>In addition to dependencies, packages can also specify <em>suggests</em> and <em>recommends</em>.  <strong>Recommends</strong>, unlike
+<li>In addition to dependencies, packages can also specify <em>suggests</em> and <em>recommends</em>, visible in Synaptic by right-clicking the package name.  <strong>Recommends</strong>, unlike
 &ldquo;dependencies,&rdquo; are not absolutely required, but should be installed along with the package in most circumstances.
-<strong>Suggests</strong> are packages that enhance or compliment the package in question, but are in no way required.  To see and/or mark
-suggested or recommended packages, right-click the package and select <strong>mark suggested for install</strong> or <strong>mark
+<strong>Suggests</strong> are packages that enhance or compliment the package in question, but are not required.  To see and/or mark
+suggested or recommended packages, right-click the package name and select <strong>mark suggested for install</strong> or <strong>mark
 recommended for install</strong>, respectively.
 </li>
-<li>Click the Synaptic icon in the panel to open the application, click Mark all upgrades, and run the updates.
-</li>
-
 <li>If you plan to install software using methods other than APT (for instance, to get a newer version), make sure you <em>purge</em> any
-versions that have been installed using Synaptic (right-click, <strong>Mark for Complete Removal</strong>) or apt-get in a terminal (type
-<strong>dpkg --help</strong> for information).  Since non-repository installations often put files in different locations than repository
-installations, failing to remove the repository version can cause two conflicting versions to be installed side-by-side.
+versions that have been installed using Synaptic (right-click, <strong>Mark for Complete Removal</strong>).  Since non-repository installations often put files in different locations than repository installations, failing to remove the repository version can cause two conflicting versions to be installed side-by-side.
 </li>
 </ul>
 
@@ -3666,17 +3663,16 @@ installations, failing to remove the repository version can cause two conflictin
 
 <h2 id="s07-1_troubleshooting">Troubleshooting</h2>
 <ul>
-<li><u>Should you uninstall?</u>:  Occasionally, conflicts in package dependencies can cause the APT system to require the uninstallation of  a
+<li><u>Should you uninstall?</u>  Occasionally, conflicts in package dependencies can cause the APT system to require the uninstallation of  a
 large number of important packages in order to install some other package.  This is rare with the default configuration, but becomes
 increasingly likely as you add unsupported repositories.  <strong>BE VERY ATTENTIVE</strong> whenever installing a package would require
 that others be removed!  If a large number of packages are going to be removed, you may want to investigate another method of installing
 this application.
 </li>
-<li><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package,  and be asked
-whether you want to install the new version (a.k.a. &ldquo;the package maintainer's version&rdquo;) or keep your current version.  The
-safest answer to this question is usually <strong>keep the current version</strong> (<strong>N</strong>), which is also the default choice. 
-If the package in question is from a MEPIS Linux repository, however, it is recommended that you say &ldquo;yes&rdquo; <strong>(Y)</strong> instead.
-</li>
+<li><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package, and be asked
+whether you want to install the new version or keep your current version.
+<ul><li>If the package in question is from a MEPIS repository, it is recommended that you &ldquo;install the maintainer's version&rdquo; <strong>(Y)</strong> </li>
+<li>Otherwise, answer &ldquo;keep the current version&rdquo; (<strong>N</strong>), which is also the default choice. </li></ul>
 
 </ul>
 <br /><br />
@@ -3707,11 +3703,10 @@ http://www.mepis.org/docs</a></li>
 <h2>Introduction</h2>
 
 <p>Synaptic is a friendly, easy-to-use frontend (GUI) to the APT <a href="index.html#s12-1_package-man" class="spterm" 
-title="click to go to the Glossary"> package management </a> system.  It is a graphical tool which allows you to install,
-remove, upgrade, or get information on all the software packages available in the online repositories on your repository list
-(<strong>/etc/apt/sources.list</strong>).  Synaptic can be launched from <strong>Start Menu > System > Synaptic Package
-Manager</strong>, or you can simply click on the <strong>Synaptic</strong> icon in the panel.  Note that your root
-password is required in order to install or remove software; and naturally, if you want to use the online repositories (as opposed to the DVD), you will need to be connected to the Internet.</p>
+title="click to go to the Glossary"> package management </a> system.  It is a graphical tool that allows you to install,
+remove, upgrade, downgrade, or get information on all the software packages available in the online repositories on your repository list.  Synaptic can be launched from <strong>Start Menu > System > Synaptic Package
+Manager</strong>, or you can simply click on the <strong>Synaptic</strong> icon in the system tray, the Apt-notifier (yellow box).  Note that your root
+password is required and, naturally, you will need to be connected to the Internet if you want to use the online repositories (as opposed to the DVD).</p>
 <br />
 
 <h2 id="s07-2_installing">Installing new software with Synaptic</h2>
