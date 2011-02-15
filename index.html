@@ -60,7 +60,7 @@ you. . . for free. . .for whatever you need to accomplish.</p>
 <!-- ########################### SECTION 1.1 ########################### -->
 <h1 id="section01-1"> 1.1:&nbsp; About MEPIS Linux</h1>
 
-<p>MEPIS Linux 11 is based on Debian 6.0, codename "Squeeze," and is a ready-to-use desktop operating system for PC  computers that have Intel or AMD processors with either 32 or 64 bit architecture, and for Apple computers with Intel processors. It is designed to work side-by-side with Microsoft's Windows or Apple's Mac OS X in a dual-boot configuration, or to replace your old Operating System entirely. </p>
+<p>MEPIS Linux 11 is based on Debian 6.0, codename "Squeeze," and is a ready-to-use desktop operating system for PC computers that have Intel or AMD processors with either 32 or 64 bit architecture, and for Apple computers with Intel processors. It is designed to work side-by-side with Microsoft's Windows or Apple's Mac OS X in a dual-boot configuration, or to replace your old Operating System entirely. </p>
 <p>MEPIS Linux 11 comes in two different versions:</p>
 <ul>
 <li>
@@ -220,18 +220,12 @@ it into a Mepis LiveDVD, please consult Section 2.2.</p>
 </p>
 
 <p>The MEPIS Torrent Team also maintains a seeded BitTorrent swarm of the latest MEPIS Linux ISO, registered at
-LinuxTracker.org within 24 hours of its official release. Bit-torrent downloads may be somewhat slow following a major release. See MEPIS Torrent Team Project in <a href="index.html#s02-2_links">links section</a>
-</p>
-
-<p>If you are not familiar with BitTorrents, see the <a href="index.html#s02-2_links">Links and Guides</a> section for
-sources of more information. </p>
-
-<p>If you are downloading a MEPIS Linux ISO via BitTorrent, you can skip the next section about verifying the md5sum and go directly to <a href="index.html#section02-3">2.3:&nbsp;Burning the DVD</a></p>
+LinuxTracker.org within 24 hours of its official release. Bit-torrent downloads may be somewhat slow following a major release.  See link below.</p>
 
 <br /><br />
 
 <h2 id="s02-2_verifying">Verifying the md5sum</h2>
-<p>After you have downloaded an ISO, the next step is to check its md5sum against the official one. The md5sum is the result of a complex calculation on the contents of a file: the outcome is a unique string. It will be identical to the official md5sum if your copy is authentic. The following steps will let you verify the integrity of the downloaded ISO on any OS platform: </p>
+<p>After you have downloaded an ISO, the next step is to check its <a href="index.html#s12-1_md5sum" class="spterm" title="data verification tally">md5sum</a> against the official one. The md5sum is the result of a complex calculation on the contents of a file: the outcome is a unique string. It will be identical to the official md5sum if your copy is authentic. The following steps will let you verify the integrity of the downloaded ISO on any OS platform: </p>
 
 <h3>md5sum: Windows</h3>
 <p>Windows users should download a tool called md5summer (link below):</p>
@@ -253,7 +247,7 @@ the md5summer program you can select the location of the <strong>.ISO</strong> a
 <p><u>Method 1</u>. The easiest way to check an ISO's integrity in Linux is to use K3b, the CD/DVD burner that is installed with MEPIS
 Linux 11.0.
 When you first load an ISO file into K3b, it will automatically
-calculate and display the <a href="index.html#s12-1_md5sum" class="spterm" title="data verification tally">md5sum.</a> You can be confident the download is valid if the final five
+calculate and display the md5sum. You can be confident the download is valid if the final five
 characters match those in the md5sum file you downloaded with the ISO.</p>
 
 <p><u>Method 2</u>.  If not using K3b, open up a console/terminal and type:</p>
@@ -305,7 +299,7 @@ href="http://www.mepis.org/docs/en/index.php?title=KTorrent"> http://www.mepis.o
 
 <h1 id="section02-3">2.3:&nbsp;&nbsp;&nbsp;&nbsp;Creating a bootable medium</h1>
 <h2>Introduction</h2>
-<p>Once you have successfully downloaded an ISO and verified its integrity, you are ready to create a bootable medium.  For most users, this will be a LiveDVD or DVD, but netbook owners and others may need or want a Live USB.</p>
+<p>Once you have successfully downloaded an ISO and verified its integrity, you are ready to create a bootable medium.  For many users, this will be a LiveDVD, but others may need or want a Live USB.</p>
 
 <ul>
 <li><a href="index.html#s02-3_livecd">Burning a LiveDVD</a></li>
@@ -317,11 +311,7 @@ href="http://www.mepis.org/docs/en/index.php?title=KTorrent"> http://www.mepis.o
 <ol>
 <li>Most important: <em>do not</em> burn the ISO onto a blank DVD as if it were a data file!  An  <a href="index.html#s12-1_iso" class="spterm" title="Special format file that can be converted to a CD or DVD. ">ISO</a> is a formatted image of an entire DVD. You need to choose <em>Burn disk image</em> or <em>Burn ISO</em> in the menu of your CD/DVD burning program. If you just drag and drop it into a file list and burn it as a regular file, you will <em>not</em> get a bootable LiveDVD.
 </li>
-<li>Use the correct medium:
-<ul>
-<li>A good quality writable DVD with a 4.7 GB capacity.
-</li>
-</ul>
+<li>Use a good quality writable DVD with a 4.7 GB capacity.
 </li>
 </ol>
 
@@ -334,7 +324,7 @@ well.</p>
 <ol>
 <li>Right-click the ISO and select <strong>Open with >K3b</strong></li>
 
-<li>Wait until the md5sum is calculated, then compare it with the one that you downloaded with the ISO: the md5sum  should match, otherwise it means you have a corrupted file.</li>
+<li>Wait until the md5sum is calculated, then compare it with the one that you downloaded with the ISO. If the md5sum does match, it means you have a corrupted file.</li>
 
 <li>Check <strong>verify written data</strong>. After the DVD is written, K3b will read it and compare the result with the MD5 sum of the ISO.</li>
 </ol>
@@ -368,12 +358,11 @@ program that can verify the data after the burn, you can check its integrity ano
 <p>In terminal type:</p>
 
 <pre>
-md5sum /dev/cdrom
+md5sum devicelocation
 </pre>
 
-<p>Depending on your system you might need to replace <strong>cdrom</strong> with <strong>cdrom1</strong> or another device name like 
-<strong>hdc</strong> or <strong>scd0</strong> (/dev/cdrom is the first CD/DVD drive, /dev/cdrom1 is the second one, etc.).  Check <strong>/etc/fstab</strong> to see the device
-names on your system.</p>
+<p>If you burned a DVD, the typical device location ("mount point") is <strong>/dev/cdrom</strong>.  Other devices can be
+<strong>hdc</strong> or <strong>scd0</strong>.  Navigate with the file manager Dolphin to <strong>/etc/fstab</strong> to check the device names on your system.</p>
 <p>Wait for the MD5 sum to be calculated, and compare it with the sum obtained from the download site: they should be the same.</p>
 
 <br />
@@ -408,22 +397,22 @@ the DVD's integrity.</p>
 
 <h2 id="s02-3_liveusb">Creating a Live USB</h2>
 <p>Netbooks typically lack a CD/DVD drive, so a Live USB is required for temporary use and installation.  Other users may also want a Live USB for improved portability or speed.  Once you have obtained the ISO, whether by purchase or download, you can easily create a bootable USB that works on most systems.</p>
-<p>If you have an existing installtion of MEPIS, or can boot the LiveDVD on a different computer, then a MEPIS application is available to you that makes the process easy.</p>
+<ul><li>If you have an existing installtion of MEPIS, or can boot the LiveDVD on a different computer, then a MEPIS application is available to you that makes the process easy.</p>
 <ul>
 <li>  Plug in your USB device.  It needs to remain unmounted, so ignore the Device Notifier screen that pops up.</li>
 <li>Click <strong>Start Menu > Settings > MEPIS System Assistant</strong>, then click on the MEPIS USB Key tab.</li>
 <li>Make the appropriate selections for the USB key, key type and ISO source.</li>
 <li>Click Apply, wait until the process is finished, then reboot or exit for later use.</li>
-</ul>
+<li>See Section 5.4 for details</li></li></ul></li>
 
-<p>If you need or want to create the Live USB from the netbook itself, you should use an alternative method:</p>
+<li>If you need or want to create the Live USB from the netbook itself, you should use an alternative method:
 
 <ul>
 <li>Download and install the Unetbootin Windows package from the Unetbootin home page listed below.</li>
 <li>Plug in the USB stick you are going to use and reformat it to FAT32.  On Windows, use the My Computer screen, right-click your USB device in the menu and select Format, then FAT 32.</li>
 <li>Start Unetbootin, and use the GUI to locate your MEPIS ISO file (or to download it) and the USB device (usually already identified for you)</li>
 <li>Create the files necessary (it will take some time) on the USB device</li>
-</ul>
+</ul></li></ul>
 
 <p>Whichever method you used to create the Live USB, you will probably need to take a few steps to get your computer to boot correctly using the USB.</p>
 <ul>
@@ -434,11 +423,8 @@ the DVD's integrity.</p>
 <li>Click on (or arrow over to) the Boot tab</li>
 <li>Identify and highlight your USB device (usually, "USB HDD"), then move it to the top of the list.  Save and exit</li>
 <li>If unsure or uncomfortable about changing the BIOS, ask for assistance in the Forums.</li>
-</ul></li>
-<li>When you see the GRUB screen, select the Default entry</li>
-<li>For screen resolution, first accept the default Auto Resolution</li> 
-<li>For other video alternatives, see <a href="index.html#section03-3">Section 3.3</a></li></ul>
-
+</ul></li></ul>
+<p>Once your system is set to recognize the USB Drive during the boot process, just plug in the Drive and reboot the machine.</p>
 
 <br /><br />
 
@@ -3971,8 +3957,9 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#IRC </a></p>
 <br />
 
 <h2 id="s08-01_rss">RSS</h2>
-<p>MEPIS Linux offers three easy ways to subscribe to RSS (Really Simple Syndication) feeds.  In Firefox or IceWeasel, you can simply go to the page with the RSS and click <strong>Bookmarks > Subscribe to This Page</strong> and the application you have selected under Preferences will open. There is also a large range of add-ons that can be installed by clicking <strong>Tools > Add-ons</strong>.  Thunderbird or IceDove can be set up for RSS feeds by clicking <strong>File > New > Account</strong>, selecting <strong>RSS News &amp; Blogs</strong> and naming the account.  Then right-click the new folder and select <strong>Manage Subscriptions.</strong>  Finally, there is a dedicated desktop application called Akregator, part of the KDE office suite, which can be installed from the repos. </p>
-
+<p>MEPIS Linux offers three easy ways to subscribe to RSS (Really Simple Syndication) feeds:</p>
+<ul><li>In Firefox or IceWeasel, you can simply go to the page with the RSS and click <strong>Bookmarks > Subscribe to This Page</strong> and the application you have selected under Preferences will open. Other modern browsers behave similarly.<li>There is also a large range of add-ons that can be installed in Firefox by clicking <strong>Tools > Add-ons</strong>.  Thunderbird or IceDove can be set up for RSS feeds by clicking <strong>File > New > Account</strong>, selecting <strong>RSS News &amp; Blogs</strong> and naming the account.  Then right-click the new folder and select <strong>Manage Subscriptions.</strong>  <li>Finally, there is a dedicated desktop application called Akregator, part of the KDE office suite, which can be installed from the repos.</li></ul> 
+<p>The method you use will depend merely on personal preferences.</p>
 <ul>
 <li>Akregator home page: <a href="http://akregator.kde.org/"> http://akregator.kde.org/</a></li>
 <li>Wikipedia: RSS: <a href="http://en.wikipedia.org/wiki/RSS_(file_format)"> http://en.wikipedia.org/wiki/RSS_(file_format)</a></li>
