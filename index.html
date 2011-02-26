@@ -828,7 +828,7 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 
 <p>Plasma provides the desktop interface for KDE 4, including the application launcher (start menu), the desktop and the desktop panel.  Plasma also provides many standardized services such as artwork, presentation and script management.</p>
 
-<p>Plasma uses a system of applets (any small application that performs one specific task, often within a larger application) that are collectively called <strong>plasmoids</strong>, but range from informative widgets (see below) to mini-applications like calculators and dictionaries. An applet may also contain another applet (known then as a containment). An important feature of Plasma is that there is no longer a distinction between panels (like the taskbar), desktop icons, and widgets; they are all created and treated the same way.</p>
+<p>Plasma uses a system of <a href="index.html#s12-1_applet" class="spterm"  title="A small application with a specific task">applets</a> that are collectively called <strong>plasmoids</strong>, but range from informative widgets (see below) to mini-applications like calculators and dictionaries. An applet may also contain another applet (known then as a containment). An important feature of Plasma is that there is no longer a distinction between panels (like the taskbar), desktop icons, and widgets; they are all created and treated the same way.</p>
 
 <p>What is commonly referred to as the &ldquo;cashew&rdquo; is the Plasma logo you can find on the default desktop, on the upper right corner, and on the right-hand side of the panel. By right-clicking to unlock widgets and clicking on a cashew, you can access configuration options and features; you can also just right click on the desktop.</p>
 
@@ -5669,9 +5669,31 @@ sets.
 
 <!-- ########################### SECTION 08.11  ########################### -->
 <h1 id="section08-11">8.11:&nbsp;&nbsp;&nbsp;&nbsp; Google services </h1>
+<p>Popular Google web-based services can be integrated with your desktop in a number of ways:</p>
+<ul><li><strong>Gmail</strong>. Options include:</li>
+<ul><li>checkGmail. This applet that sits in the system tray and permits you to manage email by right-clicking the icon.</li>
+<li>KMail.  This KDE application can be configured to integrate with Gmail, see details below.</li>
+<li>Thunderbird.  This popular Mozilla email client can also be integrated with Gmail, see details below. </li></ul>
+<li><strong>Contacts</strong>.  Options include:</li>
+<ul><li>Thunderbird.  There is an extension available that syncs the Address Book with Contacts when the app starts up.</li>
+<li>KMail.  This app can be synched with Contacts using Akonadi, see directions below.</li></ul>
+<li><strong>Calendar</strong>.  Options include:</li>
+<ul><li>Thunderbird.  There is an extension available that mounts Google Calendar as a tab, and others that allow the Lightning plugin calendar to read and write to Gcal.  </li>
+<li>Kmail (Kontact).  This app can be synched with Gcal using Akonadi, see directions below.  May be prone to crashing.</li></ul>
+<li><strong>Documents</strong>.  Options include:</li>
+<ul><li>LibreOffice has an extension called <strong>gdocs</strong> that helps directly upload a file to Google Docs.</li></ul></ul>
 
+<h2 id="s08-11_links">Links and Guides for Section 8:11</h2>
+<ul class="link">
+<li>checkGmail home page: <a href="http://checkgmail.sourceforge.net/"> http://checkgmail.sourceforge.net/ </a></li>
+<li>Thunderbird and Gmail: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=38343"> http://mail.google.com/support/bin/answer.py?hl=en&answer=38343</a></li>
+<li>Synchronizing KDE apps with Google: <a href="http://www.my-guides.net/en/content/view/178/26/"> http://www.my-guides.net/en/content/view/178/26/ </a></li>
+<li>Thunderbird Gcal tab: <a href="https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/"> https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/ </a></li>
+</ul>
 
 <br /><br /><br /><br /><br /><br />
+
+
 
 <!-- ########################### SECTION 08.12  ########################### -->
 <h1 id="section08-12">8.12:&nbsp;&nbsp;&nbsp;&nbsp; antiX </h1>
@@ -5892,10 +5914,7 @@ scripts  and programming code.  It can be installed with the <strong>bluefish</s
 </li>
 <li><strong>KompoZer</strong> is a complete web authoring system that combines web file management and easy-to-use WYSIWYG (What You See Is What You Get) web page editing. </li>
 <li>
-<strong>Quanta Plus</strong> is a highly stable and feature-rich web development environment that starts with the best architectural foundations and is designed for efficient and natural use.  In MEPIS, you must downgrade and pin three packages to be able to install it:<pre>klinkstatus
-kommander
-kfilereplace</pre>
-<p>Consult the Wiki linked below for details on this procedure.</p>
+<strong>Quanta Plus</strong> is a highly stable and feature-rich web development environment that starts with the best architectural foundations and is designed for efficient and natural use.  It is in the Community Repositories and can be installed through Synaptic.
 </li>
 </ul>
 
@@ -5909,9 +5928,10 @@ web frameworks, services, API's and tools.  Check the MEPIS Wiki for more inform
 <ul>
 <li><strong>KLinkStatus</strong> allows you to search internal and external links throughout your web site and view them in a hierarchical format or site tree. Simply point it to a single page and choose the depth to search. 
 </li>
-<li><strong>KRegExpEditor</strong> allows for writing and editing regular expressions graphically rather than using plain ASCII syntax. 
+<li><strong>KRegExpEditor</strong> enables you to write and edit regular expressions graphically rather than using plain ASCII syntax. 
 </li>
-</ul>
+<li><strong>Kompare</strong> permits a graphic comparison between two texts, with easy tools for managing any differences.</li>
+<li><strong>KFileReplace</strong> replaces some strings with others in a lot of files in a single operation. </li></ul>
 
 <h2 id="s09-2_links">Links and Guides for Section 9.2</h2>
 <ul class="link">
@@ -5932,6 +5952,8 @@ web frameworks, services, API's and tools.  Check the MEPIS Wiki for more inform
 </li>
 <li>KRegExpEditor home page: <a href="http://www.blackie.dk/KDE/KRegExpEditor/">http://www.blackie.dk/KDE/KRegExpEditor/</a>
 </li>
+
+<li>Kompare home page: <a href="http://www.caffeinated.me.uk/kompare/">http://www.caffeinated.me.uk/kompare/</a></li>
 <li>The Art of Unix programming: <a href="http://www.faqs.org/docs/artu/index.html"> http://www.faqs.org/docs/artu/index.html</a>
 </li>
 <li>Other common choices: <a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Programming">at
@@ -7213,6 +7235,8 @@ http://www.mepis.org/docs/en/index.php?title=MEPIS_irc_channel </a>
 <br /><br />
 
 <h2>Terms</h2>
+<p id="s12-1_applet"><strong>applet:&nbsp;&nbsp;</strong> A program designed to be executed from within another application. Unlike an application, applets cannot be executed directly from the operating system. </p>
+
 <p id="s12-1_backend"><strong>backend:&nbsp;&nbsp;</strong> Also <em>back-end.</em>  The backend includes the various components of a program that process the user input entered through the frontend.  See also frontend.</p>
 
 <p id="s12-1_backport"><strong>backport:&nbsp;&nbsp;</strong>  Backports are new packages that have been recompiled to run on a released distribution in order to keep it up-to-date.</p>
