@@ -735,6 +735,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <p>
         Insert the disc into your DVD drive (or the Live USB into a port) and restart your computer. You may need to set your system to boot from the medium first, see <a href="index.html#s03-3_troubleshooting ">Troubleshooting</a> below for details.</p>
+<h3>The GRUB screen</h3>
 <p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most  computers.</p>
 <p>Make sure to note the function keys at the bottom of the screen:</p>
 
@@ -755,10 +756,36 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 <li>F2 &mdash; allows you to select the language/keyboard you would like to install with the OS. </li>
 <li>F3 &mdash; enables you to select your particular screen resolution. </li>
 </ul>
+
 <!-- ###################  end unordered list ################# -->
+<h3>Cheat codes</h3>
+<p>If you look at the bottom of the GRUB screen, you will see a cursor blinking at the end of a row of codes.  You can add a <a href="index.html#s12-1_cheatcode" class="spterm"  title="A code used to pass an option to the system during boot" >cheat code</a> here to pass a command to the system in order to adjust for special situations, most commonly display problems.  Here are some of the most common codes used:</p>
+<!-- ###################  start table ################# -->
+<table>
+<tr>
+<td><strong>noagp</strong></td>
+<td>Disable AGP (Accellerated Graphics Port)</td>
+</tr>
 
-<p>A particularly useful boot option is <strong>R/W  filesystem</strong>, which allows software to be installed temporarily for hardware testing purposes.  Once booted into the desktop, you will be able to add software.  Note that a minimum of one gigabyte of RAM is recommended for this option.</p>
+<tr>
+<td><strong>nomodeset</strong></td>
+<td>Instructs the kernel not to load video drivers.  Good to try this when you get black screen with a nVidia card.</td>
+</tr>
 
+<tr>
+<td><strong>rootdelay</strong></td>
+<td>introduces a wait period that allows devices to settle down. Try this if you have problems booting, typing <strong>rootdelay=30</strong>.</td>
+</tr>
+
+<tr>
+<td><strong>xdrvr</strong></td>
+<td>Specifies a video driver for your hardware. Common uses: <strong>xdrv=vesa</strong> for a generic driver, <strong>xdrv=intel</strong> for an Intel driver.</td>
+</tr>
+</table>
+<p>A full list can be found in the Wiki entry listed below, and you should ask on the Forum about any problems you are experiencing.</p>
+
+<!-- ###################  end table ################# -->
+<h3>The boot process</h3>
 <p>When GRUB hands off the booting process to the Linux kernel, you will see a MEPIS graphical screen, called &ldquo;Splashy&rdquo;, with an expanding horizontal bar that indicates booting progress. If you hit the <strong>Ctrl-Alt-F1</strong> keys together Splashy will be disabled, and you can view a console screen and read the booting messages that echo on the screen.  (This can be made permanent after installation.)  Sometimes this can be helpful in troubleshooting boot problems.</p>
 
 <!--logging in and looking around-->
@@ -770,7 +797,19 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 <p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root and typing <code>halt</code> or <code>reboot</code>.</p>
 <p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
 
-<br /><br />
+<br />
+<br />
+<!-- ########################### Links and Guides SECTION 3.3 ########################### -->
+
+<h2 id="s03-2_links">Links and Guides for Section 3.3</h2>
+<ul class="link">
+<li>MEPIS Wiki: Cheat codes: <a href="http://www.mepis.org/docs/en/index.php?title=Cheatcode"> http://www.mepis.org/docs/en/index.php?title=Cheatcode</a>
+</li>
+<li>MEPIS Wiki: GRUB:<a href="http://www.mepis.org/docs/en/index.php?title=GRUB"> http://www.mepis.org/docs/en/index.php?title=GRUB</a>
+</li>
+</ul>
+
+<br /><br /><br /><br /><br /><br />
 
 <!-- ########################### SECTION 3.4 ########################### -->
 
