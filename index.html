@@ -763,8 +763,11 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 
 <!--logging in and looking around-->
 
-<p>If all has gone well, you should be looking at a graphical login  screen asking for a username and password. Type in
-<strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.</p>
+<p>If all has gone well, you should be looking at a graphical login  screen ("kdm") asking for a username and password.   Type in <strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.</p>
+<p>Note that there are also buttons for "Session type" and "Menu."  The allows you to pick which desktop environment or window manager you want to use; the default is the one used for the last session.  The Menu button allows you to reboot, exit, etc.</p>
+<h3>The Black Screen</h3>
+<p>Sometimes it happens that you do not end up looking at the graphical login screen at all, but instead only have a black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
+<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root and typing <code>halt</code> or <code>reboot</code>.  For solutions to this failure to start X, please consult Section 5.5 Display.</p>
 
 <br /><br />
 
