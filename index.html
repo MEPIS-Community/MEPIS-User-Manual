@@ -766,8 +766,9 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 <p>If all has gone well, you should be looking at a graphical login  screen ("kdm") asking for a username and password.   Type in <strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.</p>
 <p>Note that there are also buttons for "Session type" and "Menu."  The allows you to pick which desktop environment or window manager you want to use; the default is the one used for the last session.  The Menu button allows you to reboot, exit, etc.</p>
 <h3>The Black Screen</h3>
-<p>Sometimes it happens that you do not end up looking at the graphical login screen at all, but instead only have a black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
-<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root and typing <code>halt</code> or <code>reboot</code>.  For solutions to this failure to start X, please consult Section 5.5 Display.</p>
+<p>Sometimes it happens that you do not end up looking at the graphical login at all, but instead only have a somewhat scary black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
+<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root and typing <code>halt</code> or <code>reboot</code>.</p>
+<p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
 
 <br /><br />
 
@@ -2386,6 +2387,16 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <!-- ########################### SECTION 5.5  ########################### -->
 
 <h1  id="section05-5">5.5:&nbsp;&nbsp;&nbsp;&nbsp; Display </h1>
+
+<h2>The Black Screen</h2>
+<p>Occasionally it may happen that when you boot up, you end up looking at an empty black screen that may have a blinking cursor in the corner.  This represents a failure to start X, the windows system used by Linus.  Possibilities and solutions for this failure include:</p>
+<ul><li><strong>Wrong graphic driver.</strong> This problem can occur when using the LiveDVD or LiveUSB, when you install a new monitor or with a new graphic card.  It can be corrected by returning to the GRUB screen using the live medium and carefully selecting a correct driver.  Once you have a driver that works, you can use the MEPIS X-Windows Assistant to copy over the working setup to the installed system.</li>
+<li><strong>Driver not compiled.</strong> This problem happens every time a new kernel or an updated Xorg is installed.  Use Ctrl-Alt-F1 to get to a login prompt, log in as your user, then become root and use either the MEPIS X-Windows Assistant (command: <strong>mxconfig</strong>) or <strong>sgfxi</strong>.  Details in the Wiki.</li>
+<li><strong>Refresh out of range.</strong>Solve this by adding the cheatcode <code>vsync=58-62</code>.</li>
+<li><strong>Kernel modeset issues</strong>. Add the cheat code <code>radeon.modeset=0</code> or <code>nvidia.modeset=0</code>.</li>
+<li><strong>Agp issues</strong>. Add the cheat code <code>noagp</code>.</li>
+<li><strong>Unrecognized Intel chipset</strong>.  Add the cheat code <code>xdrvr=intel</code></li></ul>
+
 <h2>Resolution</h2>
 <p>Resolution refers to the physical number of columns and rows of pixels creating the display (e.g., 1920×1200).  In most cases, the resolution is correctly set during installation (see Section 4.2) or when a new monitor is connected.  If not, you can change it in the following ways:</p>
 <ul><li>Click <strong>Start Menu > System > System Settings > Display and Monitor</strong>. Use the pull-down menu to set the correct values.</li>
@@ -2395,7 +2406,7 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <h2>Graphic driver</h2>
 <p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>).  There are two methods for doing this:</p>
 <ul><li><u>Download directly from the manufacturer</u>.  This method will require you to select and compile the driver for your system, see the Wiki entry listed below.  To find the appropriate driver, do a web search for <strong>"(brandname) graphic driver linux"</strong> and find what you need.</li>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h-2 for standard system upkeep for Debian, and can install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and can install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
 <p>Once you have this installed, you can use it to easily change to the latest appropriate version by following the on-screen directions.  Details about its use are in the Wiki, listed below.</p>  
 <p>Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
