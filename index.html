@@ -1320,7 +1320,7 @@ If you are installing MEPIS Linux to a dual-boot with another operating system, 
 </li>
 <li>
 <strong>Page 2b (Preferences):&nbsp;&nbsp;  </strong> Check &ldquo;Preserve data in /home&rdquo; if you are doing an upgrade
-and already have data in an existing home partition; note that this option is not recommended. Select <strong>Check for badblocks</strong> if you want to do a scan for physical defects on the harddrive during formatting. This <em>is</em> recommended. Finally, you can optionally select the type of filesystem you want to use on the hard drive. If you don't know what to choose here, the default <strong>ext3</strong> is recommended.  In MEPIS Linux for the first time, ext4 is available (see Section 10.1).
+and already have data in an existing home partition; note that this option is not recommended. Select <strong>Check for badblocks</strong> if you want to do a scan for physical defects on the harddrive during formatting. This <em>is</em> recommended. Finally, you can optionally select the type of filesystem you want to use on the hard drive. If you don't know what to choose here, the default <strong>ext3</strong> is recommended.  In MEPIS Linux, ext4 is available (see Section 10.1).
 </li>
 </ul>
 <!-- ###################  end unordered list ################# -->
@@ -6607,7 +6607,7 @@ http://www.mepis.org/docs/en/index.php?title=Script</a>
 
 <p>A user interface of some sort  needs to serve for input and control.  At its simplest, this interface is a command line, as in the original Unix and also in the original MS-DOS prior to MS-Windows, but today all the most popular Linux versions use a graphical user interface (GUI) that relies on the X Window System, a software system and protocol that provides the basic framework for graphical display.</p> 
 
-<p>Finally, MEPIS builds directly on the highly popular Linux <a href="index.html#s12-1_distro" class="spterm" title="Software project that manages a remote collection of Linux-based software" >distribution</a> called Debian, its direct upstream source of fundamental structures and features.  Founded in 1993, Debian has become preeminent in areas such as package development, release protocol, organizational structure and commitment to free software.  To the solid core provided by Debian's stable release, MEPIS adds user-friendly features such as a very simple installation tool, excellent hardware recognition, a set of configuration &ldquo;Assistants,&rdquo; and a LiveDVD framework &mdash;all supported by a lively and knowledgeable Community that contributes to MEPIS the artwork and documentation, as well as additional software packages.</p>
+<p>Finally, MEPIS builds directly on the highly popular Linux <a href="index.html#s12-1_distro" class="spterm" title="Software project that manages a remote collection of Linux-based software" >distribution</a> called Debian, its direct upstream source of fundamental structures and features.  Founded in 1993, Debian has become preeminent in areas such as package development, release protocol, organizational structure and commitment to free software.  To the solid core provided by Debian's stable release, MEPIS adds user-friendly features such as a very simple installation tool, excellent hardware recognition, a set of configuration &ldquo;Assistants,&rdquo; and a LiveDVD framework&mdash;all supported by a lively and knowledgeable Community that contributes to MEPIS the artwork and documentation, as well as additional software packages.</p>
 
 <br /><br />
 
@@ -6677,7 +6677,7 @@ http://en.wikipedia.org/wiki/Debian</a></li>
 <hr /></li>
 
 
-<li><strong>/home</strong> Here the Users personal directories (data and settings) reside. If there is more than one user, a separate subdirectory is set up for each. No user (except root) can read another Users home directory.  The Users directory contains both hidden (where the filename is preceded by a dot) and visible files; hidden files can be revealed by clicking <strong>View >Show Hidden Files</strong> in Dolphin.
+<li><strong>/home</strong> Here the user's personal directories (data and settings) reside. If there is more than one user, a separate subdirectory is set up for each. No user (except root) can read another user's home directory.  The user's directory contains both hidden (where the filename is preceded by a dot) and visible files; hidden files can be revealed by clicking <strong>View >Show Hidden Files</strong> in Dolphin.
 <p><em>Example:</em> users typically organize their own files at first by using default directories such as Documents, Music, etc.</p>
 <p><em>Example:</em> your Firefox profile is located in <strong>.mozilla/firefox</strong></p>
 <hr /></li>
@@ -6710,12 +6710,12 @@ particular, kernel modules will be found here, under <strong>/lib/modules</stron
 
 
 <li><strong>/sbin</strong>  Programs are installed here if they are required by the system startup scripts but will not normally be run by
-users, other than root  &mdash;in other words, system administration utilities. 
+users, other than root&mdash;in other words, system administration utilities. 
 <p><em>Example</em>: no file here is commonly accessed by users, but this is where files like modprobe and ifconfig are located.</p>
 <hr /></li>
 
 
-<li><strong>/tmp</strong> This is the location of temporary files produced by programs  &mdash;such as compilers&mdash;  as they run. In general, these are short-term temporary files, of use to a program only while it is running.
+<li><strong>/tmp</strong> This is the location of temporary files produced by programs&mdash;such as compilers&mdash;as they run. In general, these are short-term temporary files, of use to a program only while it is running.
 <p><em>Example</em>: no file here is commonly accessed by users.</p>
 <hr /></li>
 
@@ -6736,7 +6736,7 @@ users, other than root  &mdash;in other words, system administration utilities.
 
 <h2 id="s10-1_disk_fs">The Disk Filesystem</h2>
 <p>The disk filesystem is something about which the average user does not need to be much concerned. The default disk filesystem used by MEPIS Linux is called <strong>ext3</strong>, a version of the ext2 filesystem that is journaled &mdash;i.e., it writes changes to a log before enacting them, rendering it more robust. The filesystem ext3 is set during installation when your your hard drive is formatted.</p> 
-<p>By and large, ext3 has more years, in its track record over any of its rivals, of combining stability and speed, and we do not recommend installing MEPIS onto a different disk filesystem unless you are well-educated in the differences.  However, MEPIS can read and write to many other formatted disk filesystems, and may even be installed on some of them, if for some reason one of them is preferred over ext3. ext4, a journaling file system being developed as the successor to ext3 is also available</p>
+<p>By and large, ext3 has more years on its track record than any of its rivals, and combines stability and speed; for these reasons, we do not recommend installing MEPIS onto a different disk filesystem unless you are well-educated in the differences.  However, MEPIS can read and write to many other formatted disk filesystems, and may even be installed on some of them, if for some reason one of them is preferred over ext3. A journaling file system called <strong>ext4</strong> is being developed as the successor to ext3 and is also available</p>
 
 <p>NOTE: if you are dual or multi-booting different operating systems on the same computer, see <a href="index.html#section09-6">Section 9.6: Accessing other partitions</a> for more information.</p>
 
