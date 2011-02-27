@@ -748,8 +748,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <li>Using the Help System &mdash; navigation and function.</li>
 <li>Language and Keyboard Layout Selection &mdash; F2, see below.</li>
 <li>Choosing a Screen Resolution &mdash; F3, see below.</li>
-<li><a href="index.html#s12-1_cheatcode" class="spterm" title="click to go to the Glossary"> Boot
-Options</a> &mdash; a list and explanation of the boot options available for specific situations.</li>
+<li>Boot Options &mdash; a list and explanation of choices available for specific situations.</li>
 
 </ul></li>   <!-- end sublist -->
 
@@ -799,7 +798,7 @@ Options</a> &mdash; a list and explanation of the boot options available for spe
 <p>Note that there are also buttons for "Session type" and "Menu."  The allows you to pick which desktop environment or window manager you want to use; the default is the one used for the last session.  The Menu button allows you to reboot, exit, etc.</p>
 <h3>The Black Screen</h3>
 <p>Sometimes it happens that you do not end up looking at the graphical login at all, but instead only have a somewhat scary black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
-<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root and typing <code>halt</code> or <code>reboot</code>.</p>
+<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root (typing <strong>root</strong> if you are not already logged in, otherwise <strong>su</strong>) and entering <strong>halt</strong> or <strong>reboot</strong>.</p>
 <p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
 
 <br />
@@ -1065,7 +1064,7 @@ session. For details, see the link under Links and Guides.</p>
 <li>With some cards it is sometimes necessary to open a terminal, become root, and type (one line at a time):
  <pre>alsaconf
 alsactl store</pre>
-Note: 1) alsactl is part of alsa-utils, which is not installed by default; 2) in mid-2009 '''alsaconf''' was removed from alsa-utils and is no longer available through the Debian repos.  It has been packaged by a Community Member and can be found by searching on MEPIS community forum</li>
+Note: 1) alsactl is part of alsa-utils, which is not installed by default; 2) in mid-2009 '''alsaconf''' was removed from alsa-utils and is no longer available through the Debian repos, though it is available from the Community repos.</li>
 
 <li>Try opening a terminal and becoming root, then typing:
 <pre>dpkg-reconfigure alsa-base</pre></li>
@@ -1351,8 +1350,7 @@ allows the kernel to load special driver modules required to read the boot devic
 <li><strong>ppp</strong> is required for dialup internet connections, ADSL connections, and PPTP support. Note that if you have DSL but
 connect your computers through a router, you do not need PPP.
 </li>
-<li><strong>bluez</strong> is for bluetooth device support.  If you do not have bluetooth capabilities on your computer, you may safely
-disable bluez.
+<li><strong>bluez</strong> is for bluetooth device support.  If you do not have bluetooth capabilities on your computer, you may safely disable bluez.
 </li>
 <li><strong>cupsys</strong> is the Common Unix Printing System. You
 should install cupsys if you intend to print from this machine or use
@@ -2641,7 +2639,7 @@ http://www.ibm.com/developerworks</a></li>
 
 <p>MEPIS Linux comes preconfigured for a standard LAN (Local Area Network) that uses DHCP (Dynamic Host Configuration Protocol) to assign IP addresses and DNS (Domain Name System) resolution. This will work in most cases as-is. You can change the configuration with the MEPIS Network Assistant (see <a href="index.html#section05-3">Section 5.3</a>).
 
-When you boot MEPIS Linux, your network adapters are assigned a short interface name by udev, the kernel's device manager. For normal wired adapters this is usually eth0 (with subsequent adapters eth1, eth2, eth3, etc). Wireless adapters often come up on the eth0 interface in MEPIS Linux, but the interface name depends on the adapter's chipset. For instance, atheros cards often show up as ath0, while ralink usb adapters will be rausb0. To find out what interfaces have been detected and named in your system, click Start Menu > System > KInfoCenter (Info Center) > Network Interfaces. For more details, open a terminal, become root, and enter: </p>
+When you boot MEPIS Linux, your network adapters are assigned a short interface name by udev, the kernel's device manager. For normal wired adapters this is usually eth0 (with subsequent adapters eth1, eth2, eth3, etc). Wireless adapters often come up on the eth0 interface in MEPIS Linux, but the interface name depends on the adapter's chipset. For instance, atheros cards often show up as ath0, while ralink usb adapters may be rausb0. To find out what interfaces have been detected and named in your system, click Start Menu > System > KInfoCenter (Info Center) > Network Interfaces. For more details, open a terminal, become root, and enter: </p>
 <pre>ifconfig -a</pre>
 
 <p>It is highly recommended that you have a firewall (see <a href="index.html#section05-6-2">Section 5.6.2</a>) running if you are connecting directly to the Internet with your PC!  If you are running a stand-alone/external firewall, most of which will run DHCP by default, simply connect to the
@@ -2652,7 +2650,7 @@ router/hub/switch and your machine should autoconfigure via DHCP. </p>
 <p>If you use ADSL or PPPoE, connecting to the internet is easy in MEPIS Linux.  Click <strong>Start Menu > Settings > System Settings > Network Settings</strong>, then the DSL tab.  Click the Add... button and fill in the required information, checking to connect automatically if you want.</p>
 <p>NOTE: you may encounter problems when using a USB device to connect instead of going through a router.  If that happens, plug the unit into the computer, open Konsole, and type:</p>
 <pre>dmesg | tail</pre>
-<p>Post a message on MEPIS community with the output to get some help on finding the driver you need.</p>
+<p>Post a message on Forum with the output to get some help in finding the driver you need.</p>
 <h3>Dial-Up</h3>
 
 <p>If you use a dialup connection with your computer, you will use KPPP. Click <strong>Start Menu > Internet > KPPP (Internet Dial-Up Tool)</strong> to define an account, test that the modem is working, and dial your ISP.  A wizard makes the process painless, but for configuration details you can consult the KPPP Handbook in Links and Guides.</p>
@@ -2799,7 +2797,7 @@ http://www.mepis.org/docs</a></li>
 
 <li><strong>wlan0</strong>, when ndiswrapper is operating and often when using native drivers</li>
 
-<li><strong>ra0</strong> for cards with Ralink 2500 chipsets using the native driver.  If an external device such as a dongle is being used, this will show up as <strong>rausb0</strong></li>
+<li><strong>ra0</strong> for cards with Ralink 2500 chipsets using the native driver.  If an external device such as a dongle is being used, this may show up as <strong>rausb0</strong></li>
 
 </ul>
 For a full list, consult the Debian Wiki on Wifi linked below.</li>
@@ -2898,7 +2896,7 @@ http://www.mepis.org/docs</a></li>
 <h2>Introduction</h2>
 
 <p>A firewall is a device or application used to filter data packets from incoming or outgoing network traffic, usually based upon the IP address or type of service (literally, the port number). Firewall configurations sometimes need to be adjusted if you add a new network service or change the port of an existing network service on your computer.</p>
-<p> Although MEPIS Linux does not come with a software firewall preinstalled and configured, it is recommended you use one as a safety precaution.  Firewalls are aimed at two groups of users: novice to intermediate users who are not experts in networking and security, and users who don't want the hassle of dealing with using scripts and parameters. See Links and Guides for more details. </p>
+<p> Although MEPIS Linux does not come with a software firewall preinstalled and configured, it is recommended you use one as a safety precaution, especially if you do not have a router.  Firewalls are aimed at two groups of users: novice to intermediate users who are not experts in networking and security, and users who don't want the hassle of dealing with using scripts and parameters. See Links and Guides for more details. </p>
 <br />
 
 <h2>Software</h2>
@@ -6170,7 +6168,7 @@ Xfce Wiki: <a href=" http://wiki.xfce.org/ ">http://wiki.xfce.org/ </a>
 MEPIS Wiki: XFCE: <a href="http://www.mepis.org/docs/en/index.php?title=XFCE">http://www.mepis.org/docs/en/index.php?title=XFCE</a>
 </li>
 
-<li><b>IceWM</b>&nbsp;is a window manager for the X Window System whose goal is speed and simplicity.  It is the default for antiX 8.0.
+<li><b>IceWM</b>&nbsp;is a window manager for the X Window System whose goal is speed and simplicity.  It is the default for antiX.
 <br />
 IceWM home page: <a href=" http://www.icewm.org/ "> http://www.icewm.org/</a>
 <br />
@@ -6178,7 +6176,7 @@ IceWM FAQs and Howtos: <a href= "http://www.icewm.org/FAQ/" >http://www.icewm.or
 </li>
 
 <li>
-<b>Fluxbox</b>&nbsp;is derived from <em>Blackbox</em>, and retains theme compatibility with it, while adding numerous extra features.  Very lightweight and configureable, it is supplied with antiX 8.0 already configured.
+<b>Fluxbox</b>&nbsp;is derived from <em>Blackbox</em>, and retains theme compatibility with it, while adding numerous extra features.  Very lightweight and configureable, it is supplied with antiX already configured.
 <br />
 Fluxbox home page: <a href="http://fluxbox.sourceforge.net/"> http://fluxbox.sourceforge.net/</a>
 <br />
@@ -6242,7 +6240,7 @@ Here is a good, basic definition from the Linux Documentation Project:</p>
 
 <!-- ********************** Dynamic mounting with udev   **********************  -->
 
-<h1 id="section09-6-1">9.6.1:&nbsp;&nbsp;&nbsp; Dynamic mounting</h1>
+<h2 id="section09-6-1">9.6.1:&nbsp;&nbsp;&nbsp; Dynamic mounting</h2>
 <p>Dynamic mounting occurs when a device is plugged into the system.  Most of the time, it will allow you to have access to the device's partition without any action on your part, usually through a window opened up by KDE.  Thus, when you plug in a device (USB memory stick, camera, PDA, etc.), the window that pops up showing the contents of that device ultimate depends on dynamic mounting by <strong>udev</strong>.</p>
 <p>The following description udev outlines the mounting process (edited from Wikipedia):</p>
 <p class="quote"> <em>udev is a generic kernel device manager that runs as a daemon [background process] on a Linux system and listens for a new device being initialized (or a device being removed) in the system. The system provides a set of rules that match the properties of the discovered device. A matching rule will possibly name and create a device node and run configured programs to set-up and configure the device.  udev rules can match on properties like the kernel subsystem, the kernel device name, the physical location of the device, or properties like the device's serial number. Rules can also request information from external programs to name a device or specify a custom name that will always be the same, regardless of the order devices are discovered by the system.</em></p>
@@ -6260,14 +6258,14 @@ Here is a good, basic definition from the Linux Documentation Project:</p>
 
 <!-- ********************** Manual mounting   **********************  -->
 
-<h1 id="section09-6-2">9.6.2:&nbsp;&nbsp;&nbsp; Manual mounting</h1>
+<h2 id="section09-6-2">9.6.2:&nbsp;&nbsp;&nbsp; Manual mounting</h2>
 
 <p>If you need access only on an occasional basis to a partition that is not on a device dynamically mounted, such as a partition on your HDD from another OS, you can mount it manually with a couple of graphical tools in MEPIS Linux.</p>
 
-<h2 id="s09-6-1_dolphinmount">Dolphin</h2>
+<h3 id="s09-6-1_dolphinmount">Dolphin</h3>
 <p>Dolphin makes it very easy to mount any partitions by dragging them to the Places panel on the left side, then simply clicking on them.  Details in the MEPIS Wiki under "Dolphin."</p>
 
-<h2 id="s09-6-2_kwikdisk">KwikDisk</h2>
+<h3 id="s09-6-2_kwikdisk">KwikDisk</h3>
 <p>KwikDisk is a kicker applet that will show up in the system tray when installed (looks like stacked disks) just to the right of the taskbar.  It has a variety of uses:</p>
 <ul>
 <li>
@@ -6299,7 +6297,7 @@ It is an entry for KDiskFree, a utility that measures available space.
 
 
 <!-- ********************** Automatic mounting with fstab    **********************  -->
-<h1 id="section09-6-3">9.6.3:&nbsp;&nbsp;&nbsp; Automatic mounting</h1>
+<h2 id="section09-6-3">9.6.3:&nbsp;&nbsp;&nbsp; Automatic mounting</h2>
 <p>In order to set MEPIS to automatically mount another partition at boot time so that it will be accessible at all times, you will need to edit options in the <strong>/etc/fstab</strong> configuration file.  Before we get into the details, let's go over the basic structure of every line in that file:</p>
 <h3>The fstab file</h3>
 <p>The file /etc/fstab has two parts: permanently available devices and, starting after the comment line: &ldquo;Dynamic entries below.&rdquo;  These are partitions detected at the time you installed MEPIS Linux, but which are not integral to operating MEPIS. They may be manually mounted, per Section 9.6.2, above. When they are mounted, the settings listed in /etc/fstab will govern their placement and permissions in the root filesystem.</p>  
@@ -6396,7 +6394,7 @@ Check to see that the original line for the partition is missing from the bottom
 </li>
 
 <li>
-Save the file and exit Kwrite.  To put your changes into effect, open a terminal, become root, and type:<pre>mount -a</pre>  <p>Now fstab will be parsed and all filesystems that are set to mount at boot will be immediately mounted if they are not already.  You will find the partition mounted under <strong>/mnt</strong>.</p>
+Save the file and exit KWrite.  To put your changes into effect, open a terminal, become root, and type:<pre>mount -a</pre>  <p>Now fstab will be parsed and all filesystems that are set to mount at boot will be immediately mounted if they are not already.  You will find the partition mounted under <strong>/mnt</strong>.</p>
 </li>
 </ol>
 
@@ -6410,7 +6408,7 @@ Save the file and exit Kwrite.  To put your changes into effect, open a terminal
 <ol>
 <li>First, create the folder where you want it to be.  Open Dolphin, right-click an empty space and click <strong>Create New >Folder...</strong> and enter <strong>XP</strong> as the name we're going to use.
 </li>
-<li>Open up the current /etc/fstab in the text editor kwrite, with root privileges, by typing in konsole:
+<li>Open up the current /etc/fstab in the text editor KWrite, with root privileges, by typing in konsole:
 <pre>
 kdesu kwrite /etc/fstab 
 </pre>
@@ -6481,7 +6479,7 @@ or by checking your home directory in Dolphin using the <em>Detailed List View</
 <p>Let's do a very simple (and famous) script to get the basic idea. </p> 
 
 <ul>
-<li>Open the text editor KWrite (<strong>Start Menu > Utilities</strong>, and type:
+<li>Open the text editor KWrite (<strong>Start Menu > Utilities</strong>), and type:
 <pre>#!/bin/bash
 clear
 echo "Good morning, world!"</pre>
