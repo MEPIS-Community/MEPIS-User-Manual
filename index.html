@@ -6094,6 +6094,7 @@ It is also possible to download directly from the VirtualBox website.  Be sure t
 <li><strong>Select a Host Drive or Virtual CD/DVD Disk File</strong> – Click Settings > Storage, and a dialog box will pop up where you will see in the middle a Storage Tree with an IDE Controller and a SATA Controller below it.  It looks something like this: <img src="grafx/Vbox_Storage.png" alt="Vbox storage dialog" width="500" height="350" /> 
 By clicking on the CD/DVD Drive icon in the Storage Tree, you will see the CD/DVD Drive icon appear in the Attributes section in the right side of the window.  Click on the CD/DVD Drive icon in the Attributes section to open a drop-down menu where you can assign the Host Drive or a Virtual CD/DVD disc file (ISO) to be mounted on the CD/DVD Drive.  (You can select a different ISO file by clicking on <strong>Choose a Virtual CD/DVD disk file</strong> and navigating to the file.)  </li>
 <li><strong>Run the machine.</strong>  The device you selected (ISO or CD/DVD) will be mounted when you start the virtual machine.</li>
+<li>When a new kernel is installed, the modules must be rebuilt (including for the Guest Additions).  If the <strong>dkms</strong> package is installed, VirtualBox should automatically rebuild its kernel modules (drivers), provided the kernel headers and build environment are also installed.</li>
 </ul>
 
 <p>Excellent documentation is available through <em>Help</em> on the menu bar or as a PDF from the website.</p>
