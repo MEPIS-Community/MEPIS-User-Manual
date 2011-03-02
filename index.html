@@ -28,7 +28,7 @@ install Linux, LiveDVD, live cd, install from CD, dual boot,free operating syste
 <hr />
 <h3>Welcome!</h3>
 
-<p>Welcome to the world of Linux and MEPIS. If you have just booted the MEPIS Linux LiveDVD, you have the opportunity to explore some of the
+<p>Welcome to the world of Linux and MEPIS. If you have just booted the MEPIS Linux LiveDVD or LiveUSB, you have the opportunity to explore some of the
 features of a whole new computer operating system before you decide to install it! Exploration, evaluation, comparison. . .decision. So far
 you have taken the first solid step toward a better computing experience, so enjoy exploring MEPIS Linux 11!</p>
 
@@ -5680,6 +5680,53 @@ sets.
 <li><strong>Gdocs</strong>.  Options include:</li>
 <ul><li>LibreOffice has an extension called <strong>gdocs</strong> that helps directly upload a file to Google Docs.</li></ul>
 <li><strong>Google Earth</strong>.  This app can be installed by direct download or through the repositories; check the Wiki for installation and setup details.</li></ul>
+<h2>Settings for Gmail</h2>
+<p>You can sync your local email client with your Gmail account.  Create a new <a href="index.html#s12-1_imap" class="spterm"  title="The Internet Message Access Protocol" >IMAP</a> account with the following settings:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Incoming Mail (IMAP) Server</td>
+      <td>imap.gmail.com</td>
+    </tr>
+    <tr>
+      <td>Use SSL</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Port</td>
+      <td>993</td>
+    </tr>
+    <tr>
+      <td>Outgoing Mail (SMTP) Server</td>
+      <td>smtp.gmail.com</td>
+    </tr>
+    <tr>
+      <td>Use Authentication</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Use STARTTLS/SSL</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Port</td>
+      <td>465 or 587</td>
+    </tr>
+    <tr>
+      <td>Account Name</td>
+      <td>yourname@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Email Address</td>
+      <td>yourname@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>your Gmail password</td>
+    </tr>
+  </tbody>
+</table>
+<p>Note that E-mail clients using IMAP generally leave messages on the server until the user explicitly deletes them.</p>
 <br />
 <h2 id="s08-11_links">Links and Guides for Section 8:11</h2>
 <ul class="link">
@@ -5687,7 +5734,8 @@ sets.
 <li>Thunderbird and Gmail: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=38343"> http://mail.google.com/support/bin/answer.py?hl=en&answer=38343</a></li>
 <li>Synchronizing KDE apps with Google: <a href="http://www.my-guides.net/en/content/view/178/26/"> http://www.my-guides.net/en/content/view/178/26/ </a></li>
 <li>Thunderbird Gcal tab: <a href="https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/"> https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/ </a></li>
-<li>MEPIS Wiki: Google Earth: <a href="http://www.mepis.org/docs/en/index.php?title=Googleearth"> http://www.mepis.org/docs/en/index.php?title=Googleearth </a></li></ul>
+<li>MEPIS Wiki: Google Earth: <a href="http://www.mepis.org/docs/en/index.php?title=Googleearth"> http://www.mepis.org/docs/en/index.php?title=Googleearth </a></li>
+<li>Gmail Help: Configuring other mail clients: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=78799"> http://mail.google.com/support/bin/answer.py?hl=en&answer=78799 </a></li></ul>
 
 <br /><br /><br /><br /><br /><br />
 
@@ -7277,6 +7325,8 @@ applications are released. It specifies that you may view, modify, and redistrib
 <p id="s12-1_gui"><strong>Graphical User Interface (GUI):&nbsp;&nbsp;</strong> This refers to a program or operating system interface that uses pictures (icons, windows, etc), as opposed to text (command-line) interfaces.</p>
 
 <p id="s12-1_home-dir"><strong>home directory:&nbsp;&nbsp; </strong>   One of the 17 top-level directories branching from the root directory in MEPIS Linux, <strong>/home</strong> contains a subdirectory for every registered user of the system. Within each Users home directory s/he has full read-write privileges.  Further, most of the user-specific configuration files for various installed programs are stored in hidden subdirectories within the /home/<em>username</em> directory &mdash;as is downloaded email. Other downloaded files usually go by default into the home/<em>username</em>/Documents or /home/<em>username</em>/Desktop subdirectories. </p>
+
+<p id="s12-1_imap"><strong>IMAP:&nbsp;&nbsp;</strong> The Internet Message Access Protocol is an protocol that allows an e-mail client to access a remote mail server.  It supports both on-line and off-line modes of operation. </p>
 
 <p  id="s12-1_iso"><strong>ISO:&nbsp;&nbsp;</strong> A disc image following an international standard that contains data files and filesystem metadata, including boot code, structures, and attributes.  This is the normal method for delivering Linux versions such as MEPIS over the Internet. See also <em>disk image.</em></p>
 
