@@ -468,16 +468,8 @@ the DVD's integrity.</p>
 <!-- ########################### SECTION 3.0 ########################### -->
 
 <h1 id="section03-0">3:&nbsp;&nbsp;&nbsp;&nbsp; Pre-Installation</h1>
-<br /><br /><br />
-<table border="1" frame="box" rules="none">
-  <tbody align="center">
-    <tr>
-      <td><img src="grafx/construction_computer.gif" alt="Under construction" width="100" height="80" /></td>
-      <td><b><font size="+1">Section 3.1-3.4 has not been updated for MEPIS 11, and may contain errors</font></b></td>
-    </tr>
-  </tbody>
-</table>
-<br /><br /><br />
+
+
 <h2>3.0:&nbsp;&nbsp;&nbsp;&nbsp; Introduction</h2>
 
 <p>Before launching into an installation of MEPIS Linux, there are a few steps you will want to take. This includes checking
@@ -735,7 +727,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <p>
         Insert the disc into your DVD drive (or the Live USB into a port) and restart your computer. You may need to set your system to boot from the medium first, see <a href="index.html#s03-3_troubleshooting ">Troubleshooting</a> below for details.</p>
 <h3>The GRUB screen</h3>
-<p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most  computers.</p>
+<p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most computers.</p>
 <p>Make sure to note the function keys at the bottom of the screen:</p>
 
 <!-- ###################  start unordered list ################# -->
@@ -788,16 +780,15 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <p>A full list can be found in the Wiki entry listed below, and you should ask on the Forum about any problems you are experiencing.</p>
 
 <!-- ###################  end table ################# -->
-<h3>The boot process</h3>
-<p>When GRUB hands off the booting process to the Linux kernel, you will see a MEPIS graphical screen, called &ldquo;Splashy&rdquo;, with an expanding horizontal bar that indicates booting progress. If you hit the <strong>Ctrl-Alt-F1</strong> keys together Splashy will be disabled, and you can view a console screen and read the booting messages that echo on the screen.  (This can be made permanent after installation.)  Sometimes this can be helpful in troubleshooting boot problems.</p>
+<h3>Login</h3>
 
 <!--logging in and looking around-->
 
-<p>If all has gone well, you should be looking at a graphical login  screen ("kdm") asking for a username and password.   Type in <strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.</p>
+<p>If all goes well, you will arrive at a graphical login  screen ("kdm") asking for a username and password.   Type in <strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.  Note: do not log in as root if you will be installing, as that can lead to errors.</p>
 <p>Note that there are also buttons for "Session type" and "Menu."  The allows you to pick which desktop environment or window manager you want to use; the default is the one used for the last session.  The Menu button allows you to reboot, exit, etc.</p>
 <h3>The Black Screen</h3>
 <p>Sometimes it happens that you do not end up looking at the graphical login at all, but instead only have a somewhat scary black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
-<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then provide your username and password. Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root (typing <strong>root</strong> if you are not already logged in, otherwise <strong>su</strong>) and entering <strong>halt</strong> or <strong>reboot</strong>.</p>
+<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then log in as "demo" with password "demo" (orprovide your username and password if already installed). Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root: type <strong>root</strong> if you are not already logged in, otherwise <strong>su</strong>), and enter <strong>halt</strong> or <strong>reboot</strong>.</p>
 <p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
 
 <br />
@@ -819,7 +810,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <h2 id="section03-4">3.4: The new desktop</h2>
 
-<p>The KDE 4 desktop which appears for the first time in MEPIS 8.5 is very different from the KDE 3.5 one with which MEPIS users are familiar.  This section is designed to acquaint you with its basic features, liberally borrowing material from KDE.org documentation and other online resources.  For more info and customization options, follow the Wiki link at the end of this section.</p>
+<p>This section is designed to acquaint you with the basic features of the KDE4 desktop, liberally borrowing material from KDE.org documentation and other online resources.  For more info and customization options, follow the Wiki link at the end of this section.</p>
 
 
 <h3>Plasma</h3>
@@ -832,7 +823,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <h3>Widgets</h3>
 
-<p>A widget is a basic visual building block of the Plasma desktop (the GUI) which, combined in an application, holds all the data processed by the application as well as the available interactions with this data.  Other common names are applet or gadget. Superkaramba Themes, Apple's Dashboard, Google Gadgets, Yahoo Widgets, Vista Sidebar Widgets, Opera Widgets are all examples of other widget systems, some of which Plasma also supports. </p> 
+<p>A widget is a basic visual building block of the Plasma desktop (the GUI) which, combined in an application, holds all the data processed by the application as well as the available interactions with this data.  Other common names are applet or gadget. Superkaramba Themes, Apple's Dashboard, Google Gadgets, Yahoo Widgets, Vista Sidebar Widgets, and Opera Widgets are all examples of other widget systems, some of which Plasma also supports. </p> 
 <p>A certain number of widgets are supplied by default, and others are downloadable via the Add Widgets dialogue box.  To add a widget to the desktop or panel, first unlock the widgets if they are locked, then simply right-click anywhere, select Add Widgets..., and choose the widget from the list.  Particularly useful widgets include:</p>
 
 <ul>
@@ -841,7 +832,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <li>System Monitor: various monitors: hard disk, network usage, temperature, etc.</li>
 </ul>
 
-<p>When you are done configuring your widgets (including the panel), don't forget to lock them by right-clicking on the desktop (or the panel, under Panel Options) and selecting that command.  This will prevent your widgets from possibly moving around or even disappearing.</p>
+<p>When you are done working with your widgets (including the panel), don't forget to lock them by right-clicking on the desktop (or the panel, under Panel Options) and selecting that command.  This will prevent your widgets from possibly moving around or even disappearing.</p>
 
 <h4>Adding Widgets </h4>
 
@@ -857,14 +848,14 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <h4> Configuring Desktop Widgets</h4>
 <img class="fl" src="./MEPIS 11 USER'S MANUAL_sb_files/editwidg-1.png" width="275" height="240">
-<p>Hover your mouse cursor over the widget until a translucent frame appears around the widget, showing a number of symbols:  Make sure the widgets are unlocked first.</p>
+<p>Hover your mouse cursor over the widget until a translucent frame appears around the widget, showing a number of symbols.  Make sure the widgets are unlocked first.</p>
 
 <ul>
 <li>To change the widget size, left-click on the scale symbol in the frame and keep the mouse button pressed while slowly moving your cursor across the desktop.</li>
 
-<li>To rotate the widget in any direction, left-click the arrow symbol in the frame And keep the mouse button pressed while moving your cursor  in a circle across the desktop. </li>
+<li>To rotate the widget in any direction, left-click the arrow symbol in the frame And keep the mouse button pressed while moving your cursor in a circle across the desktop. </li>
 <li>There is a sticky boundary in the horizontal and vertical positions where you can “clamp” the widget, if you like. Of course, you can also arrange it in any tilted position.</li>
-<li>To change the contents,  settings, or properties of a widget, left-click the wrench symbol in the frame, in the configuration dialog box that appears, set the options according to your wishes. </li>
+<li>To change the contents,  settings, or properties of a widget, left-click the wrench symbol in the frame and use the configuration dialog box that appears. </li>
 </ul>
 
 
@@ -888,13 +879,11 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <ul> <!-- sublist -->
 <li>Start (Start Menu) -- gives you an easy method of running installed applications</li>
-<li>Device Manager -- notifies you of all plugged-in devices and gives options for handling</li>
 <li>Pager -- shows multiple desktops you can use if you wish</li>
 <li>File Manager (Dolphin) -- your primary means of navigating around the file system</li>
 <li>System Settings -- where most configuration and customization takes place</li>
 <li>Default Browser (Firefox) -- top-rated tool for navigating the web</li>
 <li>Email (KMail) -- excellent application for managing email</li>
-<li>Package Manager (Synaptic) -- use this to upgrade the system and add new applications</li>
 </ul></li>   <!-- end sublist -->
 
 <li>Middle (here: empty) is the taskbar, used to keep track of running applications.</li>
@@ -902,9 +891,11 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <ul><!-- sublist -->
 <li>Clipboard (Klipper) -- lets you manage cut and copied material</li>
+<li>Apt-Notifier -- indicates when upgrades are available with a green arrow</li>
 <li>Sound mixer (KMix) -- here you make sound adjustments</li>
 <li>Network Manager -- center for dealing with wired and wireless network access</li>
 <li>Notifications and Jobs -- this reports system actions for you to monitor</li>
+<li>Device Manager -- notifies you of all plugged-in devices and gives options for handling</li>
 <li>Date and Time -- obvious, but you also can click this for a calendar</li>
 </ul></li></ul> <!-- end sublist -->
 
@@ -949,11 +940,11 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <li>The icons in the system tray usually belong to applications running in the background. Therefore you can only remove those icons if you close those applications (right-click the icon and select <em>Quit</em>).</li>
 
-<li>To prevent the panel and widgets being moved accidentally, use <strong>Lock Widgets.</strong></li>
+<li>To prevent the panel and widgets being moved accidentally, right-click and use <strong>Lock Widgets.</strong></li>
 
 <li>For additional configurations options like alignment and functions, click <strong>More Settings.</strong></li>
 </ul>
-<p>If all panel changes are according to your wishes, close the panel settings with Red close button on the right side.</p>
+<p>When all panel changes are done, close the panel settings with red close button on the right side.</p>
 
 <h3>Menus</h3>
 
@@ -980,32 +971,32 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 
 
-<p>The System Settings screen is divided into two tabs, General and Advanced.  Beginning KDE 4 users should explore the General tab, which covers these areas:</p>
+<p>The System Settings screen is divided into a number of separate areas, each of which contains several icons:</p>
 
 <!-- ###################  start unordered list ################# -->
 
 <ul>
-<li>Look &amp; Feel (Appearance, Desktop, etc.)</li>
+<li>Common Appearance and Behavior</li>
 
-<li>Personal (About Me, Regional &amp; Language, etc.)</li>
+<li>Workspace Appearance and Behavior</li>
 
-<li>Network &amp; Connectivity (Network Settings, Sharing, etc.)</li>
+<li>Network &amp; Connectivity</li>
+<li>Hardware</li>
 
-<li>Computer Administration (Date &amp; Time, Display, etc.)</li>
-
+<li>System Administration</li>
+<li>Lost and Found</li>
 </ul>
 <!-- ###################  end unordered list ################# -->
-
+<p>To find  a particular setting, use the search box in the upper right corner, or hover your mouse over the icons to see their contents.</p>
 
 
 <h3>Krunner</h3>
 
-<p>Krunner is a tool for searching and launching files and applications. It can also be used for more generic operations such as calculator or unit converter.  To start it: 1) use the menus (Classic Menu >Run Command, at the top of Kickoff and Lancelot) 2) Press Alt+F2, 3) right-click the desktop >Run Command. The KDE 4 version performs many functions (click the question mark for help), for instance:</p>
+<p>Krunner is a tool for searching and launching files and applications. It can also be used for more generic operations such as calculator or unit converter.  To start it: 1) click Start Menu > Run Command, 2) Press Alt+F2, or 3) right-click the desktop > Run Command. The KDE 4 version performs many functions (click the question mark for help), for instance:</p>
 
 <ul>
 <li>Application launcher<br />
-Begin to type the name of the application you want to run. Krunner will grow a short list of applications based on the letters you type. You can finish typing the name, or just click the right one from the new short list.
-</li>
+Begin to type the name of the application you want to run. Krunner will grow a short list of applications based on the letters you type. You can finish typing the name, or just click the right one from the new short list.  If an application requires <strong>root</strong> access, you should get a dialog box for the password.  Occasioinally, you must tell KDE that you want to function as root by typing: <pre>kdesu applicationname</pre> </li>
 <li>Calculator<br />
 You can use Krunner as an efficient calculator. Just type the expression you want to evaluate such as <pre>32*12= or =32*12</pre> (You can put the = sign before or after the expression).  It is possible to evaluate more sophisticated expressions such as: <pre>=sqrt(4) + 32 * sin(60)</pre></li>
 <li>Converter <br />
@@ -1019,21 +1010,21 @@ Krunner doesn't only recognize applications, but also all binaries throughout yo
 Enter any URL and the page will pop up in your default browser.</li>  
 
 <li>Task-oriented searches<br />
-Start Krunner and click on the wrench symbol >User Interface tab, then select Task Orientated >OK.  This changes Krunner into QuickSand, an alternative front end.  Just start typing to initiate a search.  QuickSand represents matches to a query as a scrolling line of icons. A completion box of matches is also shown when the matches first arrive. The list can be scrolled using the up and down arrow keys when the completion box is shown or the left and right arrow keys.</li>
+Start Krunner and click on the wrench symbol > User Interface tab, then select Task Orientated >OK.  This changes Krunner into QuickSand, an alternative front end.  Just start typing to initiate a search.  QuickSand represents matches to a query as a scrolling line of icons. A completion box of matches is also shown when the matches first arrive. The list can be scrolled using the up and down arrow keys when the completion box is shown or the left and right arrow keys.</li>
 </ul>
 
 
 <h3>File management</h3>
 
-<p>Dolphin is the default file manager in KDE 4. It includes several unique enhancements for the user that aren't available in Konqueror.  By focusing exclusively on file management, Dolphin avoids many of the pitfalls inherent in the Konqueror approach familiar from KDE 3.5, leading to such items as a more flexible sidebar system and a less-invasive notification system that doesn't interrupt user work flow.  Konqueror can still be used as file manager (as can other alternatives, for that matter) and in fact it shares the fileview functionality with Dolphin.</p>
+<p>Dolphin is the default file manager in KDE4. By focusing exclusively on file management, Dolphin avoids many of the pitfalls inherent in the Konqueror approach familiar from KDE 3.5, leading to such items as a more flexible sidebar system and a less-invasive notification system that doesn't interrupt user work flow.  Konqueror can still be used as file manager (as can other alternatives, for that matter) and in fact it shares the fileview functionality with Dolphin.</p>
 
-<p>On the left-hand side, Dolphin's Panel provides quick access to your most often used locations, called &ldquo;Places.&rdquo; Just drag a folder to the sidebar and be able to quickly access it, from not only Dolphin itself, but also from the KickOff Places tab and the Lancelot Computer tab.  Right-click an empty space to see other options.</p>
+<p>On the left-hand side, Dolphin's Panel provides quick access to your most often used locations, called &ldquo;Places.&rdquo; Just drag a folder to the sidebar to be able to quickly access it, not only from Dolphin itself, but also from the KickOff Places tab and the Lancelot Computer tab.  Right-click an empty space in the Panel to see other options.</p>
 
 <p>Some hints and tips to get you started:</p>
 <ul>
-<li>F4 opens up a terminal at the bottom in the current folder, while F3 gives you a split view that is handy for moving or copying files.</li>
-<li>For directories containing lots of images, press the preview button in Dolphin's toolbar and get previews of the files located in the current directory. </li>
-<li>To quickly move between directories, click on the breadcrumbs located right above the main view screen (e.g., <strong>Home &gt; Mail &gt; Inbox</strong>). Clicking on the arrow next to one of the breadcrumbs lets you move swiftly to different subdirectories. </li>
+<li><strong>F4</strong> opens up a terminal at the bottom in the current folder, while <strong>F3</strong> gives you a split view that is handy for moving or copying files.</li>
+<li>For directories containing lots of images, press the preview button in Dolphin's toolbar and get previews of the files located in the current directory.  For very large images, you will have to change the limit in <strong>Settings > Configure Dolphin > General > Preview tab</strong>.</li>
+<li>To quickly move between directories, click on the "breadcrumbs" located right above the main view screen (e.g., <strong>Home &gt; Mail &gt; Inbox</strong>). Clicking on the arrow next to one of the breadcrumbs lets you move swiftly to different subdirectories. </li>
 <li>For a side-by-side view that makes copying files between directories easy, hit the &ldquo;Split View&rdquo; button. </li>
 <li>Dolphin remembers settings for a specific directory, but you can also set global defaults by clicking Settings" >Configure Dolphin.
 </li></ul>
@@ -1043,18 +1034,18 @@ Start Krunner and click on the wrench symbol >User Interface tab, then select Ta
 
 <p>Okular allows you to view a great number of file formats, including PDF, PostScript, OpenDocument format files in the LibreOffice suite (ODF), OpenDocument text (ODT), some eBook formats (ePub), and even Microsoft® Compiled HTML Help files (CHM). Okular also provides support for bookmarks, annotations, form fields and multimedia content, and the rotation of pages.</p>
 
-<p>Start Okular from the Main Menu  or press Alt + F2 and enter <em>okular</em>.</p>
+<p>Start Okular by clicking <strong>Start Menu > Office > More Applications</strong>, or press Alt + F2 and enter <em>okular</em>.</p>
 
 <p>To open a document, select <strong>File &gt; Open</strong> and choose the desired file from the file system. Navigate through the document by using the navigation icons at the top or bottom of the window </p>
 
-<p>Depending on the  icon you click on the navigation panel on the left, the sidebar either shows a table of contents, a Thumbnail view of each page, the Reviews, or your Bookmarks for this file. To filter for any text listed in the sidebar or the overall document, enter a string field at the top of the sidebar. If you want to select and copy text or images from the file in Okular. Click the Selection icon in the toolbar and select one of the options from the context menu. Click the Browse icon to switch back to browsing the document.</p>
+<p>Depending on the  icon you click on the navigation panel on the left, the sidebar either shows a table of contents, a Thumbnail view of each page, the Reviews, or your Bookmarks for this file. To filter for any text listed in the sidebar or the overall document, enter a string field at the top of the sidebar. If you want to select and copy text or images from the file in Okular. click the Selection icon in the toolbar and select one of the options from the context menu. Click the Browse icon to switch back to browsing the document.</p>
 
-<h3>Working with Bookmarks and Annotations: </h3>
+<h4>Working with Bookmarks and Annotations: </h4>
 <p>With Okular, you can review a document by highlighting certain text parts or by adding annotations or bookmarks that Okular then attaches to the file in the form of metadata.</p>
 <ul>
-<li>To add a bookmark for a page, click the page, click the page in the sidebar or in the main menu display field and press Ctrl + B. The page is added to the Bookmarks list on the left sidebar.</li>
+<li>To add a bookmark for a page, click the page in the sidebar or in the main menu display field and press Ctrl + B. The page is added to the Bookmarks list on the left sidebar.</li>
 
-<li>Right-click the bookmark entry to access a context menu for going to this bookmark or renaming, or removing it.</li>
+<li>Right-click the bookmark entry to access a context menu for going to this bookmark, renaming or removing it.</li>
 
 <li>To create an annotation for this page, press F6 and select one of the annotation tools from the toolbar that appears. The annotation is added to the list of Reviews and is flagged with the login name of the user who created it. </li>
 
@@ -1068,19 +1059,16 @@ Start Krunner and click on the wrench symbol >User Interface tab, then select Ta
 
 <h3 id="s03-4_kwallet">KWallet</h3>
 
-<p>When you enter a password in a KDE application for the first time, (in Kmail for example), you are asked if you want to store the password, If you click <em>Yes</em>, Kwallet wizard opens by default.  Kwallet is a password management tool that can collect and store all passwords in one or more encrypted files (called “wallets”).</p>
+<p>Kwallet is a password management tool that can collect and store all passwords in one or more encrypted files (called “wallets”). When you enter a password in a KDE application for the first time (in Kmail of Network Manager, for example), you are asked if you want to store the password.  If you click <em>Yes</em>, Kwallet wizard opens by default.  Note: if you do not want to use KWallet, you still must step through the dialog box the first time it comes up.</p>
 
 <img class="fl" src="./MEPIS 11 USER'S MANUAL_sb_files/kwallet-setup.png" width="400" height="304" alt="Kwallet setup window">
 
-<p>To activate Kwallet, select <strong>Basic Setup</strong> and click <strong>Next</strong>, select <em>Yes, I wish to use the KDE Wallet to store my personal information</em> and enter a password. This is your master password for the default wallet, (kdewallet) that will be created during the next step.</p>
+<p>To activate Kwallet, select <strong>Basic Setup</strong> and click <strong>Next</strong>, select <em>Yes, I wish to use the KDE Wallet to store my personal information</em> and enter a password. This is your master password for the default wallet (kdewallet) that will be created during the next step.  Then click finish to close the wizard.</p>
 <p><span class="bred">Warning! Protect Your Kwallet Password:</span>
 If you forget your master password for any wallet, it cannot be recovered! Furthermore, anyone who knows your password can obtain all information contained in the respective wallet. If other people log ono your computer, make the Kwallet password a good one and write it down in a safe place! </p>
 
-<p>Click finish to close the wizard.</p> 
-
-<p>If you started the Kwallet wizard from another application like Network Manager Kmail, Kwallet will prompt you to enter the password  again in order to store the password for this application in the newly created  wallet. After initial configuration you can open your wallet at any time to view, search, delete, or create entries. Normally you do not need to add additional data manually. KDE recognizes if a resource requires authentication and Kwallet starts automatically, prompting you for the Kwallet password,.</p> 
+<p>If you started the Kwallet wizard from another application like Network Manager Kmail, Kwallet will prompt you to enter the password again in order to store the password for this application in the newly created  wallet. After initial configuration you can open your wallet at any time to view, search, delete, or create entries. Normally you do not need to add additional data manually. KDE recognizes if a resource requires authentication and Kwallet starts automatically, prompting you for the Kwallet password,.</p> 
 <p>To configure any Kwallet options, press Alt + F2 and enter <em>kwalletmanager</em>. Then, in the Kwallet Manager that opens, select <strong>Settings &gt; Configure Wallet</strong>. </p>
-<p>Note: if you do not want to use KWallet, you still must step through the dialog box the first time it comes up.</p>
 
 
 <h3 id="s03-4_activities">Activities</h3>
@@ -1121,7 +1109,7 @@ installing it to your hard drive. Keep in mind that in general everything runs m
 <li>Sound</li>
 <li>Network connection (particularly wireless)</li>
 <li>Video (including 3D acceleration)</li>
-<li>Peripherals such as printer, camera, MP3 player, or scanner.</li>
+<li>Peripherals such as printer, camera, MP3 player, or scanner.  See Section 5.2 on setting these up.</li>
 </ul> 
 <!-- ###################  end unordered list ################# -->
 
@@ -1136,7 +1124,7 @@ session. For details, see the link under Links and Guides.</p>
 <p>
         <u>DVD</u><u> won't boot</u>. If you have checked the integrity of your ISO, make sure your computer is set to boot to the DVD drive. Newer computers often have a hotkey such as F8, F10, or F12 which will invoke a <em>boot device menu</em> when pressed during startup. For older machines,  you may need to edit your system's boot device order in the CMOS (BIOS)  settings. Please consult your system's operating manual for the correct procedure.</p>
 
-<p><u>LiveDVD stops during boot</u>, or once booted performs  exceptionally poorly.  Try some of the Boot Options that can be found by clicking F1 on the opening screen (GRUB).  Problems with hardware, for instance, can often be overcome by entering <strong>noacpi</strong>, <strong>noapic</strong>, and/or <strong>nolapic</strong>.</p>
+<p><u>LiveDVD stops during boot</u>, or once booted performs exceptionally poorly.  Try some of the Boot Options that can be found by clicking F1 on the opening screen (GRUB).  Problems with hardware, for instance, can often be overcome by entering <strong>noacpi</strong>, <strong>noapic</strong>, and/or <strong>nolapic</strong>.</p>
 
 <p><u>Does not boot to graphical login (kdm)</u>. First, check that you have a good download and burn, as described earlier.  If that is OK, then try these steps:</p>
 
@@ -1162,7 +1150,7 @@ Note: 1) alsactl is part of alsa-utils, which is not installed by default; 2) in
 <li>Try opening a terminal and becoming root, then typing:
 <pre>dpkg-reconfigure alsa-base</pre></li>
 
-<li>For ''snd-hda-intel'' systems try right-clicking the desktop >Run Command, and enter <pre>kdesu kwrite /etc/modprobe.d/snd-hda-intel</pre>Once that file opens, comment out the first line; if that doesn't work, try commenting out the second line instead if it is not already. Save, and then run <strong>alsaconf</strong>.</li>
+<li>For ''snd-hda-intel'' systems try right-clicking the desktop > Run Command, and enter <pre>kdesu kwrite /etc/modprobe.d/snd-hda-intel</pre>Once that file opens, comment out the first line; if that doesn't work, try commenting out the second line instead if it is not already. Save, and then run <strong>alsaconf</strong>.</li>
 
 <li>In the second line of that same file, try adding your specific machine model, for instance:
 <pre>Options snd-hda-intel model=lenovo</pre>
