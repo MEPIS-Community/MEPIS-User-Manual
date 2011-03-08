@@ -2448,13 +2448,20 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <li>For laptops, you can make changes easily by clicking <strong>Start Menu > System > More Applications > KRandRTray</strong>.  This will place an icon in your System Tray that you can right-click to change resolution or left-click for other changes.</li>
 <li>For Nvidia cards, you can install the package <strong>nvidia-settings</strong> that will give you a graphic tool that you can use as root to alter settings.</li>
 <li>In difficult situations, it is possible to manually alter the configuration file <strong>/etc/X11/xorg.conf</strong>.  Always back up the file before you change it, and check the Wiki and the Forum for help.</li></ul>
+
 <h2>Graphic driver</h2>
-<p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>).  There are two methods for doing this:</p>
-<ul><li><u>Download directly from the manufacturer</u>.  This method will require you to select and compile the driver for your system, see the Wiki entry listed below.  To find the appropriate driver, do a web search for <strong>"(brandname) graphic driver linux"</strong> and find what you need.</li>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and can install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
+<p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>).  There are two methods for doing this (see the Wiki for details):</p>
+<ul><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; if you are not sure, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
+<ul><li>Nvidia: <a href="http://www.nvidia.com/Download/index.aspx">http://www.nvidia.com/Download/index.aspx</a></li>
+<li>ATI: <a href="http://support.amd.com/">http://support.amd.com/</a></li>
+<li>Intel: <a href="http://intellinuxgraphics.org/download.html">http://intellinuxgraphics.org/download.html</a></li></ul>
+Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are easily installed: 
+<ul><li>Navigate in Dolphin to the folder where they were downloaded </li>
+<li>Right-click the file, select the Permissions tab, check "Is executable" </li>
+<li>Press F4 to get a command line and type (using the real name of the file) <pre>sh filename.run</pre></li></ul>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and can usually install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
-<p>Once you have this installed, you can use it to easily change to the latest appropriate version by following the on-screen directions.  Details about its use are in the Wiki, listed below.</p>  
-<p>Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
+<p>Once you have this installed, you can use it to easily change to the latest appropriate version by opening a root konsole and typing <pre>sgfxi</pre> Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -2544,16 +2551,6 @@ conveniently alter screen size, orientation or refresh rate.</p>
 
 <h2 id="s05-5_links"> Links and Guides for Section 5.5</h2>
 <ul class="link">
-<li>ATI home page: <a href="http://ati.amd.com/"> http://ati.amd.com/ </a></li>
-<li>NVIDIA home page: <a href="http://www.nvidia.com/page/home.html"> http://www.nvidia.com/page/home.html </a></li>
-<li>
-Debian guide on NVIDIA installation: <a href="http://home.comcast.net/%7Eandrex/Debian-nVidia/installation.html"> http://home.comcast.net/%7Eandrex/Debian-nVidia/installation.html</a>
-</li>
-<li>NVIDIA configuration guide: <a href="http://us.download.nvidia.com/XFree86/Linux-x86/177.80/README/chapter-06.html">
-http://us.download.nvidia.com/XFree86/Linux-x86/177.80/ README/chapter-06.html </a>
-</li>
-<li>Matrox home page: <a href="http://www.matrox.com/"> http://www.matrox.com/ </a></li>
-<li>SiS home page: <a href="http://www.sis.com/"> http://www.sis.com/ </a></li>
 <li>MEPIS Wiki: Fonts: <a href="http://www.mepis.org/docs/en/index.php?title=Fonts"> http://www.mepis.org/docs/en/index.php?title=Fonts</a>
 </li>
 <li>MEPIS Wiki: GTK+: <a href="http://www.mepis.org/docs/en/index.php?title=Gtk"> http://www.mepis.org/docs/en/index.php?title=Gtk</a>
@@ -2563,8 +2560,6 @@ http://us.download.nvidia.com/XFree86/Linux-x86/177.80/ README/chapter-06.html <
 </li>
 <li>MEPIS Wiki:  Increase monitor resolution:  <a href="http://www.mepis.org/docs/en/index.php?title=Increase_Resolution"> http://www.mepis.org/docs/en/index.php?title=Increase_Resolution</a>  </li>
 <li>KPowersave home page: <a href="http://sourceforge.net/projects/powersave/"> http://sourceforge.net/projects/powersave/ </a></li>
-<li>KPowersave discussion forums: <a href="http://sourceforge.net/forum/forum.php?forum_id=424162"> 
-http://sourceforge.net/forum/forum.php?forum_id=424162</a></li>
 <li>MEPIS Wiki: How to adjust monitor gamma: <a href="http://www.mepis.org/docs/en/index.php?title=Adjusting_Monitor_Gamma"> http://www.mepis.org/docs/en/index.php?title=Adjusting_Monitor_Gamma</a>
 </li>
 </ul>
