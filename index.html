@@ -8,7 +8,7 @@ to &nbsp;&nbsp;&nbsp;MEPIS&nbsp;&nbsp;&nbsp;Linux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 <link rel="stylesheet" href="style/m11-01.css" type="text/css" />
 <link rel="shortcut icon" href="grafx/m8-shortcut-2.ico" type="image/x-icon" />
 
- <meta name="generator" content="Quanta 3.5.10"/>
+ <meta name="generator" content="Quanta 3.5.9" />
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <meta name="resource-type" content="document" />
  <meta name="description" content="MEPIS, mepis, SimplyMEPIS, MEPIS 11, MEPIS 11 users guide, Users Guide, users guide " />
@@ -726,25 +726,8 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <p>
         Insert the disc into your DVD drive (or the Live USB into a port) and restart your computer. You may need to set your system to boot from the medium first, see <a href="index.html#s03-3_troubleshooting ">Troubleshooting</a> below for details.</p>
 <h3>The GRUB screen</h3>
-<p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most computers.</p>
-<p>Make sure to note the function keys at the bottom of the screen:</p>
+<p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most computers.  </p>
 
-<!-- ###################  start unordered list ################# -->
-<ul>
-<li>F1 &mdash; Help.  Provides important information and options:
-<ul>  <!-- sublist -->
-
-<li>MEPIS Linux Information &mdash; origin, use and restriction of software.</li>
-<li>Using the Help System &mdash; navigation and function.</li>
-<li>Language and Keyboard Layout Selection &mdash; F2, see below.</li>
-<li>Choosing a Screen Resolution &mdash; F3, see below.</li>
-<li>Boot Options &mdash; a list and explanation of choices available for specific situations.</li>
-
-</ul></li>   <!-- end sublist -->
-
-<li>F2 &mdash; allows you to select the language/keyboard you would like to install with the OS. </li>
-<li>F3 &mdash; enables you to select your particular screen resolution. </li>
-</ul>
 <p>You can also run GRUB from the command line when booting, see the Wiki entry listed below.</p>
 <!-- ###################  end unordered list ################# -->
 <h3>Cheat codes</h3>
@@ -778,6 +761,11 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 </table>
 <p>A full list can be found in the Wiki entry listed below, and you should ask on the Forum about any problems you are experiencing.</p>
 
+<h3>The Black Screen</h3>
+<p>Sometimes it happens that you do not end up looking at the graphical login at all, but instead only have a somewhat scary black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
+<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then log in as "demo" with password "demo" (orprovide your username and password if already installed). Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root: type <strong>root</strong> if you are not already logged in, otherwise <strong>su</strong>), and enter <strong>halt</strong> or <strong>reboot</strong>.</p>
+<p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
+
 <!-- ###################  end table ################# -->
 <h3>Login</h3>
 
@@ -785,10 +773,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <p>If all goes well, you will arrive at a graphical login  screen ("kdm") asking for a username and password.   Type in <strong>demo</strong> for both and hit <strong>Enter</strong> to log in to MEPIS Linux.  Note: do not log in as root if you will be installing, as that can lead to errors.</p>
 <p>Note that there are also buttons for "Session type" and "Menu."  The allows you to pick which desktop environment or window manager you want to use; the default is the one used for the last session.  The Menu button allows you to reboot, exit, etc.</p>
-<h3>The Black Screen</h3>
-<p>Sometimes it happens that you do not end up looking at the graphical login at all, but instead only have a somewhat scary black screen in front of you, often with a blinking cursor in the upper left corner.  This happens because for some reason the system was unable to start X, the window system for Linux.</p>
-<p>  To get to a login prompt, press <strong>Ctrl-Alt-F1</strong> at the same time, and then log in as "demo" with password "demo" (orprovide your username and password if already installed). Once logged in, you can type <code>startx</code> to try to boot into KDE or at least to get an idea of what is wrong.  Exit by becoming root: type <strong>root</strong> if you are not already logged in, otherwise <strong>su</strong>), and enter <strong>halt</strong> or <strong>reboot</strong>.</p>
-<p>  For solutions to such a failure to start X, please consult <a href="index.html#section05-5">Section 5.5 Display</a>.</p>
+
 
 <br />
 <br />
@@ -2516,23 +2501,24 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 
 <h2>The Black Screen</h2>
 <p>Occasionally it may happen that when you boot up, you end up looking at an empty black screen that may have a blinking cursor in the corner.  This represents a failure to start X, the windows system used by Linux.  Possibilities and solutions for this failure include:</p>
-<ul><li><strong>Wrong graphic driver.</strong> This problem can occur when using the LiveDVD or LiveUSB, when you install a new monitor or with a new graphic card.  It can be corrected by returning to the GRUB screen using the live medium and carefully selecting another driver.  Once you have a driver that works, you can use the MEPIS X-Windows Assistant to copy over the working setup to the installed system.</li>
-<li><strong>Driver not compiled.</strong> This problem happens every time a new kernel or an updated Xorg is installed.  Use Ctrl-Alt-F1 to get to a login prompt, log in as your user, then become root and use either the MEPIS X-Windows Assistant (command: <strong>mxconfig</strong>) or <strong>sgfxi</strong>.  Details in the Wiki.</li>
+<ul><li><strong>Wrong graphic driver.</strong> This problem can occur when using the LiveDVD or LiveUSB, when you install a new monitor or with a new graphic card.  It can be corrected by changing the driver, see below.</li>
+<li><strong>Incorrect resolution.</strong>  Normally, the resolution is configured automatically, but it can fail.  Try adding the cheatcode <strong>video=</strong>followed by your monitor's proper resolution (e.g., video=1280x1024).</li>
+<li><strong>Driver not compiled.</strong> This problem happens every time a new kernel or an updated Xorg is installed (if used).  Use Ctrl-Alt-F1 to get to a login prompt, log in as your user, then become root and use <strong>sgfxi</strong>.  Details in the Wiki.</li>
 <li><strong>Refresh out of range.</strong>Solve this by adding the cheat code <code>vsync=58-62</code>.</li>
 <li><strong>Kernel modeset issues</strong>. Add the cheat code <code>radeon.modeset=0</code> or <code>nvidia.modeset=0</code>.</li>
 <li><strong>Agp issues</strong>. Add the cheat code <code>noagp</code>.</li>
 <li><strong>Unrecognized Intel chipset</strong>.  Add the cheat code <code>xdrvr=intel</code></li></ul>
 
 <h2>Resolution</h2>
-<p>Resolution refers to the physical number of columns and rows of pixels creating the display (e.g., 1920×1200).  In most cases, the resolution is correctly set during installation (see Section 4.2) or when a new monitor is connected.  If not, you can change it in the following ways:</p>
-<ul><li>Click <strong>Start Menu > System > System Settings > Display and Monitor</strong>. Use the pull-down menu to set the correct values.</li>
-<li>For laptops, you can make changes easily by clicking <strong>Start Menu > System > More Applications > KRandRTray</strong>.  This will place an icon in your System Tray that you can right-click to change resolution or left-click for other changes.</li>
-<li>For Nvidia cards, you can install the package <strong>nvidia-settings</strong> that will give you a graphic tool that you can use as root to alter settings.</li>
-<li>In difficult situations, it is possible to manually alter the configuration file <strong>/etc/X11/xorg.conf</strong>.  Always back up the file before you change it, and check the Wiki and the Forum for help.</li></ul>
+<p>Resolution refers to the physical number of columns and rows of pixels creating the display (e.g., 1920×1200).  In most cases, the resolution is correctly setby the kernel during installation (see Section 4.2) or when a new monitor is connected.  If not, you can change it in the following ways:</p>
+<ul><li>Click <strong>Start Menu > System > More Applications > KRandRTray</strong> to get an applet in the System Tray that you can use to adjust resolution and other values.  This is particularly useful for laptops.</li>
+<li>Click <strong>Start Menu > System > System Settings > Display and Monitor</strong>. Use the pull-down menu to set the correct values.</li>
+<li>For Nvidia cards, you can install the package <strong>nvidia-settings</strong> that will give you a graphic tool that you can use to alter settings as root with the command <pre>kdesu nvidia-settings</pre> </li>
+<li>In difficult situations, it is possible to manually alter the configuration file <strong>/etc/X11/xorg.conf</strong>.  Always back up the file before you change it, and check the Wiki and the Forum for help about specifying the use of that file.</li></ul>
 
 <h2>Graphic driver</h2>
-<p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>).  There are two methods for doing this (see the Wiki for details):</p>
-<ul><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; if you are not sure, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
+<p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>, if used) in one of the following ways (see the Wiki for details):</p>
+<ul><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; for system info, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
 <ul><li>Nvidia: <a href="http://www.nvidia.com/Download/index.aspx">http://www.nvidia.com/Download/index.aspx</a></li>
 <li>ATI: <a href="http://support.amd.com/">http://support.amd.com/</a></li>
 <li>Intel: <a href="http://intellinuxgraphics.org/download.html">http://intellinuxgraphics.org/download.html</a></li></ul>
@@ -2540,9 +2526,13 @@ Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are eas
 <ul><li>Navigate in Dolphin to the folder where they were downloaded </li>
 <li>Right-click the file, select the Permissions tab, check "Is executable" </li>
 <li>Press F4 to get a command line and type (using the real name of the file) <pre>sh filename.run</pre></li></ul>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and can usually install the appropriate Nvidia or ATI drivers.  To get the script, open Konsole, become root, and enter:</p>
+<li>Install additional driver packages from the repos.</li>  
+<ul><li>With an ATI chip, for instance, direct rendering requires the addition of the package <strong>libgl-mesa-glx</strong>.</li>
+<li>Graphic controls are available for Nvidia (<strong>nvidia-settings</strong>) and some ATI drivers </li>  
+<li>Check the Wiki and Forum for details and help.</li></ul>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</p>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
-<p>Once you have this installed, you can use it to easily change to the latest appropriate version by opening a root konsole and typing <pre>sgfxi</pre> Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
+<p>Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <pre>sgfxi</pre> Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -5078,7 +5068,6 @@ hwinfo > /home/username/Documents/hwlist
 <p>KDE has its own screensaver program known as KScreensaver, available by clicking <strong>Start Menu > System > System Settings > Display and Monitor</strong>. There is also a very creative screensavers known as Xscreensaver, available through the repo.  If you install the latter, you can install <strong>kscreensaver-xsavers</strong> to integrate it with System Settings administration location.</p>
 
 <ul>
-<li>KScreensaver: </li>
 <li>MEPIS Wiki: Xscreensaver: <a href="http://www.mepis.org/docs/en/index.php?title=Xscreensaver">
 http://www.mepis.org/docs/en/index.php?title=Xscreensaver</a></li>
 <li>Wikipedia: Xscreensaver: <a href= "http://en.wikipedia.org/wiki/XScreenSaver"> http://en.wikipedia.org/wiki/XScreenSaver</a></li>
@@ -5232,7 +5221,7 @@ http://www.mepis.org/docs</a>
 <p>The most important practice is to back up your data and configuration files regularly, a process that is easy in MEPIS Linux.  It is highly recommended that you back up to a different drive than the one your data is on! You can buy a new storage device, or use an old hard drive if you can find one.</p>
 
 <h3>Back up data:</h3>
-<p>Make sure you back up your data, including documents, graphics, music, and mail.  By default, most of this is stored in your Home directory (<strong>/home/YourUserName/</strong>).</p>
+<p>Make sure you back up your data, including documents, graphics, music, and mail.  By default, most of this is stored in your Home directory.</p>
 <br />
 
 <h3>Back up configuration files:</h3>
@@ -5250,7 +5239,7 @@ http://www.mepis.org/docs</a>
 
 <h3>Back up a list of installed program packages:</h3>
 <p>It's also a good idea to save in your  /home/<em>username</em>
-directory a file that contains the list of programs that you have installed with Synaptic, apt-get or Gdebi (see <a href="index.html#section07-1"> Section 7:     Software Management </a>). If in the future you need to reinstall, you'll just have to paste the names of the files to an <strong>apt-get install</strong> command. You can create an inventory of all packages on your system installed since installation with:</p>
+directory a file that contains the list of programs that you have installed with Synaptic, apt-get or Gdebi (see <a href="index.html#section07-1"> Section 7:     Software Management </a>). If in the future you need to reinstall, you'll just have to paste the names of the files into an <strong>apt-get install</strong> command. You can create an inventory of all packages on your system installed since installation with:</p>
 
 <pre>dpkg --get-selections &gt;list_packages.txt
 </pre>
@@ -5266,12 +5255,11 @@ apt-get dselect-upgrade
 
 <h2 id="s08-08_keep">Back up using <em>Keep</em></h2>
 
-<p><strong>Keep</strong> and <strong>LuckyBackup</strong> are graphical front ends for <strong>Rdiff-Backup</strong> that functions as a backup system for KDE.  Both are available from the repos (enable the Community repo for LuckyBackup).</p>
-
-<p>To back up using <strong>Keep,</strong> follow these steps:</p>
+<p><strong>luckyBackup</strong> is a graphical front end for Rdiff-Backup that functions as a backup system for KDE.  It is installed by default.  Directions on use in the Manual listed below</p>
 
 
 <ul>
+<li>luckyBackup Manual: <a href="http://luckybackup.sourceforge.net/manual.html"> http://luckybackup.sourceforge.net/manual.html</a></li>
 <li>MEPIS Wiki: Backup: <a href="http://www.mepis.org/docs/en/index.php?title=Backup"> http://www.mepis.org/docs/en/index.php?title=Backup</a></li>
 <li>MEPIS Wiki: Rdiff-Backup: <a href="http://www.mepis.org/docs/en/index.php?title=Keep#Rdiff-Backup">
 h/br://www.mepis.org/docs/en/index.php?title=Keep#Rdiff-Backup</a></li>
@@ -5290,7 +5278,7 @@ cloning</em> or <em>ghosting.</em> In case a new harddrive must be installed, th
 operation in a few minutes. Open-source (e.g., Partimage, G4L) and proprietary (e.g., Acronis) ghosting software are available to
 carry out this procedure.  Depending on the software used, you may have to carry this out from a separate drive or a LiveDVD. </p>
 
-<p>Cloning can also be used to make an identical working copy of your hard disk or partition to a second disk or partition with an equal or larger size than the original by using the command line tool dd. Unlike the cloning tools listed above, dd copies the hard disk or partition on a sector by sector basis, so everything is copied, including unused sectors. That being the case, it can take some time for larger drives.</p>
+<p>Cloning can also be used to make an identical working copy of your hard disk or partition to a second disk or partition with an equal or larger size than the original by using the command line tool <strong>dd</strong>. Unlike the cloning tools listed above, dd copies the hard disk or partition on a sector by sector basis, so everything is copied, including unused sectors. That being the case, it can take some time for larger drives.</p>
 <ul>
 <li>Wikipedia: Disk cloning: <a href="http://en.wikipedia.org/wiki/Disk_cloning"> http://en.wikipedia.org/wiki/Disk_cloning</a>
 </li>
@@ -5332,8 +5320,6 @@ update-rc.d -f UnneededProgram remove
 <li>cupsys:  Common UNIX Printing System(tm).</li>
 <li>ntpdate:  Set system time from internet NTP servers.</li>
 </ul>
-
-<p>There is also the KDE Service Configuration application for configuring other services, found by clicking <strong>Start Menu > Settings > System Settings > Advanced tab > Service Manager</strong>.  The Service Manager module displays a static list of services that are started on demand and cannot be modified, and a second list of services that can be loaded when KDE starts or manually started when needed.  You can also install <strong>KSysV</strong> from the repos for more advanced control of the startup scripts.</p>
 
 <br />
 <hr />
@@ -5814,7 +5800,8 @@ sets.
 </ul>
 <li><strong>Gdocs</strong>.  Options include:</li>
 <ul><li>LibreOffice has an extension called <strong>gdocs</strong> that helps directly upload a file to Google Docs.</li></ul>
-<li><strong>Google Earth</strong>.  This app can be installed by direct download or through the repositories; check the Wiki for installation and setup details.</li></ul>
+<li><strong>Google Earth</strong>.  This app can be installed by direct download or through the repositories; check the Wiki for installation and setup details.</li>
+<li><strong>Google Talk</strong>.  This chat program can be used in Kopete when properly configured.  See directions below.</li></ul>
 
 <br />
 <h2 id="s08-11_links">Links and Guides for Section 8:11</h2>
@@ -5824,7 +5811,8 @@ sets.
 <li>Synchronizing KDE apps with Google: <a href="http://www.my-guides.net/en/content/view/178/26/"> http://www.my-guides.net/en/content/view/178/26/ </a></li>
 <li>Thunderbird Gcal tab: <a href="https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/"> https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/ </a></li>
 <li>MEPIS Wiki: Google Earth: <a href="http://www.mepis.org/docs/en/index.php?title=Googleearth"> http://www.mepis.org/docs/en/index.php?title=Googleearth </a></li>
-<li>Gmail Help: Configuring other mail clients: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=78799"> http://mail.google.com/support/bin/answer.py?hl=en&answer=78799 </a></li></ul>
+<li>Gmail Help: Configuring other mail clients: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=78799"> http://mail.google.com/support/bin/answer.py?hl=en&answer=78799 </a></li>
+<li>Google Talk: Help: <a href="http://www.google.com/support/talk/bin/answer.py?answer=57557"> http://www.google.com/support/talk/bin/answer.py?answer=57557 </li></ul>
 
 <br /><br /><br /><br /><br /><br />
 
