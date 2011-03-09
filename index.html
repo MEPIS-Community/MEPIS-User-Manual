@@ -533,12 +533,12 @@ specifications.
     Core 2 Duo mobile, Pentium4 Prescott with EM64T, PentiumD with EM64T.</p>
 <br />
 <h3 id="s03-1_antiX">antiX MEPIS Linux</h3>
-
+<p>Note that antiX is not included on the MEPIS DVD.</p>
 <ul>
 <li>Pentium II or equivalent AMD7/Athlon</li>
 <li>128 MB RAM plus swap.  Will work with 64MB plus swap or use the cli-installer</li>
 <li>2.0 GB free hard drive space</li>
-<li><strong>Note:</strong> antiX is not included on the MEPIS DVD.</li>
+<li><strong>Note:</strong> antiX also works on PI and k5/k6 AMD boxes.</li>
 </ul>
 
 <br />
@@ -559,7 +559,6 @@ specifications.
 <li>Pentium II or equivalent AMD7/Athlon</li>
 <li>256 MB RAM plus swap</li>
 <li>5.0 GB free hard drive space</li>
-<li><strong>Note:</strong> antiX is not included on the MEPIS DVD.</li>
 </ul>
 <br />
 <br />  
@@ -4097,7 +4096,7 @@ http://www.mepis.org/docs</a>
 
 <ul>
 <li>Skype home page: <a href="http://www.skype.com/"> http://www.skype.com/</a></li>
-<li>Skype for Linux: <a href= "http://share.skype.com/sites/linux/"> http://share.skype.com/sites/linux/</a></li>
+<li>Skype for Linux: <a href= "http://www.skype.com/intl/en/get-skype/on-your-computer/linux/"> http://www.skype.com/intl/en/get-skype/on-your-computer/linux/</a></li>
 </ul>
 
 <p class="fl">Other common choices: <a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Voice_Chat">
@@ -4177,7 +4176,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#FTP</a></p>
 <h2 id="s08-01_bluetooth">Bluetooth</h2>
 <p><em>See also <a href="index.html#section05-8">Section 5.8: Bluetooth</a></em></p>
 <p>Bluetooth provides a means to connect and exchange information between personal devices such as mobile phones, laptops,  digital cameras, etc., over a secure short-range radio frequency.  Many basic tools (see <a href="index.html#section05-8">Section 5.8</a>) are available by right-clicking the Bluetooth icon on the right side of the panel and are mostly self-explanatory.</p>
-
+<p><strong>Note</strong>: make sure that your user name is included in the Bluetooth group using KUser.</p>
 <h3>Object transfer</h3>
 
 <p>Various applications can use Bluetooth to pass objects (files, pictures, vCal entries, vCards, etc.) between devices, though some work may better than others.  All rely on the Object Exchange protocol (OBEX), a kind of binary HTTP optimized for ad-hoc wireless links that is built in on many devices like PDAs and mobile phones.</p>
@@ -4389,25 +4388,24 @@ dvdrtools, dvd+rw-tools, dvd-slideshow, submix-dvd
 
 <p>MEPIS Wiki: Dolphin: <a href="http://www.mepis.org/docs/en/index.php?title=Dolphin"> http://www.mepis.org/docs/en/index.php?title=Dolphin</a></p>
 
-<p>A good image application is available in MEPIS Linux with Gwenview, <strong>Start Menu > Graphics</strong>.  It can be used as an image browser, for slide shows, to edit metadata, and for basic image manipulation.</p>
+<p><strong>Gwenview</strong> is good image application is available in MEPIS Linux: <strong>Start Menu > Graphics</strong>.  It can be used as an image browser, for slide shows, to edit metadata, and for basic image manipulation.</p>
 
 <p>Gwenview home page: <a href="http://gwenview.sourceforge.net/"> http://gwenview.sourceforge.net/</a></p>
 
 <p>
-<strong>Digikam</strong> can installed from the repos.  It is a photo management tool similar to Google's Picasa that comes with a stand-alone photo viewer.  To get the most out of Digikam and its plugins, install the following packages:</p>
+<strong>Digikam</strong> is installed by default: <strong>Start Menu > Graphics</strong>.  It is a photo management tool similar to Google's Picasa that comes with a stand-alone photo viewer.  To get the most out of Digikam and its plugins, install the following packages:</p>
 <pre>mpg123 vorbis-tools graphicsmagick mjpegtools</pre>
 <p>Digikam home page: <a href="http://www.digikam.org/"> http://www.digikam.org/</a></p>
 
 <p class="fl">
 Other common choices:<br />
-<a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Image_Viewers">at
-http://www.mepis.org/docs</a>
+<a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Image_Viewers">http://www.mepis.org/docs/en/index.php?title=Linux_software#Image_Viewers</a>
 </p>
 <br />
 
 <h3  id="s08-02_editimages">Editing images</h3>
 
-<p>Using Synaptic Package Manager in MEPIS Linux  users can install a very powerful image editor called <strong>GIMP</strong> (GNU Image Manipulation Program)--check whether the Community repo has a more recent version. It is similar in function to Adobe Photoshop. </p>
+<p><strong>GIMP</strong> (GNU Image Manipulation Program) is available to MEPIS Linux users under <strong>Start Menu > Graphics</strong>. Check whether the Community repo has a more recent version. It is similar in function to Adobe Photoshop. </p>
 
 <p>GIMP home page: <a href="http://www.gimp.org/"> http://www.gimp.org/</a>
 <br />GIMP tutorials: <a href="http://www.gimp.org/tutorials/"> http://www.gimp.org/tutorials/</a></p>
@@ -4473,28 +4471,28 @@ http://en.wikipedia.org/wiki/Mythtv</a>
 
 
 <h2>Office suites</h2>
-<p>MEPIS Linux comes with access to a great free office suite called OpenOffice.org. This suite is the Linux equivalent and near drop-in replacement for Microsoft Office&#174;. The most frequently used component, OpenOffice.org Writer is available under the OpenOffice.org Task Manager <strong>Start Menu > Office > OpenOffice.org</strong>. The remaining components below marked <em>optional</em> will be available after installation through Synaptic.</p>
-<p>Openoffice.org versions 3 and above offer limited support for the <strong>.docx, .xlsx</strong> and <strong>.pptx</strong> file formats of Microsoft Office 2007.</p>
+<p>MEPIS Linux comes with access to a great free office suite called LibreOffice. This suite is the Linux equivalent and near drop-in replacement for Microsoft Office&#174;. The suite is available under the OpenOffice.org Task Manager <strong>Start Menu > Office > OpenOffice.org</strong>. </p>
+<p>LibreOffice supports for the <strong>.docx, .xlsx</strong> and <strong>.pptx</strong> file formats of Microsoft Office 2007 and above.</p>
 <ul>
-<li><strong>Word Processor:&nbsp;</strong>  OpenOffice.org Writer.  An advanced word processor compatible with <strong>.doc</strong> files.
+<li><strong>Word Processor:&nbsp;</strong>  LibreOffice Writer.  An advanced word processor compatible with <strong>.doc</strong> files.
 </li>
-<li><strong>Spreadsheet:&nbsp;</strong>  <em>Optional.</em>  OpenOffice.org Calc. An advanced spreadsheet compatible with <strong>.xls</strong> files.
+<li><strong>Spreadsheet:&nbsp;</strong>   LibreOffice Calc. An advanced spreadsheet compatible with <strong>.xls</strong> files.
 </li>
-<li><strong>Presentation:&nbsp;</strong>  Used for presentations, etc. Compatible with .ppt format.
+<li><strong>Presentation:&nbsp;</strong>  LibreOffice Impress.  Used for presentations, etc. 
 </li>
-<li><strong>Math:&nbsp;</strong>  <em>Optional.</em>  Used for for mathematical equations.
+<li><strong>Draw</strong>  LibreOffice Draw.  Used to create graphics and diagrams.
 </li>
-<li><strong>Draw</strong>  <em>Optional.</em>  Used to create graphics and diagrams.
+<li><strong>Math:&nbsp;</strong>  LibreOffice Math.  Used for for mathematical equations.
 </li>
-<li><strong>Base:&nbsp;</strong>  <em>Optional.</em>  Used to create and manipulate databases.
+<li><strong>Base:&nbsp;</strong>  LibreOffice Base.  Used to create and manipulate databases.
 </li>
 </ul>
 
 
-<p class="fl">MEPIS Wiki: OpenOffice: <a href="http://www.mepis.org/docs/en/index.php?title=OpenOffice.org">
-http://www.mepis.org/docs/en/index.php?title=OpenOffice.org</a>
+<p class="fl">MEPIS Wiki: LibreOffice: <a href="http://www.mepis.org/docs/en/index.php?title=Libreoffice">
+http://www.mepis.org/docs/en/index.php?title=Libreoffice</a>
 <br />
-OpenOffice.org home page: <a href="http://www.openoffice.org/"> http://www.openoffice.org/</a>
+LibreOffice home page: <a href="http://www.libreoffice.org/"> http://www.libreoffice.org/</a>
 <br />
 <br />
 Other common choices:
@@ -4509,7 +4507,7 @@ Linux_software#Office_Productivity</a>
 <br />
 
 <h2 id="s08-03_desktop-pub">Desktop publishing</h2>
-<p>OpenOffice.org can produce simple documents for publication, but for people who want more power and flexibility, more capable programs are available.  <strong>Scribus</strong> is designed for flexible layout and typesetting, and for professional quality equipment, and a detailed published manual is available. Available through Synaptic.
+<p>LibreOffice can produce simple documents for publication, but for people who want more power and flexibility, more capable programs are available.  <strong>Scribus</strong> is designed for flexible layout and typesetting, and for professional quality equipment, and a detailed published manual is available. Available through Synaptic.
 <br /><br />
 Scribus home page: <a href="http://www.scribus.net/"> http://www.scribus.net/</a></p>
 <br /><br />
@@ -4528,12 +4526,10 @@ Scribus home page: <a href="http://www.scribus.net/"> http://www.scribus.net/</a
 </li>
 
 <li>
-<strong>OpenOffice:&nbsp;</strong>  It is also possible to FAX directly through OpenOffice Writer.
+<strong>LibreOffice:&nbsp;</strong>  It is also possible to FAX directly through LibreOffice Writer.
 <br />
-OpenOffice
-guide to printing, faxing, etc:&nbsp; 
-<a href="http://wiki.services.openoffice.org/wiki/Documentation/OOo3_User_Guides/Writer_Guide/Sending_a_fax">
-http://wiki.services.openoffice.org/wiki/ Documentation/OOo3_User_Guides/ Writer_Guide/Sending_a_fax</a> <br />
+LibreOffice Getting Started guide:&nbsp; 
+<a href="http://wiki.documentfoundation.org/Documentation">http://wiki.documentfoundation.org/Documentation</a> <br />
 </li>
 </ul>
 
@@ -4546,7 +4542,7 @@ Internet FAX price comparison: <a href="http://www.faxprices.com/"> http://www.f
 
 <h2 id="s08-03_pdf">PDF documents</h2>
 
-<p>You can view your PDF files by clicking them to open them in the default Okular, available separately by clicking <strong> Start Menu > Office > Okular (Document Viewer)</strong>. For other PDF operations such as copying text or images, merging, etc., follow the link to the MEPIS Wiki.</p>
+<p>You can view your PDF files by clicking them to open them in the default Okular (see Section 3.4), available by clicking <strong> Start Menu > Office > Okular (Document Viewer)</strong>. For other PDF operations such as copying text or images, merging, etc., follow the link to the MEPIS Wiki.</p>
 
 <ul>
 <li>Okular home page: <a href="http://okular.kde.org/"> http://okular.kde.org/</a>
@@ -4568,21 +4564,18 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#PDF </a>
 <p>MEPIS Linux has an excellent Personal Information Manager available from the repos called Kontact. It links your contacts with your email, calendar, newsreader, journal and notes all in a single window. </p>
 <ul>
 <li>
-Kontact home page: <a href="http://www.kontact.org/"> http://www.kontact.org/ </a></li>
+Kontact home page: <a href="http://userbase.kde.org/Kontact"> http://userbase.kde.org/Kontact </a></li>
 </ul>
 
 <br />
 <br />
 
 <h2 id="s08-03_organizer">Organizer</h2>
-<p>The excellent organizer KOrganizer is the calendar and scheduling component of Kontact. It is available from the repos. The application fully integrates its components, facilitating many everyday operations with its features. </p>
+<p>The organizer KOrganizer is the calendar and scheduling component of Kontact. It is available from the repos. The application fully integrates its components, facilitating many everyday operations with its features. </p>
 <ul>
 <li>
 KOrganizer home page: <a href="http://userbase.kde.org/KOrganizer">http://userbase.kde.org/KOrganizer </a>
-</li>
-<li>KOrganizer features: <a href="http://kontact.kde.org/korganizer/features/"> http://kontact.kde.org/korganizer/features/ </a>
-</li>
-</ul>
+</li></ul>
 
 <br />
 <br />
@@ -4647,8 +4640,7 @@ Synaptic as <strong>kmymoney2</strong>
 </ul>
 <p class="fl">Other common choices:
 <br />
-<a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Money_Management">at
-http://www.mepis.org/docs</a></p>
+<a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Money_Management">http://www.mepis.org/docs/en/index.php?title=Linux_software#Money_Management</a></p>
 
 <br /><br />
 
@@ -4665,7 +4657,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#Photo</a></p>
 <br /><br />
 
 <h3 id="s08-04_music">Music</h3>
-<p>Amarok is a powerful music management tool available for MEPIS Linux from the repos.  A detailed handbook is available off the Help menu.</p>
+<p>Amarok is a powerful music management tool available for MEPIS Linux by default.  A detailed handbook is available off the Help menu.</p>
 <ul>
 <li>Amarok home page: <a href="http://amarok.kde.org/"> http://amarok.kde.org/</a></li>
 </ul>
@@ -4675,7 +4667,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#Music</a></p>
 <br /><br />
 
 <h2 id="s08-04_list">List management</h2>
-<p>A good desktop sticky note application is available by default by clicking <strong>Start Menu > Utilities > KNotes (Popup Notes)</strong>.  Another useful utility is <strong>QuickList</strong>, available from the repos.</p>
+<p>A good desktop sticky note application is available by default by clicking <strong>Start Menu > Utilities > More Applications > KNotes (Popup Notes)</strong>.  Another useful utility is <strong>QuickList</strong>, available from the repos.</p>
 <br /><br />
 
 <h2 id="s08-04_gramps ">Genealogy</h2>
@@ -4747,7 +4739,7 @@ Rkhunter home page: <a href="http://www.rootkit.nl/"> http://www.rootkit.nl/</a>
 </li>
 </ul>
 <ul>
-<li><strong>chkrootkit</strong>.  Another tool that locally checks for signs of a rootkit by running <em>as <a class="spterm" href="index.html#s12-1_rootuser" title="see glossary for &ldquo;root user&rdquo;">root</a></em>:
+<li><strong>chkrootkit</strong>.  Another tool that locally checks for signs of a rootkit by running <em>as root</em>:
 <pre>
 ./chkrootkit
 </pre>
@@ -4763,12 +4755,11 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#AntiRootKit </a></p>
 <h2 id="s08-05_password">Password protection</h2>
 <p>Passwords are protected in MEPIS Linux by the use of KDE Wallet,
 which is enabled by default. To change KDE Wallet's behavior, click
-<strong>Start Menu > Settings > System Settings > Advanced tab > KDE Wallet</strong>.</p>
+<strong>Start Menu > Settings > System Settings > Account Details > KDE Wallet</strong>.</p>
 <ul>
 <li>MEPIS Wiki: KDEWallet: <a href="http://www.mepis.org/docs/en/index.php?title=KDEWallet"> http://www.mepis.org/docs/en/index.php?title=KDEWallet</a>
 </li>
-<li>KDE Wallet handbook: <a href="http://docs.kde.org/development/en/kdeutils/kwallet/index.html">at
-http://docs.kde.org</a></li>
+<li>KDE Wallet handbook: <a href="http://docs.kde.org/development/en/kdeutils/kwallet/index.html">http://docs.kde.org/development/en/kdeutils/kwallet/index.html</a></li>
 </ul>
 
 <p>NOTE: it is important to set a strong password in the first place. A strong password:</p>
@@ -4791,7 +4782,7 @@ http://docs.kde.org</a></li>
 <br />
 
 <h2 id="s08-05_privacy">Privacy</h2>
-<p>User privacy is enabled system-wide by default in MEPIS Linux, so that items such as recent documents, web browsing history, etc., are cleared during shutdown. Some applications (e.g., Firefox/IceWeasel) have their own privacy controls as well.</p>
+<p>User privacy is enabled system-wide by default in MEPIS Linux, so that items such as recent documents, web browsing history, etc., are cleared during shutdown. Some applications (e.g., Firefox/IceWeasel, Opera) have their own privacy controls as well.</p>
 <p>Web content filtering in Linux can be executed using a program such as <strong>Dansguardian</strong>, available through Synaptic.</p>
 
 <ul>
@@ -4870,9 +4861,8 @@ KMag home page: <a href="http://kmag.sourceforge.net/"> http://kmag.sourceforge.
 KMouseTool FAQ: <a href="http://accessibility.kde.org/aids/kmousetool.php/"> http://accessibility.kde.org/aids/kmousetool.php/</a>
 </li></ul>
 <p> Other accessibility applications are available through Debian and KDE projects:</p>
-<ul><li>KDE accessibility software: <a href="http://accessibility.kde.org/"> http://accessibility.kde.org/ </a></li>
-<li>Debian accessibility software: <a href="http://www.us.debian.org/devel/debian-accessibility/software.en.html">at
-http://www.us.debian.org</a></li></ul>
+<ul><li>KDE accessibility software: <a href="http://accessibility.kde.org/aids/"> http://accessibility.kde.org/aids/ </a></li>
+<li>Debian accessibility software: <a href="http://www.debian.org/devel/debian-accessibility/">http://www.debian.org/devel/debian-accessibility/</a></li></ul>
 
 <br />
 
@@ -4952,7 +4942,7 @@ Ark information page: <a href="http://docs.kde.org/stable/en/kdeutils/ark/using-
 </li>
 
 <li>
-<strong>KFloppy:</strong> A utility that can be installed from the repos to provide a straightforward graphical means to format 3.5" and 5.25" floppy disks.  .
+<strong>KFloppy:</strong> A utility that can be installed from the repos to provide a straightforward graphical means to format 3.5" and 5.25" floppy disks.
 
 <br />
 KFloppy information page: <a href="http://docs.kde.org/stable/en/kdeutils/kfloppy/introduction.html">at http://utils.kde.org/projects/kfloppy/</a>
@@ -4966,8 +4956,7 @@ http://www.mepis.org/docs</a></p>
 <br />
 
 <h2 id="s08-06_print">Printing</h2>
-<p> If you have a HP printer, there is a utility package available for MEPIS Linux called HPLIP Toolbox that can be installed from the repos.   HPLIP Toolbox is an HP-developed solution for printing, scanning, and faxing with HP
-inkjet and laser-based printers in Linux.  
+<p> If you have a HP printer, there is a utility package available for MEPIS Linux called HPLIP Toolbox that can be installed from the repos.   HPLIP Toolbox is an HP-developed solution for printing, scanning, and faxing with HP inkjet and laser-based printers in Linux.  There is also a handy toolbox that sits in the System Tray called <strong>hplip-gui</strong> available through the repos.
 <br />
 Hplip home page: <a href="http://hplip.sourceforge.net/"> http://hplip.sourceforge.net/</a>
 </p>
@@ -5065,7 +5054,7 @@ http://www.linuxcommand.org/man_pages/which1.html</a>
 <p>You can get more detailed information using a command-line program that comes pre-installed with MEPIS.</p>
 
 <ul>
-<li>Open a terminal and type <a class="spterm" href="index.html#s12-1_rootuser " title="see Glossary for &ldquo;root user&rdquo;">as root:</a> <strong>hwinfo</strong> to see a detailed list of hardware. If you run the command as an ordinary user, you may get less information.
+<li>Open a terminal and type as root <strong>hwinfo</strong> to see a detailed list of hardware. If you run the command as an ordinary user, you may get less information.
 </li>
 
 <li>You can copy and paste this list into a document. Or you can redirect the output to a plain text document by typing this as root:
@@ -5086,9 +5075,10 @@ hwinfo > /home/username/Documents/hwlist
 
 <h2 id="s08-07_screensavers">Screensavers</h2>
 
-<p>KDE has its own screensaver program known as KScreensaver, but it is not operational in MEPIS at this time. You should use instead the creative screensavers of Xscreensaver.</p>
+<p>KDE has its own screensaver program known as KScreensaver, available by clicking <strong>Start Menu > System > System Settings > Display and Monitor</strong>. There is also a very creative screensavers known as Xscreensaver, available through the repo.  If you install the latter, you can install <strong>kscreensaver-xsavers</strong> to integrate it with System Settings administration location.</p>
 
 <ul>
+<li>KScreensaver: </li>
 <li>MEPIS Wiki: Xscreensaver: <a href="http://www.mepis.org/docs/en/index.php?title=Xscreensaver">
 http://www.mepis.org/docs/en/index.php?title=Xscreensaver</a></li>
 <li>Wikipedia: Xscreensaver: <a href= "http://en.wikipedia.org/wiki/XScreenSaver"> http://en.wikipedia.org/wiki/XScreenSaver</a></li>
@@ -5123,7 +5113,7 @@ xkill
 </ul></li><!-- end sublist -->
 
 <li>
-<strong>Terminal:&nbsp;</strong>: Press <strong>Ctrl-C</strong>, which will usually stop a program you started in a terminal
+<strong>Terminal:&nbsp;</strong>: Press <strong>Ctrl-C</strong>, which will usually stop a program/command you started in a terminal
 session.
 <br />
 </li>
