@@ -6569,7 +6569,7 @@ or by checking your home directory in Dolphin using the <em>Detailed List View</
 <h2 id="s09-6-3_trouble">Troubleshooting</h2>
 <h4>Windows FAT partition</h4>
 
-<p>ALthough Windows NTFS partitions (as used in Windows 2000 and later) usually present little problem, there is sometimes difficulty with the necessary system permissions to write or delete files on a Windows FAT partition (as in Windows 98). If this seems to be the case on your computer, you'll need to insert a step after Step 4 above:</p>
+<p>Although Windows NTFS partitions (as used in Windows 2000 and later) usually present little problem, there is sometimes difficulty with the necessary system permissions to write or delete files on a Windows FAT partition (as in Windows 98). If this seems to be the case on your computer, you'll need to insert a step after Step 4 above:</p>
 <h5>Inserted Step: setting permissions when mounting a VFAT partition</h5>
 <p>Set the following additional mount options for a Windows FAT partition. Note that MEPIS should already have identified it as a vfat partition in the third column, so all your changes need only be in the fourth column (bolded below):</p>
 
@@ -7027,19 +7027,22 @@ users, other than root&mdash;in other words, system administration utilities.
 <br /><br />
 
 <h2 id="s10-3_example">Example</h2>
-<p>We already looked at editing the configuration file <strong>/etc/fstab</strong> to mount other partitions (<a href="index.html#section09-6">Section 9.6</a>), but let's look at another example here.</p>
+<p>We already looked at editing the configuration file <strong>/etc/fstab</strong> a couple of times earlier, but let's look at another example here.</p>
 
-<p>Display problems can be solved with a number of grahical and command-line tools, as we saw in <a href="index.html#section05-2-2">Section 5.2.2</a>, but once in a while a user needs to directly edit the system-wide configuration file <strong>/etc/X11/xorg.conf</strong>.  (NOTE: like all configuration files, this should always be backed up before editing.)  This file is long and has lots of entries, but let's say you are still having problems with your USB mouse after using the standard tools, and want to check how it is actually configured.  You open the file, then search and find the correct entry, something like this:</p>
+<p>Sound problems can be solved with a number of grahical and command-line tools, but once in a while a user needs to directly edit the system-wide configuration file.  For many systems, this will be <strong>/etc/modprobe.d/snd-hda-intel.conf</strong>.  It is a simple file whose top paragraph looks like this: </p>
 
-<pre>Section "InputDevice"
-  Identifier "USB Mouse"
-  Driver "mouse"
-  Option "Device" "/dev/input/mice"
-  Option "Protocol" "auto"
-  Option "ZAxisMapping" "4 5"
-  Option "Buttons" "5"
-EndSection</pre>
-<p>To try to improve mouse functionality, you might decide to substitute the exact information about the mouse's manufacturer and model in place of the word &ldquo;auto.&rdquo;  Similar steps are sometimes taken with a monitor or keyboard, for instance, when no other tool has worked.</p>
+<pre># some chips require that the model be set manually
+# for example asus g71 series may need model=g71v
+options snd-hda-intel model=<FONT><FONT color = "red">auto</FONT></strong></pre>
+<p>To try to get sound, you might decide to substitute the exact information about the sound model in place of the word &ldquo;auto.&rdquo;.  To find out your sound model, you could open a konsole and type: </p>
+<pre>lspci | grep Audio</pre>
+<p>The output will depend on the system, but it will take the following form:</p>
+<pre>00:05.0 Audio device: nVidia Corporation MCP61 High Definition Audio (rev a2)</pre>
+<p>Now you can plug that information back into the configuration file:</p>
+<pre># some chips require that the model be set manually
+# for example asus g71 series may need model=g71v
+options snd-hda-intel model=<FONT><FONT color = "red">nvidia</FONT></strong></pre>
+<p>You would save the file, reboot the machine, and hopefully your sound would be working.  You could also try more precision by using <strong>nvidia mcp61</strong> instead if the first did not work.</p>
 <br />
 
 <h2 id="s10-3_links">Links and Guides for Section 10.3</h2>
@@ -7097,7 +7100,7 @@ telinit 5
 <ul>
 <li><strong>halt</strong> (as root) &mdash;  shuts the machine down.</li>
 <li><strong>reboot</strong> (as root) &mdash; reboots the machine.</li>
-<li><strong>[application command]</strong>  &mdash; will run that application.</li>
+<li><strong>[application command]</strong>  &mdash; will run that application if it is not graphical.</li>
 </ul>
 
 <p class="fl">It is equally possible to <em>boot</em> to runlevel 3 by merely adding the number three at the end of the boot options on the GRUB screen.  From there you can simply type: </p>
@@ -7165,7 +7168,7 @@ telinit 5
 <br /><br />
 
 <h2 id="s10-5_headers">Kernel headers</h2>
-<p>In order to compile some programs you might need to have kernel headers, which are C files that define structures and constants that are needed for building most standard programs. Some programs ask for kernel sources, but most often the headers are sufficient.  You can find them in Synaptic, but you have to be careful to match the headers to your kernel version.  For this reason, it is actually somewhat easier to open a terminal, become root, and type:</p>
+<p>In order to compile some programs you might need to have kernel headers, which are C files that define structures and constants that are needed for building most standard programs. Some programs ask for kernel sources, but most often the headers are sufficient.  They may be installed by default but, if not, you can find them in Synaptic, but you have to be careful to match the headers to your kernel version.  For this reason, it is actually somewhat easier to open a terminal, become root, and type:</p>
 <pre> apt-get install linux-headers-$(uname -r)</pre>
 <p>This code will enter automatically the number of your working kernel and fetch the appropriate headers.</p>
 
