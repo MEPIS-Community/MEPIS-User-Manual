@@ -724,7 +724,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 <h1 id="section03-3">3.3:&nbsp;&nbsp;&nbsp;&nbsp; Booting up</h1>
 
 <p>
-        Insert the disc into your DVD drive (or the Live USB into a port) and restart your computer. You may need to set your system to boot from the medium first, see <a href="index.html#s03-3_troubleshooting ">Troubleshooting</a> below for details.</p>
+        Insert the disc into your DVD drive (or the Live USB into a port) and restart your computer. You may need to set your system to boot from the medium first, see <a href="index.html#s03-4_troubleshooting ">Troubleshooting</a> below for details.</p>
 <h3>The GRUB screen</h3>
 <p>Once you have booted to the live medium, you will be presented with a menu offering various choices; these are handled by a <a class="spterm" href="index.html#s12-1_bootloader " title="Program that initially chooses an operating system to load.">bootloader</a> named GRUB that allows you to have several operating systems on your computer. The default boot choice should work for most computers.  </p>
 
@@ -824,14 +824,14 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <p><u>To add a widget to the panel:</u> right-click an empty patch in the panel, and select <strong>Panel Options &gt; Add Widgets</strong></p>
 
-<img src="./MEPIS 11 USER'S MANUAL_sb_files/addwidg-1.png" width="600" height="120">
+<img src="grafx/addwidg-1.png" width="500" height="120">
 <p>In the dialog box that appears, select a widget. Use the arrow symbols to the left or right to scroll through the widgets available, you can also enter a search term  in the input field.  To make the selected widget appear on the desktop or in the panel, double-click it, and then close the dialog box.</p>
 
 <p><u>To remove a widget from the desktop or panel:</u> right-click the widget and select the <strong>Remove</strong> entry.</p>
 <p>If these menu options are not available, your desktop elements are probably locked! In this case right-click and select <strong>Unlock Widgets</strong>.</p>
 
 <h4> Configuring Desktop Widgets</h4>
-<img class="fl" src="./MEPIS 11 USER'S MANUAL_sb_files/editwidg-1.png" width="275" height="240">
+<img class="fl" src="grafx/editwidg-1.png" width="275" height="240">
 <p>Hover your mouse cursor over the widget until a translucent frame appears around the widget, showing a number of symbols.  Make sure the widgets are unlocked first.</p>
 
 <ul>
@@ -852,36 +852,32 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <p>By default, the panel ("Kicker" in KDE3.5) appears along the bottom of the screen, and takes up much of the width of the screen.  It is something of a one-stop shop for almost anything that you might want to access quickly.  MEPIS comes with a default panel described below, but the panel is also capable of running any docked widgets and extensions, such as child panels. </p>
 <br />
-<img src="grafx/M85_kicker.png" alt="Kicker" width="580" height="20" />
+<div align="center"><img src="grafx/M11_panel_new.png" alt="M11_panel" width="600" height="29" /></div>
 <br />
-
 <p>Icon key to default panel:</p>
 
 <!-- ###################  start unordered list ################# -->
-<ul>
-<li>Left side (icon tray), from left to right:
 
-<ul> <!-- sublist -->
-<li>Start (Start Menu) -- gives you an easy method of running installed applications</li>
-<li>Pager -- shows multiple desktops you can use if you wish</li>
-<li>File Manager (Dolphin) -- your primary means of navigating around the file system</li>
-<li>System Settings -- where most configuration and customization takes place</li>
-<li>Default Browser (Firefox) -- top-rated tool for navigating the web</li>
-<li>Email (KMail) -- excellent application for managing email</li>
-</ul></li>   <!-- end sublist -->
-
-<li>Middle (here: empty) is the taskbar, used to keep track of running applications.</li>
-<li>Right side (system tray), from left to right (can be expanded with arrow to show further icons):
-
-<ul><!-- sublist -->
-<li>Clipboard (Klipper) -- lets you manage cut and copied material</li>
-<li>Apt-Notifier -- indicates when upgrades are available with a green arrow</li>
-<li>Sound mixer (KMix) -- here you make sound adjustments</li>
-<li>Network Manager -- center for dealing with wired and wireless network access</li>
-<li>Notifications and Jobs -- this reports system actions for you to monitor</li>
-<li>Device Manager -- notifies you of all plugged-in devices and gives options for handling</li>
-<li>Date and Time -- obvious, but you also can click this for a calendar</li>
-</ul></li></ul> <!-- end sublist -->
+<p>By default, the panel on the KDE4 desktop in MEPIS 11 contains L-R:</p>
+<ul>  
+<li>The <em>Main Menu</em> icon on the extreme left. Installed programs are automatically listed in the Main Menu in the appropriate category. To start a program, click on the Main Menu icon in the panel or press Alt + F1, then navigate to the program listing and click it.</li>
+<li>The <em>Pager</em>, which provides access to virtual desktops (see #9 below)</li>
+<li><em>Quick launch</em> program icons.</li> 
+<li>In the middle the <em>Taskbar</em> shows currently open windows.</li>
+<li>On the right, the <em>System Tray </em> holds current essential processes:</li>
+<ul><li>Information</li>
+<li>Power status</li>
+<li>Upgrade notifier</li>
+<li>Clipboard</li>
+<li>Sound mixer</li>
+<li>Device notifier</li>
+<li>Power management</li>
+<li>Network manager</li>
+<li>Hidden icons</li>
+<li>Clock/calendar</li>
+<li>The panel settings icon ("cashew") is on the extreme right.</li> 
+</ul></ul>
+<p>When you hover the mouse pointer over an icon in the panel, a short description is displayed.</p>
 
 <!-- ###################  end unordered list ################# -->
 
@@ -1045,7 +1041,7 @@ Start Krunner and click on the wrench symbol > User Interface tab, then select T
 
 <p>Kwallet is a password management tool that can collect and store all passwords in one or more encrypted files (called “wallets”). When you enter a password in a KDE application for the first time (in Kmail of Network Manager, for example), you are asked if you want to store the password.  If you click <em>Yes</em>, Kwallet wizard opens by default.  <p><strong>Note</strong>: if you do not want to use KWallet, you still must step through the dialog box the first time it comes up.</p>
 
-<img class="fl" src="./MEPIS 11 USER'S MANUAL_sb_files/kwallet-setup.png" width="400" height="304" alt="Kwallet setup window">
+<img class="fl" src="grafx/kwallet-setup.png" width="400" height="304" alt="Kwallet setup window">
 
 <p>To activate Kwallet, select <strong>Basic Setup</strong> and click <strong>Next</strong>.  Select <em>Yes, I wish to use the KDE Wallet to store my personal information</em> and enter a password. This is your master password for the default wallet (kdewallet) that will be created during the next step.  Then click finish to close the wizard.</p>
 <div align="center"><span class="bred">Warning! Protect Your Kwallet Password:</span><br /></div>
@@ -2026,7 +2022,7 @@ Output for the webcam will resemble this:
 <ul class="link">
 <li>MEPIS Wiki: Webcam: <a href="http://www.mepis.org/docs/en/index.php?title=Webcam_Overview">
 http://www.mepis.org/docs/en/index.php?title=Webcam_Overview</a></li>
-<li>KDE Userbase: Webcam Support: <a href="http://userbase.kde.org/Webcam_Support">http://userbase.kde.org/Kopete/Webcam_Support</a></li>
+<li>KDE Userbase: Webcam Support: <a href="http://userbase.kde.org/Kopete/Webcam_Support">http://userbase.kde.org/Kopete/Webcam_Support</a></li>
 <li>Ubuntu webcam lists: <a href="https://wiki.ubuntu.com/HardwareSupportComponentsMultimediaWebCameras">  https://wiki.ubuntu.com/
 HardwareSupportComponentsMultimediaWebCameras</a></li>
 <li>The Linux Documentation Project: Webcam-HowTo: <a href="http://tldp.org/HOWTO/html_single/Webcam-HOWTO/">  http://tldp.org/HOWTO/html_single/Webcam-HOWTO/ </a></li>
@@ -3337,8 +3333,7 @@ http://alsa.opensrc.org/index.php?title=Sound_cards</a></li>
 <li>OSS home page: <a href=" http://www.opensound.com/oss.html "> http://www.opensound.com/oss.html </a></li>
 <li>KMix handbook: <a href=" http://docs.kde.org/stable/en/kdemultimedia/kmix/index.html ">
 http://docs.kde.org/stable/en/kdemultimedia/kmix/index.html </a></li>
-<li>KsCD handbook: <a href=" http://docs.kde.org/development/en/kdemultimedia/kscd/index.html ">at 
-http://docs.kde.org</a></li>
+<li>KsCD handbook: <a href=" http://www.kde.org/applications/multimedia/kscd/ ">http://www.kde.org/applications/multimedia/kscd/</a></li>
 <li>Phonon home page: <a href=" http://www.alsa-project.org/ "> http://phonon.kde.org/  </a></li>
 <li>MEPIS Wiki: sound driver database: <a href=" http://www.mepis.org/docs/en/index.php?title=Sound_Driver_Database ">at 
 http://www.mepis.org/docs</a></li>
@@ -4243,7 +4238,7 @@ http://www.mepis.org/docs/en/index.php?title=Phone</a></li>
 <li>
 <strong>KsCD:&nbsp;</strong>  KsCD is a fast, CDDB (Compact Disk Database)-enabled CD player (see <a href="index.html#section05-7">  Section 5.7: Sound</a> for configuration).
 <br />
- KsCD Homepage:&nbsp;<a href="http://docs.kde.org/development/en/kdemultimedia/kscd"> http://docs.kde.org/applications/multimedia/kscd</a>
+ KsCD Homepage:&nbsp;<a href="http://www.kde.org/applications/multimedia/kscd/"> http://www.kde.org/applications/multimedia/kscd/</a>
 <br />
 Wikipedia: CDDB&nbsp; <a href= "http://en.wikipedia.org/wiki/Cddb"> http://en.wikipedia.org/wiki/Cddb</a>
 </li>
@@ -4727,8 +4722,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#Firewall </a>
 <p>MEPIS Linux does not currently require antivirus software because no viruses able to attack and damage a Linux system are in circulation. The purpose of installing an antivirus would be to assist with stopping Linux users from unknowingly passing virus-infected emails and other documents to Windows users, as well as to provide an open-source tool for protection in a dual-boot setup with Windows. </p>
 <p> KlamAV is available for MEPIS Linux from the repos. The program is inactive until it is opened by a user with root privileges.</p>  
 <ul>
-<li>KlamAV home page: <a href="http://klamav.sourceforge.net/klamavwiki/index.php?title=Main_Page">
-at http://klamav.sourceforge.net</a></li>
+<li>KlamAV home page: <a href="http://sourceforge.net/projects/klamav/">http://sourceforge.net/projects/klamav/</a></li>
 </ul>
 
 <br /><br />
@@ -5176,7 +5170,7 @@ http://sblinux.org/pages/permissions01.html#filetypes</a>
 The information center is made up of multiple modules. Each module is a separate application, but the information center organizes all of
 these programs into a convenient location.
 <br />
-KInfocenter handbook: <a href="http://docs.kde.org/stable/en/kdebase-apps/kinfocenter/index.html">at http://kde.org/applications/system/kinfocenter/</a>
+KInfocenter handbook: <a href="http://userbase.kde.org/KInfoCenter">http://userbase.kde.org/KInfoCenter</a>
 </li>
 <li>
 <strong>KwikDisk:</strong>&nbsp;&nbsp;&nbsp; A handy panel applet that is available from the repos for MEPIS Linux.  It displays the available file devices (hard drive
@@ -5517,7 +5511,7 @@ Gnuchess home page: <a href="http://www.gnu.org/software/chess/"> http://www.gnu
 
 <p>You have an installed set of 17 solitaire card games available by clicking <strong>Start Menu > Games > Card Games > KPatience (Patience Card Game)</strong>. 
 <br />
-Kpatience handbook: <a href="http://docs.kde.org/development/en/kdegames/kpat/index.html">http://kde.org/applications/games/kpatience</a></p>
+Kpatience handbook: <a href="http://games.kde.org/game.php?game=kpat">http://games.kde.org/game.php?game=kpat</a></p>
 
 <p>Here are some other fun card games available from the repos for MEPIS.</p>
 <ul>
@@ -6156,7 +6150,7 @@ http://www.codeweavers.com/compatibility/browse/rank/ </a>
 <p><strong>Cedega</strong> is designed to run DirectX and OpenGL games from the Microsoft Windows Platform under Linux.  Popular games such as Elder Scrolls IV: Oblivion, Battlefield 2142, World of WarCraft, Madden 2007 and Civilization IV can be played on MEPIS Linux with this application.</p>
 
 <ul class="link">
-<li>Cedega home page: <a href=" http://www.transgaming.com/products_linux.php "> http://www.transgaming.com/products_linux.php </a>
+<li>Cedega home page: <a href=" http://www.cedega.com// ">http://www.cedega.com// </a>
 </li>
 <li>MEPIS Wiki: Cedega: <a href=" http://www.mepis.org/docs/en/index.php?title=Cedega "> http://www.mepis.org/docs/en/index.php?title=Cedega </a>
 </li>
