@@ -5838,16 +5838,7 @@ sets.
 
 <!-- ########################### SECTION 09  ########################### -->
 <h1 id="section09-0">9:&nbsp;&nbsp;&nbsp;&nbsp;Advanced Use</h1>
-<br /><br /><br />
-<table border="1" frame="box" rules="none">
-  <tbody align="center">
-    <tr>
-      <td><img src="grafx/construction_computer.gif" alt="Under construction" width="100" height="80" /></td>
-      <td><b><font size="+1">Section 9 has not been updated for MEPIS 11, and may contain errors</font></b></td>
-    </tr>
-  </tbody>
-</table>
-<br /><br /><br />
+
 <p>In this section you will find introductions to some of the more common advanced uses of MEPIS Linux. Click on any section that
 interests you for details.</p>
 
@@ -6269,7 +6260,7 @@ http://www.mepis.org/docs/en/index.php?title=VirtualBox </a>
 
 <h2>Traditional window managers</h2>
 
-<p>A <a class="spterm" title="click to see glossary entry" href="index.html#s12-1_window-man">window manager</a> in Linux is essentially the component which controls the appearance of windows and provides the means by which the user can interact with them.  MEPIS Linux comes with the K Desktop Environment, or <strong>KDE</strong> for short, which provides basic desktop functions, many applications for daily needs (Kmail, Amarok, K3b, etc.), and development tools and user documentation as well.   MEPIS Linux uses KDE 3.5.10 because it is mature and stable; at some point in the future it will move to KDE 4.x, which is currently under intense development.</p>
+<p>A <a class="spterm" title="click to see glossary entry" href="index.html#s12-1_window-man">window manager</a> in Linux is essentially the component which controls the appearance of windows and provides the means by which the user can interact with them.  MEPIS Linux comes with the K Desktop Environment, or <strong>KDE</strong> for short, which provides basic desktop functions, many applications for daily needs (Kmail, Amarok, K3b, etc.), and development tools and user documentation as well.   MEPIS 11 uses KDE 4.5.3 because it is stable; it will move to later KDE 4.x versions when appropriate.</p>
 
 <ul>
 <li>KDE home page: <a href="http://www.kde.org/">http://www.kde.org/</a>
@@ -6325,6 +6316,14 @@ LXDE home page: <a href="http://lxde.org/"> http://lxde.org/</a>
 LXDE Wiki: <a href= "http://wiki.lxde.org/en/Main_Page">http://wiki.lxde.org/en/Main_Page</a>
 </li>
 
+<li>
+<b>Openbox</b>&nbsp; is a fast and highly configurable destop environment that supports freedesktop.org standards.
+<br />
+Oopenbox home page: <a href="http://openbox.org/"> http://openbox.org/</a>
+<br />
+LXDE Documentation: <a href= "http://openbox.org/wiki/Help:Contents">http://openbox.org/wiki/Help:Contents</a>
+</li>
+
 </ul>
 
 <br /><br />
@@ -6333,14 +6332,10 @@ LXDE Wiki: <a href= "http://wiki.lxde.org/en/Main_Page">http://wiki.lxde.org/en/
 
 <h2 id="s09-5_links">Links and Guides for Section 9.5</h2>
 <ul class="link">
-<li>Wikipedia: X Window Managers<a href=" http://en.wikipedia.org/wiki/Window_managers "> http://en.wikipedia.org/wiki/Window_managers</a>
+<li>Wikipedia: X Window Managers<a href=" http://en.wikipedia.org/wiki/Comparison_of_window_managers "> http://en.wikipedia.org/wiki/Comparison_of_window_managers</a>
 </li>
 <li>Overview of window managers: <a href= "http://www.linuxsoft.cz/en/sw_list.php?id_kategory=5">
 http://www.linuxsoft.cz/en/sw_list.php?id_kategory=5</a>
-</li>
-<li>Wikipedia: Xgl <a href= "http://en.wikipedia.org/wiki/Xgl"> http://en.wikipedia.org/wiki/Xgl</a>
-</li>
-<li>MEPIS Wiki: AIGLX: <a href= "http://www.mepis.org/docs/en/index.php?title=AIGLX"> http://www.mepis.org/docs/en/index.php?title=AIGLX</a>
 </li>
 </ul>
 
@@ -6394,37 +6389,26 @@ Here is a good, basic definition from the Linux Documentation Project:</p>
 
 <h2 id="section09-6-2">9.6.2:&nbsp;&nbsp;&nbsp; Manual mounting</h2>
 
-<p>If you need access only on an occasional basis to a partition that is not on a device dynamically mounted, such as a partition on your HDD from another OS, you can mount it manually with a couple of graphical tools in MEPIS Linux.</p>
-
-<h3 id="s09-6-1_dolphinmount">Dolphin</h3>
-<p>Dolphin makes it very easy to mount any partitions by dragging them to the Places panel on the left side, then simply clicking on them.  Details in the MEPIS Wiki under "Dolphin."</p>
+<p>If you need access only on an occasional basis to a partition that is not on a device dynamically mounted, such as a partition on your HDD with another OS, you can mount it manually. The file manager Dolphin makes it very easy to mount any partitions by dragging them to the Places panel on the left side, then simply clicking on them, as already described in Section 3.4.</p>
 
 <h3 id="s09-6-2_kwikdisk">KwikDisk</h3>
-<p>KwikDisk is a kicker applet that will show up in the system tray when installed (looks like stacked disks) just to the right of the taskbar.  It has a variety of uses:</p>
+<p>Another graphical application for mounting partitions is <strong>KwikDisk</strong>, a kicker applet that will show up in the system tray when started by clicking <strong>Start Menu > System > More Applications > KwikDisk (Removeable Media Utility)</strong>.  It has a variety of uses:</p>
 <ul>
 <li>
 It displays the available file devices (hard drive partitions, floppy and CD drives, etc.) along with information on their free space, type and mount point.
 </li>
 <li>
-It allows you to easily mount and unmount drives. Just click on the partition you want to mount (e.g. sda1, sdb1, sdb2, etc.).
+It allows you to easily mount and unmount drives. Just click on the partition you want to mount (e.g. sda1, sdb1, sdb2, etc.).  This will work for any Linux partition, and for Windows 98, 2000 and XP as well.  You may have to provide root's password, depending on how permissions are set up.
 </li>
 <li>
-It is an entry for KDiskFree, a utility that measures available space.
+It has a menu entry for <strong>KDiskFree</strong>, a utility that measures available space.
 </li> 
 </ul>
 
-<p>Again, simply click on the device that interests you to view the contents.  </p>
+<p>Simply click on the device that interests you to view the contents, and you will something like this (note KwikDisk icon at lower left corner):  </p>
+<img src="grafx/kwikdisk.png" alt="kwikdisk_menu" width="350" height="350" />
 
-<ul>
-<li>
-.&nbsp;.&nbsp;.&nbsp;on KwikDisk, type <strong>man:kwikdisk</strong> into Dolphin's address bar.
-</li>
-<li>
-.&nbsp;.&nbsp;.&nbsp;on KDiskFree, type <strong>man:kdf</strong> into Dolphin's address bar.
-</li>
-</ul>
 
-<p>This will work for any Linux partition, and for Windows 98, 2000 and XP as well.  You may have to provide root's password, depending on how permissions are set up.</p>
 
 <br /><br />
 
