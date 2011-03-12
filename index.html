@@ -1579,14 +1579,14 @@ right-click it and select <strong>set active.</strong> Then click <strong>Commit
 </ol>
 <!-- ###################  end ordered list ################# -->
 
-<h2>Installed fstab shows wrong OS type</h2>
+<h2>Installed fstab shows wrong filesystem type</h2>
 <p>It sometimes happens that the filesystem type is reported incorrectly for ntfs or vfat partitions, showing them as ext3 or ext4.  This is usually caused by the filesystem type being set incorrectly in the MBR tables. When you reformat a partition to a different type, that only changes the actual format of the partition, it does not
 update the MBR.</p>
 <p>It may be possible to change this by using the command line utility <strong>cfdisk</strong> (type <em>man:cfdisk</em> into a Konqueror address field for details), but that can fail if irregularities exist such as with the cylinder end point (common when multibooting with Windows Vista or Windows 7).  Always reliable will be to open a root Dolphin by clicking <strong>Start Menu > System > Dolphin as su</strong>, navigating to <em>/etc</em> and clicking on the file <strong>fstab</strong>.  Back it up immediately as <em>fstab_old</em> or something similar so you can restore it if necessary.  Look for the problem partitions, for example:</p>
 <pre>/dev/sda2 /mnt/sda2 <strong><color><FONT COLOR = "red">ext3</FONT></strong> noauto,users,exec,relatime 0 0</pre>
 <p>Although the partition is labelled with the filesystem type ext3 (in red above), let's say it is actually ntfs or vfat.  Highlight ext3, delete it, and enter <em>auto</em> so the corrected line looks like this:  </p>
 <pre>/dev/sda2 /mnt/sda2 <strong><FONT COLOR = "red">auto</FONT></strong> noauto,users,exec,relatime 0 0</pre>
-<p>Check carefullly that you have not made any mistake, then save the file.  Note: it is more reliable to specify auto-detection of filesystem type than to try to specify it.</p>
+<p>Check carefullly that you have not made any mistake, then save the file.  Note: it is often more reliable to specify auto-detection of a Windows filesystem type than to try to specify it.</p>
 <br /><br />
 
 <h2 id="s04-3_links">Links and Guides for Section 4.3</h2>
