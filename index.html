@@ -2864,34 +2864,37 @@ http://www.mepis.org/docs</a></li>
 <h2 id="s05-6-1-2_basic">Basic Wireless Steps</h2>
 
 <ol>
-<li>Click on the Network Manager icon in the system tray on the right side of the panel, and follow these steps:
-<ul>
-<li>Click on the line that gives the name of an interface (e.g., wlan0) and says "Create network connection"</li>
+<li>Click on the Network Manager icon in the system tray on the right side of the panel, and you will see something like this:</li>
+<br />
+<img src="grafx/wireless_small.png" alt="network" width="400" height="205" />
+<br />
 
-<li>A list with found network names (ESSIDs) pops up. Choose your network name and click Connect.</li> 
+<li>Click on the line that gives the name of an <a href="index.html#s12-1_interface" class="spterm" title="interaction point between computer and network">interface</a> in the left panel (e.g., WLAN Interface)</li>
 
-<li>A config window opens up.  Fill in the security details in the new window. Pay attention: the system will try to detect the correct encryption type (e.g. WEP or WPA), but you may need to verify if it is set correctly.</li>
+<li>Click on the interface that now shows up in the right panel</li> 
 
-<li>Make sure to check 'Automatically connect' in this same window if you want your machine to connect without user intervention the next time you are within reach of this network.  After filling out the required details, hit OK.</li>
+<li>A config window opens up.  The system will try to detect the correct encryption type (e.g. None, WEP or WPA), but you may need to verify if it is set correctly.  Change if necessary, and fill in any required passwords.  Check 'Automatically connect' at the top of the screen if you want your machine to connect without user intervention the next time you are within reach of this network.  </li>
+
+<li>When everything is done, click OK. </li>
 
 <li>The KWallet system wizard opens up.  Click Next</li>
 
-<li>If you want to use the KDE wallet to store personal information, check the box.  For now, it is easier if you leave it unchecked and click Finish. The connection will be made.</li>
-</ul></li>
+<li>If you want to use the KDE wallet to store personal information, check the box and consult the KWallet discussion in Section 3.4, above.  For now, it is easier if you leave it unchecked and click Finish; you can always set it up later. The connection will be made.</li>
+</li>
 
 <li>Examples of wireless interfaces include:
 
 <ul>
-<li><strong>eth1</strong>, when a kernel module is being used and a wired interface exists</li>
+<li><strong>eth</strong>, when a kernel module is being used and a wired interface exists</li>
 
-<li><strong>wlan0</strong>, when ndiswrapper is operating and often when using native drivers</li>
+<li><strong>wlan</strong>, when ndiswrapper is operating and often when using native drivers</li>
 
 <li><strong>ra0</strong> for cards with Ralink 2500 chipsets using the native driver.  If an external device such as a dongle is being used, this may show up as <strong>rausb0</strong></li>
 
 </ul>
 For a full list, consult the Debian Wiki on Wifi linked below.</li>
 
-<li>If Network Manager does not see a network, open the MEPIS Network Assistant (see Section 5.3).  On the General tab, click on the radio button for Manual (mnetwork) to deactivate Network Manager.  Then click on the Troubleshooting tab. In the top panel, Hardware, click the Scan Hardware button to find the information about your chipset that you need to get help. The output will show all recognized interfaces.</li>
+<li>If Network Manager does not see a particular network, open the MEPIS Network Assistant (see Section 5.3).  On the General tab, click on the radio button for Manual (mnetwork) to deactivate Network Manager.  Then click on the Troubleshooting tab. In the top panel, Hardware, click the Scan Hardware button to find the information about your chipset that you need to get help. The output will show all recognized interfaces.</li>
 
 <li>If an <u>interface is found</u>:
 
@@ -2931,17 +2934,17 @@ For a full list, consult the Debian Wiki on Wifi linked below.</li>
 <p>Here are the steps you should take to get wireless working with Ndiswrapper:</p>
 
 <ul>
-<li>Open up MEPIS NDisWrapper Manager (<strong>Start Menu > System</strong>).</li>
+<li>Open up MEPIS Network Assistant (<strong>Start Menu > System</strong>).</li>
 
-<li>Look in the main window for one of the drivers there that is associated with your hardware. </li>
+<li>Click on the Troubleshooting tab, and click on "List Windows Drivers." Look for one of the drivers there that is associated with your hardware. </li>
 
 <li>If no driver is already associated, obtain the XP drivers for your card either from your legacy installation or from other sources (check the Wiki).</li>
 
-<li>Once you have placed the driver files (especially the *.inf and *.sys files) into a location on your computer, return to the MEPIS NDisWrapper Manager.</li>
+<li>Once you have placed the driver files (especially the *.inf and *.sys files) into a location on your computer, return to the Troubleshooting tab.</li>
 
 <li>Using the Remove Driver button, highlight and remove the existing drivers one at a time until none are left.</li>
 
-<li>Click on the Install driver button, navigate to the location where you placed the XP driver files, highlight the file and click OK</li>
+<li>Click on the Add Driver button, navigate to the location where you placed the XP driver files, highlight the file and click OK</li>
 
 <li>Click OK to close, and reboot your computer.</li>
 
@@ -7402,6 +7405,8 @@ applications are released. It specifies that you may view, modify, and redistrib
 <p id="s12-1_home-dir"><strong>home directory:&nbsp;&nbsp; </strong>   One of the 17 top-level directories branching from the root directory in MEPIS Linux, <strong>/home</strong> contains a subdirectory for every registered user of the system. Within each Users home directory s/he has full read-write privileges.  Further, most of the user-specific configuration files for various installed programs are stored in hidden subdirectories within the /home/<em>username</em> directory &mdash;as is downloaded email. Other downloaded files usually go by default into the home/<em>username</em>/Documents or /home/<em>username</em>/Desktop subdirectories. </p>
 
 <p id="s12-1_imap"><strong>IMAP:&nbsp;&nbsp;</strong> The Internet Message Access Protocol is an protocol that allows an e-mail client to access a remote mail server.  It supports both on-line and off-line modes of operation. </p>
+
+<p id="s12-1_interface"><strong>interface:&nbsp;&nbsp;</strong>  A point of interaction between computer components, often referring to the link between a computer and a network.  Examples of interface names in MEPIS Linux include <strong>WLAN</strong> (wireless) and <strong>eth0</strong> (basic wired).</p>
 
 <p  id="s12-1_iso"><strong>ISO:&nbsp;&nbsp;</strong> A disc image following an international standard that contains data files and filesystem metadata, including boot code, structures, and attributes.  This is the normal method for delivering Linux versions such as MEPIS over the Internet. See also <em>disk image.</em></p>
 
