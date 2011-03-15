@@ -1316,8 +1316,9 @@ resize/Mepis-Install-Resize.html</a></li>
 
 <h1 id="section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp; Leaving</h1>
 
-<h2>General</h2>
+
 <p>It is important to exit MEPIS Linux correctly when you have finished your session so that the system can be brought down in a secure way.  All processes are first notified that the system is going  down, giving programs the time to save any file being edited, mail and news processing programs a chance to exit  cleanly,  etc.  If you just turn the power off, you risk the possibilities of damaging the operating system.</p>  
+<h2>Permanent</h2>
 <p>There are two common ways to shut down correctly:</p>
 <ul><li>Right-click the open desktop, and select Leave to see this dialog box:</li><br />
 <img src="grafx/LeaveDialog.png" alt="Leave_dialog" width="200" height="187" />
@@ -1325,25 +1326,24 @@ resize/Mepis-Install-Resize.html</a></li>
 <li>Click <strong>Start Menu > Leave</strong> for detailed exit options:</li></ul>
 <br /><img src="grafx/LeaveDialog_Menu.png" width="308" height="202" /><br />
 
-<p>The shut down options: </p>
-<ul><li><u>Log out (End Session)</u>.  </li>
+<p>The permanent options: </p>
+<ul><li><u>Log out (End Session)</u>.  Choosing this will end everything you are doing, if you have not closed/stopped things yourself, and and bring you back to the login screen with the system still running.  You can also get back to the loging screen by clicking <strong>Ctrl-Alt-Bksp</strong>, but open programs and processes will not be saved. </li>
+<li></li>
+<li><u>Turn Off/Restart</u>.  Self-explanatory options that alter the system state itself.</li></ul>
+
+<h2>Temporary</h2>
+<ul><li><u>Lock screen.</u>  This option freezes your session, and requires your user password to reinstate.  Often used in a public context where a user will be away from the computer for a short time.</li>
+<li><u>Start a parallel session as a different user.</u>  You choose this to leave your current session where it is and be able to work for a short time as a different user.</li>
+<li><u>Suspend to RAM (Sleep).</u>  This option places your system into a low-power state. Information on system configuration, open applications, and active files is stored in main memory (RAM ), while most of the system's other components are turned off.  It is very handy and works very well in MEPIS Linux, though some systems may may not automatically restore wireless and/or bluetooth. </li>
+<li><u>Suspend to Disk.</u>This selection will save running processes to the hard drive and power down the computer.  In MEPIS Linux the success of this choice varies among systems, with some not working at all and others requiring the following addition to <strong>/boot/grub/menu.lst</strong>:</li>
+<pre>resume=swapdrive (e.g., sda2)</pre>
+</ul>
+
+<h2>Emergency</h2>
+<p>Once in a while you may encounter a total lockup of your computer while you are working that trying to kill a runaway program (Section 8.7) does not correct.  It freezes and becomes entirely unresponsive.  You have then two options remaining:</p>
+<ul><od/li><strong>Force X to restart.</strong>Hold down the Alt-SysRq keys, and press K, and all session processes will be killed and you will end up back at the login screen.</li>
+<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the ALT-SysRq keys, and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  Its purpose is to assist you to go through several stages to nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li>
 <li></li></ul>
---log out
---save session
---choices (graphic)
-
-<h2>Shutdown/Reboot</h2>
-
---command line
-
-
-<h2>Suspend</h2>
---easy
---problems
-
-<h2>Force power off</h2>
---
---see also runaway program in Section 8
 
 <!-- ########################### Links and Guides for Section 3.6  ########################### -->
 
