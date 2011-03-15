@@ -145,7 +145,7 @@ Attribution 2.5.  Citation should read:</p>
 <h2>Introduction</h2>
 
 <p>The MEPIS Linux <a href="index.html#s12-1_livecd" class="spterm"  title="An optical disc with a booting, usable operating
-system" >LiveDVD</a> or <a href="index.html#s12-1_liveusb" class="spterm"  title="A USB flash drive on which there is a bootable, usable operating system" >LiveUSB</a> boots your computer without accessing the hard disk.  It copies a virtual filesystem into RAM that acts as the center of a temporary operating system for the computer. When you end your LiveDVD session, everything about your
+system" >LiveDVD</a> or <a href="index.html#s12-1_liveusb" class="spterm"  title="A USB flash drive on which there is a bootable, usable operating system" >LiveUSB</a> boots your computer without accessing the hard disk.  It copies a virtual filesystem into RAM that acts as the center of a temporary operating system for the computer. When you end your LiveDVD <a href="index.html#s12-1_session" class="spterm" title="period of activity between a user logging in and logging out" >session</a>, everything about your
 computer is back to the way it was, unchanged.</p> 
 <p>This provides a number of benefits: </p>
 <ul>
@@ -1040,7 +1040,7 @@ Start Krunner and click on the wrench symbol > User Interface tab, then select T
 
 <h3 id="s03-4_kwallet">KWallet</h3>
 
-<p>Kwallet is a password management tool that can collect and store all passwords in one or more encrypted files (called “wallets”). When you enter a password in a KDE application for the first time (in Kmail of Network Manager, for example), you are asked if you want to store the password.  If you click <em>Yes</em>, Kwallet wizard opens by default.  <p><strong>Note</strong>: if you do not want to use KWallet, you still must step through the dialog box the first time it comes up.</p>
+<p>Kwallet is a password management tool that can collect and store all passwords in one or more encrypted files (called “wallets”). When you enter a password in a KDE application for the first time (in Kmail of Network Manager, for example), you are asked if you want to store the password.  If you click <em>Yes</em>, Kwallet wizard opens by default.  <strong>Note</strong>: if you do not want to use KWallet, you still must step through the dialog box the first time it comes up.</p>
 
 <img class="fl" src="grafx/kwallet-setup.png" width="400" height="304" alt="Kwallet setup window">
 
@@ -1317,9 +1317,17 @@ resize/Mepis-Install-Resize.html</a></li>
 <h1 id="section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp; Leaving</h1>
 
 <h2>General</h2>
-<p>Good words about proper procedures, </p>
-<img src="grafx/LeaveDialog.png" alt="Leave_dialog" width="398" height="187" />
-<p>Log out</p>
+<p>It is important to exit MEPIS Linux correctly when you have finished your session so that the system can be brought down in a secure way.  All processes are first notified that the system is going  down, giving programs the time to save any file being edited, mail and news processing programs a chance to exit  cleanly,  etc.  If you just turn the power off, you risk the possibilities of damaging the operating system.</p>  
+<p>There are two common ways to shut down correctly:</p>
+<ul><li>Right-click the open desktop, and select Leave to see this dialog box:</li><br />
+<img src="grafx/LeaveDialog.png" alt="Leave_dialog" width="200" height="187" />
+<br /><br />
+<li>Click <strong>Start Menu > Leave</strong> for detailed exit options:</li></ul>
+<br /><img src="grafx/LeaveDialog_Menu.png" width="308" height="202" /><br />
+
+<p>The shut down options: </p>
+<ul><li><u>Log out (End Session)</u>.  </li>
+<li></li></ul>
 --log out
 --save session
 --choices (graphic)
@@ -1341,7 +1349,7 @@ resize/Mepis-Install-Resize.html</a></li>
 
 <h2 id="s03-6_links">Links and Guides for Section 3.6</h2>
 <ul class="link">
-<li>MEPIS Wiki: UUID: <a href="http://www.mepis.org/docs/en/index.php?title=Uuid"> http://www.mepis.org/docs/en/index.php?title=Uuid</a>
+<li>MAN page: Shutdown: <a href="http://www.mepis.org/docs/en/index.php?title=Uuid"> http://www.mepis.org/docs/en/index.php?title=Uuid</a>
 </li> 
 </ul>
 
@@ -2586,7 +2594,7 @@ Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are eas
 <ul><li>With an ATI chip, for instance, direct rendering requires the addition of the package <strong>libgl-mesa-glx</strong>.</li>
 <li>Graphic controls are available for Nvidia (<strong>nvidia-settings</strong>) and some ATI drivers </li>  
 <li>Check the Wiki and Forum for details and help.</li></ul>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</p>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</ul>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
 <p>Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <pre>sgfxi</pre> Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
 
@@ -7480,6 +7488,8 @@ applications are released. It specifies that you may view, modify, and redistrib
 <p id="s12-1_runlevel"><strong>runlevel:&nbsp;&nbsp;</strong> A runlevel is a preset operating state on a Unix-like operating system.  A system can be booted into any of several runlevels, each of which is represented by a single digit integer. Each runlevel designates a different system configuration and allows access to a different combination of processes (i.e., instances of executing programs). See <a href="index.html#section10-4 ">Section 10.4: Runlevels</a> </p>
 
 <p id="s12-1_script"><strong>script:&nbsp;</strong> An executable text file, containing commands in an interpreted language. Usually refers to BASH scripts which are used extensively &ldquo;under the hood&rdquo; of the Linux operating system, but other languages may be used as well.</p>
+
+<p id="s12-1_session"><strong>session:&nbsp;&nbsp;</strong> A login session is the period of activity between a user logging in and logging out of a system.  In MEPIS Linux, this typically indicates the lifetime of a particular user "process" (the program code and its current activity) that KDE invokes.</p>
 
 <p id="s12-1_sourcecode"><strong>source code:&nbsp;&nbsp;</strong> The human-readable code in which software is written prior to being assembled or compiled into machine-language code.</p>
 
