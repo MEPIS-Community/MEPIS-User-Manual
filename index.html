@@ -1318,41 +1318,45 @@ resize/Mepis-Install-Resize.html</a></li>
 
 
 <p>It is important to exit MEPIS Linux correctly when you have finished your session so that the system can be brought down in a secure way.  All processes are first notified that the system is going  down, giving programs the time to save any file being edited, mail and news processing programs a chance to exit  cleanly,  etc.  If you just turn the power off, you risk the possibilities of damaging the operating system.</p>  
-<h2>Permanent</h2>
-<p>There are two common ways to shut down correctly:</p>
-<ul><li>Right-click the open desktop, and select Leave to see this dialog box:</li><br />
+
+<p>There are two common ways to exit a session correctly:</p>
+<ul><li>Right-click the open desktop, and select Leave to see this dialog box (for options, hold down the cursor):</li><br />
 <img src="grafx/LeaveDialog.png" alt="Leave_dialog" width="200" height="187" />
 <br /><br />
 <li>Click <strong>Start Menu > Leave</strong> for detailed exit options:</li></ul>
 <br /><img src="grafx/LeaveDialog_Menu.png" width="308" height="202" /><br />
+<br /><br />
 
-<p>The permanent options: </p>
-<ul><li><u>Log out (End Session)</u>.  Choosing this will end everything you are doing, if you have not closed/stopped things yourself, and and bring you back to the login screen with the system still running.  You can also get back to the loging screen by clicking <strong>Ctrl-Alt-Bksp</strong>, but open programs and processes will not be saved. </li>
-<li></li>
+<h2>Permanent</h2>
+
+<p>To leave a session for good, select one of the following: </p>
+<ul><li><u>Log out (End Session)</u>.  Choosing this will end everything you are doing, if you have not closed/stopped things yourself, and and bring you back to the login screen with the system still running.  You can also get back to the login screen by clicking <strong>Ctrl-Alt-Bksp</strong>, but any open programs and processes will <u>not</u> be saved. </li>
 <li><u>Turn Off/Restart</u>.  Self-explanatory options that alter the system state itself.</li></ul>
-
+<br /><br />
 <h2>Temporary</h2>
+<p>You can temporarily leave your session in one of the following ways:</p>
 <ul><li><u>Lock screen.</u>  This option freezes your session, and requires your user password to reinstate.  Often used in a public context where a user will be away from the computer for a short time.</li>
 <li><u>Start a parallel session as a different user.</u>  You choose this to leave your current session where it is and be able to work for a short time as a different user.</li>
 <li><u>Suspend to RAM (Sleep).</u>  This option places your system into a low-power state. Information on system configuration, open applications, and active files is stored in main memory (RAM ), while most of the system's other components are turned off.  It is very handy and works very well in MEPIS Linux, though some systems may may not automatically restore wireless and/or bluetooth. </li>
-<li><u>Suspend to Disk.</u>This selection will save running processes to the hard drive and power down the computer.  In MEPIS Linux the success of this choice varies among systems, with some not working at all and others requiring the following addition to <strong>/boot/grub/menu.lst</strong>:</li>
-<pre>resume=swapdrive (e.g., sda2)</pre>
+<li><u>Suspend to Disk (Hibernate).</u>This selection will save running processes to the hard drive and power down the computer.  In MEPIS Linux the success of this choice varies among systems, with often no restoration happening. Some users report success with the following addition (replace "/swapdrive" with the correct drive, e.g. /sda2) to <strong>/boot/grub/menu.lst</strong>:</li>
+<pre>resume=<FONT color="Red">/swapdrive</FONT></pre>
 </ul>
-
+<br /><br />
 <h2>Emergency</h2>
 <p>Once in a while you may encounter a total lockup of your computer while you are working that trying to kill a runaway program (Section 8.7) does not correct.  It freezes and becomes entirely unresponsive.  You have then two options remaining:</p>
-<ul><od/li><strong>Force X to restart.</strong>Hold down the Alt-SysRq keys, and press K, and all session processes will be killed and you will end up back at the login screen.</li>
-<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the ALT-SysRq keys, and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  Its purpose is to assist you to go through several stages to nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li>
-<li></li></ul>
-
+<ul><li><strong>Force X to restart.</strong>Hold down the Alt-SysRq keys, and press K; all session processes will be killed and you will end up back at the login screen.</li>
+<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the ALT-SysRq keys (sometimes only the <u>left</u> Alt key will work), and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  Its purpose is to assist you to go through several stages to nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li></ul>
+<br /><br />
 <!-- ########################### Links and Guides for Section 3.6  ########################### -->
 
 <h2 id="s03-6_links">Links and Guides for Section 3.6</h2>
 <ul class="link">
-<li>MAN page: Shutdown: <a href="http://www.mepis.org/docs/en/index.php?title=Uuid"> http://www.mepis.org/docs/en/index.php?title=Uuid</a>
+<li>Wikipedia: Magid SysRq Key: <a href="http://en.wikipedia.org/wiki/Magic_SysRq_key"> http://en.wikipedia.org/wiki/Magic_SysRq_key</a>
 </li> 
-</ul>
+<li>Wikipedia: ACPI: <a href="http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface"> http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface</a>
+</li>
 
+</ul>
 
 <br /><br /><br /><br /><br /><br />
 <!-- ########################### SECTION 4.0  ########################### -->
