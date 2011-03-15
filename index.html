@@ -106,6 +106,7 @@ MEPIS Store: <a href="http://www.mepis.org/store"> http://www.mepis.org/store</a
 <li><u>Wiki</u>. Continually edited and updated, the Wiki provides more detailed information on general and specific topics. Subject categories and a powerful search engine make it easy to find what you are looking for. Since all contributions come from volunteers with limited time, the Wiki is not always and everywhere up-to-date.</li>
 <li><u>Forum</u>. Several years' worth of searchable discussions provide a wealth of detail on user's concerns. Questions (requires registration) are quickly answered by volunteer members of the world-wide MEPIS users community, and the only stupid question is the one you don't ask. Help with versions earlier than MEPIS 7 can be found in the <a href=”http://www.mepis.org/node/131”>Archives</a>.</li></ul>
 <p>Particularly difficult hardware questions that are not answered from these sources can be submitted to Warren at mepis.org; ask at the Forum for details.</p>
+<br /><br />
 
 <h2>Support cycle</h2>
 <p>How long will your MEPIS Linux 11 continue to have support? The answer to this question depends on the type of support you mean:</p>
@@ -114,6 +115,15 @@ MEPIS Store: <a href="http://www.mepis.org/store"> http://www.mepis.org/store</a
 <li><u>Applications</u>. Applications continue to be developed after the release of MEPIS 11, meaning that the shipped versions will get older as time passes. In MEPIS Linux, the problem is addressed through a combination of sources: Debian, Warren, and the Community Packaging Team. There will come a point in a few years where it will be increasingly difficult to update applications for older MEPIS versions because the supporting applications have changed so much. The individual user will have to decide when the problem has become critical.</li>
 <li><u>Security</u>. Security updates from Debian will cover MEPIS 11 users well into the foreseeable future.</li></ul>
 <p>Finally, it is important to remember that the number of Community members maintaining installations of earlier versions continually decreases. Although you may still find people able to help with MEPIS 8, few are now available for MEPIS 7 and before.</p>
+<br /><br />
+
+<h2>Bugs</h2>
+<p>Bugs are errors in a computer program or system that produce incorrect results or abnormal behavior.  All software contains them, and the developers upon whom MEPIS Linux relies work hard to correct them.  MEPIS has no formal structure or mechanism of bug reporting, but relies on the following informal system:</p>
+<ul><li><strong>Self help:</strong>  do a web search on the exact error message, or on a string of words that includes the program and the type of error (e.g., "k3b cd rip failure").</li>
+<li><strong>Wiki consultation:</strong> search the Wiki for the <u>category</u> of error you are seeing (e.g., "sound not working").</li>
+<li><strong>Forum post:</strong> report the bug you are seeing in the appropriate place (e.g., Video) on the MEPIS Community Forum, making sure to supply the MEPIS version you are using and any relevant hardware specifications (e.g., "nVidia GeForce 8100"). </li>
+<li><strong>Email Warren:</strong> when the bug has not been solved by Forum members and is in an area that Warren works (such as hardware, the MEPIS Assistants, etc.), then describe it to Warren in an email to <strong>dev AT mepis DOT org</strong>.  Provide as much technical detail as possible so that he can try to duplicate it.</li></ul>
+
 
 <br /><br /><br /><br /><br /><br />
 
@@ -124,7 +134,7 @@ MEPIS Store: <a href="http://www.mepis.org/store"> http://www.mepis.org/store</a
 <p>The Manual is designed to walk new users through the steps of obtaining a copy of MEPIS Linux 11, installing it, configuring it
 to work with one's own hardware, and putting it to daily use.  It aims to provide a readable general introduction to MEPIS Linux for the new user, and purposely gives preference to graphical tools.  For detailed or infrequent topics, the user should consult the Wiki or the Forum.</p>
 
-<p>Some terms that might be unfamiliar to some readers <a href="index.html#section12-1" class="spterm" title="This is a green link. Click  to go to the Glossary page." >appear in green.</a> Hover your mouse over one of these words for a brief definition, or click on it to go to the Glossary entry for that term. Your browser's back button will return you to your original spot. Or right-click on the special term link and choose to open in a new window or tab.</p>
+<p>Some terms that might be unfamiliar to some readers <a href="index.html#section12-1" class="spterm" title="This is a green link. Click  to go to the Glossary page." >appear in green.</a> Hover your mouse over one of these words for a brief definition, or click on it to go to the Glossary entry for that term. Your browser's back button will return you to your original spot. Or right-click on the term's link and choose to open in a new window or tab.</p>
 
 <p>All content is &#169; 2011 by MEPIS LLC and released under Creative Commons
 Attribution 2.5.  Citation should read:</p>
@@ -7047,13 +7057,12 @@ users, other than root&mdash;in other words, system administration utilities.
 <p>With only rare exceptions, program and system settings on MEPIS Linux are stored in discrete plaintext configuration files; there is no &ldquo;Registry&rdquo; which requires special tools to edit.  Most configuration files are just simple lists of parameters and values which are read by programs when they launch to determine their behavior.</p>
 
 <h2>User config files</h2>
-<p>Files that hold individual user settings (such as high scores for your games, or the layout of your desktop) are stored within a Users home directory, typically as a hidden file or directory, and can only be edited by that user or by root.</p>  
-<p>These personal configuration files are actually less often edited directly than system files because most of the user configuration is done graphically through the applications themselves.  When you open an application and click <strong>Edit >Preferences</strong>, for example, your selections are written to a (usually hidden) configuration file in your user directory.  Likewise in Firefox, when you type <strong>about:config</strong> in the address bar, you are editing the hidden configuration files.</p>
+<p>Files that hold individual user settings (such as high scores for your games, or the layout of your desktop) are stored within a Users home directory, typically as a hidden file or directory, and can only be edited by that user or by root. These personal configuration files are actually less often edited directly than system files because most of the user configuration is done graphically through the applications themselves.  When you open an application and click <strong>Edit >Preferences</strong>, for example, your selections are written to a (usually hidden) configuration file in your user directory.  Likewise in Firefox, when you type <strong>about:config</strong> in the address bar, you are editing the hidden configuration files.</p>
 <br /><br />
 
 
 <h2 id="s10-3_system">System config files</h2>
-<p>Files that hold system-wide configurations or defaults (such as the file that determines which services automatically launch during boot up) are largely stored in the <strong>/etc/</strong> directory and are only editable by root.  Most of these files are never touched directly by regular users, such as these for instance:</p>
+<p>Files that hold system-wide configurations or defaults (such as the file that determines which services automatically launch during boot up) are largely stored in the <strong>/etc/</strong> directory and are only editable by root.  Most of these files are never touched directly by regular users, such as these for instance:
 <ul>
 <li><strong>/etc/rc.d/rc5.d</strong> &mdash; Contains files to control runlevel 5 into which MEPIS boots after login.
 </li>
@@ -7061,38 +7070,39 @@ users, other than root&mdash;in other words, system administration utilities.
 </li>
 <li><strong>/etc/network/interfaces</strong> &mdash; Defines internet interfaces on the system.
 </li>
-</ul>
+</ul></p>
 
 <p>Some configuration files can contain just a few lines, or even be empty, while others may be quite long.  The important point is that if you are looking for a configuration file for an application or process, head for the <strong>/etc</strong> directory and look around.</p>
 
 <br /><br />
 
 <h2 id="s10-3_example">Example</h2>
-<p>We already looked at editing the configuration file <strong>/etc/fstab</strong> a couple of times earlier, but let's look at another example here.</p>
-
-<p>Sound problems can be solved with a number of grahical and command-line tools, but once in a while a user needs to directly edit the system-wide configuration file.  For many systems, this will be <strong>/etc/modprobe.d/snd-hda-intel.conf</strong>.  It is a simple file whose top paragraph looks like this: </p>
+<p>We already looked at editing the configuration file <strong>/etc/fstab</strong> a couple of times earlier, so let's look at a different example here. Sound problems can be solved with a number of grahical and command-line tools, but once in a while a user needs to edit directly the system-wide configuration file.  For many systems, this will be <strong>/etc/modprobe.d/snd-hda-intel.conf</strong>.  It is a simple file whose top paragraph looks like this: </p>
 
 <pre># some chips require that the model be set manually
 # for example asus g71 series may need model=g71v
 options snd-hda-intel model=<FONT><FONT color = "red">auto</FONT></strong></pre>
+
 <p>To try to get sound, you might decide to substitute the exact information about the sound model in place of the word &ldquo;auto.&rdquo;.  To find out your sound model, you could open a konsole and type: </p>
+
 <pre>lspci | grep Audio</pre>
+
 <p>The output will depend on the system, but it will take the following form:</p>
+
 <pre>00:05.0 Audio device: nVidia Corporation MCP61 High Definition Audio (rev a2)</pre>
+
 <p>Now you can plug that information back into the configuration file:</p>
+
 <pre># some chips require that the model be set manually
 # for example asus g71 series may need model=g71v
 options snd-hda-intel model=<FONT><FONT color = "red">nvidia</FONT></strong></pre>
-<p>You would save the file, reboot the machine, and hopefully your sound would be working.  You could also try more precision by using <strong>nvidia mcp61</strong> instead if the first did not work.</p>
+<p>You would save the file, reboot the machine, and hopefully your sound would be working.  You could also try more precision by using <strong>model=nvidia mcp61</strong> instead, if the first did not work.</p>
 <br />
 
 <h2 id="s10-3_links">Links and Guides for Section 10.3</h2>
 
 <ul>
-<li>Understanding Linux configuration files:<a href="http://www.ibm.com/developerworks/linux/library/l-config.html">at http://www.ibm.com/developerworks</a>
-</li>
-<li>Editing basics for the xorg.conf file: <a href="http://www.linux.com/feature/118108">http://www.linux.com/feature/118108</a>
-</li>
+<li>Understanding Linux configuration files: <a  href="http://www.ibm.com/developerworks/linux/library/l-config.html">http://www.ibm.com/developerworks/linux/library/l-config.html</a></li>
 </ul>
 
 
@@ -7138,11 +7148,11 @@ telinit 5
 </pre>
 
 <p>Other useful commands when you are looking at the prompt on runlevel 3 include:</p>
-<ul>
+<div align="left"><ul>
 <li><strong>halt</strong> (as root) &mdash;  shuts the machine down.</li>
 <li><strong>reboot</strong> (as root) &mdash; reboots the machine.</li>
 <li><strong>[application command]</strong>  &mdash; will run that application if it is not graphical.</li>
-</ul>
+</ul></div>
 
 <p class="fl">It is equally possible to <em>boot</em> to runlevel 3 by merely adding the number three at the end of the boot options on the GRUB screen.  From there you can simply type: </p>
 <pre>startx</pre> 
@@ -7155,7 +7165,7 @@ telinit 5
 
 
 <h2 id="s10-4_links">Links and Guides for Section 10.4</h2>
-
+<div align="left">
 <ul>
  <li>Wikipedia: Runlevel <a href="http://en.wikipedia.org/wiki/Runlevel"> http://en.wikipedia.org/wiki/Runlevel</a></li>
 
@@ -7163,7 +7173,7 @@ telinit 5
 
 <li>The Linux Information Project: Runlevel Definition <a href="http://www.linfo.org/runlevel_def.html ">http://www.linfo.org/runlevel_def.html</a></li>
  
-</ul>
+</ul></div>
 
 
 
@@ -7196,12 +7206,12 @@ telinit 5
 <p>You will see a result something like <strong>2.6.36-1-mepis-smp</strong> (32bit) or <strong>2.6.36-1-mepis64-smp</strong> (64bit).  The MEPIS kernel also has an internal version number that you can see by looking on the "Installed files" tab of the current kernel entry in Synaptic.</p>
 <p>Unlike other software on your system, the kernel is not upgraded automatically except below the minor revision level (indicated by the third number in the kernel name).  To upgrade the kernel when a new one becomes available in the repos, follow this procedure:</p>
 
-<ol>
+<div align="left"><ol>
 <li>Open Synaptic as root and search on the word &ldquo;linux-image&rdquo;.
 </li>
 <li>Look at the results carefully, and install the image marked upgradeable that has the word "mepis" attached and the next higher version number.
 </li>
-</ol>
+</ol></div>
 <p>Such updates (only internal version number changes) can be installed without endangering the reboot process.  Kernel upgrades, where the major number changes will show up as a new package instead of an upgrade in Synaptic, should be approached with caution. They can be problematic, and may require manual editing of GRUB (see Wiki).</p>
 <p>To solve particular problems, advanced users sometimes make use of <strong>kernel patches</strong>.  A patch is program that updates files according to instructions contained in a separate file, called a patch file. The patch file consists of a list of differences that can be run to change the original file. For details, follow the Wiki link below.</p>
 <p>Advanced users sometimes compile and install their own kernel, starting with the kernel source code.  The motivation for doing this can range from pure fun to practical goals such as to produce a kernel optimized for a certain architecture and use.  Although the procedure is complicated, detailed directions can be found in the MEPIS Wiki if needed.</p>
@@ -7280,16 +7290,15 @@ http://www.ibm.com/developerworks</a>
 <br /><br />
 
 <h2 id="s11-1_wiki">Wiki</h2>
-<p>The MEPIS Wiki contains a great deal of other material.  As an ongoing product of volunteer users, it can be more up-to-date and detailed than the Manual.  Here's how to find what you're looking for:</p>
+<p>The MEPIS Wiki contains a great deal of other material.  As an ongoing product of volunteer users, it can be more up-to-date and detailed than the Manual, while also needing constant updating.  Here's how to find what you're looking for:</p>
 
-<ol>
- <li>Follow the structure by drilling down in the four areas laid out on the Main Page:
+<ul> <li>Follow the structure by drilling down in the four areas laid out on the Main Page:</li>
 <ul> <!--sublist 1 -->
 <li><u>Getting Started</u>: intended to provide new MEPIS users with the basic tools to get their system up and running.</li>
 <li><u>General Knowledge Database</u>: intended to provide users with more advanced tools to understand and use their MEPIS system.</li>
 <li><u>Help and Guides</u>: self-explanatory title, there is great stuff here for MEPIS users.</li>
 <li><u>Wiki Issues</u>: topics pertaining to the Wiki itself.</li>
-</ul></li>  <!--end sublist 1 -->
+</ul>  <!--end sublist 1 -->
 
 <li>Consult Special Pages: 
  <ul> <!-- sublist 2 -->
@@ -7300,7 +7309,7 @@ http://www.ibm.com/developerworks</a>
 <li>Click on the link <strong>Special pages</strong> for other possible aids.
 </li>
 </ul></li> <!--end sublist 2 -->
-</ol>
+</ul>
 
 
 <br /><br />
@@ -7401,7 +7410,7 @@ http://www.mepis.org/docs/en/index.php?title=MEPIS_irc_channel </a>
 <h2>Introduction</h2>
 <p>Linux terms can be confusing and offputting at first, so this Glossary provides a list of the ones used in this Manual to get you started. For more help on the terms used in the Linux computer world, see Links and Guides.</p>
 
-<p>If you reached this page by clicking on a <span class="spterm" title="This is green, and if ye didn't ken green, 'twould define it for ye.">green</span> glossary link, use your browser's <strong> [&#060;&mdash;]&nbsp;&nbsp; back button</strong>  to return you to your previous page. </p>
+<p>If you reached this page by clicking on a <span class="spterm" title="Link">green</span> glossary link, use your browser's <strong> [&#060;&mdash;]&nbsp;&nbsp; back button</strong>  to return you to your previous page. </p>
 
 <br /><br />
 
