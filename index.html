@@ -7081,7 +7081,7 @@ users, other than root&mdash;in other words, system administration utilities.
 
 <pre># some chips require that the model be set manually
 # for example asus g71 series may need model=g71v
-options snd-hda-intel model=<FONT><FONT color = "red">auto</FONT></strong></pre>
+options snd-hda-intel model=<strong><FONT color = "red">auto</FONT></strong></pre>
 
 <p>To try to get sound, you might decide to substitute the exact information about the sound model in place of the word &ldquo;auto.&rdquo;.  To find out your sound model, you could open a konsole and type: </p>
 
@@ -7095,7 +7095,7 @@ options snd-hda-intel model=<FONT><FONT color = "red">auto</FONT></strong></pre>
 
 <pre># some chips require that the model be set manually
 # for example asus g71 series may need model=g71v
-options snd-hda-intel model=<FONT><FONT color = "red">nvidia</FONT></strong></pre>
+options snd-hda-intel model=<strong><FONT color = "red">nvidia</FONT></strong></pre>
 <p>You would save the file, reboot the machine, and hopefully your sound would be working.  You could also try more precision by using <strong>model=nvidia mcp61</strong> instead, if the first did not work.</p>
 <br />
 
@@ -7148,11 +7148,11 @@ telinit 5
 </pre>
 
 <p>Other useful commands when you are looking at the prompt on runlevel 3 include:</p>
-<div align="left"><ul>
+<ul>
 <li><strong>halt</strong> (as root) &mdash;  shuts the machine down.</li>
 <li><strong>reboot</strong> (as root) &mdash; reboots the machine.</li>
 <li><strong>[application command]</strong>  &mdash; will run that application if it is not graphical.</li>
-</ul></div>
+</ul>
 
 <p class="fl">It is equally possible to <em>boot</em> to runlevel 3 by merely adding the number three at the end of the boot options on the GRUB screen.  From there you can simply type: </p>
 <pre>startx</pre> 
@@ -7206,12 +7206,12 @@ telinit 5
 <p>You will see a result something like <strong>2.6.36-1-mepis-smp</strong> (32bit) or <strong>2.6.36-1-mepis64-smp</strong> (64bit).  The MEPIS kernel also has an internal version number that you can see by looking on the "Installed files" tab of the current kernel entry in Synaptic.</p>
 <p>Unlike other software on your system, the kernel is not upgraded automatically except below the minor revision level (indicated by the third number in the kernel name).  To upgrade the kernel when a new one becomes available in the repos, follow this procedure:</p>
 
-<div align="left"><ol>
+<ul>
 <li>Open Synaptic as root and search on the word &ldquo;linux-image&rdquo;.
 </li>
 <li>Look at the results carefully, and install the image marked upgradeable that has the word "mepis" attached and the next higher version number.
 </li>
-</ol></div>
+</ul>
 <p>Such updates (only internal version number changes) can be installed without endangering the reboot process.  Kernel upgrades, where the major number changes will show up as a new package instead of an upgrade in Synaptic, should be approached with caution. They can be problematic, and may require manual editing of GRUB (see Wiki).</p>
 <p>To solve particular problems, advanced users sometimes make use of <strong>kernel patches</strong>.  A patch is program that updates files according to instructions contained in a separate file, called a patch file. The patch file consists of a list of differences that can be run to change the original file. For details, follow the Wiki link below.</p>
 <p>Advanced users sometimes compile and install their own kernel, starting with the kernel source code.  The motivation for doing this can range from pure fun to practical goals such as to produce a kernel optimized for a certain architecture and use.  Although the procedure is complicated, detailed directions can be found in the MEPIS Wiki if needed.</p>
@@ -7320,9 +7320,9 @@ http://www.ibm.com/developerworks</a>
 <ul>
 <li><strong>forum.mepiscommunity.org:&nbsp;&nbsp;</strong> A friendly community forum for every level of knowledge, from newbie to expert.
 </li>
-<li><strong>MEPIS forums in other languages:&nbsp;&nbsp;</strong> MEPISIMO  Spanish forum
+<li><strong>Mepisimo</strong> (español): &nbsp;&nbsp;<a href=" http://www.mepisimo.com/forum/index.php ">http://www.mepisimo.com/forum/index.php</a>
 </li>
-<li><strong>LinuxQuestions:&nbsp;&nbsp;</strong> A venerable Linux forum that has a section dedicated to MEPIS.
+<li><strong>LinuxQuestions.org:&nbsp;&nbsp;</strong> A venerable Linux forum that has a section dedicated to MEPIS.
 </li>
 </ul>
 <p>See the Links and Guides section at the bottom of the page for all the above.</p>
