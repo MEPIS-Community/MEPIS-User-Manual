@@ -104,7 +104,7 @@ MEPIS Store: <a href="http://www.mepis.org/store"> http://www.mepis.org/store</a
 <p>The primary source of support for non-commercial MEPIS Linux users lies with the Community:</p>
 <ul><li><u>Users Manual</u>. Written by MEPIS users who volunteer for the Community Documentation project, this excellent resource is the place to start. It covers all the basics of installation, configuration, troubleshooting, basic/advanced use, and more. It's on the MEPIS LiveDVD, the installed desktop, and online at the Forum (below) and the MEPIS home page.</li>
 <li><u>Wiki</u>. Continually edited and updated, the Wiki provides more detailed information on general and specific topics. Subject categories and a powerful search engine make it easy to find what you are looking for. Since all contributions come from volunteers with limited time, the Wiki is not always and everywhere up-to-date.</li>
-<li><u>Forum</u>. Several years' worth of searchable discussions provide a wealth of detail on user's concerns. Questions (requires registration) are quickly answered by volunteer members of the world-wide MEPIS users community, and the only stupid question is the one you don't ask. Help with versions earlier than MEPIS 7 can be found in the <a href=”http://www.mepis.org/node/131”>Archives</a>.</li></ul>
+<li><u>Forum</u>. Several years' worth of searchable discussions provide a wealth of detail on user's concerns. Questions (requires registration) are quickly answered by volunteer members of the world-wide MEPIS users community, and the only stupid question is the one you don't ask. Help with versions earlier than MEPIS 7 can be found in the <a href=”http://www.mepis.org/mepis-archives”>Archives</a>.</li></ul>
 <p>Particularly difficult hardware questions that are not answered from these sources can be submitted to Warren at mepis.org; ask at the Forum for details.</p>
 <br /><br />
 
@@ -493,7 +493,7 @@ system.</p>
 <li><a href="index.html#section03-3">3.3 Booting up</a></li>
 <li><a href="index.html#section03-4">3.4 The new desktop</a></li>
 <li><a href="index.html#section03-5">3.5 Partitioning the hard drive</a></li>
-<li><a href="index.html#section03-6">3.6 Leaving</a></li>
+<li><a href="index.html#section03-6">3.6 Exiting</a></li>
 </ul>
 
 <br /><br />
@@ -1324,28 +1324,28 @@ resize/Mepis-Install-Resize.html</a></li>
 
 <br /><br /><br /><br /><br /><br />
 
-<h1 id="section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp; Leaving</h1>
+<h1 id="section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp; Exiting</h1>
 
 
-<p>It is important to exit MEPIS Linux correctly when you have finished your session so that the system can be brought down in a secure way.  All processes are first notified that the system is going  down, giving programs the time to save any file being edited, mail and news processing programs a chance to exit  cleanly,  etc.  If you just turn the power off, you risk the possibilities of damaging the operating system.</p>  
+<p>It is important to exit MEPIS Linux correctly when you have finished your <a href="index.html#s12-1_session" class="spterm" title="period of activity between a user's logging in and logging out" >session</a> so that the system can be brought down in a secure way.  All running programs are first notified that the system is going  down, giving them the time to save any file being edited, exit from mail and news programs, etc.  If you just turn the power off, you risk the possibilities of damaging the operating system.</p>  
 
 <p>There are two common ways to exit a session correctly:</p>
-<ul><li>Right-click the open desktop, and select Leave to see this dialog box (for options, hold down the cursor):</li><br />
+<ul><li>Right-click the open desktop, and select Leave to see this dialog box.:</li><br />
 <img src="grafx/LeaveDialog.png" alt="Leave_dialog" width="200" height="187" />
-<br /><br />
-<li>Click <strong>Start Menu > Leave</strong> for detailed exit options:</li></ul>
+<p> For further options, press and hold the left mouse button on one of the choices.</p>
+<li>Click <strong>Start Menu > Leave</strong> for exit options:</li></ul>
 <br /><img src="grafx/LeaveDialog_Menu.png" width="308" height="202" /><br />
 <br /><br />
 
 <h2>Permanent</h2>
 
 <p>To leave a session for good, select one of the following: </p>
-<ul><li><u>Log out (End Session)</u>.  Choosing this will end everything you are doing, if you have not closed/stopped things yourself, and and bring you back to the login screen with the system still running.  You can also get back to the login screen by clicking <strong>Ctrl-Alt-Bksp</strong>, but any open programs and processes will <u>not</u> be saved. </li>
+<ul><li><u>Log out (End Session)</u>.  Choosing this will end everything you are doing, if you have not closed/stopped things yourself, and bring you back to the login screen with the system still running.  You can also get back to the login screen by clicking <strong>Ctrl-Alt-Bksp</strong>, but any open programs and processes will <u>not</u> be saved. </li>
 <li><u>Turn Off/Restart</u>.  Self-explanatory options that alter the system state itself.</li></ul>
 <br /><br />
 <h2>Temporary</h2>
 <p>You can temporarily leave your session in one of the following ways:</p>
-<ul><li><u>Lock screen.</u>  This option freezes your session, and requires your user password to reinstate.  Often used in a public context where a user will be away from the computer for a short time.</li>
+<ul><li><u>Lock screen.</u>  This option protects your Desktop from unauthorized access while you are away by requiring your user password to return to the session.</li>
 <li><u>Start a parallel session as a different user.</u>  You choose this to leave your current session where it is and be able to work for a short time as a different user.</li>
 <li><u>Suspend to RAM (Sleep).</u>  This option places your system into a low-power state. Information on system configuration, open applications, and active files is stored in main memory (RAM ), while most of the system's other components are turned off.  It is very handy and works very well in MEPIS Linux, though some systems may may not automatically restore wireless and/or bluetooth. </li>
 <li><u>Suspend to Disk (Hibernate).</u>This selection will save running processes to the hard drive and power down the computer.  In MEPIS Linux the success of this choice varies among systems, with often no restoration happening. Some users report success with the following addition (replace "/swapdrive" with the correct drive, e.g. /sda2) to <strong>/boot/grub/menu.lst</strong>:</li>
@@ -1353,9 +1353,9 @@ resize/Mepis-Install-Resize.html</a></li>
 </ul>
 <br /><br />
 <h2>Emergency</h2>
-<p>Once in a while you may encounter a total lockup of your computer while you are working that trying to kill a runaway program (Section 8.7) does not correct.  It freezes and becomes entirely unresponsive.  You have then two options remaining:</p>
+<p>Once in a while you may encounter a total lockup of your computer that cannot be corrected by killing a runaway program (Section 8.7). The desktop freezes and becomes entirely unresponsive.  You have two options remaining, both of which use the SysRq key (on some keyboards, the key may be labeled Prt Scr or Print Screen).:</p>
 <ul><li><strong>Force X to restart.</strong>Hold down the Alt-SysRq keys, and press K; all session processes will be killed and you will end up back at the login screen.</li>
-<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the ALT-SysRq keys (sometimes only the <u>left</u> Alt key will work), and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  Its purpose is to assist you to go through several stages to nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li></ul>
+<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the AlT-SysRq keys (sometimes only the <u>left</u> Alt key will work), and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  The purpose of this magic key is to go through several stages that nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li></ul>
 <br /><br />
 <!-- ########################### Links and Guides for Section 3.6  ########################### -->
 
@@ -7556,7 +7556,7 @@ maximize/minimize/close/move functions for windows in the GUI environment. Somet
 <li><a href="index.html#section03-3">3.3:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Booting up</a></li>
 <li><a href="index.html#section03-4">3.4:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The new desktop</a></li>
 <li><a href="index.html#section03-5">3.5:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partitioning the hard drive</a></li>
-<li><a href="index.html#section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leaving</a></li>
+<li><a href="index.html#section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exiting</a></li>
 </ul>
 </li>
 <!-- ************ MANUAL SECTION 4    ************ -->
@@ -7710,7 +7710,7 @@ maximize/minimize/close/move functions for windows in the GUI environment. Somet
 </li>
 <li><a href="index.html#section03-5">3.5:&nbsp;&nbsp;Partitioning the hard drive</a>
 </li>
-<li><a href="index.html#section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leaving</a></li>
+<li><a href="index.html#section03-6">3.6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exiting</a></li>
 </ul>
 </li>
 <!-- ************ MANUAL SECTION 4    ************ -->
