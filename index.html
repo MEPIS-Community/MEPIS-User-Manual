@@ -1004,7 +1004,8 @@ Enter any URL and the page will pop up in your default browser.</li>
 Start Krunner and click on the wrench symbol > User Interface tab, then select Task Orientated >OK.  This changes Krunner into QuickSand, an alternative front end.  Just start typing to initiate a search.  QuickSand represents matches to a query as a scrolling line of icons. A completion box of matches is also shown when the matches first arrive. The list can be scrolled using the up and down arrow keys when the completion box is shown or the left and right arrow keys.</li>
 </ul>
 
-
+<h3>Other search means</h3>
+<p>See Section 8.7 on <strong>KFind</strong> and <strong>Nepomuk-Strigi</strong></p>
 <h3>File management</h3>
 
 <p>Dolphin is the default file manager in KDE4. By focusing exclusively on file management, Dolphin avoids many of the pitfalls inherent in the Konqueror approach familiar from KDE 3.5, leading to such items as a more flexible sidebar system and a less-invasive notification system that doesn't interrupt user work flow.  Konqueror can still be used as file manager (as can other alternatives, for that matter) and in fact it shares the fileview functionality with Dolphin.</p>
@@ -6060,7 +6061,7 @@ http://en.wikipedia.org/wiki/Comparison_of_text_editors</a>
 languages, was written with C++ and C  in mind.  Install it from the repositories with the <em>kdevelop</em> package.</p>
 
 <h3>Java</h3>
-<p>MEPIS Linux ships with the Sun Java 6.07 runtime environment; the full developer kit can be installed by installing the
+<p>MEPIS Linux ships with OpenJDK Java runtime; the full developer kit can be installed by installing the
 <em>sun-java6-jdk</em> package.  The Java 5 runtime environment and development kit are also available, and the GNU <em>gcj</em> Java
 compiler. Newer versions for Linux are available from Sun's website.</p>
 
@@ -6068,7 +6069,7 @@ compiler. Newer versions for Linux are available from Sun's website.</p>
 package, but there are many optional add-on packages for it as well.  The BeanShell interpreted Java environment is available from the repos, and the <strong>NetBeans</strong> IDE, available free from Sun, also works on MEPIS Linux.</p>
 
 <h3>Python</h3>
-<p>Python 2.5 comes preinstalled on MEPIS Linux.  You can launch the interactive interpreter by typing <strong>python</strong> at the
+<p>Python 2.6.x comes preinstalled on MEPIS Linux.  You can launch the interactive interpreter by typing <strong>python</strong> at the
 console. Python 2.4 as well as a large selection of additional python libraries are also available from the repositories, where you will also find the <strong>eric</strong>,  <strong>idle</strong>, and <strong>boa-constructor</strong> IDEs.</p>
 
 <h3>Mono (.NET)</h3>
@@ -6174,7 +6175,7 @@ http://www.mepis.org/docs</a>
 <p><em>See also <a href="index.html#section09-4">9.4:&nbsp; Virtual machines</a></em></p>
 
 <h2>Introduction</h2>
-<p>There is a certain number of applications, both open-source and commercial, that will allow Windows applications to run under MEPIS Linux.  They are referred to as emulators, meaning that they duplicate the functions of Windows on a Linux platform.  Many MS Office applications, games and other programs can be run using an emulator with varying degrees of success ranging from near-native speed and functionality to only basic performance.</p>
+<p>There is a certain number of applications, both open-source and commercial, that will allow Windows applications to run under MEPIS Linux.  They are referred to as emulators, meaning that they replicate the functions of Windows on a Linux platform.  Many MS Office applications, games and other programs can be run using an emulator with varying degrees of success ranging from near-native speed and functionality to only basic performance.</p>
 
 <h2 id="s09-3_open">Open-source</h2>
 
@@ -6552,7 +6553,7 @@ sysfs /sys sysfs defaults 0 0
 /dev/sda2 /mnt/sda2 auto noauto,users,exec 0 0
 /dev/sda3 /mnt/sda3 auto noauto,users,exec 0 0
 </pre>
-For the future, when you're sober, it might be good to document your change with a comment line so you know what is what. The following is an example of the new line in place, with a comment line added:
+For the future, it might be good to document your change with a comment line so you know what is what. The following is an example of the new line in place, with a comment line added:
 
 <pre>
 sysfs /sys sysfs defaults 0 0
@@ -6697,37 +6698,37 @@ All scripts open with a <strong>shebang</strong> as in the first line: it is a c
 6 # To restore files, issue the command: cp -a /mnt/sda1/username /home
 7 # To restore, but not overwrite: 
 8 #     cp -a -i --reply=no /mnt/sda1/username /home
-8
-9 <strong># Mount the external devices</strong>
-10
-11 mount /dev/sdb1
-12 mount /dev/sdb2
-13 mount /dev/sdb3
-14
-15 <strong># Execute the backup</strong>
-16
-17 rdiff-backup /home/newbie/Documents /mnt/sdb2/Documents
-18 rdiff-backup /home/newbie/Music /mnt/sdb1/Music
-19 rdiff-backup /home/newbie/Mail /mnt/sdb2/Mail
-20 rdiff-backup /home/newbie/Pictures /mnt/sdb3/Pictures
-21 
-22 <strong># Unmount the external devices</strong>
-23
-24 umount /dev/sdb1
-25 umount /dev/sdb2
-26 umount /dev/sdb3</pre>
+9
+10 <strong># Mount the external devices</strong>
+11
+12 mount /dev/sdb1
+13 mount /dev/sdb2
+14 mount /dev/sdb3
+15
+16 <strong># Execute the backup</strong>
+17
+18 rdiff-backup /home/newbie/Documents /mnt/sdb2/Documents
+19 rdiff-backup /home/newbie/Music /mnt/sdb1/Music
+20 rdiff-backup /home/newbie/Mail /mnt/sdb2/Mail
+21 rdiff-backup /home/newbie/Pictures /mnt/sdb3/Pictures
+22 
+23 <strong># Unmount the external devices</strong>
+24
+25 umount /dev/sdb1
+26 umount /dev/sdb2
+27 umount /dev/sdb3</pre>
 <p>Now let's look at this script's components:</p>
 
 <ul>
-<li>Lines 2-7: a number sign has been placed in front of these lines (called "commenting them out") to indicate to Bash that they are not part of the sequence of commands to be executed.  Their purpose here is to provide anyone who looks at this script with information about such things as the script's origin, creator, purpose, and license (metadata).
+<li>Lines 2-8: a number sign has been placed in front of these lines (called "commenting them out") to indicate to Bash that they are not part of the sequence of commands to be executed.  Their purpose here is to provide anyone who looks at this script with information about such things as the script's origin, creator, purpose, and license (metadata).
 </li>
-<li>Line 9: good scripts separate the commands into clearly labelled procedural sections, bolded here and in lines 15 and 22.
+<li>Line 10: good scripts separate the commands into clearly labelled procedural sections, bolded here and in lines 15 and 22.
 </li>
-<li>Lines 11-13: the three devices to be used for the backup have to first be mounted so they are available to the system.
+<li>Lines 12-14: the three devices to be used for the backup have to first be mounted so they are available to the system.
 </li>
-<li>Lines 17-20: here bash is told to use the system script rdiff-backup to compare the original directories (sources) with the backup directories (targets), copy over the differences it finds, and keep a record of the changes.
+<li>Lines 18-21: here bash is told to use the system script rdiff-backup to compare the original directories (sources) with the backup directories (targets), copy over the differences it finds, and keep a record of the changes.
 </li>
-<li>Lines 24-26: once the backup work is done, the external drives are unmounted from the system.
+<li>Lines 25-27: once the backup work is done, the external drives are unmounted from the system.
 </li>
 </ul>
 
@@ -6922,7 +6923,7 @@ users, other than root&mdash;in other words, system administration utilities.
 
 <h2 id="s10-1_disk_fs">The Disk Filesystem</h2>
 <p>The disk filesystem is something about which the average user does not need to be much concerned. The default disk filesystem used by MEPIS Linux is called <strong>ext3</strong>, a version of the ext2 filesystem that is journaled &mdash;i.e., it writes changes to a log before enacting them, rendering it more robust. The filesystem ext3 is set during installation when your your hard drive is formatted.</p> 
-<p>By and large, ext3 has more years on its track record than any of its rivals, and combines stability and speed; for these reasons, we do not recommend installing MEPIS onto a different disk filesystem unless you are well-educated in the differences.  However, MEPIS can read and write to many other formatted disk filesystems, and may even be installed on some of them, if for some reason one of them is preferred over ext3. A journaling file system called <strong>ext4</strong> is being developed as the successor to ext3 and is also available</p>
+<p>By and large, ext3 has more years on its track record than any of its rivals, and combines stability and speed; for these reasons, we do not recommend installing MEPIS onto a different disk filesystem unless you are well-educated in the differences.  However, MEPIS can read and write to many other formatted disk filesystems, and may even be installed on some of them, if for some reason one of them is preferred over ext3. A journaling file system called <strong>ext4</strong> is being developed as the successor to ext3 and is also available.</p>
 
 <p>NOTE: if you are dual or multi-booting different operating systems on the same computer, see <a href="index.html#section09-6">Section 9.6: Accessing other partitions</a> for more information.</p>
 
@@ -7520,10 +7521,10 @@ applications are released. It specifies that you may view, modify, and redistrib
 
 <p id="s12-1_tarball"><strong>tarball:&nbsp;&nbsp;</strong> An archiving format, like zip, popular on the Linux platform. Unlike zip files, though, tarballs may use one of a number of different compression formats, such as gzip or bzip2. They usually end in file extensions like .tgz, .tar.gz, or .tar.bz2. Many archive formats are supported in MEPIS with a graphical application called Ark. Usually an archive can be extracted simply by right-clicking on it in KDE.</p>
 
-<p id="s12-1_window-man"><strong>window manager:&nbsp;&nbsp;</strong> A component of a desktop environment that provides the basic
-maximize/minimize/close/move functions for windows in the GUI environment. Sometimes it can be used as an alternative to a full desktop environment. In MEPIS, the default window manager is called KWin, and is an integral part of the K Desktop Environment (KDE). In antiX, the default is IceWM,  a very light windows manager that requires very little graphics and system RAM.</p>
-
 <p id="s12-1_unix"><strong>Unix:&nbsp;&nbsp;</strong> Also <em>UNIX.</em> The operating system which Linux is modeled after, developed in the late 1960's at Bell Labs and used primarily for servers and mainframes. Like Linux, Unix has many variations. </p>
+
+<p id="s12-1_window-man"><strong>window manager:&nbsp;&nbsp;</strong> A component of a desktop environment that provides the basic
+maximize/minimize/close/move functions for windows in the GUI environment. Sometimes it can be used as an alternative to a full desktop environment. In MEPIS, the default window manager is called KWin, and is an integral part of the K Desktop Environment (KDE).</p>
 
 <p id="s12-1_x11"><strong>X:&nbsp;&nbsp;</strong> Also <em>X11, xorg.</em> The X Window System is a networking and display protocol which provides windowing on bitmap displays. It provides the standard toolkit and protocol to build graphical user interfaces (GUIs) on Unix-like operating systems and OpenVMS, and is supported by almost all other modern operating systems. In Mepis Linux, the X server operates on <a  class="spterm" href="index.html#s12-1_runlevel ">runlevel</a> 5. See also: <a href="http://en.wikipedia.org/wiki/X_display_manager ">http://en.wikipedia.org/wiki/X_display_manager</a>
 </p>
@@ -7531,7 +7532,9 @@ maximize/minimize/close/move functions for windows in the GUI environment. Somet
 <br />
 <h2  id="s12-1_links">Links and Guides for Section 12</h2>
 <ul>
-<li>MEPIS Wiki: Terminology  <a href="http://www.mepis.org/docs/en/index.php?title=Category:Terminology ">at http://www.mepis.org/docs</a>
+<li>MEPIS Wiki: Terminology <a href="http://www.mepis.org/docs/en/index.php?title=Category:Terminology ">http://www.mepis.org/docs/en/index.php?title=Category:Terminology</a>
+</li>
+<li>Open Software Initiative:  <a href="http://www.opensource.org/ ">http://www.opensource.org/</a>
 </li>
 <li>SuperLinux Encyclopedia: Jargon <a href="http://slencyclopedia.berlios.de/jargon.html">http://slencyclopedia.berlios.de/jargon.html</a>
 </li>
