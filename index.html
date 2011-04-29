@@ -104,7 +104,8 @@ MEPIS Store: <a href="http://www.mepis.org/store"> http://www.mepis.org/store</a
 <p>The primary source of support for non-commercial MEPIS Linux users lies with the Community:</p>
 <ul><li><u>Users Manual</u>. Written by MEPIS users who volunteer for the Community Documentation project, this excellent resource is the place to start. It covers all the basics of installation, configuration, troubleshooting, basic/advanced use, and more. It's on the MEPIS LiveDVD, the installed desktop, and online at the Forum (below) and the MEPIS home page.</li>
 <li><u>Wiki</u>. Continually edited and updated, the Wiki provides more detailed information on general and specific topics. Subject categories and a powerful search engine make it easy to find what you are looking for. Since all contributions come from volunteers with limited time, the Wiki is not always and everywhere up-to-date.</li>
-<li><u>Forum</u>. Several years' worth of searchable discussions provide a wealth of detail on user's concerns. Questions (requires registration) are quickly answered by volunteer members of the world-wide MEPIS users community, and the only stupid question is the one you don't ask. Help with versions earlier than MEPIS 7 can be found in the <a href=”http://www.mepis.org/mepis-archives”>Archives</a>.</li></ul>
+<li><u>Forum</u>. Several years' worth of searchable discussions provide a wealth of detail on user's concerns. Questions (requires registration) are quickly answered by volunteer members of the world-wide MEPIS users community, and the only stupid question is the one you don't ask. Help with versions earlier than MEPIS 7 can be found in the 
+<a href=”http://www.mepis.org/mepis-archives”>Archives</a>.</li></ul>
 <p>Particularly difficult hardware questions that are not answered from these sources can be submitted to Warren at mepis.org; ask at the Forum for details.</p>
 <br /><br />
 
@@ -433,7 +434,7 @@ the DVD's integrity.</p>
 <li>Click <strong>Start Menu > Settings > MEPIS System Assistant</strong>, then click on the MEPIS USB Key tab.</li>
 <li>Make the appropriate selections for the USB key, key type and ISO source.</li>
 <li>Click Apply, wait until the process is finished, then reboot or exit for later use.</li>
-<li>See Section 5.4 for details</li></li></ul></li>
+<li>See Section 5.4 for details</li></ul></li>
 
 <li>If you need or want to create the Live USB from the netbook itself, you should use an alternative method:
 
@@ -453,7 +454,8 @@ the DVD's integrity.</p>
 <li>Click on (or arrow over to) the Boot tab</li>
 <li>Identify and highlight your USB device (usually, "USB HDD"), then move it to the top of the list.  Save and exit</li>
 <li>If unsure or uncomfortable about changing the BIOS, ask for assistance in the Forums.</li>
-</ul></li></ul>
+</ul></li>
+<li>On older computers without USB support in the BIOS, you can use the Plop Linux LiveCD that will load USB drivers and present you with a menu. See the website linked below for details.</li></ul>
 <p>Once your system is set to recognize the USB Drive during the boot process, just plug in the Drive and reboot the machine.</p>
 
 <br /><br />
@@ -468,7 +470,7 @@ the DVD's integrity.</p>
 <li>ISObuster home page: <a href="http://ISObuster.com/"> http://ISObuster.com/</a></li>
 <li>Unetbootin homepage: <a href="http://unetbootin.sourceforge.net/"> http://unetbootin.sourceforge.net/</a></li>
 <li>MEPIS Wiki: Netbook: <a href="http://www.mepis.org/docs/en/index.php?title=Netbook"> http://www.mepis.org/docs/en/index.php?title=Netbook</a></li>
-
+<li>Plop Linux: <a href="http://www.plop.at/en/ploplinux.html"> http://www.plop.at/en/ploplinux.html</a>   </li>
 </ul>
 
 
@@ -1323,8 +1325,6 @@ install. If you see multiple partitions showing up in KDE Partition Manager that
 <li>Wikipedia: Partitioning: <a href="http://en.wikipedia.org/wiki/Disk_partitioning">http://en.wikipedia.org/wiki/Disk_partitioning</a></li>
 <li>Linux Partitions: A Primer: <a href="http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549"> http://www.tutorialized.com/tutorial/Linux-Partitions-A-Primer/4549</a></li>
 <li>Repartition your hard drive: <a href="http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive">  http://www.mepis.org/docs/en/index.php?title=Repartition_your_hard_drive</a></li>
-<li>Community visual guide to resizing: <a href="http://www.mepisguides.com/Mepis-6/Install/resize/Mepis-Install-Resize.html"> http://www.mepisguides.com/Mepis-6/Install/
-resize/Mepis-Install-Resize.html</a></li>
 </ul>
 
 
@@ -1361,13 +1361,13 @@ resize/Mepis-Install-Resize.html</a></li>
 <h2>Emergency</h2>
 <p>Once in a while you may encounter a total lockup of your computer that cannot be corrected by killing a runaway program (Section 8.7). The desktop freezes and becomes entirely unresponsive.  You have two options remaining, both of which use the SysRq key (on some keyboards, the key may be labeled Prt Scr or Print Screen).:</p>
 <ul><li><strong>Force X to restart.</strong>Hold down the Alt-SysRq keys, and press K; all session processes will be killed and you will end up back at the login screen.</li>
-<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the AlT-SysRq keys (sometimes only the <u>left</u> Alt key will work), and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  The purpose of this magic key is to go through several stages that nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li></ul>
+<li><strong>Use magic SysRq key (REISUB).</strong>Hold down the Alt-SysRq keys (sometimes only the <u>left</u> Alt key will work), and slowly press the keys R-E-I-S-U-B; your system should shut down correctly and reboot.  The purpose of this magic key is to go through several stages that nurse your system safely out of a failure of some sort, and often only the first 2 letters are sufficient. Example, Alt-SysRq + R, then E, then try what you were attempting to do before the failure, if the system is still unresponsive, continue with the I, try again and if you still have no joy, you may as well finish the sequence.</li></ul>
 <br /><br />
 <!-- ########################### Links and Guides for Section 3.6  ########################### -->
 
 <h2 id="s03-6_links">Links and Guides for Section 3.6</h2>
 <ul class="link">
-<li>Wikipedia: Magid SysRq Key: <a href="http://en.wikipedia.org/wiki/Magic_SysRq_key"> http://en.wikipedia.org/wiki/Magic_SysRq_key</a>
+<li>Wikipedia: Magic SysRq Key: <a href="http://en.wikipedia.org/wiki/Magic_SysRq_key"> http://en.wikipedia.org/wiki/Magic_SysRq_key</a>
 </li> 
 <li>Wikipedia: ACPI: <a href="http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface"> http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface</a>
 </li>
@@ -1649,10 +1649,6 @@ update the MBR.</p>
 
 <!-- ###################  start unordered list ################# -->
 <ul class="link">
-<li>Community visual guides to installation: <a href="http://www.mepisguides.com/"> http://www.mepisguides.com/</a>
-</li>
-<li>MEPIS Wiki: Getting and installing MEPIS: <a href="http://www.mepis.org/docs/en/index.php?title=Getting_and_Installing_MEPIS"> http://www.mepis.org/docs/en/index.php?title=Getting_and_Installing_MEPIS</a>
-</li>
 <li>MEPIS Wiki: Alternative boot methods: <a href="http://www.mepis.org/docs/en/index.php?title=Alternative_boot_methods"> http://www.mepis.org/docs/en/index.php?title=Alternative_boot_methods</a>
 </li>
 <li>MEPIS Wiki: Installing MEPIS without a CD/DVD: <a href="http://www.mepis.org/docs/en/index.php?title=Installing_without_a_CD"> http://www.mepis.org/docs/en/index.php?title=Installing_without_a_CD</a>
@@ -2602,7 +2598,7 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 
 <h2>Graphic driver</h2>
 <p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>, if used) in one of the following ways (see the Wiki for details):</p>
-<ul><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; for system info, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
+<li><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; for system info, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
 <ul><li>Nvidia: <a href="http://www.nvidia.com/Download/index.aspx">http://www.nvidia.com/Download/index.aspx</a></li>
 <li>ATI: <a href="http://support.amd.com/">http://support.amd.com/</a></li>
 <li>Intel: <a href="http://intellinuxgraphics.org/download.html">http://intellinuxgraphics.org/download.html</a></li></ul>
@@ -2614,9 +2610,10 @@ Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are eas
 <ul><li>With an ATI chip, for instance, direct rendering requires the addition of the package <strong>libgl-mesa-glx</strong>.</li>
 <li>Graphic controls are available for Nvidia (<strong>nvidia-settings</strong>) and some ATI drivers </li>  
 <li>Check the Wiki and Forum for details and help.</li></ul>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</ul>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</li>
+</ul>
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
-<p>Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <pre>sgfxi</pre> Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></li></ul>
+<p>Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <b>sgfxi</b>. Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></ul>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -3522,7 +3519,7 @@ are.</p>
 
 <p>There are a lot of files in <strong>/usr/bin</strong>!  It would be nice if we could filter this output so that only entries that
 contained, say, the word "fire" would be listed.  We can do this by <strong>piping</strong> the output of the <em>ls</em> command into another
-command, <strong>grep</strong>.  The <strong>pipe</strong>, or &ldquo;|&rdquo; character, is used to send the output of one command to the input of
+command, <strong>grep</strong>.  The <strong>pipe</strong>, or &ldquo;|&rdquo; character (Caps &#043; &#092;), is used to send the output of one command to the input of
 another.</p>
 <p>The command <strong>grep</strong> searches for the pattern you give it and returns all matches, so piping the output of the previous
 command to it filters the output.</p>
@@ -3950,9 +3947,6 @@ http://www.mepis.org/docs</a></li>
 <li>MEPIS Wiki: Pinning Nvidia drivers: <a href = "http://www.mepis.org/docs/en/index.php?title=Pinning_nvidia_drivers">at
 http://www.mepis.org/docs</a></li>
 <li>Synaptic home page: <a href = "http://www.nongnu.org/synaptic/"> http://www.nongnu.org/synaptic/</a></li>
-<li>Community visual guide to Synaptic:<br />
-<a href="http://www.mepisguides.com/Mepis-6/synaptic-upgrade/synaptic-upgrade-part-1.html">
-http://www.mepisguides.com/Mepis-6/synaptic-upgrade/ synaptic-upgrade-part-1.html</a></li>
 <li>Synaptic howto (Ubuntu): <a href ="https://help.ubuntu.com/community/SynapticHowto">
 https://help.ubuntu.com/community/SynapticHowto</a></li>
 </ul>
@@ -4132,7 +4126,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#Browser</a></p>
 
 <h2 id="s08-01_email">Email</h2>
 
-<p>An email client Kmail is installed with MEPIS Linux and available by clicking <strong>Start Menu > Internet</strong>.  Its icon can be found on the left side of the panel. Thunderbird (or Debian's rebranded Icedove) is another popular choice installable through the repos.  If coming from Windows, be sure to consult <a href="index.html#section03-2">Section 3.2:&nbsp;Coming from Windows</a> about migrating data.</p>
+<p>An email client Kmail is installed with MEPIS Linux and available by clicking <strong>Start Menu > Internet</strong>.  Its icon can be found on the left side of the panel. Thunderbird is another popular choice, using the package from the Mozilla site (check the Wiki for directions); or use Debian's rebranded Icedove, installable through the repos.  If coming from Windows, be sure to consult <a href="index.html#section03-2">Section 3.2:&nbsp;Coming from Windows</a> about migrating data.</p>
 
 <ul>
 <li>Kmail home page: <a href="http://kontact.kde.org/kmail/"> http://kontact.kde.org/kmail/ </a></li>
@@ -4226,7 +4220,7 @@ http://www.mepis.org/docs/en/index.php?title=Linux_software#File_Sharing </a></p
 
 <h2 id="s08-01_ftp">FTP</h2>
 <p>You have a number of choices for FTP transfer in MEPIS Linux (see also Bluetooth, below).</p>
-<ul><li>Click <strong>Start Menu > Internet > Konqueror</strong>, details in the Handbook.</li>
+<ul><li>Click <strong>Start Menu > Internet > Konqueror</strong>, details in the Konqueror Handbook.</li>
 <li>Click <strong>Start Menu > Internet > KFTPgrabber</strong>, details in the Handbook</li>
 <li> Install the Firefox extension called FireFTP.</li>
 <li>Install any other FTP client you like from the repos.</li></ul> 
@@ -4615,7 +4609,7 @@ Internet FAX price comparison: <a href="http://www.faxprices.com/"> http://www.f
 <li>Okular home page: <a href="http://okular.kde.org/"> http://okular.kde.org/</a>
 </li>
 
-<li>MEPIS Wiki: PDF:<a href="http://www.mepis.org/docs/en/index.php?title=Pdf/"> http://www.mepis.org/docs/en/index.php?title=Pdf</a></li>
+<li>MEPIS Wiki: PDF:<a href="http://www.mepis.org/docs/en/index.php?title=Pdf"> http://www.mepis.org/docs/en/index.php?title=Pdf</a></li>
 
 </ul>
 
@@ -4765,7 +4759,7 @@ http://www.gramps-project.org/wiki/index.php?title= Linux_Genealogy_CD</a></li>
 <h2 id="s08-05_firewall">Firewall</h2>
 <p> Guarddog and Firestarter can protect your system from external hackers while not being intrusive
 during normal use. Their interfaces are clear and offer many options, but most users will almost never have to open the applications or make changes.</p>
-<p>The most common need to open your firewall application comes when the user is required to permit a protocol through the firewall, for instance when installing a network printer. Check the handbook for details on when and how to do this.</p>
+<p>The most common need to open your firewall application comes when the user is required to permit a protocol through the firewall, for instance when installing a network printer. Check the software's handbook for details on when and how to do this.</p>
 
 <ul>
 <li>MEPIS Wiki: Firestarter<a href="http://www.mepis.org/docs/en/index.php?title=Firestarter">
@@ -4988,15 +4982,8 @@ http://www.mepis.org/docs</a>
 <br />
 Midnight Commander FAQs: <a href="http://www.ibiblio.org/mc/FAQ"> http://www.ibiblio.org/mc/FAQ </a>
 <br />Wikipedia: Midnight Commander<a href="http://en.wikipedia.org/wiki/Midnight_commander">
-http://en.wikipedia.org/wiki/Midnight_commander</a>
-</li>
-</ul>
-
-<p> A couple of smaller packages for working with files are also installed with MEPIS Linux.</p>
-
-<ul>
-<li>
-<b>Ark:&nbsp;</b> A Graphical Archiving tool for KDE, similar to
+http://en.wikipedia.org/wiki/Midnight_commander</a></li>
+<li><b>Ark:&nbsp;</b> A Graphical Archiving tool for KDE, similar to
 winzip, with support for zip, tar, tar + compression (lzop, gzip,
 bzip2,
 bzip, compress) lha, zoo, rar, ar, etc... It is most commonly used
@@ -5005,15 +4992,7 @@ Compress or Extract, depending on the item's current state. You can
 also click <strong>Start Menu > Utilities > Ark (Archiving Tool).</strong>
 <br />
 Ark information page: <a href="http://docs.kde.org/stable/en/kdeutils/ark/using-ark.html">http://utils.kde.org/projects/ark</a>
-</li>
-
-<li>
-<strong>KFloppy:</strong> A utility that can be installed from the repos to provide a straightforward graphical means to format 3.5" and 5.25" floppy disks.
-
-<br />
-KFloppy information page: <a href="http://docs.kde.org/stable/en/kdeutils/kfloppy/introduction.html">at http://utils.kde.org/projects/kfloppy/</a>
-</li>
-</ul>
+</li></ul>
 
 <p class="fl">Other common choices: <a href="http://www.mepis.org/docs/en/index.php?title=Linux_software#Advanced_file_tools">at
 http://www.mepis.org/docs</a></p>
@@ -5334,9 +5313,9 @@ apt-get dselect-upgrade
 
 <br /><br />
 
-<h2 id="s08-08_keep">Back up using <em>Keep</em></h2>
+<h2 id="s08-08_keep">Back up using <em>LuckyBackup</em></h2>
 
-<p><strong>luckyBackup</strong> is a graphical front end for Rdiff-Backup that functions as a backup system for KDE.  It is installed by default.  Directions on use in the Manual listed below</p>
+<p><strong>LuckyBackup</strong> is a graphical front end for a program known as <em>rsync</em> that functions as a backup system for KDE.  It is installed by default.  Directions on use in the Manual listed below</p>
 
 
 <ul>
@@ -5577,7 +5556,7 @@ Gnuchess home page: <a href="http://www.gnu.org/software/chess/"> http://www.gnu
 
 <h2 id="s08-09_card">Card Games</h2>
 
-<p>You have an installed set of 17 solitaire card games available by clicking <strong>Start Menu > Games > Card Games > KPatience (Patience Card Game)</strong>. 
+<p>You have an installed set of 12 solitaire card games available by clicking <strong>Start Menu > Games > Card Games > KPatience (Patience Card Game)</strong>. 
 <br />
 Kpatience handbook: <a href="http://games.kde.org/game.php?game=kpat">http://games.kde.org/game.php?game=kpat</a></p>
 
