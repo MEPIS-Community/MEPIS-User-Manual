@@ -766,7 +766,7 @@ http://www.mepis.org/docs/en/index.php?title=Windows_to_MEPIS_migration</a></li>
 
 <tr>
 <td><strong>xdrvr</strong></td>
-<td>Specifies a video driver for your hardware. Common uses: <strong>xdrv=vesa</strong> for a generic driver, <strong>xdrv=intel</strong> for an unrecognized Intel driver.</td>
+<td>Specifies a video driver for your hardware. Common uses: <strong>xdrvr=vesa</strong> for a generic driver, <strong>xdrvr=intel</strong> for an unrecognized Intel driver.</td>
 </tr>
 
 <tr>
@@ -2587,7 +2587,7 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 <li><strong>Refresh out of range.</strong>Solve this by adding the cheat code <code>vsync=58-62</code>.</li>
 <li><strong>Kernel modeset issues</strong>. Add the cheat code <code>radeon.modeset=0</code> or <code>nvidia.modeset=0</code>.</li>
 <li><strong>Agp issues</strong>. Add the cheat code <code>noagp</code>.</li>
-<li><strong>Unrecognized Intel chipset</strong>.  Add the cheat code <code>xdrvr=intel</code></li></ul>
+<li><strong>Unrecognized Intel chipset</strong>.  Add the cheat code <code>xdrvr=intel confx</code></li></ul>
 
 <h2>Resolution</h2>
 <p>Resolution refers to the physical number of columns and rows of pixels creating the display (e.g., 1920×1200).  In most cases, the resolution is correctly setby the kernel during installation (see Section 4.2) or when a new monitor is connected.  If not, you can change it in the following ways:</p>
