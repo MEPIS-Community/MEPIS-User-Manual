@@ -12,7 +12,7 @@ to &nbsp;&nbsp;&nbsp;MEPIS&nbsp;&nbsp;&nbsp;Linux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <meta name="resource-type" content="document" />
  <meta name="description" content="MEPIS, mepis, SimplyMEPIS, MEPIS 11, MEPIS 11 users guide, Users Guide, users guide " />
- <meta name="keywords" content="MEPIS, mepis, SimplyMEPIS, MEPIS 11, MEPIS 11 users guide, Users Guide, users guide, Linux, GNU/Linux,
+ <meta name="keywords" content="MEPIS, mepis, SimplyMEPIS, MEPIS 11, MEPIS 11 users guide, Users Guide, users guide, manual, MEPIS manual, Linux, GNU/Linux,
 install Linux, LiveDVD, live cd, install from CD, dual boot,free operating system, FOSS, how to install linux" />
  <meta name="revisit-after" content="30" />
  <meta name="robot" content="all" />
@@ -1152,22 +1152,21 @@ installing it to your hard drive. Keep in mind that in general everything runs m
 
 <li>Try adding at the bottom <code>acpi=force</code> or <code>acpi=off</code></li>
 
-<li>If you continue to have problems, use the MEPIS X Windows Assistant (Section 5.3.4) to copy a working configuration to your computer.</li>
 </ul>
 
 <p><u>Sound not working</u>.  Here are some steps to follow if you have no sound:</p>
 
 <ul>
-<li>Take a look in the mixer (KMix) settings and make sure that all the sliders are enabled.  Then on the KMix menu bar go to Settings >Configure Kmix, and make certain the "restore volumes on login" is checked</li> 
+<li>Take a look in the mixer (KMix) settings and make sure that all the sliders are enabled.  Then on the KMix menu bar go to Settings > Configure Kmix, and make certain the "restore volumes on login" is checked</li> 
 <li>With some cards it is sometimes necessary to open a terminal, become root, and type (one line at a time):
  <pre>alsaconf
 alsactl store</pre>
-Note: 1) alsactl is part of alsa-utils, which is not installed by default; 2) in mid-2009 '''alsaconf''' was removed from alsa-utils and is no longer available through the Debian repos, though it is available from the Community repos.</li>
+Note: 1) alsaconf and alsactl are part of alsa-utils, which is not installed by default; 2) in mid-2009 '''alsaconf''' was removed from alsa-utils and is no longer available through the Debian repos, though it is available from the Community repos.</li>
 
 <li>Try opening a terminal and becoming root, then typing:
 <pre>dpkg-reconfigure alsa-base</pre></li>
 
-<li>For ''snd-hda-intel'' systems try right-clicking the desktop > Run Command, and enter <pre>kdesu kwrite /etc/modprobe.d/snd-hda-intel</pre>Once that file opens, comment out the first line; if that doesn't work, try commenting out the second line instead if it is not already. Save, and then run <strong>alsaconf</strong>.</li>
+<li>For ''snd-hda-intel'' systems try right-clicking the desktop > Run Command, and enter <pre>kdesu kwrite /etc/modprobe.d/snd-hda-intel.conf</pre>Once that file opens, comment out the first line; if that doesn't work, try commenting out the second line instead if it is not already. Save, and then run <strong>alsaconf</strong>.</li>
 
 <li>In the second line of that same file, try adding your specific machine model, for instance:
 <pre>Options snd-hda-intel model=lenovo</pre>
@@ -2279,7 +2278,6 @@ the iPod mini, iPod Photo, iPod Shuffle, iPod nano, and iPod Video.  It is avail
 <li><a href="index.html#section05-3-1">5.3.1:&nbsp;&nbsp;&nbsp;&nbsp; Network Assistant </a></li>
 <li><a href="index.html#section05-3-2">5.3.2:&nbsp;&nbsp;&nbsp;&nbsp; System Assistant  </a></li>
 <li><a href="index.html#section05-3-3">5.3.3:&nbsp;&nbsp;&nbsp;&nbsp; User Assistant  </a></li>
-<li><a href="index.html#section05-3-4">5.3.4:&nbsp;&nbsp;&nbsp;&nbsp; Welcome Center  </a></li>
 <li><a href="index.html#s05-3_links">5.3:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Links </a></li>
 </ul>
 <!-- ************  unordered hyperlink list ended  ************  -->
@@ -2425,12 +2423,6 @@ directory.</li>
 
 <br /><br /><br /><br /><br /><br />
 
-
-
-<!-- ########################### SECTION 5.3.3  ########################### -->
-<h1 id="section05-3-4">5.3.4:&nbsp;&nbsp; Welcome Center</h1>
-<p>This is another new utility that aims to make the Users first encounter with MEPIS Linux as friendly as possible. You can start it from <strong>Start Menu > System > MEPIS Welcome Center</strong> (command line: <strong>mwelcome</strong>).  From this Center you can research a topic using MEPIS documentation, join the Community forum, contribute to MEPIS development, install a language pack, activate the Community repos, or add popular applications with a single click.</p>
-<br /><br /><br /><br /><br /><br />
 
 
 <!-- ########################### SECTION 5.3.5  ########################### -->
@@ -2664,7 +2656,7 @@ applications.
 <li>Click <strong>Start Menu > System > Synaptic Package Manager</strong>.</li>
 <li>Use the search function for “fonts.”</li>
 <li>Select and download the ones you want. </li>
-<li>Enable the Debian multimedia software repository to get the Microsoft core fonts package - <strong>msttcorefonts</strong>.  
+<li>Select the Microsoft core fonts package <strong>ttf-mscorefonts-installer</strong> for easy installation of the Microsoft True Type Core Fonts for use with websites and MS applications run under Wine.  
 Note: for installation methods, see <a href="index.html#section07-1">7: Software Management</a>.</li>
 <li>Click <strong>Start Menu > Settings > System Settings > Font Installer</strong></li>
 <li>From the Font Installer, click Add and open the font you have downloaded.</li>
@@ -3353,7 +3345,7 @@ deb http://www.debian-multimedia.org squeeze main
 <br /><br />
 
 <h2 id="s05-7_troubleshooting">Troubleshooting</h2>
-<p>You can set up your sound driver by installing the package <strong>alsaconf</strong> from the Community repos.  Then open a terminal, become root, and type:</p>
+<p>You can set up your sound driver by installing the package <strong>alsa-utils</strong> from the Community repos.  Then open a terminal, become root, and type:</p>
 <pre>alsaconf</pre>
 <p>This will start an automatic process to discover your sound card and install the correct driver.</p>
 
@@ -3415,6 +3407,20 @@ http://en.wikipedia.org</a></li>
 
 
 <p>Input devices such as a keyboard or mouse will usually be picked up automatically as soon as you plug the receiver into the computer, and you should be able to just start using the device.  If you experience problems, click <strong>Start Menu > System > KUser</strong>, provide root's password and check that your username is checked to belong to the Bluetooth group.</p>
+
+<p><b>File transfer</b>.  File transfer to and from a handheld device is enabled by default by virtue of ObexFTP, a C application and library with many language bindings to access mobile phone and other handheld content.  
+<ul><li>Host to handheld device:</li>
+<ol><li>Make the handheld discoverable, if necessary</li>
+<li>On the host, right-click the BT icon in the System Tray > Manage devices.  Add your device if it is not already there, and click the Trust button below</li>
+<li>Right-click the BT icon again > Receive files configuration.  Make sure the Enable box is checked, and decide where you want the files to go (e.g., <strong>~/Downloads</strong>)</li>
+<li>Right-click the BT icon one last time > Send File.  Navigate to the file you want to send and click Next.  On the device screen, make sure the device you want to send to is present, and rescan if necessary.  Highlight the device and click Next.</li>
+<li>On the device, accept the transfer of the file.</li></ol>
+<li>Handheld to host:</li>
+<ol><li>Check that the host is visible to the handheld.</li>
+<li>Navigate to the file you want to send, and use the method appropriate for the particular device to send it.</li>
+<li>When the transfer notification pops up on the host, click Accept</li></ol>
+</ul>
+</p>
 
 <br /><br />
 
@@ -4287,8 +4293,9 @@ http://www.mepis.org/docs/en/index.php?title=Phone</a></li>
 <h1 id="section08-02">8.2:&nbsp;&nbsp;&nbsp;&nbsp; Multimedia </h1>
 <h2 id="s08-02_music">Music</h2>
 
-<h3>Playing music</h3>
+<p><strong>NOTE</strong>: make sure you have installed the package <strong>libdvdcss2</strong> before attempting to play or rip proprietary media.  Check the legality in your jurisdiction before doing this; see <a href="index.html#section05-7">Section 5.7</a></p>
 
+<h3>Playing music</h3>
 <p>A simple music players is provided with MEPIS Linux that can be found under <strong>Start Menu > Multimedia</strong> </p>
 
 <ul>
@@ -5858,10 +5865,11 @@ sets.
 <li>Click out to return to the Configure KDE Resources page</li>
 <li>Highlight and click the Use as Standard button if that is what you want.</li><p>Now if you install KOrganizer, all your Gcal data will be available.  For other calendar apps, you may need to point to the <strong>akonadi_gcal_resource</strong> file in <strong>/home/username/.kde/share/config/</strong></p></ul>
 </ul>
+<li><strong>Gtasks</strong>.  In Thunderbird, tasks are accessible through the Calendar extension discussed above.  In addition, there is a handy "Gtasks" widget available for your desktop, see link below for details.</li>
 <li><strong>Gdocs</strong>.  Options include:</li>
 <ul><li>LibreOffice has an extension called <strong>gdocs</strong> that helps directly upload a file to Google Docs.</li></ul>
 <li><strong>Google Earth</strong>.  This app can be installed by direct download or through the repositories; check the Wiki for installation and setup details.</li>
-<li><strong>Google Talk</strong>.  This chat program can be used in Kopete when properly configured.  See directions below.</li></ul>
+<li><strong>Google Talk</strong>.  This chat program can be used in Kopete when properly configured, see directions below.  In addition, there is a browser plugin called <b>google-talkplugin</b> available from the repos that allows you to make a voice or video call to someone from your Gmail account.</li></ul>
 
 <br />
 <h2 id="s08-11_links">Links and Guides for Section 8:11</h2>
@@ -5870,6 +5878,7 @@ sets.
 <li>Thunderbird and Gmail: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=38343"> http://mail.google.com/support/bin/answer.py?hl=en&answer=38343</a></li>
 <li>Synchronizing KDE apps with Google: <a href="http://www.my-guides.net/en/content/view/178/26/"> http://www.my-guides.net/en/content/view/178/26/ </a></li>
 <li>Thunderbird Gcal tab: <a href="https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/"> https://addons.mozilla.org/af/thunderbird/addon/google-calendar-tab/ </a></li>
+<li>Gtasks widget: <a href="http://kde-apps.org/content/show.php?content=140790"> http://kde-apps.org/content/show.php?content=140790</a></li>
 <li>MEPIS Wiki: Google Earth: <a href="http://www.mepis.org/docs/en/index.php?title=Googleearth"> http://www.mepis.org/docs/en/index.php?title=Googleearth </a></li>
 <li>Gmail Help: Configuring other mail clients: <a href="http://mail.google.com/support/bin/answer.py?hl=en&answer=78799"> http://mail.google.com/support/bin/answer.py?hl=en&answer=78799 </a></li>
 <li>Google Talk: Help: <a href="http://www.google.com/support/talk/bin/answer.py?answer=57557"> http://www.google.com/support/talk/bin/answer.py?answer=57557 </li></ul>
@@ -6178,6 +6187,13 @@ http://www.mepis.org/docs</a>
 <li>DOSBox home page: <a href=" http://dosbox.sourceforge.net/ "> http://dosbox.sourceforge.net/ </a></li>
 <li>DOSBox Wiki: <a href=" http://dosbox.sourceforge.net/wiki/ "> http://dosbox.sourceforge.net/wiki/ </a></li>
 </ul>
+
+<p><strong>DOSEMU</strong> is software available from the repos that allows DOS to be booted in a virtual machine, making it possible to run Windows 3.1, Word Perfect for DOS, DOOM, etc.</p>
+<ul>
+<li>DOSEMU home page: <a href=" http://www.dosemu.org/ "> http://www.dosemu.org/ </a>
+</li>
+<li>MEPIS Wiki: DOSEMU: <a href=" http://www.mepis.org/docs/en/index.php?title=Dosemu "> http://www.mepis.org/docs/en/index.php?title=Dosemu </a>
+</li></ul>
 <br />
 
 <h2 id="s09-3_commercial">Commercial</h2>
@@ -6214,10 +6230,12 @@ http://www.codeweavers.com/compatibility/browse/rank/ </a>
 </li>
 <li>Checklist of games and emulators: <a href=" http://checklist.berzerk.co.uk/AppList.php?Hardware_ID=13 "> http://checklist.berzerk.co.uk/AppList.php?Hardware_ID=13</a>
 </li>
+
+http://www.mepis.org/docs/en/index.php?title=Dosemu
 <li class="fl">Other common choices:
 <br />
 <a href=" http://www.mepis.org/docs/en/index.php?title=Linux_software#Emulation_.26_Compatibility ">
-http://www.mepis.org/docs/en/index.php /Linux_software#Emulation_.26_Compatibility </a>
+http://www.mepis.org/docs/en/index.php?title=Linux_software#Emulation_.26_Compatibility </a>
 </li>
 </ul>
 
