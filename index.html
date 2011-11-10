@@ -1832,7 +1832,7 @@ After a fresh installation many people find these first steps useful to get goin
 <li> <a href="index.html#section05-6-1-2">Wireless internet connection (Section 5.6.1.2) </a></li>
 <li> <a href="index.html#section05-5">Adjusting fonts and display resolution  (Section 5.5)</a></li>
 <li> <a href="index.html#section05-7">Sound configuration (Section 5.7)</a></li>
-<li> <a href="index.html#section05-9">Set language, keyboard, time format and other locale items(Section 5.9)</a></li>
+<li> <a href="index.html#section05-9">Set language, keyboard, AM/PM and other time formatting, and other locale items(Section 5.9)</a></li>
 </ul>
 <!-- ###################  end unordered list ################# -->
 <br /><br />
@@ -3745,11 +3745,9 @@ MEPIS (and especially if you are new to Linux), it is recommended that in genera
 <li>debian-multimedia-keyring </li>
 </ul>
 
-<p>The MEPIS Community has its own repository of packages that it builds and maintains.  These packages are distinct from official MEPIS packages, and typically have been <a href="index.html#s12-1_backport" class="spterm" id="backport" title="click to go to the Glossary">"backported"</a> from "forward" Debian versions (testing or even experimental).  To find out more about what is available, who the packagers are, and even how to get involved, follow the MEPIS Community Package Project link below.</p>
-
 <p>Repositories are most easily added, removed, or edited through Synaptic, though they can also be altered by hand by editing the file <strong>/etc/atp/sources.list</strong> in a root terminal. In Synaptic, click <strong>Settings > Repositories</strong>, then click the button New and add the information.  Here, for instance, is how the settings look for the MEPIS Community repo:</p>
 <img src="grafx/CommRepoSyn_small.png" alt="Synaptic community repo" width="400" height="93" />
-<p>At times it may be easier to directly alter the repository list in the <strong>/etc/apt/sources.list</strong> file. This can be edited as root with any text editor by backing up the existing file, editing the original file, and saving it.  The same repository viewed above looks like this in the file:
+<>At times it may be easier to directly alter the repository list in the <strong>/etc/apt/sources.list</strong> file. This can be edited as root with any text editor by backing up the existing file, editing the original file, and saving it.  The same repository viewed above looks like this in the file:
 
 <pre>deb http://main.mepis-deb.org/mepiscr/repo/ mepis11cr main non-free</pre>
 <p>Some repositories carry special labels:  </p>
@@ -3761,6 +3759,21 @@ MEPIS (and especially if you are new to Linux), it is recommended that in genera
 (&ldquo;Squeeze,&rdquo; the version SimplyMEPIS is built with) to keep your OS up-to-date.</li>
 <li><u>mepis</u>, which contain the special packages that make MEPIS what it is.</li>
 </ul>
+
+<h4>Community Repositories</h4>
+<p>The MEPIS Community has its own repository of packages that it builds and maintains.  These packages are distinct from official MEPIS packages, and typically have been <a href="index.html#s12-1_backport" class="spterm" id="backport" title="click to go to the Glossary">"backported"</a> from "forward" Debian versions (testing or even experimental). There are five separate sections:
+<ul><li><strong>Main</strong>: Most users should use at least the Main CR Repo</li> 
+<li><strong>Main - restricted</strong>: contains packages that may violate patent and/or licensing laws in your country. 
+<li><strong>Testing</strong>: these packages are being tested before moving to Main. 
+<li><strong>Testing - restricted</strong>: restricted packages being tested</li>
+<li><strong>Testing - experimental</strong>: system-wide packages (e.g., KDE upgrade) being tested</li>
+</ul>
+<p><strong>NOTE</strong>: The testing sections should only be enabled to download packages for testing, and immediately disabled afterward. 
+They should not be used on main production machines or mission critical set-ups, as there is by definition a risk that they will break your system.</p>
+
+<p>To find out more about what is available, who the packagers are, and even how to get involved, follow the MEPIS Community Package Project link below.</p>
+
+
 
 <br /><br />
 
@@ -3793,7 +3806,7 @@ increasingly likely as you add unsupported repositories.  <strong>BE VERY ATTENT
 that others be removed!  If a large number of packages are going to be removed, you may want to investigate another method of installing
 this application.
 </li>
-<li><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package, and be asked
+<p><u>Should you keep?</u>:  When upgrading, you will often be informed that a new configuration file is available for a certain package, and be asked
 whether you want to install the new version or keep your current version.
 <ul><li>If the package in question is from a MEPIS repository, it is recommended that you &ldquo;install the maintainer's version&rdquo;  </li>
 <li>Otherwise, answer &ldquo;keep the current version&rdquo; (<strong>N</strong>), which is also the default choice. </li>
@@ -3946,11 +3959,58 @@ care, however, that you don't uninstall a dependency of another application you 
 
 <br /><br />
 
+<h2>Synaptic errors</h2>
+<p>Here are some common error messages that may occasionally be encountered in using Synaptic, along with their solutions:</p>
+
+<ul><li><h3>GPG errors</h3></li>
+<p><strong>Messsage</strong>: public key not available<br>
+<strong>Problem</strong>: you do not have a correct key used for cryptography installed<br>
+<strong>Solution</strong>: Enable the Community repositories, then install <strong>checkaptgpg</strong>. Then, when you get a warning about a public key not being available, run this application by clicking StartMenu > System > Check Apt GPG. Enter Y and then the root password. </p>
+<p>NOTE: see also BADSIG below</p>
+
+<li><h3>Package authentication</h3></li>
+<p><strong>Message</strong>: Packages could not be authenticated<br>
+<strong>Problem</strong>: Many repositories, including all of Debian's repositories & Warren's MEPIS 8.0 & 8.5 repositories, use a [http://aplawrence.com/Basics/gpg.html GPG key] to verify that you are connected to the real repository instead of having been rerouted by a highjacked DNS or a [http://en.wikipedia.org/wiki/Man-in-the-middle_attack man-in-the-middle attack] to a fake site.  This is a very slight possibility, but for production machines the extra security is worth the check.  The MEPIS Community Repositories don't use such a key at this time, although new CR packages are gpg-signed by the packagers.<br>
+<strong>Solution</strong>: If this error occurs when installing packages from the Community Repository it is safely ignored.  If it occurs with packages from the Debian or MEPIS repositories, do not continue the installation and report the error.</p>
+
+<li><h3>No header, problem with merge list</h3></li>
+<p><strong>Message</strong>: Encountered a section with no Package: header.  Problem with MergeList etc.<br>
+<strong>Problem</strong>: Files have been corrupted for some reason.<br>
+<strong>Solution</strong>: There are two main variants of this problem.
+<ul><LI>If the error message includes a reference to <strong>/var/lib/dpkg/status</strong>, open a terminal and type:
+<pre>su -c "cp var/lib/dpkg/status-old var/lib/dpkg/status"
+su -c "apt-get update" </pre>
+<li>If the error message refers to a file in <strong>/var/lib/apt/lists</strong>, open a terminal and type:
+<pre>su -c "rm -f /var/lib/apt/lists/*"
+su -c "apt-get update"</pre></li></ul></p>
+
+<li><h3>Broken package</h3></li>
+<p><strong>Message</strong>: you have a broken package and are told to use the Broken filter to find it<br>
+<strong>Problem</strong>: you tried to install a package that had unmet dependencies<br>
+<strong>Solution</strong>: click on Status in the lower left corner of the Synaptic screen, then on the entry "Broken package."  Click on the package and remove it.  Reload the repos.</p>
+
+<li><h3>Cache limit exceeded</h3></li>
+<p><strong>Message</strong>: Dynamic MMap ran out of room. Please increase the size of APT::Cache-Limit. Current value: 20000000.<br>
+<strong>Problem</strong>: Cache-Limit is too small to handle new package cache<br>
+<strong>Solution</strong>: Click Start Menu > System > Dolphin as su, and provide root's password.  Open <strong>etc/apt/apt.conf </strong>. Change line from 
+ <pre>APT::Cache-Limit 20000000</pre>
+<p>to </p>
+ <pre>APT::Cache-Limit 70000000</pre> 
+<p>If you have a large cache already, then run <pre>apt-get clean</pre></p>
+
+<li><h3>BADSIG</h3></li>
+<p><strong>Message</strong>: similar to "GPG error: ftp://ftp.mirrorservice.org mepis-11.0 Release: The following signatures were invalid: BADSIG E6AD81A8B9FBE3CE Warren Woodford (MEPIS Maintainers)"<br>
+<strong>Problem</strong>: The GPG signature of the repo has expired<br>
+<strong>Solution</strong>: Warren has to be notified</p></ul>
+<br /><br />
+
 <h2 id="s07-2_links">Links and Guides for Section 7.2</h2>
 <ul>
 <li>MEPIS Wiki: Installing/Removing Software: <a href = "http://www.mepis.org/docs/en/index.php?title=Installing_/_Removing_Software">at
 http://www.mepis.org/docs</a></li>
 <li>MEPIS Wiki: Pinning Nvidia drivers: <a href = "http://www.mepis.org/docs/en/index.php?title=Pinning_nvidia_drivers">at
+http://www.mepis.org/docs</a></li>
+<li>MEPIS Wiki: GPG error: <a href = "http://www.mepis.org/docs/en/index.php?title=Public_key_not_available_error">at
 http://www.mepis.org/docs</a></li>
 <li>Synaptic home page: <a href = "http://www.nongnu.org/synaptic/"> http://www.nongnu.org/synaptic/</a></li>
 <li>Synaptic howto (Ubuntu): <a href ="https://help.ubuntu.com/community/SynapticHowto">
