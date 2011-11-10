@@ -1074,7 +1074,7 @@ Start Krunner and click on the wrench symbol > User Interface tab, then select T
 <p>To change an existing activity, right-click the Desktop > Folder View Settings. Then click on Activities in the left panel, then use the Type pull-down menu to select what you want. To create a new activity, click on the Desktop upper-corner cashew > Unlock Widgets, then click on it again > Zoom Out. This causes the desktop to shrink. Now click on the green plus sign "Add Activity" and you should see a new blank desktop besides the old one. This can be repeated multiple times. Click on the + (plus sign) for the desktop you wish to use, then set up your Desktop by clicking on the wrench icon (Desktop Settings) below it; when you have finished, do not forget to lock widgets.  If you want to remove an activity later,  unlock the widgets and zoom out from your current desktop view, then select the red cross from the toolbar underneath to remove the activity.</p>  
 
 <p>Available activities for KDE 4.5 include:</p>
-<ul>
+<li>
 <li><strong>Folder</strong> view (default) -- displays the contents of a folder (by default the user's Home directory)</li>
 <li><strong>Desktop</strong> view -- displays a blank desktop to which widgets can be added as desired</li>
 <li><strong>Newspaper</strong> -- displays widgets you add in two columns</li>
@@ -1638,7 +1638,7 @@ right-click it and select <strong>set active.</strong> Then click <strong>Commit
 <p>It sometimes happens that the filesystem type is reported incorrectly for ntfs or vfat partitions, showing them as ext3 or ext4.  This is usually caused by the filesystem type being set incorrectly in the MBR tables. When you reformat a partition to a different type, that only changes the actual format of the partition, it does not
 update the MBR.</p>
 <p>It may be possible to change this by using the command line utility <strong>cfdisk</strong> (type <em>man:cfdisk</em> into a Konqueror address field for details), but that can fail if irregularities exist such as with the cylinder end point (common when multibooting with Windows Vista or Windows 7).  Always reliable will be to open a root Dolphin by clicking <strong>Start Menu > System > Dolphin as su</strong>, navigating to <em>/etc</em> and clicking on the file <strong>fstab</strong>.  Back it up immediately as <em>fstab_old</em> or something similar so you can restore it if necessary.  Look for the problem partitions, for example:</p>
-<pre>/dev/sda2 /mnt/sda2 <strong><color><FONT COLOR = "red">ext3</FONT></strong> noauto,users,exec,relatime 0 0</pre>
+<pre>/dev/sda2 /mnt/sda2 <strong><p><FONT COLOR = "red">ext3</FONT></strong> noauto,users,exec,relatime 0 0</pre>
 <p>Although the partition is labelled with the filesystem type ext3 (in red above), let's say it is actually ntfs or vfat.  Highlight ext3, delete it, and enter <em>auto</em> so the corrected line looks like this:  </p>
 <pre>/dev/sda2 /mnt/sda2 <strong><FONT COLOR = "red">auto</FONT></strong> noauto,users,exec,relatime 0 0</pre>
 <p>Check carefullly that you have not made any mistake, then save the file.  Note: it is often more reliable to specify auto-detection of a Windows filesystem type than to try to specify it.</p>
@@ -2590,11 +2590,11 @@ http://www.mepis.org/docs/en/index.php?title=GRUB_from_command_line</a></li>
 
 <h2>Graphic driver</h2>
 <p>If you are not satisfied with your display's performance, you may need to upgrade your graphic driver (make sure to first back up the file <strong>/etc/X11/xorg.conf</strong>, if used) in one of the following ways (see the Wiki for details):</p>
-<li><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; for system info, use <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
+<ul><li><u>Download directly from the manufacturer</u>. This method will require you to select and download the driver for your system; for system info, open a terminal and enter <pre>lspci|grep VGA</pre>Here are driver websites for the three most popular brands--do a web search on "brandname linux driver" for others: 
 <ul><li>Nvidia: <a href="http://www.nvidia.com/Download/index.aspx">http://www.nvidia.com/Download/index.aspx</a></li>
 <li>ATI: <a href="http://support.amd.com/">http://support.amd.com/</a></li>
 <li>Intel: <a href="http://intellinuxgraphics.org/download.html">http://intellinuxgraphics.org/download.html</a></li></ul>
-Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are easily installed: 
+<p>Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are easily installed:</p> 
 <ul><li>Navigate in Dolphin to the folder where they were downloaded </li>
 <li>Right-click the file, select the Permissions tab, check "Is executable" </li>
 <li>Press F4 to get a command line and type (using the real name of the file) <pre>sh filename.run</pre></li></ul>
@@ -2602,10 +2602,9 @@ Intel drivers must be compiled (Section 7.3), but Nvidia and ATI drivers are eas
 <ul><li>With an ATI chip, for instance, direct rendering requires the addition of the package <strong>libgl-mesa-glx</strong>.</li>
 <li>Graphic controls are available for Nvidia (<strong>nvidia-settings</strong>) and some ATI drivers </li>  
 <li>Check the Wiki and Forum for details and help.</li></ul>
-<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:</li>
-</ul>
+<li><u>Use a script called <strong>sgfxi</strong></u>. This script was developed by a Linux user named h2-1 for standard system upkeep for Debian, and currently supports ATI fglrx and Nvidia drivers. It also supports converting from or to Xorg free drivers like ati, intel, or nv.  To get the script, open Konsole, become root, and enter:
 <pre>cd /usr/local/bin && wget -Nc smxi.org/sgfxi && chmod +x sgfxi </pre>
-<p>Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <b>sgfxi</b>. Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</p></ul>
+Once you have this installed, you can use it to easily change to the latest appropriate driver by opening a root konsole and typing <b>sgfxi</b>. Follow the simple on-screen directions.  Note that this is not an official MEPIS product, so no guarantees can be made about its use.</li></ul>
 
 <h2 > Adjusting fonts </h2>
 <h3 id="s05-5_basic">Basic adjustment</h3>
@@ -3762,9 +3761,9 @@ MEPIS (and especially if you are new to Linux), it is recommended that in genera
 
 <h4>Community Repositories</h4>
 <p>The MEPIS Community has its own repository of packages that it builds and maintains.  These packages are distinct from official MEPIS packages, and typically have been <a href="index.html#s12-1_backport" class="spterm" id="backport" title="click to go to the Glossary">"backported"</a> from "forward" Debian versions (testing or even experimental). There are five separate sections:
-<ul><li><strong>Main</strong>: Most users should use at least the Main CR Repo</li> 
-<li><strong>Main - restricted</strong>: contains packages that may violate patent and/or licensing laws in your country. 
-<li><strong>Testing</strong>: these packages are being tested before moving to Main. 
+<ul><li><strong>Main</strong>: most users should use at least this CR Repo</li> 
+<li><strong>Main - restricted</strong>: contains packages that may violate patent and/or licensing laws in your country 
+<li><strong>Testing</strong>: these packages are being tested before moving to Main
 <li><strong>Testing - restricted</strong>: restricted packages being tested</li>
 <li><strong>Testing - experimental</strong>: system-wide packages (e.g., KDE upgrade) being tested</li>
 </ul>
@@ -3823,6 +3822,8 @@ whether you want to install the new version or keep your current version.
 http://en.wikipedia.org/wiki/Advanced_Packaging_Tool</a> </li>
 <li>MEPIS Wiki: Installing/Removing Software: <a href = "http://www.mepis.org/docs/en/index.php?title=Installing_/_Removing_Software">at
 http://www.mepis.org/docs</a></li>
+<li>MEPIS Wiki: Sources.list: <a href = "http://www.mepis.org/docs/en/index.php?title=Sources.list">at
+http://www.mepis.org/docs/en/index.php?title=Sources.list</a></li>
 <li>MEPIS Community Packaging Project: <a href="http://www.mepiscommunity.org/en/node/56">http://www.mepiscommunity.org/en/node/56</a></li>
 </ul>
 
@@ -3963,19 +3964,25 @@ care, however, that you don't uninstall a dependency of another application you 
 <p>Here are some common error messages that may occasionally be encountered in using Synaptic, along with their solutions:</p>
 
 <ul><li><h3>GPG errors</h3></li>
-<p><strong>Messsage</strong>: public key not available<br>
-<strong>Problem</strong>: you do not have a correct key used for cryptography installed<br>
+<p><strong>Messsage</strong>: public key not available
+<br>
+<strong>Problem</strong>: you do not have a correct key used for cryptography installed
+<br>
 <strong>Solution</strong>: Enable the Community repositories, then install <strong>checkaptgpg</strong>. Then, when you get a warning about a public key not being available, run this application by clicking StartMenu > System > Check Apt GPG. Enter Y and then the root password. </p>
-<p>NOTE: see also BADSIG below</p>
+<p>NOTE: see also BADSIG below
+</p>
 
 <li><h3>Package authentication</h3></li>
 <p><strong>Message</strong>: Packages could not be authenticated<br>
-<strong>Problem</strong>: Many repositories, including all of Debian's repositories & Warren's MEPIS 8.0 & 8.5 repositories, use a [http://aplawrence.com/Basics/gpg.html GPG key] to verify that you are connected to the real repository instead of having been rerouted by a highjacked DNS or a [http://en.wikipedia.org/wiki/Man-in-the-middle_attack man-in-the-middle attack] to a fake site.  This is a very slight possibility, but for production machines the extra security is worth the check.  The MEPIS Community Repositories don't use such a key at this time, although new CR packages are gpg-signed by the packagers.<br>
+<strong>Problem</strong>: Many repositories, including all of Debian's repositories & Warren's MEPIS 8.0 & 8.5 repositories, use a [http://aplawrence.com/Basics/gpg.html GPG key] to verify that you are connected to the real repository instead of having been rerouted by a highjacked DNS or a [http://en.wikipedia.org/wiki/Man-in-the-middle_attack man-in-the-middle attack] to a fake site.  This is a very slight possibility, but for production machines the extra security is worth the check.  The MEPIS Community Repositories don't use such a key at this time, although new CR packages are gpg-signed by the packagers.
+<br>
 <strong>Solution</strong>: If this error occurs when installing packages from the Community Repository it is safely ignored.  If it occurs with packages from the Debian or MEPIS repositories, do not continue the installation and report the error.</p>
 
 <li><h3>No header, problem with merge list</h3></li>
-<p><strong>Message</strong>: Encountered a section with no Package: header.  Problem with MergeList etc.<br>
-<strong>Problem</strong>: Files have been corrupted for some reason.<br>
+<p><strong>Message</strong>: Encountered a section with no Package: header.  Problem with MergeList etc.
+<br>
+<strong>Problem</strong>: Files have been corrupted for some reason.
+<br>
 <strong>Solution</strong>: There are two main variants of this problem.
 <ul><LI>If the error message includes a reference to <strong>/var/lib/dpkg/status</strong>, open a terminal and type:
 <pre>su -c "cp var/lib/dpkg/status-old var/lib/dpkg/status"
@@ -3985,22 +3992,30 @@ su -c "apt-get update" </pre>
 su -c "apt-get update"</pre></li></ul></p>
 
 <li><h3>Broken package</h3></li>
-<p><strong>Message</strong>: you have a broken package and are told to use the Broken filter to find it<br>
+<p><strong>Message</strong>: you have a broken package and are told to use the Broken filter to find it
+<br>
 <strong>Problem</strong>: you tried to install a package that had unmet dependencies<br>
-<strong>Solution</strong>: click on Status in the lower left corner of the Synaptic screen, then on the entry "Broken package."  Click on the package and remove it.  Reload the repos.</p>
+<strong>Solution</strong>: click on Status in the lower left corner of the Synaptic screen, then on the entry "Broken package."  Click on the package and remove it.  Reload the repos.
+</p>
 
 <li><h3>Cache limit exceeded</h3></li>
-<p><strong>Message</strong>: Dynamic MMap ran out of room. Please increase the size of APT::Cache-Limit. Current value: 20000000.<br>
-<strong>Problem</strong>: Cache-Limit is too small to handle new package cache<br>
+<p><strong>Message</strong>: Dynamic MMap ran out of room. Please increase the size of APT::Cache-Limit. Current value: 20000000.
+<br>
+<strong>Problem</strong>: Cache-Limit is too small to handle new package cache
+<br>
 <strong>Solution</strong>: Click Start Menu > System > Dolphin as su, and provide root's password.  Open <strong>etc/apt/apt.conf </strong>. Change line from 
  <pre>APT::Cache-Limit 20000000</pre>
-<p>to </p>
+<p>to 
+</p>
  <pre>APT::Cache-Limit 70000000</pre> 
-<p>If you have a large cache already, then run <pre>apt-get clean</pre></p>
+<p>If you have a large cache already, then run <pre>apt-get clean</pre>
+</p>
 
 <li><h3>BADSIG</h3></li>
-<p><strong>Message</strong>: similar to "GPG error: ftp://ftp.mirrorservice.org mepis-11.0 Release: The following signatures were invalid: BADSIG E6AD81A8B9FBE3CE Warren Woodford (MEPIS Maintainers)"<br>
-<strong>Problem</strong>: The GPG signature of the repo has expired<br>
+<p><strong>Message</strong>: similar to "GPG error: ftp://ftp.mirrorservice.org mepis-11.0 Release: The following signatures were invalid: BADSIG E6AD81A8B9FBE3CE Warren Woodford (MEPIS Maintainers)"
+<br>
+<strong>Problem</strong>: The GPG signature of the repo has expired
+<br>
 <strong>Solution</strong>: Warren has to be notified</p></ul>
 <br /><br />
 
@@ -4175,6 +4190,13 @@ http://www.mepis.org/docs/en/index.php?title=Compiling</a>.</li>
 
 <h2 id="s08-01_browsers">Web browsers</h2>
 <p>Two web browsers, Konqueror and Mozilla's Firefox, are installed with MEPIS Linux and available by clicking <strong>Start Menu > Internet</strong>. The Debian packagers also provide a rebranded variant of Firefox named IceWeasel, which is updated frequently.  If coming from Windows, be sure to consult <a href="index.html#section03-2">Section 3.2:&nbsp;Coming from Windows</a> about migrating data.</p>
+
+<p>There are actually three methods of installing Firefox:</p>
+<ul><li>From the Debian repos through Synaptic</li>
+<li>From the Community repo through Synaptic</li>
+<li>By direct download of a blob from the Mozilla site that should be moved as root to the <strong>/opt</strong> directory. Then create a softlink between the executable: in Dolphin, pres F3 to create two columns, navigate in each to the appropriate location, and just drag the file from /opt/firefox/ to /usr/bin/.</li></ul>
+
+<p>In addition to the stable Firefox package linked off the home page, there are also two other "channels;" the Aurora (experimental) and Beta (testing).</p>
 
 <ul>
 <li><strong>Firefox</strong> home page: <a href="http://www.mozilla.com/firefox/"> http://www.mozilla.com/firefox/</a></li>
