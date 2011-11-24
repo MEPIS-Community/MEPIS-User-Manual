@@ -3746,7 +3746,7 @@ MEPIS (and especially if you are new to Linux), it is recommended that in genera
 
 <p>Repositories are most easily added, removed, or edited through Synaptic, though they can also be altered by hand by editing the file <strong>/etc/apt/sources.list</strong> in a root terminal. In Synaptic, click <strong>Settings > Repositories</strong>, then click the button New and add the information.  Here, for instance, is how the settings look for the MEPIS Community repo:</p>
 <img src="grafx/CommRepoSyn_small.png" alt="Synaptic community repo" width="400" height="93" />
-<>At times it may be easier to directly alter the repository list in the <strong>/etc/apt/sources.list</strong> file. This can be edited as root with any text editor by backing up the existing file, editing the original file, and saving it.  The same repository viewed above looks like this in the file:
+<p>At times it may be easier to directly alter the repository list in the <strong>/etc/apt/sources.list</strong> file. This can be edited as root with any text editor by backing up the existing file, editing the original file, and saving it.  The same repository viewed above looks like this in the file:</p>
 
 <pre>deb http://main.mepis-deb.org/mepiscr/repo/ mepis11cr main non-free</pre>
 <p>Some repositories carry special labels:  </p>
@@ -3772,7 +3772,21 @@ They should not be used on main production machines or mission critical set-ups,
 
 <p>To find out more about what is available, who the packagers are, and even how to get involved, follow the MEPIS Community Package Project link below.</p>
 
-
+<h4>Dedicated Repositories</h4>
+<p>In addition to the general repositories such as Debian, Mepis, and Community, there also exist a certain number of dedicated repositories associated with a single application.  When you add them to your <strong>sources.list</strong> file, either directly or through Synaptic, then you will receive update notifications.  Here are some of the more common ones used in MEPIS, arranged as they would appear in sources.list:</p>
+<ul><li><strong>LibreOffice</strong>: deb http://download.tuxfamily.org/gericom/libreoffice/ /</li>
+<li><strong>QGIS</strong>deb http://qgis.org/debian/ squeeze main </li>
+<li><strong>VirtualBox</strong>: deb http://download.virtualbox.org/virtualbox/debian/ squeeze contrib</li>
+<li><strong>Google Earth</strong>: deb http://dl.google.com/linux/earth/deb/ stable main</li>
+<li><strong>Google Chrome</strong>: deb http://dl.google.com/linux/deb/ stable non-free main</li>
+<li><strong>Google Talk Plugin</strong>: deb http://dl.google.com/linux/talkplugin/deb/ stable main</li>
+<li><strong>Opera</strong>: deb http://deb.opera.com/opera/ squeeze non-free</li></ul>
+<p>Opera and Google provide the GPG key with the installation, but you will have to acquire the others in the manner already described.</p>
+ 
+<h4>Subversion Repositories</h4>
+<p>One final category of repository exists for acquiring the most recent build of an application. This is done through <strong>Subversion</strong> (in the regular repos), a version control system that can be used by the end user to stay current with development. Once installed through the repos, you can use the application for any development line that offers a repository set up for the use of Subversion.  Here is an example for the drawing application <strong>Inkscape</strong>:</p>
+<pre>svn co svn://svn.tuxfamily.org/svnroot/xmoto/svg2lvl/trunk/extensions</pre>
+<p>That command will check out a copy of the application source code into a directory named <em>trunk</em> on your local machine.  Subversion is mostly used by developers working on a project, but sometimes endusers will use it for a particular interest.</p>
 
 <br /><br />
 
@@ -3823,8 +3837,11 @@ http://en.wikipedia.org/wiki/Advanced_Packaging_Tool</a> </li>
 <li>MEPIS Wiki: Installing/Removing Software: <a href = "http://www.mepis.org/docs/en/index.php?title=Installing_/_Removing_Software">at
 http://www.mepis.org/docs</a></li>
 <li>MEPIS Wiki: Sources.list: <a href = "http://www.mepis.org/docs/en/index.php?title=Sources.list">at
-http://www.mepis.org/docs/en/index.php?title=Sources.list</a></li>
+ http://www.mepis.org/docs/en/index.php?title=Sources.list</a></li>
 <li>MEPIS Community Packaging Project: <a href="http://www.mepiscommunity.org/en/node/56">http://www.mepiscommunity.org/en/node/56</a></li>
+<li>Subversion: <a href= "http://sourceforge.net/apps/trac/sourceforge/wiki/Subversion">
+http://sourceforge.net/apps/trac/sourceforge/wiki/Subversion</a> </li>
+
 </ul>
 
 
