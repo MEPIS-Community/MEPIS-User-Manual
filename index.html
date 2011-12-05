@@ -1075,9 +1075,10 @@ Start Krunner and click on the wrench symbol > User Interface tab, then select T
 <ul><li>Virtual desktops (default)</li>
 <li>Activities</li>
 <li>Cube</li></ul>
-<p>Virtual desktops are a sub-set of an Activity, so each Activity can have a number of desktops.  Activities can be arranged on the surfaces of a cube.</p>
+<p>Virtual desktops are a sub-set of an Activity, so each Activity can have a number of desktops.  Activities can also be arranged on the surfaces of a cube.  </p>
 
-<h4>Virtual desktops</h4>
+<h4 id="s03-4_virtual">Virtual desktops</h4>
+
 <p>MEPIS 11 comes with a set of four virtual desktops, reached through the Pager just to the right of the Start Menu.  You can use them to create different workspaces for separate tasks.  For example, one might be Music, another Work, a third Web and a fourth Games.  On each of those you could open and leave running the applications you want to use, so that switching back and forth would be quick and easy.  To configure, right-click the Pager and select an option.</p>
 
 <h4 id="s03-4_activities">Activities</h4>
@@ -1110,7 +1111,15 @@ Start Krunner and click on the wrench symbol > User Interface tab, then select T
 <img src="grafx/SearchLaunch.png" alt="SearchAndLaunch" width="400" height="300" />
 <p>To switch quickly between the activities: create a new panel and locate it where you want it, then add the widget "Activity Bar" to the panel.  If you like, you can resize the panel to match the bar and set it to auto-hide.</p>
 
-<h4>Cube</h4>
+<h4 id="s03-4_cube">Cube</h4>
+
+<p>If your graphics card is capable and you have the correct driver for it, it may be possible to set up a cube with a desktop on each face.  Here is the procedure:</p>
+
+<ul><li>Click <strong>SystemSettings > Workspace Appearance and Behavior > Desktop Effects</strong></li>
+<li>On the General tab, check Enable Desktop Effects and click Apply at the bottom, ignoring any error message you see</li>
+<li>Switch to the Advanced tab and under Compositing type, use the pulldown menu to change the default rendering engine from XRender to OpenGL, then click Apply again</li>
+<li>Now switch to the All Effects tab, scroll down about 75% and check Desktop Cube and Desktop Cube Animation, then click Apply</li></ul>
+<p>If you see any errors, check that your graphics card is capable and the driver is correct (see Section 5.5).</p>
 
 <h3 id="s03-4_netbook">Netbook desktop</h3>
 <p>There is also a special configuration called Netbook.  To switch to the Netbook Desktop:</p> 
